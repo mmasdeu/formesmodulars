@@ -13,14 +13,25 @@ Keith Conrad: https://ctnt-summer.math.uconn.edu/wp-content/uploads/sites/1632/2
 El grup modular
 ***************
 
-Blah
-$\sqrt{2}$
-$$\sqrt{3}$$
-\[\sqrt{4}\]
-
+Considerem el semiplà superior de Poincaré,
 \[
-\sqrt{5}
+\mathbb{H} = \{z\in \mathbb{C} : \Im(z) >0\}
 \]
+i el grup $\operatorname{SL}_2(\mathbb{R})$, definit com
+\[
+\operatorname{SL}_2(\mathbb{R}) = \left\{ \pmatrix{a&b\\c&d} \in M_2(\mathbb{R}) : ad-bc = 1\right\}.
+\]
+Aquest grup actua en els complexos (de fet, a $\mathbb{C} \cup \{\infty\}$) mitjançant les anomenades *transformacions lineals fraccionàries*:
+\[
+g\cdot z=\pmatrix{a&b\\c&d}\cdot z = \frac{az+b}{cz+d}.
+\]
+Es té una fórmula senzilla per la part imaginària d'aquesta quantitat:
+\[
+\Im(gz) = \frac{\Im(z)}{|cz+d|^2}.
+\]
+Per tant, veiem que $\operatorname{SL}_2(\mathbb{R})$ actua a $\mathbb{H}$. També veiem que $-1$ actua trivialment, i per tant de fet tenim un grup del quocient $\operatorname{PSL}_2(\mathbb{R}) = \operatorname{SL}_2(\mathbb{R})/\{\pm 1\}$, que de fet és *fidel*.
+
+**Remarca:** De fet, el grup $\operatorname{PSL}_2(\mathbb{R})$ és el grup d'automorfismes analítics d'$\mathbb{H}$.
 
 Formes modulars
 ***************
