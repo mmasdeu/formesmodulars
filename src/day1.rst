@@ -14,6 +14,13 @@ El grup modular
 ***************
 
 Blah
+$\sqrt{2}$
+$$\sqrt{3}$$
+\[\sqrt{4}\]
+
+\[
+\sqrt{5}
+\]
 
 Formes modulars
 ***************
