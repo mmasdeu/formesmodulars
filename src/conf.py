@@ -33,7 +33,6 @@
 # ones.
 extensions = ['sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
-    'lean_sphinx',
     'sphinx.ext.todo']
 
 # Add any paths that contain templates here, relative to this directory.
@@ -49,9 +48,9 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = 'BIYSC 2021 - Notes'
-copyright = '2021, Marc Masdeu, Roberto Rubio'
-author = 'Marc Masdeu, Roberto Rubio'
+project = 'Formes Modulars'
+copyright = '2022, Marc Masdeu'
+author = 'Marc Masdeu'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -100,10 +99,7 @@ html_theme_options = {
     'head_font_family': 'Times New Roman, Times, serif',
     'code_bg': 'white',
     'code_font_size': '10pt',
-    'extra_nav_links': {'PDF version':'biysc2021_notes.pdf',
-                        'Lean Live Editor': 'https://leanprover-community.github.io/lean-web-editor/',
-                        'Lean Documentation': 'https://leanprover-community.github.io/mathlib_docs/',
-                        'Leanprover Community':'https://leanprover-community.github.io/'},
+    'extra_nav_links': {'PDF version':'formesmodulars.pdf',
     # 'sidebar_width' : '230px',
     # 'page_width' : '95%',
     # 'fixed_sidebar' : True
@@ -136,7 +132,7 @@ html_sidebars = {
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'biysc_2021_notes'
+htmlhelp_basename = 'formesmodulars'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -174,8 +170,8 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'biysc2021_notes.tex', 'BIYSC 2021 - Notes',
-     'Marc Masdeu \\and Roberto Rubio', 'manual'),
+    (master_doc, 'formesmodulars.tex', 'Formes Modulars',
+     'Marc Masdeu', 'manual'),
 ]
 
 
@@ -184,7 +180,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'biysc2021_notes', 'BIYSC 2021 - Notes',
+    (master_doc, 'formesmodulars', 'Formes Modulars',
      [author], 1)
 ]
 
@@ -194,7 +190,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'biysc2021_notes', 'BIYSC 2021 - Notes',
-     author, 'biysc2021_notes', 'Notes on Lean for BIYSC 2021',
+    (master_doc, 'formesmodulars', 'Formes Modulars',
+     author, 'formesmodulars', 'Formes Modulars',
      'Miscellaneous'),
 ]
