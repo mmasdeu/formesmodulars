@@ -99,7 +99,7 @@ html_theme_options = {
     'head_font_family': 'Times New Roman, Times, serif',
     'code_bg': 'white',
     'code_font_size': '10pt',
-    'extra_nav_links': {'PDF version':'formesmodulars.pdf',
+    'extra_nav_links': {'PDF version':'formesmodulars.pdf'}
     # 'sidebar_width' : '230px',
     # 'page_width' : '95%',
     # 'fixed_sidebar' : True
