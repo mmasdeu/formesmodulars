@@ -1,8 +1,6 @@
-# BIYSC 2021 - Notes
+# Formes modulars
 
-Source code for https://mmasdeu.github.io/biysc2021-notes
+Source code for https://mmasdeu.github.io/formesmodulars
 
-Download this project using `leanproject get mmasdeu/biysc2021-notes`
-
-To generate the html pages, you'll need `pip` and `leanproject`.
+To generate the html pages, you'll need `pip`.
 Run `make html examples` in the `src` folder.
