@@ -43,6 +43,17 @@ mathjax_config = {
     },
 }
 
+mathjax_config = { 'TeX': {'Macros': {}}}
+
+with open('mathsymbols.tex', 'r') as f:
+    for line in f:
+        macros = re.findall(r'\\(DeclareRobustCommand|newcommand|renewcommand){\\(.*?)}(\[(\d)\])?{(.+)}', line)
+        for macro in macros:
+            if len(macro[2]) == 0:
+                mathjax_config['TeX']['Macros'][macro[1]] = "{"+macro[4]+"}"
+            else:
+                mathjax_config['TeX']['Macros'][macro[1]] = ["{"+macro[4]+"}", int(macro[3])]
+
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
 
