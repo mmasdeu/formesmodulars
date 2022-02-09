@@ -19,7 +19,7 @@ Considerem el semiplà superior de Poincaré,
 \]
 i el grup $\operatorname{SL}_2(\mathbb{R})$, definit com
 \[
-\operatorname{SL}_2(\mathbb{R}) = \left\{ \pmatrix{a&b\\c&d} \in M_2(\mathbb{R}) : ad-bc = 1\right\}.
+\SL_2(\R) = \left\{ \smtx abcd \in M_2(\R) : ad-bc = 1\right\}.
 \]
 Aquest grup actua en els complexos (de fet, a $\mathbb{C} \cup \{\infty\}$) mitjançant les anomenades *transformacions lineals fraccionàries*:
 \[
