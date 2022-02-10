@@ -34,25 +34,27 @@
 extensions = ['sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
     'sphinx.ext.todo',
-    'sphinx_math_dollar']
+              'sphinx_math_dollar']
 
-mathjax_config = {
-    'tex2jax': {
-        'inlineMath': [ ["\\(","\\)"] ],
-        'displayMath': [["\\[","\\]"] ],
-    },
+
+mathjax3_config = { 'tex': {'macros': {}},
+
+'tex2jax': {
+  'inlineMath': [ ['$','$'], ["\\(","\\)"] ],
+  'displayMath': [ ['$$','$$'], ["\\[","\\]"] ],
+  'processEscapes': True
+},
 }
 
-mathjax_config = { 'TeX': {'Macros': {}}}
-
-with open('mathsymbols.tex', 'r') as f:
+import re
+with open('mathsymbols.sty', 'r') as f:
     for line in f:
         macros = re.findall(r'\\(DeclareRobustCommand|renewcommand|newcommand){\\(.*?)}(\[(\d)\])?{(.+)}', line)
         for macro in macros:
             if len(macro[2]) == 0:
-                mathjax_config['TeX']['Macros'][macro[1]] = "{"+macro[4]+"}"
+                mathjax3_config['tex']['macros'][macro[1]] = "{"+macro[4]+"}"
             else:
-                mathjax_config['TeX']['Macros'][macro[1]] = ["{"+macro[4]+"}", int(macro[3])]
+                mathjax3_config['tex']['macros'][macro[1]] = ["{"+macro[4]+"}", int(macro[3])]
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -158,7 +160,7 @@ htmlhelp_basename = 'formesmodulars'
 
 latex_engine = 'xelatex'
 
-latex_additional_files = ['unixode.sty']
+latex_additional_files = ['unixode.sty', 'mathsymbols.sty']
 
 latex_elements = {
     # The paper size ('letterpaper' or 'a4paper').
@@ -173,12 +175,13 @@ latex_elements = {
    # load packages and make box around code lighter
     'preamble': r'''
 \usepackage{unixode}
-\usepackage{amsmath,amsthm,amssymb}
+\usepackage{amsmath,amsthm,amssymb,amsfonts}
 \definecolor{VerbatimBorderColor}{rgb}{0.7,0.7,0.7}
 % from sphinxmanual.cls: put authors on separate lines
 \DeclareRobustCommand{\and}{%
    \end{tabular}\kern-\tabcolsep\\\begin{tabular}[t]{c}%
 }
+\input{mathsymbols.sty}
 ''',
 
     # Latex figure (float) alignment
