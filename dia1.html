@@ -13,13 +13,13 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]]}})</script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"Q": "{\\mathbb{Q}}", "R": "{\\mathbb{R}}", "C": "{\\mathbb{C}}", "H": "{\\mathbb{H}}", "SL": "{\\operatorname{SL}}", "GL": "{\\operatorname{GL}}", "PSL": "{\\operatorname{PSL}}", "PGL": "{\\operatorname{PGL}}", "lto": "{\\longrightarrow}", "dfn": "{\\ensuremath{:=}}", "surjects": "{\\twoheadrightarrow}", "injects": "{\\hookrightarrow}", "id": "{\\ensuremath \\text{Id}}", "mtx": ["{\\left(\\begin{matrix}#1&#2\\\\#3&#4\\end{matrix}\\right)}", 4], "mat": ["{\\left(\\begin{matrix}#1\\end{matrix}\\right)}", 1], "smat": ["{\\left(\\begin{smallmatrix}#1\\end{smallmatrix}\\right)}", 1], "smtx": ["{\\left(\\begin{smallmatrix}#1&#2\\\\#3&#4\\end{smallmatrix}\\right)}", 4], "slz": "{\\operatorname{SL}_2(\\bZ)}", "Im": "{\\operatorname{Im}}", "Re": "{\\operatorname{Re}}"}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="2. Segon dia" href="day2.html" />
-    <link rel="prev" title="BIYSC 2021 - Can computers do math?" href="index.html" />
+    <link rel="next" title="2. Segon dia" href="dia2.html" />
+    <link rel="prev" title="Formes modulars: una introducci&#243; a la cinquena operaci&#243; b&#224;sica" href="index.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -46,23 +46,30 @@ Keith Conrad: <a class="reference external" href="https://ctnt-summer.math.uconn
 <section id="el-grup-modular">
 <h2><span class="section-number">1.2. </span>El grup modular<a class="headerlink" href="#el-grup-modular" title="Permalink to this headline">&#182;</a></h2>
 <p>Considerem el semipl&#224; superior de Poincar&#233;,
+<div class="math notranslate nohighlight">
 \[
-\mathbb{H} = \{z\in \mathbb{C} : \Im(z) &gt;0\}
-\]
+\H = \{z\in \C : \Im(z) &gt;0\}
+\]</div>
+
 i el grup <span class="math notranslate nohighlight">\(\operatorname{SL}_2(\mathbb{R})\)</span>, definit com
+<div class="math notranslate nohighlight">
 \[
-\operatorname{SL}_2(\mathbb{R}) = \left\{ \pmatrix{a&amp;b\c&amp;d} \in M_2(\mathbb{R}) : ad-bc = 1\right\}.
-\]
-Aquest grup actua en els complexos (de fet, a <span class="math notranslate nohighlight">\(\mathbb{C} \cup \{\infty\}\)</span>) mitjan&#231;ant les anomenades <em>transformacions lineals fraccion&#224;ries</em>:
-[
-gcdot z=pmatrix{a&amp;b\c&amp;d}cdot z = frac{az+b}{cz+d}.
-]
-Es t&#233; una f&#243;rmula senzilla per la part imagin&#224;ria d&#8217;aquesta quantitat:
-[
-Im(gz) = frac{Im(z)}{<a href="#id1"><span class="problematic" id="id2">|</span></a>cz+d|^2}.
-\]
-Per tant, veiem que <span class="math notranslate nohighlight">\(\operatorname{SL}_2(\mathbb{R})\)</span> actua a <span class="math notranslate nohighlight">\(\mathbb{H}\)</span>. Tamb&#233; veiem que <span class="math notranslate nohighlight">\(-1\)</span> actua trivialment, i per tant de fet tenim un grup del quocient <span class="math notranslate nohighlight">\(\operatorname{PSL}_2(\mathbb{R}) = \operatorname{SL}_2(\mathbb{R})/\{\pm 1\}\)</span>, que de fet &#233;s <em>fidel</em>.</p>
-<p><strong>Remarca:</strong> De fet, el grup <span class="math notranslate nohighlight">\(\operatorname{PSL}_2(\mathbb{R})\)</span> &#233;s el grup d&#8217;automorfismes anal&#237;tics d&#8217;<span class="math notranslate nohighlight">\(\mathbb{H}\)</span>.</p>
+\SL_2(\R) = \left\{ \smtx abcd \in M_2(\R) : ad-bc = 1\right\}.
+\]</div>
+</p>
+<p>Aquest grup actua en els complexos (de fet, a <span class="math notranslate nohighlight">\(\mathbb{C} \cup \{\infty\}\)</span>)
+mitjan&#231;ant les anomenades <em>transformacions lineals fraccion&#224;ries</em>:
+<div class="math notranslate nohighlight">
+\[g\cdot z =\smtx{a}{b}{c}{d}\cdot z = \frac{az+b}{cz+d}.\]</div>
+</p>
+<p>Es t&#233; una f&#243;rmula  senzilla per la part imagin&#224;ria d&#8217;aquesta quantitat:
+<div class="math notranslate nohighlight">
+\[
+\Im(gz) = \frac{\Im(z)}{ | cz+d | ^2}.
+\]</div>
+</p>
+<p>Per tant, veiem que <span class="math notranslate nohighlight">\(\operatorname{SL}_2(\mathbb{R})\)</span> actua a <span class="math notranslate nohighlight">\(\mathbb{H}\)</span>. Tamb&#233; veiem que <span class="math notranslate nohighlight">\(-1\)</span> actua trivialment, i per tant de fet tenim un grup del quocient <span class="math notranslate nohighlight">\(\PSL_2(\R) = \SL_2(\R)/\{\pm 1\}\)</span>, que de fet &#233;s <em>fidel</em>.</p>
+<p><strong>Remarca:</strong> De fet, el grup <span class="math notranslate nohighlight">\(\PSL_2(\R)\)</span> &#233;s el grup d&#8217;automorfismes anal&#237;tics d&#8217;<span class="math notranslate nohighlight">\(\H\)</span>.</p>
 </section>
 <section id="formes-modulars">
 <h2><span class="section-number">1.3. </span>Formes modulars<a class="headerlink" href="#formes-modulars" title="Permalink to this headline">&#182;</a></h2>
@@ -94,7 +101,7 @@ Per tant, veiem que <span class="math notranslate nohighlight">\(\operatorname{S
 <li class="toctree-l2"><a class="reference internal" href="#formes-modulars">1.3. Formes modulars</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="day2.html">2. Segon dia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dia2.html">2. Segon dia</a></li>
 </ul>
 
 
@@ -127,7 +134,7 @@ Per tant, veiem que <span class="math notranslate nohighlight">\(\operatorname{S
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
-      <a href="_sources/day1.rst.txt"
+      <a href="_sources/dia1.rst.txt"
           rel="nofollow">Page source</a>
     </div>
 
