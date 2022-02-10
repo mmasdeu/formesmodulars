@@ -1,6 +1,6 @@
 
 
-BIYSC 2021 - Can computers do math?
+Formes modulars: una introducció a la cinquena operació bàsica
 ================================================================
 
 .. toctree::
@@ -8,7 +8,7 @@ BIYSC 2021 - Can computers do math?
    :numbered: 
    :maxdepth: 2
 
-   day*
+   dia*
 
 
 .. Indices and tables
