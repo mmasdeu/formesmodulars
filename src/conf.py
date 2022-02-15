@@ -49,7 +49,7 @@ mathjax3_config = { 'tex': {'macros': {}},
 import re
 with open('mathsymbols.sty', 'r') as f:
     for line in f:
-        macros = re.findall(r'\\(DeclareRobustCommand|renewcommand|newcommand){\\(.*?)}(\[(\d)\])?{(.+)}', line)
+        macros = re.findall(r'\\(DeclareRobustCommand|renewcommand|newcommand|providecommand){\\(.*?)}(\[(\d)\])?{(.+)}', line)
         for macro in macros:
             if len(macro[2]) == 0:
                 mathjax3_config['tex']['macros'][macro[1]] = "{"+macro[4]+"}"
