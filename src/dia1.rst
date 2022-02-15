@@ -18,11 +18,11 @@ Definicions bàsiques
 
 Considerem el semiplà superior de Poincaré,
 $$
-\HH = \{z\in \C : \Im(z) >0\}
+\HH = \{z\in \CC : \Im(z) >0\}
 $$
 i el grup $\operatorname{SL}_2(\mathbb{R})$, definit com
 $$
-\SL_2(\R) = \left\{ \smtx abcd \in M_2(\R) : ad-bc = 1\right\}.
+\SL_2(\RR) = \left\{ \smtx abcd \in M_2(\RR) : ad-bc = 1\right\}.
 $$
 
 Aquest grup actua en els complexos (de fet, a $\mathbb{C} \cup \{\infty\}$)
@@ -34,11 +34,11 @@ $$
 \Im(gz) = \frac{\Im(z)}{ | cz+d | ^2}.
 $$
 
-Per tant, veiem que $\operatorname{SL}_2(\mathbb{R})$ actua a $\mathbb{H}$. També veiem que $-1$ actua trivialment, i per tant de fet tenim un grup del quocient $\PSL_2(\R) = \SL_2(\R)/\{\pm 1\}$, que de fet és *fidel*.
+Per tant, veiem que $\operatorname{SL}_2(\mathbb{R})$ actua a $\mathbb{H}$. També veiem que $-1$ actua trivialment, i per tant de fet tenim un grup del quocient $\PSL_2(\RR) = \SL_2(\RR)/\{\pm 1\}$, que de fet és *fidel*.
 
-**Remarca:** De fet, el grup $\PSL_2(\R)$ és el grup d'automorfismes analítics d'$\HH$.
+**Remarca:** De fet, el grup $\PSL_2(\RR)$ és el grup d'automorfismes analítics d'$\HH$.
 
-**Definició:** El grup $G = \SL_2(\R)/\{\pm 1\}$ s'anomena el *grup modular*. Sovint confondrem una matriu $g = \smtx abcd$ amb la seva imatge a $G$.
+**Definició:** El grup $G = \SL_2(\RR)/\{\pm 1\}$ s'anomena el *grup modular*. Sovint confondrem una matriu $g = \smtx abcd$ amb la seva imatge a $G$.
 
 El domini fonamental
 ====================
@@ -94,7 +94,7 @@ $$f(z+1)=f(z),\quad f(-1/z) = z^{k}f(z).$$
 
 **Remarca:** Aplicant la definició a $-1\in \SL_2(\Z)$ obtenim que $f(z)=(-1)^k f(z)$. Per tant, si $k$ és senar només la funció $0$ és dèbilment modular. Demanarem doncs, d'aquí en endavant, que $k$ sigui parell.
 
-Fixem-nos que, si $f(z+1)=f(z)$ per a tot $z\in \HH$, aleshores podem composar amb el canvi $q=e^{2\pi i z}$ i obtenir una funció $\tilde f(z)$ definida a $\tilde\HH=\{q\in \C : 0 < | q | < 1 \}$. Aleshores, $\tilde f$ tindrà una sèrie de Laurent al voltant de $q=0$:
+Fixem-nos que, si $f(z+1)=f(z)$ per a tot $z\in \HH$, aleshores podem composar amb el canvi $q=e^{2\pi i z}$ i obtenir una funció $\tilde f(z)$ definida a $\tilde\HH=\{q\in \CC : 0 < | q | < 1 \}$. Aleshores, $\tilde f$ tindrà una sèrie de Laurent al voltant de $q=0$:
 $$\tilde f(q) = \sum_{n=-\infty}^\infty a_nq^n.$$
 Direm aleshores que $f$ és *meromorfa a l'infinit* si $\tilde f$ és meromorfa a $q=0$ ($a_n=0$ per $n<<0$). També direm que $f$ és *holomorfa a l'infinit* si $a_n=0$ per $n < 0$, i $f$ s'anul·la a l'infinit si $a_n=0$ per $n\leq 0$.
 
@@ -142,7 +142,7 @@ $$
 $$
 és una forma cuspidal de pes $12$, anomenada la funció discriminant.
 
-**Remarca:** Definim, per $\tau\in\HH$ i $w\in\C$, la funció $\wp$ de Weierstrass, com
+**Remarca:** Definim, per $\tau\in\HH$ i $w\in\CC$, la funció $\wp$ de Weierstrass, com
 $$
 \wp_\tau(w)=\frac{1}{w^2}+\sum_{(c,d)\neq (0,0)} \left(\frac{1}{(w-c\tau-d)^2}-\frac{1}{(c\tau+d)^2}\right).
 $$
@@ -177,9 +177,9 @@ El teorema es demostra aplicant el teorema del residu a un contorn adequat, i no
 L'àlgebra de formes modulars
 ----------------------------
 
-Escrivim $M_k$ com el $\C$-espai vectorial format per les formes modulars de pes $k$, i $S_k$ com el subespai format per les formes cuspidals. Com que $S_k=\ker( f\mapsto f(\infty))$, tenim $\dim M_k/S_k\leq 1$. A més, quan $k\geq 4$ les sèries d'Eisenstein són de M_k\setminus S_k$ i, per tant
+Escrivim $M_k$ com el $\CC$-espai vectorial format per les formes modulars de pes $k$, i $S_k$ com el subespai format per les formes cuspidals. Com que $S_k=\ker( f\mapsto f(\infty))$, tenim $\dim M_k/S_k\leq 1$. A més, quan $k\geq 4$ les sèries d'Eisenstein són de M_k\setminus S_k$ i, per tant
 $$
-M_k = \C G_k \oplus S_k.
+M_k = \CC G_k \oplus S_k.
 $$
 
 Aplicarem la fórmula de la valència a alguns casos senzills. Per exemple, si $f$ és una funció holomorfa, aleshores tots els termes que apareixen a l'esquerra són positius o zero, i per tant $M_k=0$ per $k<0$. Per $k=2$, veiem que no hi ha manera d'obtenir $1/6$ sumant múltiples de $1$, $1/2$ i $1/3$, i per tant $M_2=0$.
@@ -195,17 +195,17 @@ Resumim el què hem demostrat:
 **Teorema:**
 
 1. $M_k=0$ per $k<0$ i $k=2$.
-2. $M_0=\C\cdot 1$, $M_4=\C\cdot G_4$, $M_6=\C\cdot G_6$, $M_8=\C\cdot G_8$ i $M_{10} = \C\cdot G_{10}$. En aquests casos, $S_k=0$.
+2. $M_0=\CC\cdot 1$, $M_4=\CC\cdot G_4$, $M_6=\CC\cdot G_6$, $M_8=\CC\cdot G_8$ i $M_{10} = \CC\cdot G_{10}$. En aquests casos, $S_k=0$.
 3. La multiplicació per $\Delta$ indueix un isomorfisme $M_{k-12}\cong S_k$.
 
 En particular, $\dim M_k=\lfloor k/12\rfloor$ si $k\equiv 2 \pmod{12}$, i $\dim M_k=\lfloor k/12\rfloor +1$ si $k\neq 2\pmod{12}$.
 
 **Corol·lari:** L'espai $M_k$ té com a base el conjunt de monomis $G_4^iG_6^j$, on $i,j\geq 0$ són enters amb $4i+6j=k$.
 
-*Prova:* Veiem primer que generen, cosa que és clara per $k\leq 6$. Per $k\geq 8$, fem inducció en $k$. Triem enters positius $i,j$ tals que $4i+6j=k$, i considerem $g =G_4^iG_6^j$, que no s'anula a l'infinit. Si $f\in M_k$, aleshores $f-\lambda g\in S_k$ per algun $\lambda\in\C$. Per aquest $\lambda$, tenim $f-\lambda g = \Delta h$ amb $h\in M_{k-12}$. Apliquem ara la hipòtesi d'inducció a $h$, i ja estem.
-Si aquests monomis no fossin linealment independents, la funció $G_4^3/G_6^2$ satisfaria un polinomi amb coeficients a $\C$ i, per tant, seria constant. Però això no pot ser, perquè $G_4$ s'anula a $\rho$ i $G_6$ no, per exemple.
+*Prova:* Veiem primer que generen, cosa que és clara per $k\leq 6$. Per $k\geq 8$, fem inducció en $k$. Triem enters positius $i,j$ tals que $4i+6j=k$, i considerem $g =G_4^iG_6^j$, que no s'anula a l'infinit. Si $f\in M_k$, aleshores $f-\lambda g\in S_k$ per algun $\lambda\in\CC$. Per aquest $\lambda$, tenim $f-\lambda g = \Delta h$ amb $h\in M_{k-12}$. Apliquem ara la hipòtesi d'inducció a $h$, i ja estem.
+Si aquests monomis no fossin linealment independents, la funció $G_4^3/G_6^2$ satisfaria un polinomi amb coeficients a $\CC$ i, per tant, seria constant. Però això no pot ser, perquè $G_4$ s'anula a $\rho$ i $G_6$ no, per exemple.
 
-**Remarca:** Es pot resumir l'anterior dient que $M=\bigoplus_{k\in\Z} M_k \cong \C[G_4,G_6]$.
+**Remarca:** Es pot resumir l'anterior dient que $M=\bigoplus_{k\in\Z} M_k \cong \CC[G_4,G_6]$.
 
 La funció j de Klein
 --------------------
@@ -215,9 +215,9 @@ j = E_2^3 / \Delta.
 $$
 Veiem que $j$ té un holomorfa a tot $\HH$, perquè $\Delta$ no s'anula. A més, té un pol simple a l'infinit, provinent del zero simple de $\Delta$.
 
-**Proposició:** L'aplicació $z\mapsto j(z)$ identifica $G\backslash \HH$ amb $\C$.
+**Proposició:** L'aplicació $z\mapsto j(z)$ identifica $G\backslash \HH$ amb $\CC$.
 
-*Prova:* com que $j$ és invariant per $G$, obtenim una funció ben definida $G\backslash \HH\to \C$. Hem de veure que, per a tot $\lambda\C$, existeix un únic $z\in G\backslash\HH$ tal que $j(z)=\lambda$ o, el què és el mateix, que la funció $f_\lambda(z)=E_2(z)^3 - \lambda\Delta(z)$ té un únic zero mòdul $G$. Aplicant la fórmula de la valència a $f_\lambda$ (que té pes $12$) veiem que hem de descomposar $1$ de la forma $a + b/2 + c/3$ amb $a,b,c\geq 0$. Les úniques possibilitats són $(1,0,0)$, $(0,2,0)$, $(0,0,3)$, i per tant hi ha un únic zero de $f_\lambda$ a $G\backslash\HH$. $\qed$
+*Prova:* com que $j$ és invariant per $G$, obtenim una funció ben definida $G\backslash \HH\to \CC$. Hem de veure que, per a tot $\lambda\CC$, existeix un únic $z\in G\backslash\HH$ tal que $j(z)=\lambda$ o, el què és el mateix, que la funció $f_\lambda(z)=E_2(z)^3 - \lambda\Delta(z)$ té un únic zero mòdul $G$. Aplicant la fórmula de la valència a $f_\lambda$ (que té pes $12$) veiem que hem de descomposar $1$ de la forma $a + b/2 + c/3$ amb $a,b,c\geq 0$. Les úniques possibilitats són $(1,0,0)$, $(0,2,0)$, $(0,0,3)$, i per tant hi ha un únic zero de $f_\lambda$ a $G\backslash\HH$. $\qed$
 
 De fet, d'alguna manera la funció $j$ dona lloc a totes les funcions modulars de pes zero:
 
