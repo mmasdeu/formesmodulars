@@ -18,7 +18,7 @@ Definicions bàsiques
 
 Considerem el semiplà superior de Poincaré,
 $$
-\H = \{z\in \C : \Im(z) >0\}
+\HH = \{z\in \C : \Im(z) >0\}
 $$
 i el grup $\operatorname{SL}_2(\mathbb{R})$, definit com
 $$
@@ -36,7 +36,7 @@ $$
 
 Per tant, veiem que $\operatorname{SL}_2(\mathbb{R})$ actua a $\mathbb{H}$. També veiem que $-1$ actua trivialment, i per tant de fet tenim un grup del quocient $\PSL_2(\R) = \SL_2(\R)/\{\pm 1\}$, que de fet és *fidel*.
 
-**Remarca:** De fet, el grup $\PSL_2(\R)$ és el grup d'automorfismes analítics d'$\H$.
+**Remarca:** De fet, el grup $\PSL_2(\R)$ és el grup d'automorfismes analítics d'$\HH$.
 
 **Definició:** El grup $G = \SL_2(\R)/\{\pm 1\}$ s'anomena el *grup modular*. Sovint confondrem una matriu $g = \smtx abcd$ amb la seva imatge a $G$.
 
@@ -51,15 +51,15 @@ Actuen enviant $z$ a $S\cdot z=-1/z$ i $T\cdot z = z+1$. A més, satisfan les re
 $$
 S^2=1,\quad (ST)^3=1.
 $$
-Considerem ara el conjunt $D\subseteq \H$ definit com
+Considerem ara el conjunt $D\subseteq \HH$ definit com
 $$
-D = \{ z \in \H : \Re(z)\leq 1/2, | z | \geq 1 \}.
+D = \{ z \in \HH : \Re(z)\leq 1/2, | z | \geq 1 \}.
 $$
 Es té el següent teorema:
 
 **Teorema:**
 
-1. Per cada $z\in \H$, hi ha algun $g\in G$ tal que $g\cdot z \in D$.
+1. Per cada $z\in \HH$, hi ha algun $g\in G$ tal que $g\cdot z \in D$.
 #. Siguin $z, z'\in D$ congruents mòdul $G$. Aleshores o bé $\Re(z)=\pm 1/2$ i $z=z'\pm 1$, o bé $| z | = 1$ i $z'=-1/z$.
 #. Sigui $z\in D$, i considerem $G_z=\{g \in G: g\cdot z = z\}$. Aleshores $G_z=1$ excepte si:
 
@@ -67,12 +67,12 @@ Es té el següent teorema:
    #. $z = \rho=e^{2\pi i/3}$, i aleshores $G_\rho=\{1, ST, (ST)^2\}$.
    #. $z = -\bar\rho=e^{\pi i /3}$, i aleshores $G_{-\bar\rho}=\{1, (TS), (TS)^2\}$.
 
-*Prova:* El primer pas és considerar $G'=\langle S, T\rangle$ i $z\in\H$, i veure que hi ha un $g'\in G'$ tal que $g'\cdot z \in D$. Hi un nombre finit de parelles $(c,d)$ tals que $ | c z + d | $ és menor que un nombre fixat. Per tant, hi ha algun $g\in G'$ tal que $\Im(g\cdot z)$ és màxim. També hi ha un enter $n$ tal que $z'=T^ng z$ té part real entre $-1/2$ i $1/2$. Aleshores es veu que $z'$ pertany a $D$...
+*Prova:* El primer pas és considerar $G'=\langle S, T\rangle$ i $z\in\HH$, i veure que hi ha un $g'\in G'$ tal que $g'\cdot z \in D$. Hi un nombre finit de parelles $(c,d)$ tals que $ | c z + d | $ és menor que un nombre fixat. Per tant, hi ha algun $g\in G'$ tal que $\Im(g\cdot z)$ és màxim. També hi ha un enter $n$ tal que $z'=T^ng z$ té part real entre $-1/2$ i $1/2$. Aleshores es veu que $z'$ pertany a $D$...
 
 ..  TODO: acabar-la.
 
 
-**Corol·lari:** L'aplicació de pas al quocient $D \to \H/G$ és exhaustiva, i la seva restricció a l'interior de $D$ és injectiva.
+**Corol·lari:** L'aplicació de pas al quocient $D \to \HH/G$ és exhaustiva, i la seva restricció a l'interior de $D$ és injectiva.
 
 **Teorema:** El grup $G$ està generat per $S$ i $T$. De fet, es té $G=\langle S, T | S^2=(ST)^3=1 \rangle$.
 
@@ -82,19 +82,19 @@ Formes modulars
 Definicions
 -----------
 
-**Definició:** Diem que una funció $f$ meromorfa a $\H$ és *dèbilment modular* de pes $k\in\Z$ si
+**Definició:** Diem que una funció $f$ meromorfa a $\HH$ és *dèbilment modular* de pes $k\in\Z$ si
 $$f(g\cdot z) = (cz+d)^k f(z),\forall g=\smtx abcd \in\SL_2(\Z).$$
 
 És convenient introduir aquí la notació "slash": definim $f | g$ com la funció (que depèn de $k$, encara que no ho posem a la notació)
 $$(f | g)(z) = (cz+d)^{-k} f(z).$$
 Aleshores veiem que $f$ és dèbilment modular si, i només si, $f| g=f$ per a tot $g\in \SL_2(\Z)$.
 
-Com que $G$ està generat pels elements $S$ i $T$, aquesta condició és equivalent a demanar que, per a tot $z\in \H$,
+Com que $G$ està generat pels elements $S$ i $T$, aquesta condició és equivalent a demanar que, per a tot $z\in \HH$,
 $$f(z+1)=f(z),\quad f(-1/z) = z^{k}f(z).$$
 
 **Remarca:** Aplicant la definició a $-1\in \SL_2(\Z)$ obtenim que $f(z)=(-1)^k f(z)$. Per tant, si $k$ és senar només la funció $0$ és dèbilment modular. Demanarem doncs, d'aquí en endavant, que $k$ sigui parell.
 
-Fixem-nos que, si $f(z+1)=f(z)$ per a tot $z\in \H$, aleshores podem composar amb el canvi $q=e^{2\pi i z}$ i obtenir una funció $\tilde f(z)$ definida a $\tilde\H=\{q\in \C : 0 < | q | < 1 \}$. Aleshores, $\tilde f$ tindrà una sèrie de Laurent al voltant de $q=0$:
+Fixem-nos que, si $f(z+1)=f(z)$ per a tot $z\in \HH$, aleshores podem composar amb el canvi $q=e^{2\pi i z}$ i obtenir una funció $\tilde f(z)$ definida a $\tilde\HH=\{q\in \C : 0 < | q | < 1 \}$. Aleshores, $\tilde f$ tindrà una sèrie de Laurent al voltant de $q=0$:
 $$\tilde f(q) = \sum_{n=-\infty}^\infty a_nq^n.$$
 Direm aleshores que $f$ és *meromorfa a l'infinit* si $\tilde f$ és meromorfa a $q=0$ ($a_n=0$ per $n<<0$). També direm que $f$ és *holomorfa a l'infinit* si $a_n=0$ per $n < 0$, i $f$ s'anul·la a l'infinit si $a_n=0$ per $n\leq 0$.
 
@@ -104,7 +104,7 @@ Resumint, una forma modular de pes $k$ ve donada per una sèrie
 $$
 f(z) = \sum_{n=0}^\infty a_n q^n = \sum_{n=0}^\infty a_ne^{2\pi i z},
 $$
-que convergeix per a tot $z\in \H$, i que satisfà $f(-1/z) = z^kf(z)$.
+que convergeix per a tot $z\in \HH$, i que satisfà $f(-1/z) = z^kf(z)$.
 
 **Remarca:** Si multipliquem una forma modular $f$ de pes $k$ amb una $f'$ de pes $k'$ obtindrem una forma $ff'$ de pes $k+k'$.
 
@@ -129,7 +129,7 @@ $$
 $$
 \#\{ (c,d)\neq (0,0) : N \leq \abs{c\rho + d}< N+1\} = O(N)
 $$
-i $\sum_n n^{1-k}$ convergeix per $k>2$, ja estem. Com que $D$ és compacte, la sèrie $G_k(z)$ convergeix normalment a $D$ i, com que podem traslladar $D$ per recobrir tot $\H$ amb elements de $\SL_2(\Z)$, en deduïm que $G_k(z)$ també convergeix a tot $\H$ a una funció holomorfa.
+i $\sum_n n^{1-k}$ convergeix per $k>2$, ja estem. Com que $D$ és compacte, la sèrie $G_k(z)$ convergeix normalment a $D$ i, com que podem traslladar $D$ per recobrir tot $\HH$ amb elements de $\SL_2(\Z)$, en deduïm que $G_k(z)$ també convergeix a tot $\HH$ a una funció holomorfa.
 
 Per calcular $G_k(\infty)$, prenem el límit quan $\Im(z)\to\infty$, i això ho podem fer mantenint $z$ a $D$. En aquest cas, gràcies a la convergència uniforme de la sèrie podem prendre el límit terme a terme. Els termes que tenen $c\neq 0$ tots van a $0$, i només ens queda
 $$
@@ -142,7 +142,7 @@ $$
 $$
 és una forma cuspidal de pes $12$, anomenada la funció discriminant.
 
-**Remarca:** Definim, per $\tau\in\H$ i $w\in\C$, la funció $\wp$ de Weierstrass, com
+**Remarca:** Definim, per $\tau\in\HH$ i $w\in\C$, la funció $\wp$ de Weierstrass, com
 $$
 \wp_\tau(w)=\frac{1}{w^2}+\sum_{(c,d)\neq (0,0)} \left(\frac{1}{(w-c\tau-d)^2}-\frac{1}{(c\tau+d)^2}\right).
 $$
@@ -161,14 +161,14 @@ L'espai de les formes modulars
 
 Zeros i pols d'una funció modular
 ---------------------------------
-Sigui $f\neq 0$ una funció meromorfa a $\H$, i sigui $\tau\in\H$. Escrivim $v_{\tau}(f)$ com l'enter tal que $(z-\tau)^{- v_{\tau}(f)} f(z)$ és holomorfa i diferent de zero a $z=\tau$ (l'ordre de $f$ a $\tau$).
+Sigui $f\neq 0$ una funció meromorfa a $\HH$, i sigui $\tau\in\HH$. Escrivim $v_{\tau}(f)$ com l'enter tal que $(z-\tau)^{- v_{\tau}(f)} f(z)$ és holomorfa i diferent de zero a $z=\tau$ (l'ordre de $f$ a $\tau$).
 
-Si $f$ és una funció modular de pes $k$, aleshores $v_\tau(f)=v_{g\tau}(f)$, perquè $cz+d$ és holomorfa i diferent de zero a tot $\H$. També podem definir $v_\infty(f)=n_0$ si $\tilde f(q)=\sum_{n\geq n_0} a_nq^n$ amb $a_{n_0}\neq 0$.
+Si $f$ és una funció modular de pes $k$, aleshores $v_\tau(f)=v_{g\tau}(f)$, perquè $cz+d$ és holomorfa i diferent de zero a tot $\HH$. També podem definir $v_\infty(f)=n_0$ si $\tilde f(q)=\sum_{n\geq n_0} a_nq^n$ amb $a_{n_0}\neq 0$.
 
 **Teorema (fórmula de la valència):** Si $f\neq 0$ és una funció modular de pes $k$, es té
-$$v_{\infty}(f) + \frac{1}{2} v_{i}(f) +\frac{1}{3}v_{\rho}(f) +\sum_{\tau\in G\backslash \H} v_{\tau}(f) = \frac{k}{12},
+$$v_{\infty}(f) + \frac{1}{2} v_{i}(f) +\frac{1}{3}v_{\rho}(f) +\sum_{\tau\in G\backslash \HH} v_{\tau}(f) = \frac{k}{12},
 $$
-on la suma recorre les òrbites de punts d'$\H$ diferents de $i$ i $\rho$.
+on la suma recorre les òrbites de punts d'$\HH$ diferents de $i$ i $\rho$.
 
 **Remarca:** la suma només conté un nombre finit de termes no nuls. En efecte, com que $f$ és meromorfa tenim que $\tilde f$ no té cap zero ni pol al disc $0<\abs{q}<r$ per algun $r >0$. Per tant, $f$ no té zeros ni pols a la regió $\Im(z)>\frac{\log(1/r)}{2\pi}$ i, llavors $f$ té tots els zeros i pols de $D$ a la regió compacta $D\cap \Im(z)< \frac{\log(1/r)}{2\pi}$, on només n'hi pot haver un nombre finit.
 
@@ -184,7 +184,7 @@ $$
 
 Aplicarem la fórmula de la valència a alguns casos senzills. Per exemple, si $f$ és una funció holomorfa, aleshores tots els termes que apareixen a l'esquerra són positius o zero, i per tant $M_k=0$ per $k<0$. Per $k=2$, veiem que no hi ha manera d'obtenir $1/6$ sumant múltiples de $1$, $1/2$ i $1/3$, i per tant $M_2=0$.
 
-Ara, apliquem la fórmula a $G_4$. Podem escriure 1/3 = 0 + 1/2\cdot 0 + 1/3\cdot 1+0$ (i només d'aquesta manera), i per tant $G_4(\rho)=0$ (amb ordre $1$), i no s'anul·la enlloc més. De forma semblant, $v_{i}(G_6) = 1$ i aquest és l'únic punt on s'anul·la $G_6$. Observem llavors que $\Delta(i)\neq 0$ i que, per tant $\Delta\neq 0$. A més, per construcció $v_{\infty}(\Delta)\geq 1$. Per tant, la fórmula de la valència ens diu que $\Delta$ no s'anul·la a $\H$, i té un zero simple a l'infinit.
+Ara, apliquem la fórmula a $G_4$. Podem escriure 1/3 = 0 + 1/2\cdot 0 + 1/3\cdot 1+0$ (i només d'aquesta manera), i per tant $G_4(\rho)=0$ (amb ordre $1$), i no s'anul·la enlloc més. De forma semblant, $v_{i}(G_6) = 1$ i aquest és l'únic punt on s'anul·la $G_6$. Observem llavors que $\Delta(i)\neq 0$ i que, per tant $\Delta\neq 0$. A més, per construcció $v_{\infty}(\Delta)\geq 1$. Per tant, la fórmula de la valència ens diu que $\Delta$ no s'anul·la a $\HH$, i té un zero simple a l'infinit.
 
 Finalment, sigui $f$ un element de $S_k$, i definim $g=f/\Delta$. Aleshores $g$ té pes $k-12$, i $v_{\tau}(g)\geq 0$ per a tot $\tau$. Per tant $g\in M_{k-12}$.
 
@@ -213,17 +213,17 @@ Definim la següent funció modular de pes $0$:
 $$
 j = E_2^3 / \Delta.
 $$
-Veiem que $j$ té un holomorfa a tot $\H$, perquè $\Delta$ no s'anula. A més, té un pol simple a l'infinit, provinent del zero simple de $\Delta$.
+Veiem que $j$ té un holomorfa a tot $\HH$, perquè $\Delta$ no s'anula. A més, té un pol simple a l'infinit, provinent del zero simple de $\Delta$.
 
-**Proposició:** L'aplicació $z\mapsto j(z)$ identifica $G\backslash \H$ amb $\C$.
+**Proposició:** L'aplicació $z\mapsto j(z)$ identifica $G\backslash \HH$ amb $\C$.
 
-*Prova:* com que $j$ és invariant per $G$, obtenim una funció ben definida $G\backslash \H\to \C$. Hem de veure que, per a tot $\lambda\C$, existeix un únic $z\in G\backslash\H$ tal que $j(z)=\lambda$ o, el què és el mateix, que la funció $f_\lambda(z)=E_2(z)^3 - \lambda\Delta(z)$ té un únic zero mòdul $G$. Aplicant la fórmula de la valència a $f_\lambda$ (que té pes $12$) veiem que hem de descomposar $1$ de la forma $a + b/2 + c/3$ amb $a,b,c\geq 0$. Les úniques possibilitats són $(1,0,0)$, $(0,2,0)$, $(0,0,3)$, i per tant hi ha un únic zero de $f_\lambda$ a $G\backslash\H$. $\qed$
+*Prova:* com que $j$ és invariant per $G$, obtenim una funció ben definida $G\backslash \HH\to \C$. Hem de veure que, per a tot $\lambda\C$, existeix un únic $z\in G\backslash\HH$ tal que $j(z)=\lambda$ o, el què és el mateix, que la funció $f_\lambda(z)=E_2(z)^3 - \lambda\Delta(z)$ té un únic zero mòdul $G$. Aplicant la fórmula de la valència a $f_\lambda$ (que té pes $12$) veiem que hem de descomposar $1$ de la forma $a + b/2 + c/3$ amb $a,b,c\geq 0$. Les úniques possibilitats són $(1,0,0)$, $(0,2,0)$, $(0,0,3)$, i per tant hi ha un únic zero de $f_\lambda$ a $G\backslash\HH$. $\qed$
 
 De fet, d'alguna manera la funció $j$ dona lloc a totes les funcions modulars de pes zero:
 
 **Proposició:** Tota funció modular de pes zero és una funció racional en $j$.
 
-*Prova:* Sigui $f$ una funció modular. Multiplicant-la per un polinomi en $j$, posem suposar que és holomorfa a $\H$. D'altra banda, com que $\Delta$ té un zero simple a l'infinit, podem multiplicar $f$ per $\Delta^n$ de manera que $g=\Delta^nf$ sigui holomorfa també a l'infinit. Aleshores $g$ és una forma modular de pes $12n$, que podem escriure com un polinomi (4,6)-homogeni en $E_4$ i $E_6$, de grau $12n$. Per linealitat, n'hi ha prou amb veure que $f=E_4^iE_6^j/\Delta^n$ és una funció racional en $j$. Observem però que, com que $4i+6j=12n$, tant $p=i/3$ com $q=j/2$ són enters i, per tant, $f=E_4^{3p}E_6^{2q}/\Delta^{p+q}=(\frac{E_4^3}{\Delta})^p(\frac{E_6^2}{\Delta})^q$. Però tant $E_4^3/\Delta$ com $E_6^2/\Delta$ són funcions racionals en $j$, i ja estem. $\qed$
+*Prova:* Sigui $f$ una funció modular. Multiplicant-la per un polinomi en $j$, posem suposar que és holomorfa a $\HH$. D'altra banda, com que $\Delta$ té un zero simple a l'infinit, podem multiplicar $f$ per $\Delta^n$ de manera que $g=\Delta^nf$ sigui holomorfa també a l'infinit. Aleshores $g$ és una forma modular de pes $12n$, que podem escriure com un polinomi (4,6)-homogeni en $E_4$ i $E_6$, de grau $12n$. Per linealitat, n'hi ha prou amb veure que $f=E_4^iE_6^j/\Delta^n$ és una funció racional en $j$. Observem però que, com que $4i+6j=12n$, tant $p=i/3$ com $q=j/2$ són enters i, per tant, $f=E_4^{3p}E_6^{2q}/\Delta^{p+q}=(\frac{E_4^3}{\Delta})^p(\frac{E_6^2}{\Delta})^q$. Però tant $E_4^3/\Delta$ com $E_6^2/\Delta$ són funcions racionals en $j$, i ja estem. $\qed$
 
 **Remarca:** Aviat veurem les $q$-expansions de les sèries d'Eisenstein, i podrem deduir-ne la de $j$, que de fet és
 $$

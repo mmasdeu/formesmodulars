@@ -61,7 +61,7 @@ $$
 
 Resumint, hem trobat:
 
-**Teorema:** La funció $G_2$ satisfà, per a tot $z\in \H$,
+**Teorema:** La funció $G_2$ satisfà, per a tot $z\in \HH$,
 $$
 G_2(z+1) = G_2(z),\quad z^{-2}G_2(-1/z)-G_2(z) = \frac{-2\pi i}{z}.
 $$
@@ -90,7 +90,7 @@ Resumint,
 $$
 \dlog\tilde\Delta = 2\pi i E_2.
 $$
-Això vol dir que per a tot $z\in\H$,
+Això vol dir que per a tot $z\in\HH$,
 $$
 \dlog \left(z^{-12}\tilde\Delta(-1/z)\right) = \frac{-12}{z} + \dlog\tilde\Delta(-1/z) =  2\pi i E_2(z)=\dlog\tilde\Delta(z).
 $$
