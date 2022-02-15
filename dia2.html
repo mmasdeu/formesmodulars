@@ -13,9 +13,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="3. Tercer dia" href="dia3.html" />
     <link rel="prev" title="1. Primer dia" href="dia1.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -35,6 +38,142 @@
             
   <section id="segon-dia">
 <span id="day2"></span><h1><span class="section-number">2. </span>Segon dia<a class="headerlink" href="#segon-dia" title="Permalink to this headline">&#182;</a></h1>
+<section id="la-serie-d-eisenstein-de-pes-2">
+<h2><span class="section-number">2.1. </span>La s&#232;rie d&#8217;Eisenstein de pes <span class="math notranslate nohighlight">\(2\)</span><a class="headerlink" href="#la-serie-d-eisenstein-de-pes-2" title="Permalink to this headline">&#182;</a></h2>
+<p>Considerem la funci&#243;
+<div class="math notranslate nohighlight">
+\[
+G_2(z) = \sum_{m=-\infty}^\infty \sum_{n=-\infty}^\infty \frac{1}{(mz+n)^2},
+\]</div>
+
+on si <span class="math notranslate nohighlight">\(m=0\)</span> hem d&#8217;ometre el terme <span class="math notranslate nohighlight">\(n=0\)</span> (a partir d&#8217;ara aix&#242; no ho direm). Podem separar el terme <span class="math notranslate nohighlight">\(m=0\)</span> i obtenir:
+<div class="math notranslate nohighlight">
+\[
+G_2(z) = 2\zeta(2) + 2\sum_{m\neq 0}\sum_{n\in\Z} \frac{1}{(mz+n)^2}.
+\]</div>
+
+Igual que hem fet amb les series d&#8217;Eisenstein de pes <span class="math notranslate nohighlight">\(k\geq 4\)</span>, podem calcular els coeficients de Fourier de <span class="math notranslate nohighlight">\(G_2\)</span>, i obtenim
+<div class="math notranslate nohighlight">
+\[
+G_2(z)= 2\zeta(2)  - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n.
+\]</div>
+
+&#201;s clar, doncs, que <span class="math notranslate nohighlight">\(G_2(z+1)=G_2(z)\)</span>. Ara b&#233;, si intentem calcular <span class="math notranslate nohighlight">\(G_2(-1/z)\)</span> trobarem un comportament curi&#243;s:
+<div class="math notranslate nohighlight">
+\[
+G_2(-1/z) = \sum_{m=-\infty}^\infty\sum_{n=-\infty}^\infty \frac{z^2}{(nz+m)^2} = z^2\sum_{n=-\infty}^\infty\sum_{m=-\infty}^\infty \frac{1}{(mz+n)^2}.
+\]</div>
+
+Fixem-nos que l&#8217;ordre dels sumatoris est&#224; canviat! Per relacionar-ho altra vegada amb <span class="math notranslate nohighlight">\(G(z)\)</span>, ens cal primer poder-la escriure com la suma d&#8217;una s&#232;rie absolutament convergent.</p>
+<p><strong>Lema:</strong> Es pot escriure
+<div class="math notranslate nohighlight">
+\[
+G_2(z) = 2\zeta(2) + \sum_{m\neq 0,n\in\Z}\frac{1}{(mz+n)^2(mz+n+1)},
+\]</div>
+
+on la s&#232;rie &#233;s absolutament convergent.</p>
+<p><em>Prova:</em> Nom&#233;s cal calcular
+<div class="math notranslate nohighlight">
+\[
+\sum_{m\neq 0}\sum_{n\in\Z} \frac{1}{(mz+n)(mz+n+1)} = \sum_{m\neq 0}\sum_{n\in\Z} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right) = \sum_{m\neq 0} 0 = 0.
+\]</div>
+</p>
+<p>Per tant, podem restar el terme general de sobre de la s&#232;rie que defineix <span class="math notranslate nohighlight">\(G_2(z)\)</span>, per obtenir
+<div class="math notranslate nohighlight">
+\[\begin{split}
+G_2(z) = 2\zeta(2) + \sum_{m\neq 0}\sum_{n\in\Z} \left(\frac{1}{(mz+n)^2}-\frac{1}{(mz+n)(mz+n+1)}\right)\\=2\zeta(2)+\sum_{m\neq 0
+}\sum_{n\in\Z}\frac{1}{(mz+n)^2(mz+n+1)}.\quad\qed
+\end{split}\]</div>
+</p>
+<p>Ara podem veure com es transforma <span class="math notranslate nohighlight">\(G_2\)</span>:
+<div class="math notranslate nohighlight">
+\[\begin{split}
+z^{-2}G_2(-1/z)-G_2(z)= \sum_{n\in \Z}\sum_{m\neq 0}\left(\frac{1}{(mz+n)^2} - \frac{1}{(mz+n)^2(mz+n+1)}\right)\\= \sum_{n\in\Z}\sum_{m\neq 0} \frac{1}{(mz+n)(mz+n+1)} = \sum_{n\in\Z}\sum_{m\neq 0}\left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right)
+\end{split}\]</div>
+
+Aquesta &#250;ltima suma la podem calcular expl&#237;citament:
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\sum_{n=-N}^{N-1}\sum_{m\neq 0} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right) =  \sum_{m\neq 0}\sum_{n=-N}^{N-1} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right)\\= \sum_{m\neq 0} \left(\frac{1}{mz-N}-\frac{1}{mz+N}\right) = \frac{-2\pi}{z}\cot(\pi N/z).
+\end{split}\]</div>
+
+Per poder calcular el l&#237;mit, observem que
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\cot(\pi N/z) = i(1-2\sum_{m=0}^\infty e^{2\pi mN/z})\substack{\to\\{\tiny N\rightarrow\infty}} i.
+\end{split}\]</div>
+</p>
+<p>Resumint, hem trobat:</p>
+<p><strong>Teorema:</strong> La funci&#243; <span class="math notranslate nohighlight">\(G_2\)</span> satisf&#224;, per a tot <span class="math notranslate nohighlight">\(z\in \HH\)</span>,
+<div class="math notranslate nohighlight">
+\[
+G_2(z+1) = G_2(z),\quad z^{-2}G_2(-1/z)-G_2(z) = \frac{-2\pi i}{z}.
+\]</div>
+
+De fet, per a tot <span class="math notranslate nohighlight">\(\gamma=\smtx abcd\in\SL_2(\Z)\)</span>,
+<div class="math notranslate nohighlight">
+\[
+G_2(\gamma z) = (cz+d)^2G_2(z) - 2\pi i c(cz+d).
+\]</div>
+</p>
+<p>A m&#233;s, <span class="math notranslate nohighlight">\(G_2\)</span> t&#233; la <span class="math notranslate nohighlight">\(q\)</span> expansi&#243;
+<div class="math notranslate nohighlight">
+\[
+G_2(z) = 2\zeta(2) - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n = \frac{\pi^2}{3}\left(1-24\sum_{n=1}^\infty \sigma-1(n)q^n\right).
+\]</div>
+</p>
+</section>
+<section id="l-expansio-de-delta">
+<h2><span class="section-number">2.2. </span>L&#8217;expansi&#243; de <span class="math notranslate nohighlight">\(\Delta\)</span><a class="headerlink" href="#l-expansio-de-delta" title="Permalink to this headline">&#182;</a></h2>
+<p>Volem donar una f&#243;rmula per <span class="math notranslate nohighlight">\(\Delta(z)=\frac{E_4(z)^3-E_6(z)^2}{1728}\)</span>. Per aix&#242;, considerem <span class="math notranslate nohighlight">\(\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}\)</span>. Veurem que aquestes dues funcions coincideixen (<span class="math notranslate nohighlight">\(q=e^{2\pi i z})\)</span>. Prenent la derivada logar&#237;tmica, obtenim (fixem-nos que <span class="math notranslate nohighlight">\(\dlog q = 2\pi i\)</span>)
+<div class="math notranslate nohighlight">
+\[
+\dlog \tilde\Delta = 2\pi i + 24\sum_{n=1}^\infty \frac{-2\pi i n q^n}{1-q^n} = 2\pi i\left(1-24\sum_{n=1}^\infty\frac{nq^n}{1-q^n}\right).
+\]</div>
+
+Observem que
+<div class="math notranslate nohighlight">
+\[
+\sum_{n=1}^\infty \frac{nq^n}{1-q^n}=\sum_{n=1}^\infty n\sum_{m=1}^\infty q^{nm} = \sum_{n\geq 1}\sigma_1(n)q^n.
+\]</div>
+
+Resumint,
+<div class="math notranslate nohighlight">
+\[
+\dlog\tilde\Delta = 2\pi i E_2.
+\]</div>
+
+Aix&#242; vol dir que per a tot <span class="math notranslate nohighlight">\(z\in\HH\)</span>,
+<div class="math notranslate nohighlight">
+\[
+\dlog \left(z^{-12}\tilde\Delta(-1/z)\right) = \frac{-12}{z} + \dlog\tilde\Delta(-1/z) =  2\pi i E_2(z)=\dlog\tilde\Delta(z).
+\]</div>
+
+Per tant, <span class="math notranslate nohighlight">\(z^{-12}\tilde\Delta(-1/z) = C \tilde\Delta(z)\)</span>. Evaluant a <span class="math notranslate nohighlight">\(z=i\)</span> podem veure que <span class="math notranslate nohighlight">\(C=1\)</span> (ja que <span class="math notranslate nohighlight">\(\Delta(i)\neq 0\)</span>) i que, per tant <span class="math notranslate nohighlight">\(\tilde\Delta\)</span> &#233;s una forma modular de pes <span class="math notranslate nohighlight">\(12\)</span>. Per tant, &#233;s un m&#250;ltiple de <span class="math notranslate nohighlight">\(\Delta(z)\)</span>, que ha de ser <span class="math notranslate nohighlight">\(1\)</span> perqu&#232; les s&#232;ries de Fourier comencen ambdues per <span class="math notranslate nohighlight">\(q+O(q^2)\)</span>.</p>
+</section>
+<section id="la-funcio-tau-de-ramanujan">
+<h2><span class="section-number">2.3. </span>La funci&#243; <span class="math notranslate nohighlight">\(\tau\)</span> de Ramanujan<a class="headerlink" href="#la-funcio-tau-de-ramanujan" title="Permalink to this headline">&#182;</a></h2>
+<p>Recordem la funci&#243; <span class="math notranslate nohighlight">\(\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}\)</span>. Calculant els primers termes del producte, de seguida veiem que
+<div class="math notranslate nohighlight">
+\[
+\tilde\Delta = \sum_{n\geq 1} \tau(n)q^n = q - 24 q^{2} + 252 q^{3} - 1472 q^{4} + 4830 q^{5} - 6048 q^{6} - 16744 q^{7} + O(q^{8}).
+\]</div>
+
+Ramanujan va ser el primer a estudiar la funci&#243; <span class="math notranslate nohighlight">\(\tau(n)\)</span> funci&#243; el 1916, i va conjecturar que:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\tau(n)\tau(m)=\tau(nm)\)</span> si <span class="math notranslate nohighlight">\((n,m)=1\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\tau(p^{k+1}) = \tau(p)\tau(p^k) - p^{11}\tau(p^{k-1})\)</span>, i</p></li>
+<li><p>$abs{tau(n)} leq 2p^{11/2}.</p></li>
+</ol>
+<p>Tamb&#233; va observar (sense demostrar-les) tot de congru&#232;ncies que satisf&#224;:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\tau(n)\equiv n^2\sigma_7(n)\pmod{27}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\tau(n)\equiv n\sigma_3(n)\pmod{7}\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(\tau(n)\equiv \sigma_{11}(n)\pmod{691}\)</span>.</p></li>
+</ol>
+<p>A m&#233;s, Ramanujan va relacionar <span class="math notranslate nohighlight">\(\tau(n)\)</span> amb si <span class="math notranslate nohighlight">\(r_{24}(n)\)</span>, el nombre de maneres d&#8217;escriure <span class="math notranslate nohighlight">\(n\)</span> com a suma de <span class="math notranslate nohighlight">\(24\)</span> quadrats (!)</p>
+<p>Tot aix&#242;, vist un segle despr&#233;s, &#233;s relativament f&#224;cil de demostrar amb la teoria de les formes modulars.</p>
+</section>
 </section>
 
 
@@ -56,7 +195,13 @@
 <!-- <h3>Navigation</h3> -->
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dia1.html">1. Primer dia</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Segon dia</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. Segon dia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#la-serie-d-eisenstein-de-pes-2">2.1. La s&#232;rie d&#8217;Eisenstein de pes <span class="math notranslate nohighlight">\(2\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#l-expansio-de-delta">2.2. L&#8217;expansi&#243; de <span class="math notranslate nohighlight">\(\Delta\)</span></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#la-funcio-tau-de-ramanujan">2.3. La funci&#243; <span class="math notranslate nohighlight">\(\tau\)</span> de Ramanujan</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="dia3.html">3. Tercer dia</a></li>
 </ul>
 
 

@@ -13,7 +13,7 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"Q": "{\\mathbb{Q}}", "R": "{\\mathbb{R}}", "C": "{\\mathbb{C}}", "H": "{\\mathbb{H}}", "SL": "{\\operatorname{SL}}", "GL": "{\\operatorname{GL}}", "PSL": "{\\operatorname{PSL}}", "PGL": "{\\operatorname{PGL}}", "lto": "{\\longrightarrow}", "dfn": "{\\ensuremath{:=}}", "surjects": "{\\twoheadrightarrow}", "injects": "{\\hookrightarrow}", "id": "{\\ensuremath \\text{Id}}", "mtx": ["{\\left(\\begin{matrix}#1&#2\\\\#3&#4\\end{matrix}\\right)}", 4], "mat": ["{\\left(\\begin{matrix}#1\\end{matrix}\\right)}", 1], "smat": ["{\\left(\\begin{smallmatrix}#1\\end{smallmatrix}\\right)}", 1], "smtx": ["{\\left(\\begin{smallmatrix}#1&#2\\\\#3&#4\\end{smallmatrix}\\right)}", 4], "slz": "{\\operatorname{SL}_2(\\bZ)}", "Im": "{\\operatorname{Im}}", "Re": "{\\operatorname{Re}}"}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true}}</script>
+    <script>window.MathJax = {"tex": {"macros": {}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="Index" href="genindex.html" />
@@ -38,23 +38,18 @@
             
   <section id="primer-dia">
 <span id="day1"></span><h1><span class="section-number">1. </span>Primer dia<a class="headerlink" href="#primer-dia" title="Permalink to this headline">&#182;</a></h1>
-<section id="links-to-lectures">
-<h2><span class="section-number">1.1. </span>Links to lectures<a class="headerlink" href="#links-to-lectures" title="Permalink to this headline">&#182;</a></h2>
-<p>Videos of Keith Conrad: <a class="reference external" href="https://www.youtube.com/watch?v=LolxzYwN1TQ">https://www.youtube.com/watch?v=LolxzYwN1TQ</a>
-Keith Conrad: <a class="reference external" href="https://ctnt-summer.math.uconn.edu/wp-content/uploads/sites/1632/2016/02/CTNTmodularforms.pdf">https://ctnt-summer.math.uconn.edu/wp-content/uploads/sites/1632/2016/02/CTNTmodularforms.pdf</a></p>
-</section>
-<section id="el-grup-modular">
-<h2><span class="section-number">1.2. </span>El grup modular<a class="headerlink" href="#el-grup-modular" title="Permalink to this headline">&#182;</a></h2>
+<section id="definicions-basiques">
+<h2><span class="section-number">1.1. </span>Definicions b&#224;siques<a class="headerlink" href="#definicions-basiques" title="Permalink to this headline">&#182;</a></h2>
 <p>Considerem el semipl&#224; superior de Poincar&#233;,
 <div class="math notranslate nohighlight">
 \[
-\H = \{z\in \C : \Im(z) &gt;0\}
+\HH = \{z\in \CC : \Im(z) &gt;0\}
 \]</div>
 
 i el grup <span class="math notranslate nohighlight">\(\operatorname{SL}_2(\mathbb{R})\)</span>, definit com
 <div class="math notranslate nohighlight">
 \[
-\SL_2(\R) = \left\{ \smtx abcd \in M_2(\R) : ad-bc = 1\right\}.
+\SL_2(\RR) = \left\{ \smtx abcd \in M_2(\RR) : ad-bc = 1\right\}.
 \]</div>
 </p>
 <p>Aquest grup actua en els complexos (de fet, a <span class="math notranslate nohighlight">\(\mathbb{C} \cup \{\infty\}\)</span>)
@@ -68,12 +63,316 @@ mitjan&#231;ant les anomenades <em>transformacions lineals fraccion&#224;ries</e
 \Im(gz) = \frac{\Im(z)}{ | cz+d | ^2}.
 \]</div>
 </p>
-<p>Per tant, veiem que <span class="math notranslate nohighlight">\(\operatorname{SL}_2(\mathbb{R})\)</span> actua a <span class="math notranslate nohighlight">\(\mathbb{H}\)</span>. Tamb&#233; veiem que <span class="math notranslate nohighlight">\(-1\)</span> actua trivialment, i per tant de fet tenim un grup del quocient <span class="math notranslate nohighlight">\(\PSL_2(\R) = \SL_2(\R)/\{\pm 1\}\)</span>, que de fet &#233;s <em>fidel</em>.</p>
-<p><strong>Remarca:</strong> De fet, el grup <span class="math notranslate nohighlight">\(\PSL_2(\R)\)</span> &#233;s el grup d&#8217;automorfismes anal&#237;tics d&#8217;<span class="math notranslate nohighlight">\(\H\)</span>.</p>
+<p>Per tant, veiem que <span class="math notranslate nohighlight">\(\operatorname{SL}_2(\mathbb{R})\)</span> actua a <span class="math notranslate nohighlight">\(\mathbb{H}\)</span>. Tamb&#233; veiem que <span class="math notranslate nohighlight">\(-1\)</span> actua trivialment, i per tant de fet tenim un grup del quocient <span class="math notranslate nohighlight">\(\PSL_2(\RR) = \SL_2(\RR)/\{\pm 1\}\)</span>, que de fet &#233;s <em>fidel</em>.</p>
+<p><strong>Remarca:</strong> De fet, el grup <span class="math notranslate nohighlight">\(\PSL_2(\RR)\)</span> &#233;s el grup d&#8217;automorfismes anal&#237;tics d&#8217;<span class="math notranslate nohighlight">\(\HH\)</span>.</p>
+<p><strong>Definici&#243;:</strong> El grup <span class="math notranslate nohighlight">\(G = \SL_2(\RR)/\{\pm 1\}\)</span> s&#8217;anomena el <em>grup modular</em>. Sovint confondrem una matriu <span class="math notranslate nohighlight">\(g = \smtx abcd\)</span> amb la seva imatge a <span class="math notranslate nohighlight">\(G\)</span>.</p>
+</section>
+<section id="el-domini-fonamental">
+<h2><span class="section-number">1.2. </span>El domini fonamental<a class="headerlink" href="#el-domini-fonamental" title="Permalink to this headline">&#182;</a></h2>
+<p>Considerem dos elements a <span class="math notranslate nohighlight">\(G\)</span> que jugaran un paper important:
+<div class="math notranslate nohighlight">
+\[
+S = \smtx{0}{-1}{1}{0},\quad T = \smtx 1101.
+\]</div>
+
+Actuen enviant <span class="math notranslate nohighlight">\(z\)</span> a <span class="math notranslate nohighlight">\(S\cdot z=-1/z\)</span> i <span class="math notranslate nohighlight">\(T\cdot z = z+1\)</span>. A m&#233;s, satisfan les relacions (a <span class="math notranslate nohighlight">\(G\)</span>)
+<div class="math notranslate nohighlight">
+\[
+S^2=1,\quad (ST)^3=1.
+\]</div>
+
+Considerem ara el conjunt <span class="math notranslate nohighlight">\(D\subseteq \HH\)</span> definit com
+<div class="math notranslate nohighlight">
+\[
+D = \{ z \in \HH : \Re(z)\leq 1/2, | z | \geq 1 \}.
+\]</div>
+
+Es t&#233; el seg&#252;ent teorema:</p>
+<p><strong>Teorema:</strong></p>
+<ol class="arabic simple">
+<li><p>Per cada <span class="math notranslate nohighlight">\(z\in \HH\)</span>, hi ha algun <span class="math notranslate nohighlight">\(g\in G\)</span> tal que <span class="math notranslate nohighlight">\(g\cdot z \in D\)</span>.</p></li>
+<li><p>Siguin <span class="math notranslate nohighlight">\(z, z'\in D\)</span> congruents m&#242;dul <span class="math notranslate nohighlight">\(G\)</span>. Aleshores o b&#233; <span class="math notranslate nohighlight">\(\Re(z)=\pm 1/2\)</span> i <span class="math notranslate nohighlight">\(z=z'\pm 1\)</span>, o b&#233; <span class="math notranslate nohighlight">\(| z | = 1\)</span> i <span class="math notranslate nohighlight">\(z'=-1/z\)</span>.</p></li>
+<li><p>Sigui <span class="math notranslate nohighlight">\(z\in D\)</span>, i considerem <span class="math notranslate nohighlight">\(G_z=\{g \in G: g\cdot z = z\}\)</span>. Aleshores <span class="math notranslate nohighlight">\(G_z=1\)</span> excepte si:</p>
+<ol class="loweralpha simple">
+<li><p><span class="math notranslate nohighlight">\(z=i\)</span>, i aleshores <span class="math notranslate nohighlight">\(G_i = \{1, S\}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(z = \rho=e^{2\pi i/3}\)</span>, i aleshores <span class="math notranslate nohighlight">\(G_\rho=\{1, ST, (ST)^2\}\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(z = -\bar\rho=e^{\pi i /3}\)</span>, i aleshores <span class="math notranslate nohighlight">\(G_{-\bar\rho}=\{1, (TS), (TS)^2\}\)</span>.</p></li>
+</ol>
+</li>
+</ol>
+<p><em>Prova:</em> El primer pas &#233;s considerar <span class="math notranslate nohighlight">\(G'=\langle S, T\rangle\)</span> i <span class="math notranslate nohighlight">\(z\in\HH\)</span>, i veure que hi ha un <span class="math notranslate nohighlight">\(g'\in G'\)</span> tal que <span class="math notranslate nohighlight">\(g'\cdot z \in D\)</span>. Hi un nombre finit de parelles <span class="math notranslate nohighlight">\((c,d)\)</span> tals que $ | c z + d | $ &#233;s menor que un nombre fixat. Per tant, hi ha algun <span class="math notranslate nohighlight">\(g\in G'\)</span> tal que <span class="math notranslate nohighlight">\(\Im(g\cdot z)\)</span> &#233;s m&#224;xim. Tamb&#233; hi ha un enter <span class="math notranslate nohighlight">\(n\)</span> tal que <span class="math notranslate nohighlight">\(z'=T^ng z\)</span> t&#233; part real entre <span class="math notranslate nohighlight">\(-1/2\)</span> i <span class="math notranslate nohighlight">\(1/2\)</span>. Aleshores es veu que <span class="math notranslate nohighlight">\(z'\)</span> pertany a <span class="math notranslate nohighlight">\(D\)</span>&#8230;</p>
+<p><strong>Corol&#183;lari:</strong> L&#8217;aplicaci&#243; de pas al quocient <span class="math notranslate nohighlight">\(D \to \HH/G\)</span> &#233;s exhaustiva, i la seva restricci&#243; a l&#8217;interior de <span class="math notranslate nohighlight">\(D\)</span> &#233;s injectiva.</p>
+<p><strong>Teorema:</strong> El grup <span class="math notranslate nohighlight">\(G\)</span> est&#224; generat per <span class="math notranslate nohighlight">\(S\)</span> i <span class="math notranslate nohighlight">\(T\)</span>. De fet, es t&#233; <span class="math notranslate nohighlight">\(G=\langle S, T | S^2=(ST)^3=1 \rangle\)</span>.</p>
 </section>
 <section id="formes-modulars">
 <h2><span class="section-number">1.3. </span>Formes modulars<a class="headerlink" href="#formes-modulars" title="Permalink to this headline">&#182;</a></h2>
-<p>Blah blah</p>
+<section id="definicions">
+<h3><span class="section-number">1.3.1. </span>Definicions<a class="headerlink" href="#definicions" title="Permalink to this headline">&#182;</a></h3>
+<p><strong>Definici&#243;:</strong> Diem que una funci&#243; <span class="math notranslate nohighlight">\(f\)</span> meromorfa a <span class="math notranslate nohighlight">\(\HH\)</span> &#233;s <em>d&#232;bilment modular</em> de pes <span class="math notranslate nohighlight">\(k\in\Z\)</span> si
+<div class="math notranslate nohighlight">
+\[f(g\cdot z) = (cz+d)^k f(z),\forall g=\smtx abcd \in\SL_2(\Z).\]</div>
+</p>
+<p>&#201;s convenient introduir aqu&#237; la notaci&#243; &#8220;slash&#8221;: definim <span class="math notranslate nohighlight">\(f | g\)</span> com la funci&#243; (que dep&#232;n de <span class="math notranslate nohighlight">\(k\)</span>, encara que no ho posem a la notaci&#243;)
+<div class="math notranslate nohighlight">
+\[(f | g)(z) = (cz+d)^{-k} f(z).\]</div>
+
+Aleshores veiem que <span class="math notranslate nohighlight">\(f\)</span> &#233;s d&#232;bilment modular si, i nom&#233;s si, <span class="math notranslate nohighlight">\(f| g=f\)</span> per a tot <span class="math notranslate nohighlight">\(g\in \SL_2(\Z)\)</span>.</p>
+<p>Com que <span class="math notranslate nohighlight">\(G\)</span> est&#224; generat pels elements <span class="math notranslate nohighlight">\(S\)</span> i <span class="math notranslate nohighlight">\(T\)</span>, aquesta condici&#243; &#233;s equivalent a demanar que, per a tot <span class="math notranslate nohighlight">\(z\in \HH\)</span>,
+<div class="math notranslate nohighlight">
+\[f(z+1)=f(z),\quad f(-1/z) = z^{k}f(z).\]</div>
+</p>
+<p><strong>Remarca:</strong> Aplicant la definici&#243; a <span class="math notranslate nohighlight">\(-1\in \SL_2(\Z)\)</span> obtenim que <span class="math notranslate nohighlight">\(f(z)=(-1)^k f(z)\)</span>. Per tant, si <span class="math notranslate nohighlight">\(k\)</span> &#233;s senar nom&#233;s la funci&#243; <span class="math notranslate nohighlight">\(0\)</span> &#233;s d&#232;bilment modular. Demanarem doncs, d&#8217;aqu&#237; en endavant, que <span class="math notranslate nohighlight">\(k\)</span> sigui parell.</p>
+<p>Fixem-nos que, si <span class="math notranslate nohighlight">\(f(z+1)=f(z)\)</span> per a tot <span class="math notranslate nohighlight">\(z\in \HH\)</span>, aleshores podem composar amb el canvi <span class="math notranslate nohighlight">\(q=e^{2\pi i z}\)</span> i obtenir una funci&#243; <span class="math notranslate nohighlight">\(\tilde f(z)\)</span> definida a <span class="math notranslate nohighlight">\(\tilde\HH=\{q\in \CC : 0 &lt; | q | &lt; 1 \}\)</span>. Aleshores, <span class="math notranslate nohighlight">\(\tilde f\)</span> tindr&#224; una s&#232;rie de Laurent al voltant de <span class="math notranslate nohighlight">\(q=0\)</span>:
+<div class="math notranslate nohighlight">
+\[\tilde f(q) = \sum_{n=-\infty}^\infty a_nq^n.\]</div>
+
+Direm aleshores que <span class="math notranslate nohighlight">\(f\)</span> &#233;s <em>meromorfa a l&#8217;infinit</em> si <span class="math notranslate nohighlight">\(\tilde f\)</span> &#233;s meromorfa a <span class="math notranslate nohighlight">\(q=0\)</span> (<span class="math notranslate nohighlight">\(a_n=0\)</span> per <span class="math notranslate nohighlight">\(n&lt;&lt;0\)</span>). Tamb&#233; direm que <span class="math notranslate nohighlight">\(f\)</span> &#233;s <em>holomorfa a l&#8217;infinit</em> si <span class="math notranslate nohighlight">\(a_n=0\)</span> per <span class="math notranslate nohighlight">\(n &lt; 0\)</span>, i <span class="math notranslate nohighlight">\(f\)</span> s&#8217;anul&#183;la a l&#8217;infinit si <span class="math notranslate nohighlight">\(a_n=0\)</span> per <span class="math notranslate nohighlight">\(n\leq 0\)</span>.</p>
+<p><strong>Definici&#243;:</strong> Una <em>forma modular</em> de pes <span class="math notranslate nohighlight">\(k\)</span> &#233;s una funci&#243; d&#232;bilment modular que &#233;s holomorfa a tot arreu, incloent l&#8217;infinit. Si aquesta s&#8217;anula a l&#8217;infinit, l&#8217;anomenarem una <em>forma cuspidal</em>.</p>
+<p>Resumint, una forma modular de pes <span class="math notranslate nohighlight">\(k\)</span> ve donada per una s&#232;rie
+<div class="math notranslate nohighlight">
+\[
+f(z) = \sum_{n=0}^\infty a_n q^n = \sum_{n=0}^\infty a_ne^{2\pi i z},
+\]</div>
+
+que convergeix per a tot <span class="math notranslate nohighlight">\(z\in \HH\)</span>, i que satisf&#224; <span class="math notranslate nohighlight">\(f(-1/z) = z^kf(z)\)</span>.</p>
+<p><strong>Remarca:</strong> Si multipliquem una forma modular <span class="math notranslate nohighlight">\(f\)</span> de pes <span class="math notranslate nohighlight">\(k\)</span> amb una <span class="math notranslate nohighlight">\(f'\)</span> de pes <span class="math notranslate nohighlight">\(k'\)</span> obtindrem una forma <span class="math notranslate nohighlight">\(ff'\)</span> de pes <span class="math notranslate nohighlight">\(k+k'\)</span>.</p>
+</section>
+<section id="series-d-eisenstein">
+<h3><span class="section-number">1.3.2. </span>S&#232;ries d&#8217;Eisenstein<a class="headerlink" href="#series-d-eisenstein" title="Permalink to this headline">&#182;</a></h3>
+<p>Per ara els &#250;nics exemples que tenim de formes modulars s&#243;n les constants, que s&#243;n formes modulars de pes zero (de fet, s&#243;n les &#250;niques formes modulars de pes zero). Si considerem una funci&#243; holomorfa <span class="math notranslate nohighlight">\(h\)</span> qualsevol, aleshores una manera de construir una funci&#243; modular &#233;s &#8220;simetritzar-la&#8221;, &#233;s a dir, considerrar <span class="math notranslate nohighlight">\(\sum_{g\in G} h|_k g\)</span>. El problema &#233;s que en general aquesta suma no t&#233; per qu&#232; convergir. Una segona idea seria considerar una funci&#243; que ja sigui invariant per algun subgrup de <span class="math notranslate nohighlight">\(H\leq G\)</span>, i aleshores nom&#233;s simetritzar per <span class="math notranslate nohighlight">\(G/H\)</span>. La versi&#243; m&#233;s senzilla d&#8217;aquest principi &#233;s considerar la funci&#243; constant <span class="math notranslate nohighlight">\(1\)</span>. Si <span class="math notranslate nohighlight">\(H=\{ \pm \smtx{1}{t}{0}{1}\}\)</span>, veiem que <span class="math notranslate nohighlight">\(1|_k h=1\)</span> per a tot <span class="math notranslate nohighlight">\(h\in H\)</span>. Per tant, podem considerar
+<div class="math notranslate nohighlight">
+\[
+G_k(z) = \sum_{\gamma \in H\backslash \SL_2(\Z)} 1|_k \gamma= \sum_{\smtx abcd \in H \backslash \SL_2(\Z)} (cz+d)^{-k}.
+\]</div>
+
+Fixem-nos que, donada una matriu <span class="math notranslate nohighlight">\(\smtx abcd\in \SL_2(\Z)\)</span>, la classe lateral<span class="math notranslate nohighlight">\(H\smtx abcd\)</span> est&#224; formada per totes les matrius de la forma <span class="math notranslate nohighlight">\(\smtx{a'}{b'}{c}{d}\in\SL_2(\Z)\)</span>. Per tant, podem reescriure
+<div class="math notranslate nohighlight">
+\[
+G_k(z) = \sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k},
+\]</div>
+</p>
+<p><strong>Proposici&#243;:</strong> Si <span class="math notranslate nohighlight">\(k&gt;2\)</span>, la funci&#243; <span class="math notranslate nohighlight">\(G_k(z)\)</span> &#233;s una forma modular de pes <span class="math notranslate nohighlight">\(k\)</span>. El seu valor a l&#8217;infinit &#233;s <span class="math notranslate nohighlight">\(2\zeta(k)\)</span>, on <span class="math notranslate nohighlight">\(\zeta\)</span> &#233;s la funci&#243; zeta de Riemann.</p>
+<p><em>Prova:</em> Ens cal primer veure la converg&#232;ncia de la s&#232;rie per tot <span class="math notranslate nohighlight">\(z\)</span>. Considerem primer <span class="math notranslate nohighlight">\(z\in D\)</span> fixat, i podem veure f&#224;cilment que <span class="math notranslate nohighlight">\(\abs{c z + d}^2 \geq \abs{c\rho - d}^2\)</span>. Com que
+<div class="math notranslate nohighlight">
+\[
+\#\{ (c,d)\neq (0,0) : N \leq \abs{c\rho + d}&lt; N+1\} = O(N)
+\]</div>
+
+i <span class="math notranslate nohighlight">\(\sum_n n^{1-k}\)</span> convergeix per <span class="math notranslate nohighlight">\(k&gt;2\)</span>, ja estem. Com que <span class="math notranslate nohighlight">\(D\)</span> &#233;s compacte, la s&#232;rie <span class="math notranslate nohighlight">\(G_k(z)\)</span> convergeix normalment a <span class="math notranslate nohighlight">\(D\)</span> i, com que podem traslladar <span class="math notranslate nohighlight">\(D\)</span> per recobrir tot <span class="math notranslate nohighlight">\(\HH\)</span> amb elements de <span class="math notranslate nohighlight">\(\SL_2(\Z)\)</span>, en dedu&#239;m que <span class="math notranslate nohighlight">\(G_k(z)\)</span> tamb&#233; convergeix a tot <span class="math notranslate nohighlight">\(\HH\)</span> a una funci&#243; holomorfa.</p>
+<p>Per calcular <span class="math notranslate nohighlight">\(G_k(\infty)\)</span>, prenem el l&#237;mit quan <span class="math notranslate nohighlight">\(\Im(z)\to\infty\)</span>, i aix&#242; ho podem fer mantenint <span class="math notranslate nohighlight">\(z\)</span> a <span class="math notranslate nohighlight">\(D\)</span>. En aquest cas, gr&#224;cies a la converg&#232;ncia uniforme de la s&#232;rie podem prendre el l&#237;mit terme a terme. Els termes que tenen <span class="math notranslate nohighlight">\(c\neq 0\)</span> tots van a <span class="math notranslate nohighlight">\(0\)</span>, i nom&#233;s ens queda
+<div class="math notranslate nohighlight">
+\[
+\lim G_k(z) = \sum_{n\neq 0} n^{-k} = 2 \zeta(k).
+\]</div>
+</p>
+<p>Podem normalitzar <span class="math notranslate nohighlight">\(G_k\)</span> per tal que prengui el valor <span class="math notranslate nohighlight">\(1\)</span> a l&#8217;infinit, i obtenim <span class="math notranslate nohighlight">\(E_k(z)=\frac{1}{2\zeta(k)} G_k(z)\)</span>. Aleshores podem fer combinacions de s&#232;ries d&#8217;Eisenstein per obtenir altres formes modulars. Per exemple,
+<div class="math notranslate nohighlight">
+\[
+\Delta(z) = \frac{E_4^3 - E_6^2}{1728}
+\]</div>
+
+&#233;s una forma cuspidal de pes <span class="math notranslate nohighlight">\(12\)</span>, anomenada la funci&#243; discriminant.</p>
+<p><strong>Remarca:</strong> Definim, per <span class="math notranslate nohighlight">\(\tau\in\HH\)</span> i <span class="math notranslate nohighlight">\(w\in\CC\)</span>, la funci&#243; <span class="math notranslate nohighlight">\(\wp\)</span> de Weierstrass, com
+<div class="math notranslate nohighlight">
+\[
+\wp_\tau(w)=\frac{1}{w^2}+\sum_{(c,d)\neq (0,0)} \left(\frac{1}{(w-c\tau-d)^2}-\frac{1}{(c\tau+d)^2}\right).
+\]</div>
+
+Aleshores la s&#232;rie de Laurent de <span class="math notranslate nohighlight">\(\wp_\tau\)</span> &#233;s f&#224;cil de calcular, i resulta que les s&#232;ries d&#8217;Eisenstein apareixen com a coeficients d&#8217;aquesta s&#232;rie:
+\[
+\wp_\tau(w) = \frac{1}{w^2} + \sum_{k=2}^\infty (2k-1)G_{2k}(\tau)w^{2k-2}.
+\]
+De fet, si definim <span class="math notranslate nohighlight">\(x=\wp_\tau(w)\)</span> i <span class="math notranslate nohighlight">\(y=\wp_\tau'(w)\)</span> (la derivada respecte <span class="math notranslate nohighlight">\(w\)</span>), tenim
+\[
+y^2=4x^3-60G_2(\tau)x-140G_3(\tau),
+\]
+que &#233;s una corba el&#183;l&#237;ptica amb discriminant justament <span class="math notranslate nohighlight">\(16\Delta(\tau)\)</span>, que per tant &#233;s diferent de zero.</p>
+</section>
+</section>
+<section id="l-espai-de-les-formes-modulars">
+<h2><span class="section-number">1.4. </span>L&#8217;espai de les formes modulars<a class="headerlink" href="#l-espai-de-les-formes-modulars" title="Permalink to this headline">&#182;</a></h2>
+<section id="zeros-i-pols-d-una-funcio-modular">
+<h3><span class="section-number">1.4.1. </span>Zeros i pols d&#8217;una funci&#243; modular<a class="headerlink" href="#zeros-i-pols-d-una-funcio-modular" title="Permalink to this headline">&#182;</a></h3>
+<p>Sigui <span class="math notranslate nohighlight">\(f\neq 0\)</span> una funci&#243; meromorfa a <span class="math notranslate nohighlight">\(\HH\)</span>, i sigui <span class="math notranslate nohighlight">\(\tau\in\HH\)</span>. Escrivim <span class="math notranslate nohighlight">\(v_{\tau}(f)\)</span> com l&#8217;enter tal que <span class="math notranslate nohighlight">\((z-\tau)^{- v_{\tau}(f)} f(z)\)</span> &#233;s holomorfa i diferent de zero a <span class="math notranslate nohighlight">\(z=\tau\)</span> (l&#8217;ordre de <span class="math notranslate nohighlight">\(f\)</span> a <span class="math notranslate nohighlight">\(\tau\)</span>).</p>
+<p>Si <span class="math notranslate nohighlight">\(f\)</span> &#233;s una funci&#243; modular de pes <span class="math notranslate nohighlight">\(k\)</span>, aleshores <span class="math notranslate nohighlight">\(v_\tau(f)=v_{g\tau}(f)\)</span>, perqu&#232; <span class="math notranslate nohighlight">\(cz+d\)</span> &#233;s holomorfa i diferent de zero a tot <span class="math notranslate nohighlight">\(\HH\)</span>. Tamb&#233; podem definir <span class="math notranslate nohighlight">\(v_\infty(f)=n_0\)</span> si <span class="math notranslate nohighlight">\(\tilde f(q)=\sum_{n\geq n_0} a_nq^n\)</span> amb <span class="math notranslate nohighlight">\(a_{n_0}\neq 0\)</span>.</p>
+<p><strong>Teorema (f&#243;rmula de la val&#232;ncia):</strong> Si <span class="math notranslate nohighlight">\(f\neq 0\)</span> &#233;s una funci&#243; modular de pes <span class="math notranslate nohighlight">\(k\)</span>, es t&#233;
+<div class="math notranslate nohighlight">
+\[v_{\infty}(f) + \frac{1}{2} v_{i}(f) +\frac{1}{3}v_{\rho}(f) +\sum_{\tau\in G\backslash \HH} v_{\tau}(f) = \frac{k}{12},
+\]</div>
+
+on la suma recorre les &#242;rbites de punts d&#8217;<span class="math notranslate nohighlight">\(\HH\)</span> diferents de <span class="math notranslate nohighlight">\(i\)</span> i <span class="math notranslate nohighlight">\(\rho\)</span>.</p>
+<p><strong>Remarca:</strong> la suma nom&#233;s cont&#233; un nombre finit de termes no nuls. En efecte, com que <span class="math notranslate nohighlight">\(f\)</span> &#233;s meromorfa tenim que <span class="math notranslate nohighlight">\(\tilde f\)</span> no t&#233; cap zero ni pol al disc <span class="math notranslate nohighlight">\(0&lt;\abs{q}&lt;r\)</span> per algun <span class="math notranslate nohighlight">\(r &gt;0\)</span>. Per tant, <span class="math notranslate nohighlight">\(f\)</span> no t&#233; zeros ni pols a la regi&#243; <span class="math notranslate nohighlight">\(\Im(z)&gt;\frac{\log(1/r)}{2\pi}\)</span> i, llavors <span class="math notranslate nohighlight">\(f\)</span> t&#233; tots els zeros i pols de <span class="math notranslate nohighlight">\(D\)</span> a la regi&#243; compacta <span class="math notranslate nohighlight">\(D\cap \Im(z)&lt; \frac{\log(1/r)}{2\pi}\)</span>, on nom&#233;s n&#8217;hi pot haver un nombre finit.</p>
+<p>El teorema es demostra aplicant el teorema del residu a un contorn adequat, i no el farem en aquestes notes.</p>
+</section>
+<section id="l-algebra-de-formes-modulars">
+<h3><span class="section-number">1.4.2. </span>L&#8217;&#224;lgebra de formes modulars<a class="headerlink" href="#l-algebra-de-formes-modulars" title="Permalink to this headline">&#182;</a></h3>
+<p>Escrivim <span class="math notranslate nohighlight">\(M_k\)</span> com el <span class="math notranslate nohighlight">\(\CC\)</span>-espai vectorial format per les formes modulars de pes <span class="math notranslate nohighlight">\(k\)</span>, i <span class="math notranslate nohighlight">\(S_k\)</span> com el subespai format per les formes cuspidals. Com que <span class="math notranslate nohighlight">\(S_k=\ker( f\mapsto f(\infty))\)</span>, tenim <span class="math notranslate nohighlight">\(\dim M_k/S_k\leq 1\)</span>. A m&#233;s, quan <span class="math notranslate nohighlight">\(k\geq 4\)</span> les s&#232;ries d&#8217;Eisenstein s&#243;n de M_k\setminus S_k$ i, per tant
+<div class="math notranslate nohighlight">
+\[
+M_k = \CC G_k \oplus S_k.
+\]</div>
+</p>
+<p>Aplicarem la f&#243;rmula de la val&#232;ncia a alguns casos senzills. Per exemple, si <span class="math notranslate nohighlight">\(f\)</span> &#233;s una funci&#243; holomorfa, aleshores tots els termes que apareixen a l&#8217;esquerra s&#243;n positius o zero, i per tant <span class="math notranslate nohighlight">\(M_k=0\)</span> per <span class="math notranslate nohighlight">\(k&lt;0\)</span>. Per <span class="math notranslate nohighlight">\(k=2\)</span>, veiem que no hi ha manera d&#8217;obtenir <span class="math notranslate nohighlight">\(1/6\)</span> sumant m&#250;ltiples de <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(1/2\)</span> i <span class="math notranslate nohighlight">\(1/3\)</span>, i per tant <span class="math notranslate nohighlight">\(M_2=0\)</span>.</p>
+<p>Ara, apliquem la f&#243;rmula a <span class="math notranslate nohighlight">\(G_4\)</span>. Podem escriure 1/3 = 0 + 1/2\cdot 0 + 1/3\cdot 1+0$ (i nom&#233;s d&#8217;aquesta manera), i per tant <span class="math notranslate nohighlight">\(G_4(\rho)=0\)</span> (amb ordre <span class="math notranslate nohighlight">\(1\)</span>), i no s&#8217;anul&#183;la enlloc m&#233;s. De forma semblant, <span class="math notranslate nohighlight">\(v_{i}(G_6) = 1\)</span> i aquest &#233;s l&#8217;&#250;nic punt on s&#8217;anul&#183;la <span class="math notranslate nohighlight">\(G_6\)</span>. Observem llavors que <span class="math notranslate nohighlight">\(\Delta(i)\neq 0\)</span> i que, per tant <span class="math notranslate nohighlight">\(\Delta\neq 0\)</span>. A m&#233;s, per construcci&#243; <span class="math notranslate nohighlight">\(v_{\infty}(\Delta)\geq 1\)</span>. Per tant, la f&#243;rmula de la val&#232;ncia ens diu que <span class="math notranslate nohighlight">\(\Delta\)</span> no s&#8217;anul&#183;la a <span class="math notranslate nohighlight">\(\HH\)</span>, i t&#233; un zero simple a l&#8217;infinit.</p>
+<p>Finalment, sigui <span class="math notranslate nohighlight">\(f\)</span> un element de <span class="math notranslate nohighlight">\(S_k\)</span>, i definim <span class="math notranslate nohighlight">\(g=f/\Delta\)</span>. Aleshores <span class="math notranslate nohighlight">\(g\)</span> t&#233; pes <span class="math notranslate nohighlight">\(k-12\)</span>, i <span class="math notranslate nohighlight">\(v_{\tau}(g)\geq 0\)</span> per a tot <span class="math notranslate nohighlight">\(\tau\)</span>. Per tant <span class="math notranslate nohighlight">\(g\in M_{k-12}\)</span>.</p>
+<p>Podem acabar calculant per <span class="math notranslate nohighlight">\(k\leq 10\)</span> els espais <span class="math notranslate nohighlight">\(M_k\)</span>. En aquest cas, <span class="math notranslate nohighlight">\(k-12 &lt; 0\)</span> i <span class="math notranslate nohighlight">\(S_k=0\)</span>. Per tant, <span class="math notranslate nohighlight">\(\dim M_k\leq 1\)</span>. Com que <span class="math notranslate nohighlight">\(1, G_4, G_6, G_8, G_10\)</span> s&#243;n elements de <span class="math notranslate nohighlight">\(M_k\)</span> per <span class="math notranslate nohighlight">\(k=0, 4,6,8,10\)</span>, formen una base de l&#8217;espai corresponent.</p>
+<p>Resumim el qu&#232; hem demostrat:</p>
+<p><strong>Teorema:</strong></p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(M_k=0\)</span> per <span class="math notranslate nohighlight">\(k&lt;0\)</span> i <span class="math notranslate nohighlight">\(k=2\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(M_0=\CC\cdot 1\)</span>, <span class="math notranslate nohighlight">\(M_4=\CC\cdot G_4\)</span>, <span class="math notranslate nohighlight">\(M_6=\CC\cdot G_6\)</span>, <span class="math notranslate nohighlight">\(M_8=\CC\cdot G_8\)</span> i <span class="math notranslate nohighlight">\(M_{10} = \CC\cdot G_{10}\)</span>. En aquests casos, <span class="math notranslate nohighlight">\(S_k=0\)</span>.</p></li>
+<li><p>La multiplicaci&#243; per <span class="math notranslate nohighlight">\(\Delta\)</span> indueix un isomorfisme <span class="math notranslate nohighlight">\(M_{k-12}\cong S_k\)</span>.</p></li>
+</ol>
+<p>En particular, <span class="math notranslate nohighlight">\(\dim M_k=\lfloor k/12\rfloor\)</span> si <span class="math notranslate nohighlight">\(k\equiv 2 \pmod{12}\)</span>, i <span class="math notranslate nohighlight">\(\dim M_k=\lfloor k/12\rfloor +1\)</span> si <span class="math notranslate nohighlight">\(k\neq 2\pmod{12}\)</span>.</p>
+<p><strong>Corol&#183;lari:</strong> L&#8217;espai <span class="math notranslate nohighlight">\(M_k\)</span> t&#233; com a base el conjunt de monomis <span class="math notranslate nohighlight">\(G_4^iG_6^j\)</span>, on <span class="math notranslate nohighlight">\(i,j\geq 0\)</span> s&#243;n enters amb <span class="math notranslate nohighlight">\(4i+6j=k\)</span>.</p>
+<p><em>Prova:</em> Veiem primer que generen, cosa que &#233;s clara per <span class="math notranslate nohighlight">\(k\leq 6\)</span>. Per <span class="math notranslate nohighlight">\(k\geq 8\)</span>, fem inducci&#243; en <span class="math notranslate nohighlight">\(k\)</span>. Triem enters positius <span class="math notranslate nohighlight">\(i,j\)</span> tals que <span class="math notranslate nohighlight">\(4i+6j=k\)</span>, i considerem <span class="math notranslate nohighlight">\(g =G_4^iG_6^j\)</span>, que no s&#8217;anula a l&#8217;infinit. Si <span class="math notranslate nohighlight">\(f\in M_k\)</span>, aleshores <span class="math notranslate nohighlight">\(f-\lambda g\in S_k\)</span> per algun <span class="math notranslate nohighlight">\(\lambda\in\CC\)</span>. Per aquest <span class="math notranslate nohighlight">\(\lambda\)</span>, tenim <span class="math notranslate nohighlight">\(f-\lambda g = \Delta h\)</span> amb <span class="math notranslate nohighlight">\(h\in M_{k-12}\)</span>. Apliquem ara la hip&#242;tesi d&#8217;inducci&#243; a <span class="math notranslate nohighlight">\(h\)</span>, i ja estem.
+Si aquests monomis no fossin linealment independents, la funci&#243; <span class="math notranslate nohighlight">\(G_4^3/G_6^2\)</span> satisfaria un polinomi amb coeficients a <span class="math notranslate nohighlight">\(\CC\)</span> i, per tant, seria constant. Per&#242; aix&#242; no pot ser, perqu&#232; <span class="math notranslate nohighlight">\(G_4\)</span> s&#8217;anula a <span class="math notranslate nohighlight">\(\rho\)</span> i <span class="math notranslate nohighlight">\(G_6\)</span> no, per exemple.</p>
+<p><strong>Remarca:</strong> Es pot resumir l&#8217;anterior dient que <span class="math notranslate nohighlight">\(M=\bigoplus_{k\in\Z} M_k \cong \CC[G_4,G_6]\)</span>.</p>
+</section>
+<section id="la-funcio-j-de-klein">
+<h3><span class="section-number">1.4.3. </span>La funci&#243; j de Klein<a class="headerlink" href="#la-funcio-j-de-klein" title="Permalink to this headline">&#182;</a></h3>
+<p>Definim la seg&#252;ent funci&#243; modular de pes <span class="math notranslate nohighlight">\(0\)</span>:
+<div class="math notranslate nohighlight">
+\[
+j = E_2^3 / \Delta.
+\]</div>
+
+Veiem que <span class="math notranslate nohighlight">\(j\)</span> t&#233; un holomorfa a tot <span class="math notranslate nohighlight">\(\HH\)</span>, perqu&#232; <span class="math notranslate nohighlight">\(\Delta\)</span> no s&#8217;anula. A m&#233;s, t&#233; un pol simple a l&#8217;infinit, provinent del zero simple de <span class="math notranslate nohighlight">\(\Delta\)</span>.</p>
+<p><strong>Proposici&#243;:</strong> L&#8217;aplicaci&#243; <span class="math notranslate nohighlight">\(z\mapsto j(z)\)</span> identifica <span class="math notranslate nohighlight">\(G\backslash \HH\)</span> amb <span class="math notranslate nohighlight">\(\CC\)</span>.</p>
+<p><em>Prova:</em> com que <span class="math notranslate nohighlight">\(j\)</span> &#233;s invariant per <span class="math notranslate nohighlight">\(G\)</span>, obtenim una funci&#243; ben definida <span class="math notranslate nohighlight">\(G\backslash \HH\to \CC\)</span>. Hem de veure que, per a tot <span class="math notranslate nohighlight">\(\lambda\CC\)</span>, existeix un &#250;nic <span class="math notranslate nohighlight">\(z\in G\backslash\HH\)</span> tal que <span class="math notranslate nohighlight">\(j(z)=\lambda\)</span> o, el qu&#232; &#233;s el mateix, que la funci&#243; <span class="math notranslate nohighlight">\(f_\lambda(z)=E_2(z)^3 - \lambda\Delta(z)\)</span> t&#233; un &#250;nic zero m&#242;dul <span class="math notranslate nohighlight">\(G\)</span>. Aplicant la f&#243;rmula de la val&#232;ncia a <span class="math notranslate nohighlight">\(f_\lambda\)</span> (que t&#233; pes <span class="math notranslate nohighlight">\(12\)</span>) veiem que hem de descomposar <span class="math notranslate nohighlight">\(1\)</span> de la forma <span class="math notranslate nohighlight">\(a + b/2 + c/3\)</span> amb <span class="math notranslate nohighlight">\(a,b,c\geq 0\)</span>. Les &#250;niques possibilitats s&#243;n <span class="math notranslate nohighlight">\((1,0,0)\)</span>, <span class="math notranslate nohighlight">\((0,2,0)\)</span>, <span class="math notranslate nohighlight">\((0,0,3)\)</span>, i per tant hi ha un &#250;nic zero de <span class="math notranslate nohighlight">\(f_\lambda\)</span> a <span class="math notranslate nohighlight">\(G\backslash\HH\)</span>. <span class="math notranslate nohighlight">\(\qed\)</span></p>
+<p>De fet, d&#8217;alguna manera la funci&#243; <span class="math notranslate nohighlight">\(j\)</span> dona lloc a totes les funcions modulars de pes zero:</p>
+<p><strong>Proposici&#243;:</strong> Tota funci&#243; modular de pes zero &#233;s una funci&#243; racional en <span class="math notranslate nohighlight">\(j\)</span>.</p>
+<p><em>Prova:</em> Sigui <span class="math notranslate nohighlight">\(f\)</span> una funci&#243; modular. Multiplicant-la per un polinomi en <span class="math notranslate nohighlight">\(j\)</span>, posem suposar que &#233;s holomorfa a <span class="math notranslate nohighlight">\(\HH\)</span>. D&#8217;altra banda, com que <span class="math notranslate nohighlight">\(\Delta\)</span> t&#233; un zero simple a l&#8217;infinit, podem multiplicar <span class="math notranslate nohighlight">\(f\)</span> per <span class="math notranslate nohighlight">\(\Delta^n\)</span> de manera que <span class="math notranslate nohighlight">\(g=\Delta^nf\)</span> sigui holomorfa tamb&#233; a l&#8217;infinit. Aleshores <span class="math notranslate nohighlight">\(g\)</span> &#233;s una forma modular de pes <span class="math notranslate nohighlight">\(12n\)</span>, que podem escriure com un polinomi (4,6)-homogeni en <span class="math notranslate nohighlight">\(E_4\)</span> i <span class="math notranslate nohighlight">\(E_6\)</span>, de grau <span class="math notranslate nohighlight">\(12n\)</span>. Per linealitat, n&#8217;hi ha prou amb veure que <span class="math notranslate nohighlight">\(f=E_4^iE_6^j/\Delta^n\)</span> &#233;s una funci&#243; racional en <span class="math notranslate nohighlight">\(j\)</span>. Observem per&#242; que, com que <span class="math notranslate nohighlight">\(4i+6j=12n\)</span>, tant <span class="math notranslate nohighlight">\(p=i/3\)</span> com <span class="math notranslate nohighlight">\(q=j/2\)</span> s&#243;n enters i, per tant, <span class="math notranslate nohighlight">\(f=E_4^{3p}E_6^{2q}/\Delta^{p+q}=(\frac{E_4^3}{\Delta})^p(\frac{E_6^2}{\Delta})^q\)</span>. Per&#242; tant <span class="math notranslate nohighlight">\(E_4^3/\Delta\)</span> com <span class="math notranslate nohighlight">\(E_6^2/\Delta\)</span> s&#243;n funcions racionals en <span class="math notranslate nohighlight">\(j\)</span>, i ja estem. <span class="math notranslate nohighlight">\(\qed\)</span></p>
+<p><strong>Remarca:</strong> Aviat veurem les <span class="math notranslate nohighlight">\(q\)</span>-expansions de les s&#232;ries d&#8217;Eisenstein, i podrem deduir-ne la de <span class="math notranslate nohighlight">\(j\)</span>, que de fet &#233;s
+<div class="math notranslate nohighlight">
+\[
+j(z)=\frac{1}{q} + 744 + 196884q + 21493760q^2+\cdots
+\]</div>
+
+Els coeficients s&#243;n tots enters, que a m&#233;s satisfan <span class="math notranslate nohighlight">\(n\equiv 0\pmod{p^i}\implies c(n) \equiv 0 \pmod{p^i}\)</span> per <span class="math notranslate nohighlight">\(p=2,3,5,7,11\)</span> (per <span class="math notranslate nohighlight">\(p=2,3,5\)</span> la divisilitat de <span class="math notranslate nohighlight">\(c(n)\)</span> &#233;s per <span class="math notranslate nohighlight">\(2^{3i+8}\)</span>, <span class="math notranslate nohighlight">\(3^{2i+3}\)</span> i <span class="math notranslate nohighlight">\(5^{i+1}\)</span>, respectivament).</p>
+</section>
+</section>
+<section id="calcul-de-les-q-expansions">
+<h2><span class="section-number">1.5. </span>C&#224;lcul de les q-expansions<a class="headerlink" href="#calcul-de-les-q-expansions" title="Permalink to this headline">&#182;</a></h2>
+<section id="els-nombres-de-bernoulli">
+<h3><span class="section-number">1.5.1. </span>Els nombres de Bernoulli<a class="headerlink" href="#els-nombres-de-bernoulli" title="Permalink to this headline">&#182;</a></h3>
+<p>Es defineixen com els coeficients de la s&#232;rie de Taylor de
+<div class="math notranslate nohighlight">
+\[
+\frac{t}{e^t-1} = \sum_{k=0}^\infty B_k \frac{t^k}{k!}.
+\]</div>
+</p>
+<p>Es poden calcular de manera recursiva, calculant el terme de grau <span class="math notranslate nohighlight">\(n\)</span> de l&#8217;expansi&#243;
+<div class="math notranslate nohighlight">
+\[
+t = \sum_{k=0}^\infty B_k \frac{t^k}{k!} \sum_{\ell=1}^\infty \frac{t^\ell}{\ell!}.
+\]</div>
+
+De fet, veiem que <span class="math notranslate nohighlight">\(B_0=1\)</span>, <span class="math notranslate nohighlight">\(B_1=-1/2\)</span>, i <span class="math notranslate nohighlight">\(B_k=0\)</span> per a tot <span class="math notranslate nohighlight">\(k\geq 3\)</span> senar. Tamb&#233; podem calcular <span class="math notranslate nohighlight">\(B_2=1/6\)</span>, <span class="math notranslate nohighlight">\(B_4=-1/30\)</span>,&#8230;</p>
+<p>L&#8217;inter&#232;s en els nombres de Bernoulli prov&#233; del fet que s&#243;n la &#8220;part racional&#8221; dels valors de la funci&#243; zeta de Riemann en els enters parells (per exemple, <span class="math notranslate nohighlight">\(\zeta(2)=\pi^2/6\)</span>, <span class="math notranslate nohighlight">\(\zeta(4)=\pi^4/90\)</span>,&#8230;</p>
+<p><strong>Proposici&#243;:</strong> si <span class="math notranslate nohighlight">\(n\geq 2\)</span> &#233;s un enter parell,
+<div class="math notranslate nohighlight">
+\[
+\zeta(n) = \frac {2^{n-1}\pi^{n} \abs{B_{n}}} {n!}
+\]</div>
+</p>
+<p><em>Prova:</em> Substituint <span class="math notranslate nohighlight">\(t=2iz\)</span> a la definici&#243; dels nombres de Bernoulli obtenim la f&#243;rmula
+<div class="math notranslate nohighlight">
+\[
+z\cot z = \sum_{k=0}^\infty \abs{B_{2k}}\frac{2^{2k}z^{2k}}{(2k)!}.
+\]</div>
+
+D&#8217;altra banda, de la famosa f&#243;rmula
+<div class="math notranslate nohighlight">
+\[
+\sin(z) = z\prod_{n=1}^\infty \left(1-\frac{z^2}{n^2\pi^2}\right)
+\]</div>
+
+n&#8217;obtenim, fent la derivada logar&#237;tmica,
+<div class="math notranslate nohighlight">
+\[
+z\cot z = 1+2\sum_{n=1}^\infty \frac{z^2}{z^2-n^2\pi^2}=1-2\sum_{n=1}^\infty\sum_{k=1}^\infty \frac{z^{2k}}{n^{2k}{\pi^{2k}}}.
+\]</div>
+
+Arribem al resultat comparant el terme de <span class="math notranslate nohighlight">\(z^{2k}\)</span> de cada equaci&#243;.<span class="math notranslate nohighlight">\(\qed\)</span></p>
+</section>
+<section id="expansions-de-les-series-d-eisenstein">
+<h3><span class="section-number">1.5.2. </span>Expansions de les s&#232;ries d&#8217;Eisenstein<a class="headerlink" href="#expansions-de-les-series-d-eisenstein" title="Permalink to this headline">&#182;</a></h3>
+<p>Observem que, de la igualtat
+<div class="math notranslate nohighlight">
+\[
+z\cot z = 1+2\sum_{n=1}^\infty \frac{z^2}{z^2-n^2\pi^2}
+\]</div>
+
+en podem deduir
+<div class="math notranslate nohighlight">
+\[
+\pi\cot (\pi z)=\frac{1}{z} + \sum_{m=1}^\infty \left(\frac{1}{z+m}-\frac{1}{z-m}\right).
+\]</div>
+
+D&#8217;altra banda,
+<div class="math notranslate nohighlight">
+\[
+\pi\cot(\pi z) = \pi \frac{\cos(\pi z)}{\sin(\pi z)} = i\pi\frac{q+1}{q-1} = i\pi - \frac{2i\pi}{1-q} = i\pi -2\pi i \sum_{n=0}^\infty q^n.
+\]</div>
+
+Comparant les dues expressions, obtenim la igualtat b&#224;sica
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{z} + \sum_{m=1}^\infty \left(\frac{1}{z+m}-\frac{1}{z-m}\right) =  i\pi -2\pi i \sum_{n=0}^\infty q^n.
+\]</div>
+
+Derivant-la successivament, obtenim el que es coneix com la <strong>f&#243;rmula de Lipschitz</strong>:
+<div class="math notranslate nohighlight">
+\[
+\sum_{m\in\Z} \frac{1}{(m+z)^k} = \frac{(-1)^k (2\pi i)^k}{(k-1)!}\sum_{n=1}^\infty n^{k-1}q^n, \quad k\geq 2.
+\]</div>
+</p>
+<p><strong>Proposici&#243;:</strong> Per cada <span class="math notranslate nohighlight">\(k\geq 4\)</span> parell, tenim
+<div class="math notranslate nohighlight">
+\[
+G_k(z) = 2\zeta(k) + 2\frac{(2\pi i)^{k}}{(k-1)!} \sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
+\]</div>
+</p>
+<p><em>Prova:</em> Expandim <span class="math notranslate nohighlight">\(G_k(z)\)</span> com
+<div class="math notranslate nohighlight">
+\[
+G_k(z)=\sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k} =2\zeta(k) + 2\sum_{n=1}^\infty\sum_{m\in\Z} \frac{1}{(cz+d)^k}.
+\]</div>
+
+Aplicant la igualtat b&#224;sica anterior amb <span class="math notranslate nohighlight">\(cz\)</span> en comptes de <span class="math notranslate nohighlight">\(z\)</span>, tenim
+<div class="math notranslate nohighlight">
+\[
+G_k(z) = 2\zeta(k) +2\frac{(-1)^k (2\pi i)^k}{(k-1)!} \sum_{d=1}^\infty \sum_{a=1}^\infty d^{k-1} q^{ad} = 2\zeta(k) + \frac{2(2\pi i)^k}{(k-1)!}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
+\]</div>
+</p>
+<p><strong>Corol&#183;lari:</strong> Tenim <span class="math notranslate nohighlight">\(G_k(z)=2\zeta(k)E_k(z)\)</span>, amb
+<div class="math notranslate nohighlight">
+\[
+E_k(z) = 1-\frac{2k}{B_k}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
+\]</div>
+</p>
+<p>Per exemple,
+<div class="math notranslate nohighlight">
+\[
+E_4=1+240\sum_{n\geq 1} \sigma_3(n)q^n,\quad E_6=1-504\sum_{n\geq 1} \sigma_5(n)q^n.
+\]</div>
+</p>
+</section>
+<section id="una-primera-aplicacio">
+<h3><span class="section-number">1.5.3. </span>Una primera aplicaci&#243;<a class="headerlink" href="#una-primera-aplicacio" title="Permalink to this headline">&#182;</a></h3>
+<p>Ja hem vist que <span class="math notranslate nohighlight">\(M_8\)</span> i <span class="math notranslate nohighlight">\(M_{10}\)</span> tenen dimensi&#243; <span class="math notranslate nohighlight">\(1\)</span>. Per tant, <span class="math notranslate nohighlight">\(E_4^2=E_8\)</span> i <span class="math notranslate nohighlight">\(E_4E_6=E_{10}\)</span>. Comparant coeficients de les corresponents expansions, obtenim les identitats
+<div class="math notranslate nohighlight">
+\[
+\sigma_7(n)=\sigma_3(n)+120\sum_{m=1}^{n-1} \sigma_3(m)\sigma_3(n-m),
+\]</div>
+</p>
+<p><div class="math notranslate nohighlight">
+\[
+11\sigma_9(n)=21\sigma_5(n)-10\sigma_3(n)+5040\sum_{m=1}^{n-1} \sigma_3(m)\sigma_5(n-m).
+\]</div>
+</p>
+</section>
 </section>
 </section>
 
@@ -96,12 +395,15 @@ mitjan&#231;ant les anomenades <em>transformacions lineals fraccion&#224;ries</e
 <!-- <h3>Navigation</h3> -->
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">1. Primer dia</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#links-to-lectures">1.1. Links to lectures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#el-grup-modular">1.2. El grup modular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#definicions-basiques">1.1. Definicions b&#224;siques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#el-domini-fonamental">1.2. El domini fonamental</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#formes-modulars">1.3. Formes modulars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#l-espai-de-les-formes-modulars">1.4. L&#8217;espai de les formes modulars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calcul-de-les-q-expansions">1.5. C&#224;lcul de les q-expansions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dia2.html">2. Segon dia</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dia3.html">3. Tercer dia</a></li>
 </ul>
 
 
