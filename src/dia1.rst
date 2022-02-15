@@ -60,16 +60,22 @@ Es té el següent teorema:
 **Teorema:**
 
 1. Per cada $z\in \HH$, hi ha algun $g\in G$ tal que $g\cdot z \in D$.
-#. Siguin $z, z'\in D$ congruents mòdul $G$. Aleshores o bé $\Re(z)=\pm 1/2$ i $z=z'\pm 1$, o bé $| z | = 1$ i $z'=-1/z$.
+#. Siguin $z, z'\in D$ congruents mòdul $G$. Aleshores o bé $\Re(z)=\pm 1/2$ i $z=z'\pm 1$, o bé $\abs{z} = 1$ i $z'=-1/z$.
 #. Sigui $z\in D$, i considerem $G_z=\{g \in G: g\cdot z = z\}$. Aleshores $G_z=1$ excepte si:
 
    a. $z=i$, i aleshores $G_i = \{1, S\}$.
    #. $z = \rho=e^{2\pi i/3}$, i aleshores $G_\rho=\{1, ST, (ST)^2\}$.
    #. $z = -\bar\rho=e^{\pi i /3}$, i aleshores $G_{-\bar\rho}=\{1, (TS), (TS)^2\}$.
 
-*Prova:* El primer pas és considerar $G'=\langle S, T\rangle$ i $z\in\HH$, i veure que hi ha un $g'\in G'$ tal que $g'\cdot z \in D$. Hi un nombre finit de parelles $(c,d)$ tals que $ | c z + d | $ és menor que un nombre fixat. Per tant, hi ha algun $g\in G'$ tal que $\Im(g\cdot z)$ és màxim. També hi ha un enter $n$ tal que $z'=T^ng z$ té part real entre $-1/2$ i $1/2$. Aleshores es veu que $z'$ pertany a $D$...
+*Prova:* El primer pas és considerar $G'=\langle S, T\rangle$ i $z\in\HH$, i veure que hi ha un $g'\in G'$ tal que $g'\cdot z \in D$. Hi un nombre finit de parelles $(c,d)$ tals que $ \abs{c z + d} $ és menor que un nombre fixat. Per tant, hi ha algun $g\in G'$ tal que $\Im(g\cdot z)$ és màxim. També hi ha un enter $n$ tal que $z'=T^ng z$ té part real entre $-1/2$ i $1/2$. Veurem ara que $\abs{z'}\geq 1$ i que, per tant, pertany a $D$: si no fos així, aleshores $\abs{z'}<1$ faria que $\Im(-1/z') = \Im(z')/\abs{z'}^2 > \Im(z')$, contradient la maximalitat de $\Im(z')$.
 
-..  TODO: acabar-la.
+Per demostrar el segon punt, suposem que $z$ i $gz$ pertanyen a $D$. Per simetria, podem assumir que $\Im(gz)\geq \Im(z)$, és a dir,
+$$
+\abs{cz+d}^2=(cx+d)^2 + (cy)^2\leq 1, \quad z=x+iy.
+$$
+Com que $y>1/2$, això implica que $\abs{c}\leq 1$. Analitzant els diferents casos $c=0$, $c=1$ i $c=-1$ obtenim el que quedava per demostrar, excepte el fet que $G=G'$.
+
+Sigui ara $g\in G$ un element arbitrari, i prenem $z_0$ a l'interior de $D$. Considerem $z=gz_0$, i trobarem $g'\in G'$ tal que $g'z$ pertanyi a $D$. Pel què hem vist $g'z=z_0$ i d'aquí obtenim $g'g=1$, i per tant $g$ pertany a $G'$.
 
 
 **Corol·lari:** L'aplicació de pas al quocient $D \to \HH/G$ és exhaustiva, i la seva restricció a l'interior de $D$ és injectiva.
