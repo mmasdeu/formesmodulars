@@ -1,21 +1,23 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="CA">
   <head>
     <meta charset="ascii" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>3. Tercer dia &#8212; Formes Modulars 0.1 documentation</title>
+    <title>3. Tercer dia &#8212; Formes Modulars 1.0 documentaci&#243;</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
+    <script>window.MathJax = {"tex": {"macros": {"Q": "{\\mathbb{Q}}", "Z": "{\\mathbb{Z}}", "RR": "{\\mathbb{R}}", "CC": "{\\mathbb{C}}", "HH": "{\\mathbb{H}}", "SL": "{\\operatorname{SL}}", "GL": "{\\operatorname{GL}}", "PSL": "{\\operatorname{PSL}}", "PGL": "{\\operatorname{PGL}}", "lto": "{\\longrightarrow}", "dfn": "{\\ensuremath{:=}}", "surjects": "{\\twoheadrightarrow}", "injects": "{\\hookrightarrow}", "id": "{\\ensuremath \\text{Id}}", "mtx": ["{\\left(\\begin{matrix}#1&#2\\\\#3&#4\\end{matrix}\\right)}", 4], "mat": ["{\\left(\\begin{matrix}#1\\end{matrix}\\right)}", 1], "smat": ["{\\left(\\begin{smallmatrix}#1\\end{smallmatrix}\\right)}", 1], "smtx": ["{\\left(\\begin{smallmatrix}#1&#2\\\\#3&#4\\end{smallmatrix}\\right)}", 4], "slz": "{\\operatorname{SL}_2(\\bZ)}", "to": "{\\longrightarrow}", "dlog": "{\\operatorname{dlog}}", "Im": "{\\operatorname{Im}}", "Re": "{\\operatorname{Re}}", "abs": ["{|#1|}", 1], "qed": "{\\blacksquare}", "implies": "{\\Longrightarrow}"}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="&#205;ndex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
     <link rel="prev" title="2. Segon dia" href="dia2.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -34,7 +36,229 @@
           <div class="body" role="main">
             
   <section id="tercer-dia">
-<span id="day3"></span><h1><span class="section-number">3. </span>Tercer dia<a class="headerlink" href="#tercer-dia" title="Permalink to this headline">&#182;</a></h1>
+<span id="day3"></span><h1><span class="section-number">3. </span>Tercer dia<a class="headerlink" href="#tercer-dia" title="Link permanent a aquest t&#237;tol">&#182;</a></h1>
+<section id="operadors-de-hecke">
+<h2><span class="section-number">3.1. </span>Operadors de Hecke<a class="headerlink" href="#operadors-de-hecke" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<section id="definicio">
+<h3><span class="section-number">3.1.1. </span>Definici&#243;<a class="headerlink" href="#definicio" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<p>Sigui <span class="math notranslate nohighlight">\(f\)</span> una forma d&#232;bilment modular de pes <span class="math notranslate nohighlight">\(k\)</span> (&#233;s a dir, meromorfa i satisf&#224; la simetria corresponent per <span class="math notranslate nohighlight">\(\SL_2(\Z)\)</span>). Per cada <span class="math notranslate nohighlight">\(n\geq 1\)</span> i cada <span class="math notranslate nohighlight">\(d\mid n\)</span>, definim
+<div class="math notranslate nohighlight">
+\[
+(T_nf)(z) = n^{k-1} \sum_{e\geq 1, ed=n}\sum_{0\leq b &lt; d} d^{-k} f\left(\frac{ez+b}{d}\right).
+\]</div>
+</p>
+<p>En particular, si <span class="math notranslate nohighlight">\(n=p\)</span> &#233;s un primer, tenim
+<div class="math notranslate nohighlight">
+\[
+(T_pf)(z) = p^{-1} \left(\sum_{b=0}^{p-1} f(\frac{z+b}{p}) + f(pz)\right).
+\]</div>
+</p>
+<p><strong>Proposici&#243;:</strong> La funci&#243; <span class="math notranslate nohighlight">\(T_nf\)</span> &#233;s d&#232;bilment modular de pes <span class="math notranslate nohighlight">\(k\)</span>. Si <span class="math notranslate nohighlight">\(f\)</span> &#233;s holomorfa, tamb&#233; ho &#233;s <span class="math notranslate nohighlight">\(T_nf\)</span>. A m&#233;s:</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(T_m T_n = T_n T_m = T_{nm}\)</span> si <span class="math notranslate nohighlight">\((m,n)=1\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(T_{p^{r+1}} = T_p T_{p^r} - p^{k-1} T_{p^{r-1}}\)</span> si <span class="math notranslate nohighlight">\(p\)</span> &#233;s primer i <span class="math notranslate nohighlight">\(n\geq 1\)</span>.</p></li>
+</ol>
+<p>Podem calcular l&#8217;efecte d&#8217;aquests operadors en les <span class="math notranslate nohighlight">\(q\)</span>-expansions, obtenint:</p>
+<p><strong>Proposici&#243;:</strong> Si <span class="math notranslate nohighlight">\(f(z)=\sum_{m\in \Z} a_m(f)q^m\)</span> &#233;s meromorfa l&#8217;infinit, aleshores <span class="math notranslate nohighlight">\(T_nf(z)=\sum_{m\in\Z} a_m(T_nf)q^m\)</span> tamb&#233; ho &#233;s, i
+<div class="math notranslate nohighlight">
+\[
+a_m(T_nf) = \sum_{d \mid (m,n)} d^{k-1} a_{mn/d^2}(f).
+\]</div>
+</p>
+<p>En particular, <span class="math notranslate nohighlight">\(a_0(T_nf) = \sigma_{k-1}(n) a_0(f)\)</span>, <span class="math notranslate nohighlight">\(a_1(T_nf) = a_n(f)\)</span> i, si <span class="math notranslate nohighlight">\(n=p\)</span> &#233;s un primer,
+<div class="math notranslate nohighlight">
+\[
+a_m(T_pf) = a_{pm}(f) + p^{k-1} a_{m/p}(f),
+\]</div>
+
+on entenem que <span class="math notranslate nohighlight">\(a_{m/p}(f)=0\)</span> si <span class="math notranslate nohighlight">\(p\)</span> no divideix <span class="math notranslate nohighlight">\(m\)</span>. Veiem tamb&#233; que <span class="math notranslate nohighlight">\(T_n\)</span> actua a <span class="math notranslate nohighlight">\(M_k\)</span> i <span class="math notranslate nohighlight">\(S_k\)</span>, i commuten entre si.</p>
+</section>
+<section id="formes-propies">
+<h3><span class="section-number">3.1.2. </span>Formes pr&#242;pies<a class="headerlink" href="#formes-propies" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<p>Suposem ara que <span class="math notranslate nohighlight">\(f=\sum_{n\geq 0} a_n(f)q^n\)</span> &#233;s una forma modular de pes <span class="math notranslate nohighlight">\(k&gt;0\)</span>, que &#233;s pr&#242;pia per tots els <span class="math notranslate nohighlight">\(T_n\)</span>. &#201;s a dir, per cada <span class="math notranslate nohighlight">\(n\geq 1\)</span> tenim <span class="math notranslate nohighlight">\(T_nf=\lambda_nf\)</span>, per algun <span class="math notranslate nohighlight">\(\lambda_n\in\CC\)</span>.</p>
+<p><strong>Teorema:</strong>  <span class="math notranslate nohighlight">\(a_1(f)\neq 0\)</span>. Si <span class="math notranslate nohighlight">\(f\)</span> est&#224; normalitzada de manera que <span class="math notranslate nohighlight">\(a_1(f)=1\)</span>, aleshores <span class="math notranslate nohighlight">\(a_n(f) = \lambda_n\)</span>.</p>
+<p><em>Prova:</em> Hem vist que <span class="math notranslate nohighlight">\(a_1(T_nf) = a_n(f)\)</span>. Com que <span class="math notranslate nohighlight">\(f\)</span> &#233;s pr&#242;pia, <span class="math notranslate nohighlight">\(a_1(T_nf) = \lambda_n a_1(f)\)</span>. Per tant, <span class="math notranslate nohighlight">\(a_n(f) = \lambda_n a_1(f)\)</span>. Si suposem que <span class="math notranslate nohighlight">\(a_1(f)=0\)</span>, aleshores tindr&#237;em <span class="math notranslate nohighlight">\(a_n(f)=0\)</span> per a tot <span class="math notranslate nohighlight">\(n\geq 1\)</span>, i per tant <span class="math notranslate nohighlight">\(f\)</span> seria una constant. Per&#242; <span class="math notranslate nohighlight">\(k&gt;0\)</span>, i per tant arribem a contradicci&#243;. <span class="math notranslate nohighlight">\(\qed\)</span></p>
+<p><strong>Corol&#183;lari:</strong> Si <span class="math notranslate nohighlight">\(f\)</span> i <span class="math notranslate nohighlight">\(g\)</span> s&#243;n formes pr&#242;pies per tot <span class="math notranslate nohighlight">\(T_n\)</span> amb els mateixos valors propis, aleshores s&#243;n proporcionals.</p>
+<p><strong>Corol&#183;lari:</strong> Si <span class="math notranslate nohighlight">\(f\)</span> est&#224; normalitzada, aleshores
+<div class="math notranslate nohighlight">
+\[
+a_m(f)a_n(f)=a_{mn}(f),\text{ i}
+\]</div>
+
+<div class="math notranslate nohighlight">
+\[
+a_{p^{r+1}}(f) = a_p(f)a_{p^r}(f) - p^{k-1} a_{r-1}(f).
+\]</div>
+</p>
+</section>
+</section>
+<section id="la-funcio-l-associada-a-una-forma-modular">
+<h2><span class="section-number">3.2. </span>La funci&#243; L associada a una forma modular<a class="headerlink" href="#la-funcio-l-associada-a-una-forma-modular" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<p>Podem empaquetar tota la informaci&#243; que hem trobat de manera anal&#237;tica, mitjan&#231;ant la funci&#243;-L. Sigui
+<div class="math notranslate nohighlight">
+\[
+L(f,s) = \sum_{n=1}^\infty a_n(f)n^{-s},\quad \Re(s)&gt;k.
+\]</div>
+
+Observem que convergeix per a tot <span class="math notranslate nohighlight">\(\Re(s)&gt;k\)</span> gr&#224;cies a que controlem el creixement dels <span class="math notranslate nohighlight">\(a_n(f)\)</span>. Si <span class="math notranslate nohighlight">\(f\)</span> &#233;s cuspidal,
+aleshores sabem que la s&#232;rie convergeix a <span class="math notranslate nohighlight">\(\Re(s)&gt;k/2+1\)</span>.</p>
+<section id="el-producte-d-euler">
+<h3><span class="section-number">3.2.1. </span>El producte d&#8217;Euler<a class="headerlink" href="#el-producte-d-euler" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<p><strong>Proposici&#243;:</strong> <span class="math notranslate nohighlight">\(f\)</span> &#233;s una forma pr&#242;pia normalitzada si i nom&#233;s si la funci&#243; <span class="math notranslate nohighlight">\(L(f,s)\)</span> t&#233; un producte d&#8217;Euler:
+<div class="math notranslate nohighlight">
+\[
+L(f,s) = \prod_{p} \frac{1}{1-a_p(f)p^{-s} + p^{k-1-2s}},
+\]</div>
+
+on el producte &#233;s sobre els primers <span class="math notranslate nohighlight">\(p\)</span>.
+<em>Prova</em>: Com que els coeficients <span class="math notranslate nohighlight">\(a_{n}(f)\)</span> formen una successi&#243; multiplicativa, tenim
+<div class="math notranslate nohighlight">
+\[
+L(f,s) = \prod_p \sum_{r=0}^\infty a_{p^r}(f)p^{-rs}.
+\]</div>
+
+Per tant, si escrivim <span class="math notranslate nohighlight">\(T=p^{-s}\)</span>, aleshores hem de demostrar
+<div class="math notranslate nohighlight">
+\[
+\sum_{r=0}^\infty a_{p^r}(f)T^r = \left(1-a_p(f)T + p^{k-1}T^2\right)^{-1}.
+\]</div>
+
+Equivalentment, podem demostrar
+<div class="math notranslate nohighlight">
+\[
+\left(1-a_p(f)T + p^{k-1}T^2\right)\sum_{r=0}^\infty a_{p^r}(f)T^r = 1.
+\]</div>
+
+El coeficient de <span class="math notranslate nohighlight">\(T\)</span> &#233;s <span class="math notranslate nohighlight">\(a_p(f)-a_p(f)=0\)</span>. El de <span class="math notranslate nohighlight">\(T^{r+1}\)</span> &#233;s, per a tot <span class="math notranslate nohighlight">\(r\geq 1\)</span>,
+<div class="math notranslate nohighlight">
+\[
+a_{p^{r+1}} - a_pa_{p^{r}} + p^{k-1}a_{p^{r-1}},
+\]</div>
+
+que ja sabem que &#233;s <span class="math notranslate nohighlight">\(0\)</span>.</p>
+</section>
+<section id="l-equacio-funcional">
+<h3><span class="section-number">3.2.2. </span>L&#8217;equaci&#243; funcional<a class="headerlink" href="#l-equacio-funcional" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<p>Escrivim <span class="math notranslate nohighlight">\(\Lambda(f,s) = (2\pi)^{-s} \Gamma(s) L(f,s)\)</span>, on
+<div class="math notranslate nohighlight">
+\[
+\Gamma(s) = \int_0^{\infty} t^{s}e^{-t}\frac{dt}{t}.
+\]</div>
+</p>
+<p>Podem calcular
+<div class="math notranslate nohighlight">
+\[
+\Lambda(f,s) = (2\pi)^{-s} \int_0^\infty t^s e^{-t}\frac{dt}{t} \sum_{n=1}^\infty a_nn^{-s} = \sum_{n=1}^\infty a_n \int_0^\infty \left(\frac{t}{2\pi n}\right)^s e^{-t}\frac{dt}{t}.
+\]</div>
+
+Si fem el canvi de variables <span class="math notranslate nohighlight">\(t\mapsto t/(2\pi n)\)</span> al terme <span class="math notranslate nohighlight">\(n\)</span>-&#232;ssim, obtenim
+<div class="math notranslate nohighlight">
+\[
+\sum_{n=1}^\infty a_n\int_0^\infty t^s e^{-2\pi n t} \frac{dt}{t} = \int_0^\infty \left(\sum_{n=1}^\infty a_ne^{-2\pi nt}\right) t^s\frac{dt}{t}.
+\]</div>
+
+Resumint, hem obtingut una f&#243;rmula integral per <span class="math notranslate nohighlight">\(\Lambda(f,s)\)</span>:
+<div class="math notranslate nohighlight">
+\[
+\Lambda(f,s) = \int_0^\infty (f(it) - a_0)t^s\frac{dt}{t}.
+\]</div>
+</p>
+<p>Volem extendre <span class="math notranslate nohighlight">\(\Lambda(f,s)\)</span> a tot el pla complex, per&#242; la integral tal i com la tenim t&#233; problemes de converg&#232;ncia prop de <span class="math notranslate nohighlight">\(t=0\)</span>. Suposem, per simplicar, que <span class="math notranslate nohighlight">\(a_0=0\)</span>. El que fem &#233;s observar que
+<div class="math notranslate nohighlight">
+\[
+\int_0^\infty f(it)t^{s}\frac{dt}{t} = \int_0^1(\cdots)+\int_1^\infty(\cdots)
+\]</div>
+
+i, fent servir que <span class="math notranslate nohighlight">\(f(i/t) = i^kt^kf(it)= (-1)^{k/2}\)</span> trobem, fent el canvi <span class="math notranslate nohighlight">\(t\mapsto 1/t\)</span>,
+<div class="math notranslate nohighlight">
+\[
+\int_0^1  f(it)t^{s}\frac{dt}{t} = (-1)^{k/2} \int_1^\infty f(it)t^{k-s}\frac{dt}{t}.
+\]</div>
+
+Per tant,
+<div class="math notranslate nohighlight">
+\[
+\Lambda(f,s) = \int_1^\infty f(it) (t^s + (-1)^{k/2} t^{k-s})\frac{dt}{t}.
+\]</div>
+
+Aquesta expressi&#243; convergeix per tot <span class="math notranslate nohighlight">\(s\in\CC\)</span>. A m&#233;s a m&#233;s, obtenim l&#8217;equaci&#243; funcional, que relaciona <span class="math notranslate nohighlight">\(s\)</span> amb <span class="math notranslate nohighlight">\(k-s\)</span>:
+<div class="math notranslate nohighlight">
+\[
+\Lambda(f,k-s) = (-1)^{k/2} \Lambda(f,s).
+\]</div>
+</p>
+</section>
+<section id="funcio-l-de-les-series-d-eisenstein">
+<h3><span class="section-number">3.2.3. </span>Funci&#243;-L de les s&#232;ries d&#8217;Eisenstein<a class="headerlink" href="#funcio-l-de-les-series-d-eisenstein" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<p>Sigui <span class="math notranslate nohighlight">\(k\geq 4\)</span> un enter, i considerem la s&#232;rie d&#8217;Eisenstein <span class="math notranslate nohighlight">\(E_k = 1 - \frac{2k}{B_k}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n\)</span>.</p>
+<p><strong>Proposici&#243;:</strong> <span class="math notranslate nohighlight">\(T_p(E_k) = (1+p^{k-1})E_k\)</span>.
+<em>Prova:</em> Ho comprovem coeficient a coeficient. Si <span class="math notranslate nohighlight">\(p\nmid n\)</span>, hem de comprovar que
+<div class="math notranslate nohighlight">
+\[
+\sigma_{k-1}(pn) = (1+p^{k-1})\sigma_{k-1}(n).
+\]</div>
+
+Per altra banda, si <span class="math notranslate nohighlight">\(n = p^em\)</span> amb <span class="math notranslate nohighlight">\(p\nmid m\)</span> i <span class="math notranslate nohighlight">\(e\geq 1\)</span>, hem de veure que
+<div class="math notranslate nohighlight">
+\[
+\sigma_{k-1}(p^{e+1}m) + p^{k-1} \sigma_{k-1}(p^{e-1}m) = (1+p^{k-1})\sigma_{k-1}(p^em).
+\]</div>
+
+La primera equaci&#243; es comprova f&#224;cilment, i la segona es fa per inducci&#243; en <span class="math notranslate nohighlight">\(e\)</span>. <span class="math notranslate nohighlight">\(\qed\)</span></p>
+<p>Podem ara calcular ara la seva s&#232;rie de Dirichlet:
+<div class="math notranslate nohighlight">
+\[
+\sum_{n=1}^\infty \sigma_{k-1}(n)n^{-s} = \sum_{a,d\geq 1} \frac{a^{k-1}}{a^sd^s} = \left(\sum_{d\geq 1} d^{-s}\right)\left(\sum_{a\geq 1} a^{k-s-1}\right) = \zeta(s)\zeta(s-k+1).
+\]</div>
+</p>
+<p>De manera alternativa, podem veure que l&#8217;invers del terme <span class="math notranslate nohighlight">\(p\)</span>-&#232;ssim del producte d&#8217;Euler &#233;s
+<div class="math notranslate nohighlight">
+\[
+1-\sigma_{k-1}(p)p^{-s} + p^{k-1-2s} = 1- p^{-s} - p^{k-1-s} + p^{k-1-2s} = (1-p^{-s})(1-p^{k-1-s}),
+\]</div>
+
+que coincideix amb el producte dels inversos dels factors d&#8217;Euler de <span class="math notranslate nohighlight">\(\zeta(s)\zeta(s-k+1)\)</span>.</p>
+</section>
+<section id="funcio-l-de-la-delta-de-ramanujan">
+<h3><span class="section-number">3.2.4. </span>Funci&#243;-L de la Delta de Ramanujan<a class="headerlink" href="#funcio-l-de-la-delta-de-ramanujan" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<p>Recordem <span class="math notranslate nohighlight">\(\Delta(q)=q\prod_{n\geq 1} (1-q^n)^{24}\)</span>. Com ja hem vist, <span class="math notranslate nohighlight">\(S_{12}=\CC\Delta\)</span> i per tant <span class="math notranslate nohighlight">\(\Delta\)</span> &#233;s trivialment una forma pr&#242;pia per tots els operadors de Hecke, que a m&#233;s ja est&#224; normalitzada. Per tant:</p>
+<p><strong>Corol&#183;lari:</strong> Tenim:
+<div class="math notranslate nohighlight">
+\[
+\tau(nm)=\tau(n)\tau(m),\quad (n,m)=1,
+\]</div>
+
+i
+<div class="math notranslate nohighlight">
+\[
+\tau(p)\tau(p^n) = \tau(p^{n+1})+p^{11}\tau(p^{n-1}),\quad \forall p\text{ primer}, n\geq 1.
+\]</div>
+</p>
+<p>Es tenen resultats an&#224;legs per tots els espais <span class="math notranslate nohighlight">\(S_k\)</span> de dimensi&#243; <span class="math notranslate nohighlight">\(1\)</span>, que s&#243;n exactament <span class="math notranslate nohighlight">\(k=12,16,18,20,22,26\)</span>. Els generador &#233;s, en cada cas, <span class="math notranslate nohighlight">\(\Delta E_{k-12}\)</span>.</p>
+</section>
+<section id="el-producte-de-petersson">
+<h3><span class="section-number">3.2.5. </span>El producte de Petersson<a class="headerlink" href="#el-producte-de-petersson" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<p>Per estudiar m&#233;s a fons els espais <span class="math notranslate nohighlight">\(S_k\)</span>, els hem de dotar de m&#233;s estructura que la d&#8217;espai vectorial complex. Podem definir un producte escalar herm&#237;tic, de la seg&#252;ent manera: donades <span class="math notranslate nohighlight">\(f,g\in S_k\)</span>, considerem
+<div class="math notranslate nohighlight">
+\[
+\phi_{f,g} = = f(z)\overline{g(z)} y^{k}.
+\]</div>
+</p>
+<p>Si <span class="math notranslate nohighlight">\(\gamma\in\SL_2(\Z)\)</span>, podem veure f&#224;cilment que <span class="math notranslate nohighlight">\(\phi_{f,g}(\gamma z) = \phi_{f,g}(z)\)</span>. Per tant, &#233;s una funci&#243; ben definida a <span class="math notranslate nohighlight">\(\SL_2(\Z)\backslash\HH\)</span>. Podem doncs considerar la integral
+<div class="math notranslate nohighlight">
+\[
+\langle f,g\rangle = \frac{3}{\pi}\int_{\SL_2(\Z)\backslash\HH} f(z)\overline{g(z)} y^{k-2}dxdy,
+\]</div>
+
+ja que <span class="math notranslate nohighlight">\(\frac{dxdy}{y^2}\)</span> &#233;s una mesura <span class="math notranslate nohighlight">\(\SL_2(\Z)\)</span>-invariant a <span class="math notranslate nohighlight">\(\HH\)</span>. Respecte aquesta mesura, el domini fonamental de <span class="math notranslate nohighlight">\(\SL_2(\Z)\)</span> t&#233; volum <span class="math notranslate nohighlight">\(\frac{\pi}{3}\)</span>, i per aix&#242; escollim la normalitzaci&#243; anterior.</p>
+<p><strong>Proposici&#243;:</strong> El producte <span class="math notranslate nohighlight">\(\langle\cdot,\cdot\rangle\)</span> &#233;s herm&#237;tic i definit positiu. &#201;s a dir:
+1. <span class="math notranslate nohighlight">\(\langle a_1f_1+a_2f_2,g\rangle = a_1\langle f_1,g\rangle + a_2\langle f_2,g\rangle\)</span>,
+#. <span class="math notranslate nohighlight">\(\langle g,f\rangle = \overline{\langle f,g\rangle}\)</span>, i
+#. <span class="math notranslate nohighlight">\(\langle f,f\rangle\geq 0\)</span>, amb igualtat nom&#233;s si <span class="math notranslate nohighlight">\(f=0\)</span>.</p>
+<p><strong>Proposici&#243;:</strong> Per a tot <span class="math notranslate nohighlight">\(n\geq 1\)</span>, tenim <span class="math notranslate nohighlight">\(\langle T_n f, g\rangle=\langle f, T_ng\rangle\)</span>.</p>
+<p>Com a conclusi&#243;, els operadors de Hecke <span class="math notranslate nohighlight">\(T_n\)</span> formen una fam&#237;lia d&#8217;operadors normals respecte el producte de Petersson. Per tant, <span class="math notranslate nohighlight">\(S_k\)</span> cont&#233; una base ortogonal de formes pr&#242;pies per <strong>tots</strong> els operadors de Hecke simult&#224;niament. Es diu que <span class="math notranslate nohighlight">\(S_k\)</span> satisf&#224; &#171;multiplicitat-1&#187;: donat una col&#183;lecci&#243; de valors propis <span class="math notranslate nohighlight">\(\{\lambda_n\}_{n\geq 1}\)</span>, hi ha com a molt una forma cuspidal pr&#242;pia <span class="math notranslate nohighlight">\(f\in S_k\)</span> tal que <span class="math notranslate nohighlight">\(T_n(f)=\lambda_n f\)</span>. A m&#233;s, pel teorema de Cayley-Hamilton tenim que els valors propis dels operadors de Hecke s&#243;n nombres algebraics reals!</p>
+</section>
+</section>
 </section>
 
 
@@ -53,27 +277,31 @@
 
 
 
-<!-- <h3>Navigation</h3> -->
+<!-- <h3>Navegaci&#243;</h3> -->
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="dia1.html">1. Primer dia!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dia1.html">1. Primer dia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dia2.html">2. Segon dia</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Tercer dia</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Tercer dia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#operadors-de-hecke">3.1. Operadors de Hecke</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#la-funcio-l-associada-a-una-forma-modular">3.2. La funci&#243; L associada a una forma modular</a></li>
+</ul>
+</li>
 </ul>
 
 
 <hr />
 <ul>
     
-    <li class="toctree-l1"><a href="formesmodulars.pdf">PDF version</a></li>
+    <li class="toctree-l1"><a href="formesmodulars.pdf">Descarrega PDF</a></li>
     
 </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3 id="searchlabel">Cerca r&#224;pida</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
+      <input type="submit" value="Ves a" />
     </form>
     </div>
 </div>

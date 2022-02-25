@@ -1,12 +1,12 @@
 
 <!DOCTYPE html>
 
-<html>
+<html lang="CA">
   <head>
     <meta charset="ascii" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Segon dia &#8212; Formes Modulars 0.1 documentation</title>
+    <title>2. Segon dia &#8212; Formes Modulars 1.0 documentaci&#243;</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -16,10 +16,10 @@
     <script>window.MathJax = {"tex": {"macros": {"Q": "{\\mathbb{Q}}", "Z": "{\\mathbb{Z}}", "RR": "{\\mathbb{R}}", "CC": "{\\mathbb{C}}", "HH": "{\\mathbb{H}}", "SL": "{\\operatorname{SL}}", "GL": "{\\operatorname{GL}}", "PSL": "{\\operatorname{PSL}}", "PGL": "{\\operatorname{PGL}}", "lto": "{\\longrightarrow}", "dfn": "{\\ensuremath{:=}}", "surjects": "{\\twoheadrightarrow}", "injects": "{\\hookrightarrow}", "id": "{\\ensuremath \\text{Id}}", "mtx": ["{\\left(\\begin{matrix}#1&#2\\\\#3&#4\\end{matrix}\\right)}", 4], "mat": ["{\\left(\\begin{matrix}#1\\end{matrix}\\right)}", 1], "smat": ["{\\left(\\begin{smallmatrix}#1\\end{smallmatrix}\\right)}", 1], "smtx": ["{\\left(\\begin{smallmatrix}#1&#2\\\\#3&#4\\end{smallmatrix}\\right)}", 4], "slz": "{\\operatorname{SL}_2(\\bZ)}", "to": "{\\longrightarrow}", "dlog": "{\\operatorname{dlog}}", "Im": "{\\operatorname{Im}}", "Re": "{\\operatorname{Re}}", "abs": ["{|#1|}", 1], "qed": "{\\blacksquare}", "implies": "{\\Longrightarrow}"}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
+    <link rel="index" title="&#205;ndex" href="genindex.html" />
+    <link rel="search" title="Cerca" href="search.html" />
     <link rel="next" title="3. Tercer dia" href="dia3.html" />
-    <link rel="prev" title="1. Primer dia!" href="dia1.html" />
+    <link rel="prev" title="1. Primer dia" href="dia1.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -37,9 +37,62 @@
           <div class="body" role="main">
             
   <section id="segon-dia">
-<span id="day2"></span><h1><span class="section-number">2. </span>Segon dia<a class="headerlink" href="#segon-dia" title="Permalink to this headline">&#182;</a></h1>
+<span id="day2"></span><h1><span class="section-number">2. </span>Segon dia<a class="headerlink" href="#segon-dia" title="Link permanent a aquest t&#237;tol">&#182;</a></h1>
+<section id="creixement-dels-coeficients">
+<h2><span class="section-number">2.1. </span>Creixement dels coeficients<a class="headerlink" href="#creixement-dels-coeficients" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<p>M&#233;s endavant ens interessar&#224; tenir fites per l&#8217;ordre de creixement dels
+coeficients de Fourier de les formes modulars.</p>
+<p><strong>Proposici&#243;:</strong> Si <span class="math notranslate nohighlight">\(f=E_k\)</span>, aleshores <span class="math notranslate nohighlight">\(a_n\approx n^{k-1}\)</span>. &#201;s a dir, que hi ha constants <span class="math notranslate nohighlight">\(A, B&gt;0\)</span> tals que
+<div class="math notranslate nohighlight">
+\[
+An^{k-1}\leq \abs{a_n}\leq Bn^{k-1}.
+\]</div>
+</p>
+<p><em>Prova:</em> Tenim <span class="math notranslate nohighlight">\(\abs{a_n} = A \sigma_{k-1}(n)\geq An^{k-1}\)</span>. D&#8217;altra banda,
+<div class="math notranslate nohighlight">
+\[
+\frac{\abs{a_n}}{n^{k-1}} = A \sum_{d\mid n} \frac{1}{d^{k-1}} \leq A\sum_{d=1}^\infty \frac{d^{k-1}} = A\zeta(k-1) &lt; \infty.\quad\qed
+\]</div>
+</p>
+<p>El creixement de les formes cuspidals &#233;s m&#233;s lent:</p>
+<p><strong>Teorema (Hecke):</strong> Si <span class="math notranslate nohighlight">\(f\)</span> &#233;s una forma cuspidal de pes <span class="math notranslate nohighlight">\(k\)</span>, llavors <span class="math notranslate nohighlight">\(a_n=O(n^{k/2})\)</span>.</p>
+<p><em>Prova:</em>
+Primer de tot, com que <span class="math notranslate nohighlight">\(a_0=0\)</span>, podem escriure <span class="math notranslate nohighlight">\(f(z)=q\sum_{n\geq 1}a_nq^{n-1}\)</span> i, per tant,
+<div class="math notranslate nohighlight">
+\[
+\abs{f(z)} = O(q)=O(e^{-2\pi \Im(z)}),\quad q\to 0.
+\]</div>
+</p>
+<p>Escrivim <span class="math notranslate nohighlight">\(z=x+iy\)</span>, i definim <span class="math notranslate nohighlight">\(\phi(z)=\abs{f(z)}y^{k/2}\)</span>. La modularitat de <span class="math notranslate nohighlight">\(f\)</span> fa que la funci&#243; <span class="math notranslate nohighlight">\(C^\infty\)</span> (no-holomorfa) <span class="math notranslate nohighlight">\(\phi\)</span> sigui invariant per <span class="math notranslate nohighlight">\(\SL_2(\Z)\)</span>, i <span class="math notranslate nohighlight">\(\phi(z)\to 0\)</span> quan <span class="math notranslate nohighlight">\(\Im(z)\to\infty\)</span>. Per tant, <span class="math notranslate nohighlight">\(\phi\)</span> &#233;s fitada: hi ha alguna constant <span class="math notranslate nohighlight">\(M\)</span> tal que
+<div class="math notranslate nohighlight">
+\[
+\abs{f(z)}\leq My^{-k/2},\quad z\in \HH.
+\]</div>
+
+Per com es calculen els coeficients de Fourier, tenim
+<div class="math notranslate nohighlight">
+\[
+a_n =  \int_0^1 f(x+iy)e^{-2\pi i n(x+iy)}dx,
+\]</div>
+
+i per tant
+<div class="math notranslate nohighlight">
+\[
+\abs{a_n} \leq Me^{2\pi n y}\int_0^1 y^{-k/2} e^{-2\pi inx}dx = My^{-k/2}e^{2\pi i n y}.
+\]</div>
+
+Aquesta igualtat &#233;s v&#224;lida per tot <span class="math notranslate nohighlight">\(y&gt;0\)</span>. En particular, per <span class="math notranslate nohighlight">\(y=1/n\)</span> dona
+<div class="math notranslate nohighlight">
+\[
+\abs{a_n}\leq e^{2\pi} M n^{k/2}.\qed
+\]</div>
+</p>
+<p><strong>Corol&#183;lari:</strong> Si <span class="math notranslate nohighlight">\(f\)</span> no &#233;s cuspidal, aleshores <span class="math notranslate nohighlight">\(a_n\approx n^{k-1}\)</span>.</p>
+<p><em>Prova:</em> Escrivim <span class="math notranslate nohighlight">\(f=\lambda E_k + h\)</span> amb <span class="math notranslate nohighlight">\(\lambda\neq 0\)</span> i <span class="math notranslate nohighlight">\(h\)</span> cuspidal, i apliquem els resultats anteriors. Com que els coeficients d&#8221;<span class="math notranslate nohighlight">\(E_k\)</span> creixen
+molt m&#233;s r&#224;pid que els de <span class="math notranslate nohighlight">\(h\)</span>, el creixement de <span class="math notranslate nohighlight">\(f\)</span> &#233;s igual que el d&#8221;<span class="math notranslate nohighlight">\(E_k\)</span>. <span class="math notranslate nohighlight">\(\qed\)</span></p>
+</section>
 <section id="la-serie-d-eisenstein-de-pes-2">
-<h2><span class="section-number">2.1. </span>La s&#232;rie d&#8217;Eisenstein de pes <span class="math notranslate nohighlight">\(2\)</span><a class="headerlink" href="#la-serie-d-eisenstein-de-pes-2" title="Permalink to this headline">&#182;</a></h2>
+<h2><span class="section-number">2.2. </span>La s&#232;rie d&#8217;Eisenstein de pes 2<a class="headerlink" href="#la-serie-d-eisenstein-de-pes-2" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
 <p>Considerem la funci&#243;
 <div class="math notranslate nohighlight">
 \[
@@ -123,8 +176,8 @@ G_2(z) = 2\zeta(2) - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n = \frac{\pi^2}{3}\le
 \]</div>
 </p>
 </section>
-<section id="l-expansio-de-delta">
-<h2><span class="section-number">2.2. </span>L&#8217;expansi&#243; de <span class="math notranslate nohighlight">\(\Delta\)</span><a class="headerlink" href="#l-expansio-de-delta" title="Permalink to this headline">&#182;</a></h2>
+<section id="l-expansio-de-la-funcio-discriminant">
+<h2><span class="section-number">2.3. </span>L&#8217;expansi&#243; de la funci&#243; discriminant<a class="headerlink" href="#l-expansio-de-la-funcio-discriminant" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
 <p>Volem donar una f&#243;rmula per <span class="math notranslate nohighlight">\(\Delta(z)=\frac{E_4(z)^3-E_6(z)^2}{1728}\)</span>. Per aix&#242;, considerem <span class="math notranslate nohighlight">\(\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}\)</span>. Veurem que aquestes dues funcions coincideixen (<span class="math notranslate nohighlight">\(q=e^{2\pi i z})\)</span>. Prenent la derivada logar&#237;tmica, obtenim (fixem-nos que <span class="math notranslate nohighlight">\(\dlog q = 2\pi i\)</span>)
 <div class="math notranslate nohighlight">
 \[
@@ -152,7 +205,7 @@ Aix&#242; vol dir que per a tot <span class="math notranslate nohighlight">\(z\i
 Per tant, <span class="math notranslate nohighlight">\(z^{-12}\tilde\Delta(-1/z) = C \tilde\Delta(z)\)</span>. Evaluant a <span class="math notranslate nohighlight">\(z=i\)</span> podem veure que <span class="math notranslate nohighlight">\(C=1\)</span> (ja que <span class="math notranslate nohighlight">\(\Delta(i)\neq 0\)</span>) i que, per tant <span class="math notranslate nohighlight">\(\tilde\Delta\)</span> &#233;s una forma modular de pes <span class="math notranslate nohighlight">\(12\)</span>. Per tant, &#233;s un m&#250;ltiple de <span class="math notranslate nohighlight">\(\Delta(z)\)</span>, que ha de ser <span class="math notranslate nohighlight">\(1\)</span> perqu&#232; les s&#232;ries de Fourier comencen ambdues per <span class="math notranslate nohighlight">\(q+O(q^2)\)</span>.</p>
 </section>
 <section id="la-funcio-tau-de-ramanujan">
-<h2><span class="section-number">2.3. </span>La funci&#243; <span class="math notranslate nohighlight">\(\tau\)</span> de Ramanujan<a class="headerlink" href="#la-funcio-tau-de-ramanujan" title="Permalink to this headline">&#182;</a></h2>
+<h2><span class="section-number">2.4. </span>La funci&#243; tau de Ramanujan<a class="headerlink" href="#la-funcio-tau-de-ramanujan" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
 <p>Recordem la funci&#243; <span class="math notranslate nohighlight">\(\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}\)</span>. Calculant els primers termes del producte, de seguida veiem que
 <div class="math notranslate nohighlight">
 \[
@@ -162,8 +215,8 @@ Per tant, <span class="math notranslate nohighlight">\(z^{-12}\tilde\Delta(-1/z)
 Ramanujan va ser el primer a estudiar la funci&#243; <span class="math notranslate nohighlight">\(\tau(n)\)</span> funci&#243; el 1916, i va conjecturar que:</p>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(\tau(n)\tau(m)=\tau(nm)\)</span> si <span class="math notranslate nohighlight">\((n,m)=1\)</span>.</p></li>
-<li><p><span class="math notranslate nohighlight">\(\tau(p^{k+1}) = \tau(p)\tau(p^k) - p^{11}\tau(p^{k-1})\)</span>, i</p></li>
-<li><p>$abs{tau(n)} leq 2p^{11/2}.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\tau(p^{k+1}) = \tau(p)\tau(p^k) - p^{11}\tau(p^{k-1})\)</span>, per a tot primer <span class="math notranslate nohighlight">\(p\)</span> i <span class="math notranslate nohighlight">\(k\geq 1\)</span>; i</p></li>
+<li><p><span class="math notranslate nohighlight">\(\abs{\tau(p)} \leq 2p^{11/2}\)</span> per a tot primer <span class="math notranslate nohighlight">\(p\)</span>.</p></li>
 </ol>
 <p>Tamb&#233; va observar (sense demostrar-les) tot de congru&#232;ncies que satisf&#224;:</p>
 <ol class="arabic simple">
@@ -172,7 +225,7 @@ Ramanujan va ser el primer a estudiar la funci&#243; <span class="math notransla
 <li><p><span class="math notranslate nohighlight">\(\tau(n)\equiv \sigma_{11}(n)\pmod{691}\)</span>.</p></li>
 </ol>
 <p>A m&#233;s, Ramanujan va relacionar <span class="math notranslate nohighlight">\(\tau(n)\)</span> amb si <span class="math notranslate nohighlight">\(r_{24}(n)\)</span>, el nombre de maneres d&#8217;escriure <span class="math notranslate nohighlight">\(n\)</span> com a suma de <span class="math notranslate nohighlight">\(24\)</span> quadrats (!)</p>
-<p>Tot aix&#242;, vist un segle despr&#233;s, &#233;s relativament f&#224;cil de demostrar amb la teoria de les formes modulars.</p>
+<p>Tot aix&#242;, vist un segle despr&#233;s, &#233;s relativament f&#224;cil de demostrar amb la teoria de les formes modulars. El teorema de Hecke que hem vist abans implica ja que <span class="math notranslate nohighlight">\(\abs{\tau(p)} =O(p^6)\)</span>, per&#242; per veure la fita m&#233;s fina conjecturada per Ramanujan haur&#237;em de fer servir resultats molt m&#233;s profunds de P.Deligne (1974).</p>
 </section>
 </section>
 
@@ -192,13 +245,14 @@ Ramanujan va ser el primer a estudiar la funci&#243; <span class="math notransla
 
 
 
-<!-- <h3>Navigation</h3> -->
+<!-- <h3>Navegaci&#243;</h3> -->
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="dia1.html">1. Primer dia!</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dia1.html">1. Primer dia</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. Segon dia</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#la-serie-d-eisenstein-de-pes-2">2.1. La s&#232;rie d&#8217;Eisenstein de pes <span class="math notranslate nohighlight">\(2\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#l-expansio-de-delta">2.2. L&#8217;expansi&#243; de <span class="math notranslate nohighlight">\(\Delta\)</span></a></li>
-<li class="toctree-l2"><a class="reference internal" href="#la-funcio-tau-de-ramanujan">2.3. La funci&#243; <span class="math notranslate nohighlight">\(\tau\)</span> de Ramanujan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creixement-dels-coeficients">2.1. Creixement dels coeficients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#la-serie-d-eisenstein-de-pes-2">2.2. La s&#232;rie d&#8217;Eisenstein de pes 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#l-expansio-de-la-funcio-discriminant">2.3. L&#8217;expansi&#243; de la funci&#243; discriminant</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#la-funcio-tau-de-ramanujan">2.4. La funci&#243; tau de Ramanujan</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dia3.html">3. Tercer dia</a></li>
@@ -208,16 +262,16 @@ Ramanujan va ser el primer a estudiar la funci&#243; <span class="math notransla
 <hr />
 <ul>
     
-    <li class="toctree-l1"><a href="formesmodulars.pdf">PDF version</a></li>
+    <li class="toctree-l1"><a href="formesmodulars.pdf">Descarrega PDF</a></li>
     
 </ul>
 
 <div id="searchbox" style="display: none" role="search">
-  <h3 id="searchlabel">Quick search</h3>
+  <h3 id="searchlabel">Cerca r&#224;pida</h3>
     <div class="searchformwrapper">
     <form class="search" action="search.html" method="get">
       <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
-      <input type="submit" value="Go" />
+      <input type="submit" value="Ves a" />
     </form>
     </div>
 </div>
