@@ -244,8 +244,8 @@ Si aquests monomis no fossin linealment independents, la funció $G_4^3/G_6^2$ s
 
 **Remarca:** Es pot resumir l'anterior dient que $M=\bigoplus_{k\in\ZZ} M_k \cong \CC[G_4,G_6]$.
 
-Càlcul de les q-expansions
-==========================
+La q-expansió de les sèries d'Eisenstein
+========================================
 
 Els nombres de Bernoulli
 ------------------------
