@@ -4,17 +4,43 @@
 Primer dia
 ***************************
 
-..
-   Links to lectures
-   =================
+Abans d'introduir els objects que estudiarem, és natural preguntar-nos per què els estudiem (a més del fet que són objectes matemàtics extremadament bonics).
 
-   Videos of Keith Conrad: https://www.youtube.com/watch?v=LolxzYwN1TQ
-   Keith Conrad: https://ctnt-summer.math.uconn.edu/wp-content/uploads/sites/1632/2016/02/CTNTmodularforms.pdf
-   Ram Murty: https://www.youtube.com/watch?v=LhCMD7N_fMc
+Resulta que molts problemes en la teoria de nombres (i en altres ciències) tracten de *comptar* certs objectes. Per exemple, podem comptar el nombre de particions d'n enter $n$ (maneres d'obtenir $n$ com a suma de naturals positius ordenats), o el nombre de solucions mòdul $n$ de l'equació $y^2+y=x^3-x^2$, o bé el nombre de maneres d'escriure $n$ com a suma de $8$ quadrats,... Doncs resulta que per tots els problemes anteriors (i molts d'altres) aquests recomptes donen, un cop escrits en forma de sèrie de potències, una forma modular.
+
+El fet anterior ja seria de per si interessant, ja que estudiar formes modulars ens permetria estudiar tots aquests problemes a la vegada. El que és encara més sorprenent és que resulta que les formes modulars constitueixen espais vectorials de dimensió finita, i això fa que si podem construir suficients exemples, podem descobrir identitats sorprenents. Com a mostra, podem enunciar alguns teoremes que aprofiten aquest fet:
+
+**Teorema:**
+Per a tot primer $p$, es té:
+$$
+\#\{(x,y)\in\ZZ/p\times\ZZ/p : y^2+y=x^3-x^2\} = p - a_p,
+$$
+on $a_p$ és el coeficient de $q^p$ de la sèrie formal
+$$
+q\prod_{n=1}^\infty (1-q^n)^2(1-q^{11n})^2.
+$$
+
+**Teorema (Fermat):**
+Sigui $r_2(n)$ el nombre de maneres d'escriure $n$ com a suma de $8$ quadrats. Aleshores, per tot $n\geq 1$ es té:
+$$
+r_2(n)=4\sum_{d\equiv 1\mod 4} d - 4\sum_{d\equiv 3\mod 4} d,
+$$
+on les sumes recorren els divisors $d$ de $n$ positius.
+
+**Teorema:**
+Sigui $a_p$ el nombre d'arrels del polinomi $x^3-x-1$ a $\ZZ/p\ZZ$. Aleshores per tot primer $p\neq 23$, $a_p-1$ és el coeficient de $q^p$ de la sèrie formal
+$$
+q\prod_{n=1}^\infty (1-q^n)(1-q^{23n}).
+$$
+
+**Teorema (Ramanujan):**
+Sigui $\tau(n)$ el coeficient de $q^n$ de la sèrie formal $\Delta(q)=q\prod_{n\geq 1} (1-q^n)^{24}$. Aleshores per a tot $n\geq 1$,
+$$
+\tau(n) \equiv \sum_{d\mid n} d^{11} \pmod{691}.
+$$
 
 Definicions bàsiques
 ====================
-
 
 Considerem el semiplà superior de Poincaré,
 $$
@@ -55,19 +81,23 @@ Considerem ara el conjunt $D\subseteq \HH$ definit com
 $$
 D = \{ z \in \HH : \Re(z)\leq 1/2, | z | \geq 1 \}.
 $$
-Es té el següent teorema:
+Es té el següent:
 
 **Teorema:**
 
-1. Per cada $z\in \HH$, hi ha algun $g\in G$ tal que $g\cdot z \in D$.
-#. Siguin $z, z'\in D$ congruents mòdul $G$. Aleshores o bé $\Re(z)=\pm 1/2$ i $z=z'\pm 1$, o bé $\abs{z} = 1$ i $z'=-1/z$.
+1. Siguin $z, z'\in D$ congruents mòdul $G$. Aleshores o bé $\Re(z)=\pm 1/2$ i $z=z'\pm 1$, o bé $\abs{z} = 1$ i $z'=-1/z$.
 #. Sigui $z\in D$, i considerem $G_z=\{g \in G: g\cdot z = z\}$. Aleshores $G_z=1$ excepte si:
 
    a. $z=i$, i aleshores $G_i = \{1, S\}$.
    #. $z = \rho=e^{2\pi i/3}$, i aleshores $G_\rho=\{1, ST, (ST)^2\}$.
    #. $z = -\bar\rho=e^{\pi i /3}$, i aleshores $G_{-\bar\rho}=\{1, (TS), (TS)^2\}$.
 
-*Prova:* El primer pas és considerar $G'=\langle S, T\rangle$ i $z\in\HH$, i veure que hi ha un $g'\in G'$ tal que $g'\cdot z \in D$. Hi un nombre finit de parelles $(c,d)$ tals que $ \abs{c z + d} $ és menor que un nombre fixat. Per tant, hi ha algun $g\in G'$ tal que $\Im(g\cdot z)$ és màxim. També hi ha un enter $n$ tal que $z'=T^ng z$ té part real entre $-1/2$ i $1/2$. Veurem ara que $\abs{z'}\geq 1$ i que, per tant, pertany a $D$: si no fos així, aleshores $\abs{z'}<1$ faria que $\Im(-1/z') = \Im(z')/\abs{z'}^2 > \Im(z')$, contradient la maximalitat de $\Im(z')$.
+*Prova:*
+Considerem $G'=\langle S, T\rangle$. Donat $z\in\HH$, trobarem $g'\in G'$ tal que $g'z\in D$. Si escrivim $g=\smtx abcd$ un element de $G'$ arbitrari, aleshores per la fórmula
+$$
+\Im(gz)=\frac{\Im(z)}{\abs{cz+d}^2}
+$$
+veiem que hi ha un nombre finit de parelles $(c,d)$ tal que $\abs{cz+d}<M$ per qualsevol $M$. Per tant, hi ha algun $g'\in G'$ que maximitza $\Im(gz)$. Triem ara $n\in\ZZ$ tal que $T^ngz$ tingui part real entre $-1/2$ i $1/2$. Aleshores és fàcil veure que $z'=T^ngz$ és a $D$ (si no ho fos, seria perquè $\abs{z'}<1$, però aleshores $-1/z'$ tindria part imaginària més gran, contradicció).
 
 Per demostrar el segon punt, suposem que $z$ i $gz$ pertanyen a $D$. Per simetria, podem assumir que $\Im(gz)\geq \Im(z)$, és a dir,
 $$
@@ -75,8 +105,7 @@ $$
 $$
 Com que $y>1/2$, això implica que $\abs{c}\leq 1$. Analitzant els diferents casos $c=0$, $c=1$ i $c=-1$ obtenim el que quedava per demostrar, excepte el fet que $G=G'$.
 
-Sigui ara $g\in G$ un element arbitrari, i prenem $z_0$ a l'interior de $D$. Considerem $z=gz_0$, i trobarem $g'\in G'$ tal que $g'z$ pertanyi a $D$. Pel què hem vist $g'z=z_0$ i d'aquí obtenim $g'g=1$, i per tant $g$ pertany a $G'$.
-
+Sigui ara $g\in G$ un element arbitrari, i prenem $z_0$ a l'interior de $D$. Considerem $z=gz_0$, i trobarem $g'\in G'$ tal que $g'z$ pertanyi a $D$. Pel què hem vist $g'z=z_0$ i d'aquí obtenim $g'g=1$, i per tant $g$ pertany a $G'$. $\qed$
 
 **Corol·lari:** L'aplicació de pas al quocient $D \to \HH/G$ és exhaustiva, i la seva restricció a l'interior de $D$ és injectiva.
 
@@ -88,17 +117,17 @@ Formes modulars
 Definicions
 -----------
 
-**Definició:** Diem que una funció $f$ meromorfa a $\HH$ és *dèbilment modular* de pes $k\in\Z$ si
-$$f(g\cdot z) = (cz+d)^k f(z),\forall g=\smtx abcd \in\SL_2(\Z).$$
+**Definició:** Diem que una funció $f$ meromorfa a $\HH$ és *dèbilment modular* de pes $k\in\ZZ$ si
+$$f(g\cdot z) = (cz+d)^k f(z),\forall g=\smtx abcd \in\SL_2(\ZZ).$$
 
 És convenient introduir aquí la notació "slash": definim $f | g$ com la funció (que depèn de $k$, encara que no ho posem a la notació)
 $$(f | g)(z) = (cz+d)^{-k} f(z).$$
-Aleshores veiem que $f$ és dèbilment modular si, i només si, $f| g=f$ per a tot $g\in \SL_2(\Z)$.
+Aleshores veiem que $f$ és dèbilment modular si, i només si, $f| g=f$ per a tot $g\in \SL_2(\ZZ)$.
 
 Com que $G$ està generat pels elements $S$ i $T$, aquesta condició és equivalent a demanar que, per a tot $z\in \HH$,
 $$f(z+1)=f(z),\quad f(-1/z) = z^{k}f(z).$$
 
-**Remarca:** Aplicant la definició a $-1\in \SL_2(\Z)$ obtenim que $f(z)=(-1)^k f(z)$. Per tant, si $k$ és senar només la funció $0$ és dèbilment modular. Demanarem doncs, d'aquí en endavant, que $k$ sigui parell.
+**Remarca:** Aplicant la definició a $-1\in \SL_2(\ZZ)$ obtenim que $f(z)=(-1)^k f(z)$. Per tant, si $k$ és senar només la funció $0$ és dèbilment modular. Demanarem doncs, d'aquí en endavant, que $k$ sigui parell.
 
 Fixem-nos que, si $f(z+1)=f(z)$ per a tot $z\in \HH$, aleshores podem composar amb el canvi $q=e^{2\pi i z}$ i obtenir una funció $\tilde f(z)$ definida a $\tilde\HH=\{q\in \CC : 0 < | q | < 1 \}$. Aleshores, $\tilde f$ tindrà una sèrie de Laurent al voltant de $q=0$:
 $$\tilde f(q) = \sum_{n=-\infty}^\infty a_nq^n.$$
@@ -122,9 +151,9 @@ Sèries d'Eisenstein
 -------------------
 Per ara els únics exemples que tenim de formes modulars són les constants, que són formes modulars de pes zero (de fet, són les úniques formes modulars de pes zero). Si considerem una funció holomorfa $h$ qualsevol, aleshores una manera de construir una funció modular és "simetritzar-la", és a dir, considerrar $\sum_{g\in G} h|_k g$. El problema és que en general aquesta suma no té per què convergir. Una segona idea seria considerar una funció que ja sigui invariant per algun subgrup de $H\leq G$, i aleshores només simetritzar per $G/H$. La versió més senzilla d'aquest principi és considerar la funció constant $1$. Si $H=\{ \pm \smtx{1}{t}{0}{1}\}$, veiem que $1|_k h=1$ per a tot $h\in H$. Per tant, podem considerar
 $$
-G_k(z) = \sum_{\gamma \in H\backslash \SL_2(\Z)} 1|_k \gamma= \sum_{\smtx abcd \in H \backslash \SL_2(\Z)} (cz+d)^{-k}.
+G_k(z) = \sum_{\gamma \in H\backslash \SL_2(\ZZ)} 1|_k \gamma= \sum_{\smtx abcd \in H \backslash \SL_2(\ZZ)} (cz+d)^{-k}.
 $$
-Fixem-nos que, donada una matriu $\smtx abcd\in \SL_2(\Z)$, la classe lateral$H\smtx abcd$ està formada per totes les matrius de la forma $\smtx{a'}{b'}{c}{d}\in\SL_2(\Z)$. Per tant, podem reescriure
+Fixem-nos que, donada una matriu $\smtx abcd\in \SL_2(\ZZ)$, la classe lateral$H\smtx abcd$ està formada per totes les matrius de la forma $\smtx{a'}{b'}{c}{d}\in\SL_2(\ZZ)$. Per tant, podem reescriure
 $$
 G_k(z) = \sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k},
 $$
@@ -135,7 +164,7 @@ $$
 $$
 \#\{ (c,d)\neq (0,0) : N \leq \abs{c\rho + d}< N+1\} = O(N)
 $$
-i $\sum_n n^{1-k}$ convergeix per $k>2$, ja estem. Com que $D$ és compacte, la sèrie $G_k(z)$ convergeix normalment a $D$ i, com que podem traslladar $D$ per recobrir tot $\HH$ amb elements de $\SL_2(\Z)$, en deduïm que $G_k(z)$ també convergeix a tot $\HH$ a una funció holomorfa.
+i $\sum_n n^{1-k}$ convergeix per $k>2$, ja estem. Com que $D$ és compacte, la sèrie $G_k(z)$ convergeix normalment a $D$ i, com que podem traslladar $D$ per recobrir tot $\HH$ amb elements de $\SL_2(\ZZ)$, en deduïm que $G_k(z)$ també convergeix a tot $\HH$ a una funció holomorfa.
 
 Per calcular $G_k(\infty)$, prenem el límit quan $\Im(z)\to\infty$, i això ho podem fer mantenint $z$ a $D$. En aquest cas, gràcies a la convergència uniforme de la sèrie podem prendre el límit terme a terme. Els termes que tenen $c\neq 0$ tots van a $0$, i només ens queda
 $$
@@ -153,13 +182,13 @@ $$
 \wp_\tau(w)=\frac{1}{w^2}+\sum_{(c,d)\neq (0,0)} \left(\frac{1}{(w-c\tau-d)^2}-\frac{1}{(c\tau+d)^2}\right).
 $$
 Aleshores la sèrie de Laurent de $\wp_\tau$ és fàcil de calcular, i resulta que les sèries d'Eisenstein apareixen com a coeficients d'aquesta sèrie:
-\[
+$$
 \wp_\tau(w) = \frac{1}{w^2} + \sum_{k=2}^\infty (2k-1)G_{2k}(\tau)w^{2k-2}.
-\]
+$$
 De fet, si definim $x=\wp_\tau(w)$ i $y=\wp_\tau'(w)$ (la derivada respecte $w$), tenim
-\[
+$$
 y^2=4x^3-60G_2(\tau)x-140G_3(\tau),
-\]
+$$
 que és una corba el·líptica amb discriminant justament $16\Delta(\tau)$, que per tant és diferent de zero.
 
 L'espai de les formes modulars
@@ -211,31 +240,7 @@ En particular, $\dim M_k=\lfloor k/12\rfloor$ si $k\equiv 2 \pmod{12}$, i $\dim 
 *Prova:* Veiem primer que generen, cosa que és clara per $k\leq 6$. Per $k\geq 8$, fem inducció en $k$. Triem enters positius $i,j$ tals que $4i+6j=k$, i considerem $g =G_4^iG_6^j$, que no s'anula a l'infinit. Si $f\in M_k$, aleshores $f-\lambda g\in S_k$ per algun $\lambda\in\CC$. Per aquest $\lambda$, tenim $f-\lambda g = \Delta h$ amb $h\in M_{k-12}$. Apliquem ara la hipòtesi d'inducció a $h$, i ja estem.
 Si aquests monomis no fossin linealment independents, la funció $G_4^3/G_6^2$ satisfaria un polinomi amb coeficients a $\CC$ i, per tant, seria constant. Però això no pot ser, perquè $G_4$ s'anula a $\rho$ i $G_6$ no, per exemple.
 
-**Remarca:** Es pot resumir l'anterior dient que $M=\bigoplus_{k\in\Z} M_k \cong \CC[G_4,G_6]$.
-
-La funció j de Klein
---------------------
-Definim la següent funció modular de pes $0$:
-$$
-j = E_2^3 / \Delta.
-$$
-Veiem que $j$ té un holomorfa a tot $\HH$, perquè $\Delta$ no s'anula. A més, té un pol simple a l'infinit, provinent del zero simple de $\Delta$.
-
-**Proposició:** L'aplicació $z\mapsto j(z)$ identifica $G\backslash \HH$ amb $\CC$.
-
-*Prova:* com que $j$ és invariant per $G$, obtenim una funció ben definida $G\backslash \HH\to \CC$. Hem de veure que, per a tot $\lambda\CC$, existeix un únic $z\in G\backslash\HH$ tal que $j(z)=\lambda$ o, el què és el mateix, que la funció $f_\lambda(z)=E_2(z)^3 - \lambda\Delta(z)$ té un únic zero mòdul $G$. Aplicant la fórmula de la valència a $f_\lambda$ (que té pes $12$) veiem que hem de descomposar $1$ de la forma $a + b/2 + c/3$ amb $a,b,c\geq 0$. Les úniques possibilitats són $(1,0,0)$, $(0,2,0)$, $(0,0,3)$, i per tant hi ha un únic zero de $f_\lambda$ a $G\backslash\HH$. $\qed$
-
-De fet, d'alguna manera la funció $j$ dona lloc a totes les funcions modulars de pes zero:
-
-**Proposició:** Tota funció modular de pes zero és una funció racional en $j$.
-
-*Prova:* Sigui $f$ una funció modular. Multiplicant-la per un polinomi en $j$, posem suposar que és holomorfa a $\HH$. D'altra banda, com que $\Delta$ té un zero simple a l'infinit, podem multiplicar $f$ per $\Delta^n$ de manera que $g=\Delta^nf$ sigui holomorfa també a l'infinit. Aleshores $g$ és una forma modular de pes $12n$, que podem escriure com un polinomi (4,6)-homogeni en $E_4$ i $E_6$, de grau $12n$. Per linealitat, n'hi ha prou amb veure que $f=E_4^iE_6^j/\Delta^n$ és una funció racional en $j$. Observem però que, com que $4i+6j=12n$, tant $p=i/3$ com $q=j/2$ són enters i, per tant, $f=E_4^{3p}E_6^{2q}/\Delta^{p+q}=(\frac{E_4^3}{\Delta})^p(\frac{E_6^2}{\Delta})^q$. Però tant $E_4^3/\Delta$ com $E_6^2/\Delta$ són funcions racionals en $j$, i ja estem. $\qed$
-
-**Remarca:** Aviat veurem les $q$-expansions de les sèries d'Eisenstein, i podrem deduir-ne la de $j$, que de fet és
-$$
-j(z)=\frac{1}{q} + 744 + 196884q + 21493760q^2+\cdots
-$$
-Els coeficients són tots enters, que a més satisfan $n\equiv 0\pmod{p^i}\implies c(n) \equiv 0 \pmod{p^i}$ per $p=2,3,5,7,11$ (per $p=2,3,5$ la divisilitat de $c(n)$ és per $2^{3i+8}$, $3^{2i+3}$ i $5^{i+1}$, respectivament).
+**Remarca:** Es pot resumir l'anterior dient que $M=\bigoplus_{k\in\ZZ} M_k \cong \CC[G_4,G_6]$.
 
 Càlcul de les q-expansions
 ==========================
@@ -296,7 +301,7 @@ $$
 $$
 Derivant-la successivament, obtenim el que es coneix com la **fórmula de Lipschitz**:
 $$
-\sum_{m\in\Z} \frac{1}{(m+z)^k} = \frac{(-1)^k (2\pi i)^k}{(k-1)!}\sum_{n=1}^\infty n^{k-1}q^n, \quad k\geq 2.
+\sum_{m\in\ZZ} \frac{1}{(m+z)^k} = \frac{(-1)^k (2\pi i)^k}{(k-1)!}\sum_{n=1}^\infty n^{k-1}q^n, \quad k\geq 2.
 $$
 
 **Proposició:** Per cada $k\geq 4$ parell, tenim
@@ -306,7 +311,7 @@ $$
 
 *Prova:* Expandim $G_k(z)$ com
 $$
-G_k(z)=\sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k} =2\zeta(k) + 2\sum_{n=1}^\infty\sum_{m\in\Z} \frac{1}{(cz+d)^k}.
+G_k(z)=\sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k} =2\zeta(k) + 2\sum_{n=1}^\infty\sum_{m\in\ZZ} \frac{1}{(cz+d)^k}.
 $$
 Aplicant la igualtat bàsica anterior amb $cz$ en comptes de $z$, tenim
 $$
@@ -325,11 +330,14 @@ $$
 
 Una primera aplicació
 ---------------------
-Ja hem vist que $M_8$ i $M_{10}$ tenen dimensió $1$. Per tant, $E_4^2=E_8$ i $E_4E_6=E_{10}$. Comparant coeficients de les corresponents expansions, obtenim les identitats
+Ja hem vist que $M_8$, $M_{10}$ i $M_{14}$ tenen dimensió $1$. Per tant, $E_4^2=E_8$, $E_4E_6=E_{10}$ i $E_4E_{10}=E_{14}$. Comparant coeficients de les corresponents expansions, obtenim les identitats
 $$
 \sigma_7(n)=\sigma_3(n)+120\sum_{m=1}^{n-1} \sigma_3(m)\sigma_3(n-m),
 $$
-
 $$
-11\sigma_9(n)=21\sigma_5(n)-10\sigma_3(n)+5040\sum_{m=1}^{n-1} \sigma_3(m)\sigma_5(n-m).
+11\sigma_9(n)=21\sigma_5(n)-10\sigma_3(n)+5040\sum_{m=1}^{n-1} \sigma_3(m)\sigma_5(n-m),
+$$
+i
+$$
+\sigma_{13}(n) = 11\sigma_9(n) - 10\sigma_{3}(n) +2640 \sum_{m=1}^n \sigma_3(n)\sigma_9(m-n).
 $$

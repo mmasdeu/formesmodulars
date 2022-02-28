@@ -34,7 +34,9 @@
 extensions = ['sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
     'sphinx.ext.todo',
-    'sphinx_math_dollar']
+    'sphinx_math_dollar',
+    'sphinx_proof',
+    'sphinx_togglebutton']
 
 
 mathjax3_config = { 'tex': {'macros': {}},
@@ -169,7 +171,7 @@ latex_elements = {
 
     # The font size ('10pt', '11pt' or '12pt').
     #
-    # 'pointsize': '10pt',
+    'pointsize': '11pt',
 
     # Additional stuff for the LaTeX preamble.
    # load packages and make box around code lighter
