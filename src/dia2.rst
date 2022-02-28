@@ -4,30 +4,6 @@
 Segon dia
 ***************************
 
-La funció j de Klein
---------------------
-Definim la següent funció modular de pes $0$:
-$$
-j = E_2^3 / \Delta.
-$$
-Veiem que $j$ té un holomorfa a tot $\HH$, perquè $\Delta$ no s'anula. A més, té un pol simple a l'infinit, provinent del zero simple de $\Delta$.
-
-**Proposició:** L'aplicació $z\mapsto j(z)$ identifica $G\backslash \HH$ amb $\CC$.
-
-*Prova:* com que $j$ és invariant per $G$, obtenim una funció ben definida $G\backslash \HH\to \CC$. Hem de veure que, per a tot $\lambda\CC$, existeix un únic $z\in G\backslash\HH$ tal que $j(z)=\lambda$ o, el què és el mateix, que la funció $f_\lambda(z)=E_2(z)^3 - \lambda\Delta(z)$ té un únic zero mòdul $G$. Aplicant la fórmula de la valència a $f_\lambda$ (que té pes $12$) veiem que hem de descomposar $1$ de la forma $a + b/2 + c/3$ amb $a,b,c\geq 0$. Les úniques possibilitats són $(1,0,0)$, $(0,2,0)$, $(0,0,3)$, i per tant hi ha un únic zero de $f_\lambda$ a $G\backslash\HH$. $\qed$
-
-De fet, d'alguna manera la funció $j$ dona lloc a totes les funcions modulars de pes zero:
-
-**Proposició:** Tota funció modular de pes zero és una funció racional en $j$.
-
-*Prova:* Sigui $f$ una funció modular. Multiplicant-la per un polinomi en $j$, posem suposar que és holomorfa a $\HH$. D'altra banda, com que $\Delta$ té un zero simple a l'infinit, podem multiplicar $f$ per $\Delta^n$ de manera que $g=\Delta^nf$ sigui holomorfa també a l'infinit. Aleshores $g$ és una forma modular de pes $12n$, que podem escriure com un polinomi (4,6)-homogeni en $E_4$ i $E_6$, de grau $12n$. Per linealitat, n'hi ha prou amb veure que $f=E_4^iE_6^j/\Delta^n$ és una funció racional en $j$. Observem però que, com que $4i+6j=12n$, tant $p=i/3$ com $q=j/2$ són enters i, per tant, $f=E_4^{3p}E_6^{2q}/\Delta^{p+q}=(\frac{E_4^3}{\Delta})^p(\frac{E_6^2}{\Delta})^q$. Però tant $E_4^3/\Delta$ com $E_6^2/\Delta$ són funcions racionals en $j$, i ja estem. $\qed$
-
-**Remarca:** A partir de les  $q$-expansions de les sèries d'Eisenstein podem obtenir la de $j$:
-$$
-j(z)=\frac{1}{q} + 744 + 196884q + 21493760q^2+\cdots
-$$
-Els coeficients són tots enters, que a més satisfan $n\equiv 0\pmod{p^i}\implies c(n) \equiv 0 \pmod{p^i}$ per $p=2,3,5,7,11$ (per $p=2,3,5$ la divisilitat de $c(n)$ és per $2^{3i+8}$, $3^{2i+3}$ i $5^{i+1}$, respectivament).
-
 Creixement dels coeficients
 ===========================
 
@@ -76,8 +52,21 @@ $$
 *Prova:* Escrivim $f=\lambda E_k + h$ amb $\lambda\neq 0$ i $h$ cuspidal, i apliquem els resultats anteriors. Com que els coeficients d'$E_k$ creixen
 molt més ràpid que els de $h$, el creixement de $f$ és igual que el d'$E_k$. $\qed$
 
+
+L'expansió de la funció discriminant
+====================================
+
+Volem donar una fórmula per $\Delta(z)=\frac{E_4(z)^3-E_6(z)^2}{1728}$. Per això, considerem $\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}$. Veurem que aquestes dues funcions coincideixen ($q=e^{2\pi i z})$. Prenent la derivada logarítmica, obtenim (fixem-nos que $\dlog q = 2\pi i$)
+$$
+\dlog \tilde\Delta = 2\pi i + 24\sum_{n=1}^\infty \frac{-2\pi i n q^n}{1-q^n} = 2\pi i\left(1-24\sum_{n=1}^\infty\frac{nq^n}{1-q^n}\right).
+$$
+Observem que
+$$
+\sum_{n=1}^\infty \frac{nq^n}{1-q^n}=\sum_{n=1}^\infty n\sum_{m=1}^\infty q^{nm} = \sum_{n\geq 1}\sigma_1(n)q^n.
+$$
+
 La sèrie d'Eisenstein de pes 2
-================================
+------------------------------
 
 Considerem la funció
 $$
@@ -127,6 +116,9 @@ $$
 \cot(\pi N/z) = i(1-2\sum_{m=0}^\infty e^{2\pi mN/z})\substack{\to\\{\tiny N\rightarrow\infty}} i.
 $$
 
+Relació amb la funció delta
+---------------------------
+
 Resumint, hem trobat:
 
 **Teorema:** La funció $G_2$ satisfà, per a tot $z\in \HH$,
@@ -143,17 +135,6 @@ $$
 G_2(z) = 2\zeta(2) - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n = \frac{\pi^2}{3}\left(1-24\sum_{n=1}^\infty \sigma-1(n)q^n\right).
 $$
 
-L'expansió de la funció discriminant
-=====================================
-
-Volem donar una fórmula per $\Delta(z)=\frac{E_4(z)^3-E_6(z)^2}{1728}$. Per això, considerem $\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}$. Veurem que aquestes dues funcions coincideixen ($q=e^{2\pi i z})$. Prenent la derivada logarítmica, obtenim (fixem-nos que $\dlog q = 2\pi i$)
-$$
-\dlog \tilde\Delta = 2\pi i + 24\sum_{n=1}^\infty \frac{-2\pi i n q^n}{1-q^n} = 2\pi i\left(1-24\sum_{n=1}^\infty\frac{nq^n}{1-q^n}\right).
-$$
-Observem que
-$$
-\sum_{n=1}^\infty \frac{nq^n}{1-q^n}=\sum_{n=1}^\infty n\sum_{m=1}^\infty q^{nm} = \sum_{n\geq 1}\sigma_1(n)q^n.
-$$
 Resumint,
 $$
 \dlog\tilde\Delta = 2\pi i E_2.
@@ -166,9 +147,9 @@ Per tant, $z^{-12}\tilde\Delta(-1/z) = C \tilde\Delta(z)$. Evaluant a $z=i$ pode
 
 
 La funció tau de Ramanujan
-=============================
+--------------------------
 
-Recordem la funció $\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}$. Calculant els primers termes del producte, de seguida veiem que
+Calculant els primers termes del producte $\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}$, de seguida veiem que
 $$
 \tilde\Delta = \sum_{n\geq 1} \tau(n)q^n = q - 24 q^{2} + 252 q^{3} - 1472 q^{4} + 4830 q^{5} - 6048 q^{6} - 16744 q^{7} + O(q^{8}).
 $$
@@ -189,10 +170,10 @@ A més, Ramanujan va relacionar $\tau(n)$ amb si $r_{24}(n)$, el nombre de maner
 Tot això, vist un segle després, és relativament fàcil de demostrar amb la teoria de les formes modulars. El teorema de Hecke que hem vist abans implica ja que $\abs{\tau(p)} =O(p^6)$, però per veure la fita més fina conjecturada per Ramanujan hauríem de fer servir resultats molt més profunds de P.Deligne (1974).
 
 Operadors de Hecke
-==================
+==================================
 
 Definició
----------
+-----------
 
 .. TODO
    Fer una definició en termes de reticles
@@ -226,7 +207,7 @@ $$
 on entenem que $a_{m/p}(f)=0$ si $p$ no divideix $m$. Veiem també que $T_n$ actua a $M_k$ i $S_k$, i commuten entre si.
 
 Formes pròpies
---------------
+----------------
 
 Suposem ara que $f=\sum_{n\geq 0} a_n(f)q^n$ és una forma modular de pes $k>0$, que és pròpia per tots els $T_n$. És a dir, per cada $n\geq 1$ tenim $T_nf=\lambda_nf$, per algun $\lambda_n\in\CC$.
 

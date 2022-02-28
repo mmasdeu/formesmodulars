@@ -6,7 +6,7 @@ Primer dia
 
 Abans d'introduir els objects que estudiarem, és natural preguntar-nos per què els estudiem (a més del fet que són objectes matemàtics extremadament bonics).
 
-Resulta que molts problemes en la teoria de nombres (i en altres ciències) tracten de *comptar* certs objectes. Per exemple, podem comptar el nombre de particions d'n enter $n$ (maneres d'obtenir $n$ com a suma de naturals positius ordenats), o el nombre de solucions mòdul $n$ de l'equació $y^2+y=x^3-x^2$, o bé el nombre de maneres d'escriure $n$ com a suma de $8$ quadrats,... Doncs resulta que per tots els problemes anteriors (i molts d'altres) aquests recomptes donen, un cop escrits en forma de sèrie de potències, una forma modular.
+Resulta que molts problemes en la teoria de nombres (i en altres ciències) tracten de *comptar* certs objectes. Per exemple, podem comptar el nombre de particions d'n enter $n$ (maneres d'obtenir $n$ com a suma de naturals positius ordenats), o el nombre de solucions mòdul $n$ de l'equació $y^2+y=x^3-x^2$, o bé el nombre de maneres d'escriure $n$ com a suma de $2$ quadrats,... Doncs resulta que per tots els problemes anteriors (i molts d'altres) aquests recomptes donen, un cop escrits en forma de sèrie de potències, una forma modular.
 
 El fet anterior ja seria de per si interessant, ja que estudiar formes modulars ens permetria estudiar tots aquests problemes a la vegada. El que és encara més sorprenent és que resulta que les formes modulars constitueixen espais vectorials de dimensió finita, i això fa que si podem construir suficients exemples, podem descobrir identitats sorprenents. Com a mostra, podem enunciar alguns teoremes que aprofiten aquest fet:
 
@@ -21,7 +21,7 @@ q\prod_{n=1}^\infty (1-q^n)^2(1-q^{11n})^2.
 $$
 
 **Teorema (Fermat):**
-Sigui $r_2(n)$ el nombre de maneres d'escriure $n$ com a suma de $8$ quadrats. Aleshores, per tot $n\geq 1$ es té:
+Sigui $r_2(n)$ el nombre de maneres d'escriure $n$ com a suma de $2$ quadrats. Aleshores, per tot $n\geq 1$ es té:
 $$
 r_2(n)=4\sum_{d\equiv 1\mod 4} d - 4\sum_{d\equiv 3\mod 4} d,
 $$
@@ -57,7 +57,7 @@ $$g\cdot z =\smtx{a}{b}{c}{d}\cdot z = \frac{az+b}{cz+d}.$$
 
 Es té una fórmula  senzilla per la part imaginària d'aquesta quantitat:
 $$
-\Im(gz) = \frac{\Im(z)}{ | cz+d | ^2}.
+\Im(gz) = \frac{\Im(z)}{ \abs{cz+d} ^2}.
 $$
 
 Per tant, veiem que $\operatorname{SL}_2(\mathbb{R})$ actua a $\mathbb{H}$. També veiem que $-1$ actua trivialment, i per tant de fet tenim un grup del quocient $\PSL_2(\RR) = \SL_2(\RR)/\{\pm 1\}$, que de fet és *fidel*.
@@ -73,24 +73,26 @@ Considerem dos elements a $G$ que jugaran un paper important:
 $$
 S = \smtx{0}{-1}{1}{0},\quad T = \smtx 1101.
 $$
-Actuen enviant $z$ a $S\cdot z=-1/z$ i $T\cdot z = z+1$. A més, satisfan les relacions (a $G$)
+Actuen enviant $z$ a $S z=-1/z$ i $T z = z+1$. A més, satisfan les relacions (a $G$)
 $$
 S^2=1,\quad (ST)^3=1.
 $$
 Considerem ara el conjunt $D\subseteq \HH$ definit com
 $$
-D = \{ z \in \HH : \Re(z)\leq 1/2, | z | \geq 1 \}.
+D = \{ z \in \HH : \Re(z)\leq 1/2, \abs{z} \geq 1 \}.
 $$
 Es té el següent:
 
 **Teorema:**
 
 1. Siguin $z, z'\in D$ congruents mòdul $G$. Aleshores o bé $\Re(z)=\pm 1/2$ i $z=z'\pm 1$, o bé $\abs{z} = 1$ i $z'=-1/z$.
-#. Sigui $z\in D$, i considerem $G_z=\{g \in G: g\cdot z = z\}$. Aleshores $G_z=1$ excepte si:
+#. Sigui $z\in D$, i considerem $G_z=\{g \in G: g z = z\}$. Aleshores $G_z=1$ excepte si:
 
    a. $z=i$, i aleshores $G_i = \{1, S\}$.
    #. $z = \rho=e^{2\pi i/3}$, i aleshores $G_\rho=\{1, ST, (ST)^2\}$.
    #. $z = -\bar\rho=e^{\pi i /3}$, i aleshores $G_{-\bar\rho}=\{1, (TS), (TS)^2\}$.
+
+#. El grup $G$ està generat per $S$ i $T$. De fet, es té $G=\langle S, T | S^2=(ST)^3=1 \rangle$.
 
 *Prova:*
 Considerem $G'=\langle S, T\rangle$. Donat $z\in\HH$, trobarem $g'\in G'$ tal que $g'z\in D$. Si escrivim $g=\smtx abcd$ un element de $G'$ arbitrari, aleshores per la fórmula
@@ -109,7 +111,7 @@ Sigui ara $g\in G$ un element arbitrari, i prenem $z_0$ a l'interior de $D$. Con
 
 **Corol·lari:** L'aplicació de pas al quocient $D \to \HH/G$ és exhaustiva, i la seva restricció a l'interior de $D$ és injectiva.
 
-**Teorema:** El grup $G$ està generat per $S$ i $T$. De fet, es té $G=\langle S, T | S^2=(ST)^3=1 \rangle$.
+
 
 Formes modulars
 ====================
@@ -118,18 +120,18 @@ Definicions
 -----------
 
 **Definició:** Diem que una funció $f$ meromorfa a $\HH$ és *dèbilment modular* de pes $k\in\ZZ$ si
-$$f(g\cdot z) = (cz+d)^k f(z),\forall g=\smtx abcd \in\SL_2(\ZZ).$$
+$$f(g z) = (cz+d)^k f(z),\forall g=\smtx abcd \in\SL_2(\ZZ).$$
 
-És convenient introduir aquí la notació "slash": definim $f | g$ com la funció (que depèn de $k$, encara que no ho posem a la notació)
-$$(f | g)(z) = (cz+d)^{-k} f(z).$$
-Aleshores veiem que $f$ és dèbilment modular si, i només si, $f| g=f$ per a tot $g\in \SL_2(\ZZ)$.
+És convenient introduir aquí la notació "slash": definim $f \slash{k} g$ com la funció (que depèn de $k$, encara que no ho posem a la notació)
+$$(f \slash{k} g)(z) = (cz+d)^{-k} f(z).$$
+Aleshores veiem que $f$ és dèbilment modular si, i només si, $f\slash{k} g=f$ per a tot $g\in \SL_2(\ZZ)$.
 
 Com que $G$ està generat pels elements $S$ i $T$, aquesta condició és equivalent a demanar que, per a tot $z\in \HH$,
 $$f(z+1)=f(z),\quad f(-1/z) = z^{k}f(z).$$
 
 **Remarca:** Aplicant la definició a $-1\in \SL_2(\ZZ)$ obtenim que $f(z)=(-1)^k f(z)$. Per tant, si $k$ és senar només la funció $0$ és dèbilment modular. Demanarem doncs, d'aquí en endavant, que $k$ sigui parell.
 
-Fixem-nos que, si $f(z+1)=f(z)$ per a tot $z\in \HH$, aleshores podem composar amb el canvi $q=e^{2\pi i z}$ i obtenir una funció $\tilde f(z)$ definida a $\tilde\HH=\{q\in \CC : 0 < | q | < 1 \}$. Aleshores, $\tilde f$ tindrà una sèrie de Laurent al voltant de $q=0$:
+Fixem-nos que, si $f(z+1)=f(z)$ per a tot $z\in \HH$, aleshores podem composar amb el canvi $q=e^{2\pi i z}$ i obtenir una funció $\tilde f(z)$ definida a $\tilde\HH=\{q\in \CC : 0 < \abs{q} < 1 \}$. Aleshores, $\tilde f$ tindrà una sèrie de Laurent al voltant de $q=0$:
 $$\tilde f(q) = \sum_{n=-\infty}^\infty a_nq^n.$$
 Direm aleshores que $f$ és *meromorfa a l'infinit* si $\tilde f$ és meromorfa a $q=0$ ($a_n=0$ per $n<<0$). També direm que $f$ és *holomorfa a l'infinit* si $a_n=0$ per $n < 0$, i $f$ s'anul·la a l'infinit si $a_n=0$ per $n\leq 0$.
 
@@ -141,7 +143,7 @@ f(z) = \sum_{n=0}^\infty a_n q^n = \sum_{n=0}^\infty a_ne^{2\pi i z},
 $$
 que convergeix per a tot $z\in \HH$, i que satisfà $f(-1/z) = z^kf(z)$.
 
-**Remarca:** Si multipliquem una forma modular $f$ de pes $k$ amb una $f'$ de pes $k'$ obtindrem una forma $ff'$ de pes $k+k'$.
+**Remarca:** Si multipliquem una forma modular $f$ de pes $k$ amb una $f'$ de pes $k'$ obtindrem una forma $ff'$ de pes $k+k'$. Obtenim així un anell graduat $M=\bigoplus_{k\in\ZZ} M_k$.
 
 .. TODO
    Interpretació via reticles
@@ -149,9 +151,9 @@ que convergeix per a tot $z\in \HH$, i que satisfà $f(-1/z) = z^kf(z)$.
 
 Sèries d'Eisenstein
 -------------------
-Per ara els únics exemples que tenim de formes modulars són les constants, que són formes modulars de pes zero (de fet, són les úniques formes modulars de pes zero). Si considerem una funció holomorfa $h$ qualsevol, aleshores una manera de construir una funció modular és "simetritzar-la", és a dir, considerrar $\sum_{g\in G} h|_k g$. El problema és que en general aquesta suma no té per què convergir. Una segona idea seria considerar una funció que ja sigui invariant per algun subgrup de $H\leq G$, i aleshores només simetritzar per $G/H$. La versió més senzilla d'aquest principi és considerar la funció constant $1$. Si $H=\{ \pm \smtx{1}{t}{0}{1}\}$, veiem que $1|_k h=1$ per a tot $h\in H$. Per tant, podem considerar
+Per ara els únics exemples que tenim de formes modulars són les constants, que són formes modulars de pes zero (de fet, són les úniques formes modulars de pes zero). Si considerem una funció holomorfa $h$ qualsevol, aleshores una manera de construir una funció modular és "simetritzar-la", és a dir, considerrar $\sum_{g\in G} h\slash{k} g$. El problema és que en general aquesta suma no té per què convergir. Una segona idea seria considerar una funció que ja sigui invariant per algun subgrup de $H\leq G$, i aleshores només simetritzar per $G/H$. La versió més senzilla d'aquest principi és considerar la funció constant $1$. Si $H=\{ \pm \smtx{1}{t}{0}{1}\}$, veiem que $1\slash{k} h=1$ per a tot $h\in H$. Per tant, podem considerar
 $$
-G_k(z) = \sum_{\gamma \in H\backslash \SL_2(\ZZ)} 1|_k \gamma= \sum_{\smtx abcd \in H \backslash \SL_2(\ZZ)} (cz+d)^{-k}.
+G_k(z) = \sum_{\gamma \in H\backslash \SL_2(\ZZ)} 1\slash{k} \gamma= \sum_{\smtx abcd \in H \backslash \SL_2(\ZZ)} \frac{1}{(cz+d)^{k}}.
 $$
 Fixem-nos que, donada una matriu $\smtx abcd\in \SL_2(\ZZ)$, la classe lateral$H\smtx abcd$ està formada per totes les matrius de la forma $\smtx{a'}{b'}{c}{d}\in\SL_2(\ZZ)$. Per tant, podem reescriure
 $$
@@ -160,11 +162,11 @@ $$
 
 **Proposició:** Si $k>2$, la funció $G_k(z)$ és una forma modular de pes $k$. El seu valor a l'infinit és $2\zeta(k)$, on $\zeta$ és la funció zeta de Riemann.
 
-*Prova:* Ens cal primer veure la convergència de la sèrie per tot $z$. Considerem primer $z\in D$ fixat, i podem veure fàcilment que $\abs{c z + d}^2 \geq \abs{c\rho - d}^2$. Com que
+*Prova:* Ens cal primer veure la convergència de la sèrie per tot $z$. Considerem primer $z\in D$ fixat, i podem veure fàcilment que $\abs{c z + d}^2 \geq c^2-cd+d^2= \abs{c\rho - d}^2$. Com que
 $$
 \#\{ (c,d)\neq (0,0) : N \leq \abs{c\rho + d}< N+1\} = O(N)
 $$
-i $\sum_n n^{1-k}$ convergeix per $k>2$, ja estem. Com que $D$ és compacte, la sèrie $G_k(z)$ convergeix normalment a $D$ i, com que podem traslladar $D$ per recobrir tot $\HH$ amb elements de $\SL_2(\ZZ)$, en deduïm que $G_k(z)$ també convergeix a tot $\HH$ a una funció holomorfa.
+i $\sum_{n\geq 1} 1/n^{k-1}$ convergeix per $k>2$, ja estem. Com que $D$ és compacte, la sèrie $G_k(z)$ convergeix normalment a $D$ i, com que podem traslladar $D$ per recobrir tot $\HH$ amb elements de $\SL_2(\ZZ)$, en deduïm que $G_k(z)$ també convergeix a tot $\HH$ a una funció holomorfa.
 
 Per calcular $G_k(\infty)$, prenem el límit quan $\Im(z)\to\infty$, i això ho podem fer mantenint $z$ a $D$. En aquest cas, gràcies a la convergència uniforme de la sèrie podem prendre el límit terme a terme. Els termes que tenen $c\neq 0$ tots van a $0$, i només ens queda
 $$
