@@ -13,7 +13,7 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"Q": "{\\mathbb{Q}}", "Z": "{\\mathbb{Z}}", "RR": "{\\mathbb{R}}", "CC": "{\\mathbb{C}}", "HH": "{\\mathbb{H}}", "SL": "{\\operatorname{SL}}", "GL": "{\\operatorname{GL}}", "PSL": "{\\operatorname{PSL}}", "PGL": "{\\operatorname{PGL}}", "lto": "{\\longrightarrow}", "dfn": "{\\ensuremath{:=}}", "surjects": "{\\twoheadrightarrow}", "injects": "{\\hookrightarrow}", "id": "{\\ensuremath \\text{Id}}", "mtx": ["{\\left(\\begin{matrix}#1&#2\\\\#3&#4\\end{matrix}\\right)}", 4], "mat": ["{\\left(\\begin{matrix}#1\\end{matrix}\\right)}", 1], "smat": ["{\\left(\\begin{smallmatrix}#1\\end{smallmatrix}\\right)}", 1], "smtx": ["{\\left(\\begin{smallmatrix}#1&#2\\\\#3&#4\\end{smallmatrix}\\right)}", 4], "slz": "{\\operatorname{SL}_2(\\bZ)}", "to": "{\\longrightarrow}", "dlog": "{\\operatorname{dlog}}", "Im": "{\\operatorname{Im}}", "Re": "{\\operatorname{Re}}", "abs": ["{|#1|}", 1], "qed": "{\\blacksquare}", "implies": "{\\Longrightarrow}"}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"QQ": "{\\mathbb{Q}}", "ZZ": "{\\mathbb{Z}}", "RR": "{\\mathbb{R}}", "CC": "{\\mathbb{C}}", "HH": "{\\mathbb{H}}", "SL": "{\\operatorname{SL}}", "GL": "{\\operatorname{GL}}", "PSL": "{\\operatorname{PSL}}", "PGL": "{\\operatorname{PGL}}", "lto": "{\\longrightarrow}", "dfn": "{\\ensuremath{:=}}", "surjects": "{\\twoheadrightarrow}", "injects": "{\\hookrightarrow}", "id": "{\\ensuremath \\text{Id}}", "mtx": ["{\\left(\\begin{matrix}#1&#2\\\\#3&#4\\end{matrix}\\right)}", 4], "mat": ["{\\left(\\begin{matrix}#1\\end{matrix}\\right)}", 1], "smat": ["{\\left(\\begin{smallmatrix}#1\\end{smallmatrix}\\right)}", 1], "smtx": ["{\\left(\\begin{smallmatrix}#1&#2\\\\#3&#4\\end{smallmatrix}\\right)}", 4], "slz": "{\\operatorname{SL}_2(\\bZ)}", "to": "{\\longrightarrow}", "dlog": "{\\operatorname{dlog}}", "Im": "{\\operatorname{Im}}", "Re": "{\\operatorname{Re}}", "abs": ["{|#1|}", 1], "slsh": ["{|_{#1}}", 1], "qed": "{\\blacksquare}", "implies": "{\\Longrightarrow}"}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="&#205;ndex" href="genindex.html" />
@@ -38,8 +38,136 @@
             
   <section id="segon-dia">
 <span id="day2"></span><h1><span class="section-number">2. </span>Segon dia<a class="headerlink" href="#segon-dia" title="Link permanent a aquest t&#237;tol">&#182;</a></h1>
+<section id="la-q-expansio-de-les-series-d-eisenstein">
+<h2><span class="section-number">2.1. </span>La q-expansi&#243; de les s&#232;ries d&#8217;Eisenstein<a class="headerlink" href="#la-q-expansio-de-les-series-d-eisenstein" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<section id="els-nombres-de-bernoulli">
+<h3><span class="section-number">2.1.1. </span>Els nombres de Bernoulli<a class="headerlink" href="#els-nombres-de-bernoulli" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<p>Es defineixen com els coeficients de la s&#232;rie de Taylor de
+<div class="math notranslate nohighlight">
+\[
+\frac{t}{e^t-1} = \sum_{k=0}^\infty B_k \frac{t^k}{k!}.
+\]</div>
+</p>
+<p>Es poden calcular de manera recursiva, calculant el terme de grau <span class="math notranslate nohighlight">\(n\)</span> de l&#8217;expansi&#243;
+<div class="math notranslate nohighlight">
+\[
+t = \sum_{k=0}^\infty B_k \frac{t^k}{k!} \sum_{\ell=1}^\infty \frac{t^\ell}{\ell!}.
+\]</div>
+
+De fet, veiem que <span class="math notranslate nohighlight">\(B_0=1\)</span>, <span class="math notranslate nohighlight">\(B_1=-1/2\)</span>, i <span class="math notranslate nohighlight">\(B_k=0\)</span> per a tot <span class="math notranslate nohighlight">\(k\geq 3\)</span> senar. Tamb&#233; podem calcular <span class="math notranslate nohighlight">\(B_2=1/6\)</span>, <span class="math notranslate nohighlight">\(B_4=-1/30\)</span>,&#8230;</p>
+<p>L&#8217;inter&#232;s en els nombres de Bernoulli prov&#233; del fet que s&#243;n la &#171;part racional&#187; dels valors de la funci&#243; zeta de Riemann en els enters parells (per exemple, <span class="math notranslate nohighlight">\(\zeta(2)=\pi^2/6\)</span>, <span class="math notranslate nohighlight">\(\zeta(4)=\pi^4/90\)</span>,&#8230;</p>
+<p><strong>Proposici&#243;:</strong> si <span class="math notranslate nohighlight">\(n\geq 2\)</span> &#233;s un enter parell,
+<div class="math notranslate nohighlight">
+\[
+\zeta(n) = \frac {2^{n-1}\pi^{n} \abs{B_{n}}} {n!}
+\]</div>
+</p>
+<p><em>Prova:</em> Substituint <span class="math notranslate nohighlight">\(t=2iz\)</span> a la definici&#243; dels nombres de Bernoulli obtenim la f&#243;rmula
+<div class="math notranslate nohighlight">
+\[
+z\cot z = \sum_{k=0}^\infty \abs{B_{2k}}\frac{2^{2k}z^{2k}}{(2k)!}.
+\]</div>
+
+D&#8217;altra banda, de la famosa f&#243;rmula
+<div class="math notranslate nohighlight">
+\[
+\sin(z) = z\prod_{n=1}^\infty \left(1-\frac{z^2}{n^2\pi^2}\right)
+\]</div>
+
+n&#8217;obtenim, fent la derivada logar&#237;tmica,
+<div class="math notranslate nohighlight">
+\[
+z\cot z = 1+2\sum_{n=1}^\infty \frac{z^2}{z^2-n^2\pi^2}=1-2\sum_{n=1}^\infty\sum_{k=1}^\infty \frac{z^{2k}}{n^{2k}{\pi^{2k}}}.
+\]</div>
+
+Arribem al resultat comparant el terme de <span class="math notranslate nohighlight">\(z^{2k}\)</span> de cada equaci&#243;.<span class="math notranslate nohighlight">\(\qed\)</span></p>
+</section>
+<section id="expansions-de-les-series-d-eisenstein">
+<h3><span class="section-number">2.1.2. </span>Expansions de les s&#232;ries d&#8217;Eisenstein<a class="headerlink" href="#expansions-de-les-series-d-eisenstein" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<p>Observem que, de la igualtat
+<div class="math notranslate nohighlight">
+\[
+z\cot z = 1+2\sum_{n=1}^\infty \frac{z^2}{z^2-n^2\pi^2}
+\]</div>
+
+en podem deduir
+<div class="math notranslate nohighlight">
+\[
+\pi\cot (\pi z)=\frac{1}{z} + \sum_{m=1}^\infty \left(\frac{1}{z+m}-\frac{1}{z-m}\right).
+\]</div>
+
+D&#8217;altra banda,
+<div class="math notranslate nohighlight">
+\[
+\pi\cot(\pi z) = \pi \frac{\cos(\pi z)}{\sin(\pi z)} = i\pi\frac{q+1}{q-1} = i\pi - \frac{2i\pi}{1-q} = i\pi -2\pi i \sum_{n=0}^\infty q^n.
+\]</div>
+
+Comparant les dues expressions, obtenim la igualtat b&#224;sica
+<div class="math notranslate nohighlight">
+\[
+\frac{1}{z} + \sum_{m=1}^\infty \left(\frac{1}{z+m}-\frac{1}{z-m}\right) =  i\pi -2\pi i \sum_{n=0}^\infty q^n.
+\]</div>
+
+Derivant-la successivament, obtenim el que es coneix com la <strong>f&#243;rmula de Lipschitz</strong>:
+<div class="math notranslate nohighlight">
+\[
+\sum_{m\in\ZZ} \frac{1}{(m+z)^k} = \frac{(-1)^k (2\pi i)^k}{(k-1)!}\sum_{n=1}^\infty n^{k-1}q^n, \quad k\geq 2.
+\]</div>
+</p>
+<p><strong>Proposici&#243;:</strong> Per cada <span class="math notranslate nohighlight">\(k\geq 4\)</span> parell, tenim
+<div class="math notranslate nohighlight">
+\[
+G_k(z) = 2\zeta(k) + 2\frac{(2\pi i)^{k}}{(k-1)!} \sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
+\]</div>
+</p>
+<p><em>Prova:</em> Expandim <span class="math notranslate nohighlight">\(G_k(z)\)</span> com
+<div class="math notranslate nohighlight">
+\[
+G_k(z)=\sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k} =2\zeta(k) + 2\sum_{n=1}^\infty\sum_{m\in\ZZ} \frac{1}{(cz+d)^k}.
+\]</div>
+
+Aplicant la igualtat b&#224;sica anterior amb <span class="math notranslate nohighlight">\(cz\)</span> en comptes de <span class="math notranslate nohighlight">\(z\)</span>, tenim
+<div class="math notranslate nohighlight">
+\[
+G_k(z) = 2\zeta(k) +2\frac{(-1)^k (2\pi i)^k}{(k-1)!} \sum_{d=1}^\infty \sum_{a=1}^\infty d^{k-1} q^{ad} = 2\zeta(k) + \frac{2(2\pi i)^k}{(k-1)!}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
+\]</div>
+</p>
+<p><strong>Corol&#183;lari:</strong> Tenim <span class="math notranslate nohighlight">\(G_k(z)=2\zeta(k)E_k(z)\)</span>, amb
+<div class="math notranslate nohighlight">
+\[
+E_k(z) = 1-\frac{2k}{B_k}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
+\]</div>
+</p>
+<p>Per exemple,
+<div class="math notranslate nohighlight">
+\[
+E_4=1+240\sum_{n\geq 1} \sigma_3(n)q^n,\quad E_6=1-504\sum_{n\geq 1} \sigma_5(n)q^n.
+\]</div>
+</p>
+</section>
+<section id="una-primera-aplicacio">
+<h3><span class="section-number">2.1.3. </span>Una primera aplicaci&#243;<a class="headerlink" href="#una-primera-aplicacio" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<p>Ja hem vist que <span class="math notranslate nohighlight">\(M_8\)</span>, <span class="math notranslate nohighlight">\(M_{10}\)</span> i <span class="math notranslate nohighlight">\(M_{14}\)</span> tenen dimensi&#243; <span class="math notranslate nohighlight">\(1\)</span>. Per tant, <span class="math notranslate nohighlight">\(E_4^2=E_8\)</span>, <span class="math notranslate nohighlight">\(E_4E_6=E_{10}\)</span> i <span class="math notranslate nohighlight">\(E_4E_{10}=E_{14}\)</span>. Comparant coeficients de les corresponents expansions, obtenim les identitats
+<div class="math notranslate nohighlight">
+\[
+\sigma_7(n)=\sigma_3(n)+120\sum_{m=1}^{n-1} \sigma_3(m)\sigma_3(n-m),
+\]</div>
+
+<div class="math notranslate nohighlight">
+\[
+11\sigma_9(n)=21\sigma_5(n)-10\sigma_3(n)+5040\sum_{m=1}^{n-1} \sigma_3(m)\sigma_5(n-m),
+\]</div>
+
+i
+<div class="math notranslate nohighlight">
+\[
+\sigma_{13}(n) = 11\sigma_9(n) - 10\sigma_{3}(n) +2640 \sum_{m=1}^n \sigma_3(n)\sigma_9(m-n).
+\]</div>
+</p>
+</section>
+</section>
 <section id="creixement-dels-coeficients">
-<h2><span class="section-number">2.1. </span>Creixement dels coeficients<a class="headerlink" href="#creixement-dels-coeficients" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<h2><span class="section-number">2.2. </span>Creixement dels coeficients<a class="headerlink" href="#creixement-dels-coeficients" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
 <p>M&#233;s endavant ens interessar&#224; tenir fites per l&#8217;ordre de creixement dels
 coeficients de Fourier de les formes modulars.</p>
 <p><strong>Proposici&#243;:</strong> Si <span class="math notranslate nohighlight">\(f=E_k\)</span>, aleshores <span class="math notranslate nohighlight">\(a_n\approx n^{k-1}\)</span>. &#201;s a dir, que hi ha constants <span class="math notranslate nohighlight">\(A, B&gt;0\)</span> tals que
@@ -63,7 +191,7 @@ Primer de tot, com que <span class="math notranslate nohighlight">\(a_0=0\)</spa
 \abs{f(z)} = O(q)=O(e^{-2\pi \Im(z)}),\quad q\to 0.
 \]</div>
 </p>
-<p>Escrivim <span class="math notranslate nohighlight">\(z=x+iy\)</span>, i definim <span class="math notranslate nohighlight">\(\phi(z)=\abs{f(z)}y^{k/2}\)</span>. La modularitat de <span class="math notranslate nohighlight">\(f\)</span> fa que la funci&#243; <span class="math notranslate nohighlight">\(C^\infty\)</span> (no-holomorfa) <span class="math notranslate nohighlight">\(\phi\)</span> sigui invariant per <span class="math notranslate nohighlight">\(\SL_2(\Z)\)</span>, i <span class="math notranslate nohighlight">\(\phi(z)\to 0\)</span> quan <span class="math notranslate nohighlight">\(\Im(z)\to\infty\)</span>. Per tant, <span class="math notranslate nohighlight">\(\phi\)</span> &#233;s fitada: hi ha alguna constant <span class="math notranslate nohighlight">\(M\)</span> tal que
+<p>Escrivim <span class="math notranslate nohighlight">\(z=x+iy\)</span>, i definim <span class="math notranslate nohighlight">\(\phi(z)=\abs{f(z)}y^{k/2}\)</span>. La modularitat de <span class="math notranslate nohighlight">\(f\)</span> fa que la funci&#243; <span class="math notranslate nohighlight">\(C^\infty\)</span> (no-holomorfa) <span class="math notranslate nohighlight">\(\phi\)</span> sigui invariant per <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span>, i <span class="math notranslate nohighlight">\(\phi(z)\to 0\)</span> quan <span class="math notranslate nohighlight">\(\Im(z)\to\infty\)</span>. Per tant, <span class="math notranslate nohighlight">\(\phi\)</span> &#233;s fitada: hi ha alguna constant <span class="math notranslate nohighlight">\(M\)</span> tal que
 <div class="math notranslate nohighlight">
 \[
 \abs{f(z)}\leq My^{-k/2},\quad z\in \HH.
@@ -91,8 +219,22 @@ Aquesta igualtat &#233;s v&#224;lida per tot <span class="math notranslate nohig
 <p><em>Prova:</em> Escrivim <span class="math notranslate nohighlight">\(f=\lambda E_k + h\)</span> amb <span class="math notranslate nohighlight">\(\lambda\neq 0\)</span> i <span class="math notranslate nohighlight">\(h\)</span> cuspidal, i apliquem els resultats anteriors. Com que els coeficients d&#8221;<span class="math notranslate nohighlight">\(E_k\)</span> creixen
 molt m&#233;s r&#224;pid que els de <span class="math notranslate nohighlight">\(h\)</span>, el creixement de <span class="math notranslate nohighlight">\(f\)</span> &#233;s igual que el d&#8221;<span class="math notranslate nohighlight">\(E_k\)</span>. <span class="math notranslate nohighlight">\(\qed\)</span></p>
 </section>
+<section id="l-expansio-de-la-funcio-discriminant">
+<h2><span class="section-number">2.3. </span>L&#8217;expansi&#243; de la funci&#243; discriminant<a class="headerlink" href="#l-expansio-de-la-funcio-discriminant" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<p>Volem donar una f&#243;rmula per <span class="math notranslate nohighlight">\(\Delta(z)=\frac{E_4(z)^3-E_6(z)^2}{1728}\)</span>. Per aix&#242;, considerem <span class="math notranslate nohighlight">\(\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}\)</span>. Veurem que aquestes dues funcions coincideixen (<span class="math notranslate nohighlight">\(q=e^{2\pi i z})\)</span>. Prenent la derivada logar&#237;tmica, obtenim (fixem-nos que <span class="math notranslate nohighlight">\(\dlog q = 2\pi i\)</span>)
+<div class="math notranslate nohighlight">
+\[
+\dlog \tilde\Delta = 2\pi i + 24\sum_{n=1}^\infty \frac{-2\pi i n q^n}{1-q^n} = 2\pi i\left(1-24\sum_{n=1}^\infty\frac{nq^n}{1-q^n}\right).
+\]</div>
+
+Observem que
+<div class="math notranslate nohighlight">
+\[
+\sum_{n=1}^\infty \frac{nq^n}{1-q^n}=\sum_{n=1}^\infty n\sum_{m=1}^\infty q^{nm} = \sum_{n\geq 1}\sigma_1(n)q^n.
+\]</div>
+</p>
 <section id="la-serie-d-eisenstein-de-pes-2">
-<h2><span class="section-number">2.2. </span>La s&#232;rie d&#8217;Eisenstein de pes 2<a class="headerlink" href="#la-serie-d-eisenstein-de-pes-2" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<h3><span class="section-number">2.3.1. </span>La s&#232;rie d&#8217;Eisenstein de pes 2<a class="headerlink" href="#la-serie-d-eisenstein-de-pes-2" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
 <p>Considerem la funci&#243;
 <div class="math notranslate nohighlight">
 \[
@@ -102,7 +244,7 @@ G_2(z) = \sum_{m=-\infty}^\infty \sum_{n=-\infty}^\infty \frac{1}{(mz+n)^2},
 on si <span class="math notranslate nohighlight">\(m=0\)</span> hem d&#8217;ometre el terme <span class="math notranslate nohighlight">\(n=0\)</span> (a partir d&#8217;ara aix&#242; no ho direm). Podem separar el terme <span class="math notranslate nohighlight">\(m=0\)</span> i obtenir:
 <div class="math notranslate nohighlight">
 \[
-G_2(z) = 2\zeta(2) + 2\sum_{m\neq 0}\sum_{n\in\Z} \frac{1}{(mz+n)^2}.
+G_2(z) = 2\zeta(2) + 2\sum_{m\neq 0}\sum_{n\in\ZZ} \frac{1}{(mz+n)^2}.
 \]</div>
 
 Igual que hem fet amb les series d&#8217;Eisenstein de pes <span class="math notranslate nohighlight">\(k\geq 4\)</span>, podem calcular els coeficients de Fourier de <span class="math notranslate nohighlight">\(G_2\)</span>, i obtenim
@@ -121,27 +263,27 @@ Fixem-nos que l&#8217;ordre dels sumatoris est&#224; canviat! Per relacionar-ho 
 <p><strong>Lema:</strong> Es pot escriure
 <div class="math notranslate nohighlight">
 \[
-G_2(z) = 2\zeta(2) + \sum_{m\neq 0,n\in\Z}\frac{1}{(mz+n)^2(mz+n+1)},
+G_2(z) = 2\zeta(2) + \sum_{m\neq 0,n\in\ZZ}\frac{1}{(mz+n)^2(mz+n+1)},
 \]</div>
 
 on la s&#232;rie &#233;s absolutament convergent.</p>
 <p><em>Prova:</em> Nom&#233;s cal calcular
 <div class="math notranslate nohighlight">
 \[
-\sum_{m\neq 0}\sum_{n\in\Z} \frac{1}{(mz+n)(mz+n+1)} = \sum_{m\neq 0}\sum_{n\in\Z} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right) = \sum_{m\neq 0} 0 = 0.
+\sum_{m\neq 0}\sum_{n\in\ZZ} \frac{1}{(mz+n)(mz+n+1)} = \sum_{m\neq 0}\sum_{n\in\ZZ} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right) = \sum_{m\neq 0} 0 = 0.
 \]</div>
 </p>
 <p>Per tant, podem restar el terme general de sobre de la s&#232;rie que defineix <span class="math notranslate nohighlight">\(G_2(z)\)</span>, per obtenir
 <div class="math notranslate nohighlight">
 \[\begin{split}
-G_2(z) = 2\zeta(2) + \sum_{m\neq 0}\sum_{n\in\Z} \left(\frac{1}{(mz+n)^2}-\frac{1}{(mz+n)(mz+n+1)}\right)\\=2\zeta(2)+\sum_{m\neq 0
-}\sum_{n\in\Z}\frac{1}{(mz+n)^2(mz+n+1)}.\quad\qed
+G_2(z) = 2\zeta(2) + \sum_{m\neq 0}\sum_{n\in\ZZ} \left(\frac{1}{(mz+n)^2}-\frac{1}{(mz+n)(mz+n+1)}\right)\\=2\zeta(2)+\sum_{m\neq 0
+}\sum_{n\in\ZZ}\frac{1}{(mz+n)^2(mz+n+1)}.\quad\qed
 \end{split}\]</div>
 </p>
 <p>Ara podem veure com es transforma <span class="math notranslate nohighlight">\(G_2\)</span>:
 <div class="math notranslate nohighlight">
 \[\begin{split}
-z^{-2}G_2(-1/z)-G_2(z)= \sum_{n\in \Z}\sum_{m\neq 0}\left(\frac{1}{(mz+n)^2} - \frac{1}{(mz+n)^2(mz+n+1)}\right)\\= \sum_{n\in\Z}\sum_{m\neq 0} \frac{1}{(mz+n)(mz+n+1)} = \sum_{n\in\Z}\sum_{m\neq 0}\left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right)
+z^{-2}G_2(-1/z)-G_2(z)= \sum_{n\in \ZZ}\sum_{m\neq 0}\left(\frac{1}{(mz+n)^2} - \frac{1}{(mz+n)^2(mz+n+1)}\right)\\= \sum_{n\in\ZZ}\sum_{m\neq 0} \frac{1}{(mz+n)(mz+n+1)} = \sum_{n\in\ZZ}\sum_{m\neq 0}\left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right)
 \end{split}\]</div>
 
 Aquesta &#250;ltima suma la podem calcular expl&#237;citament:
@@ -156,6 +298,9 @@ Per poder calcular el l&#237;mit, observem que
 \cot(\pi N/z) = i(1-2\sum_{m=0}^\infty e^{2\pi mN/z})\substack{\to\\{\tiny N\rightarrow\infty}} i.
 \end{split}\]</div>
 </p>
+</section>
+<section id="relacio-amb-la-funcio-delta">
+<h3><span class="section-number">2.3.2. </span>Relaci&#243; amb la funci&#243; delta<a class="headerlink" href="#relacio-amb-la-funcio-delta" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
 <p>Resumint, hem trobat:</p>
 <p><strong>Teorema:</strong> La funci&#243; <span class="math notranslate nohighlight">\(G_2\)</span> satisf&#224;, per a tot <span class="math notranslate nohighlight">\(z\in \HH\)</span>,
 <div class="math notranslate nohighlight">
@@ -163,7 +308,7 @@ Per poder calcular el l&#237;mit, observem que
 G_2(z+1) = G_2(z),\quad z^{-2}G_2(-1/z)-G_2(z) = \frac{-2\pi i}{z}.
 \]</div>
 
-De fet, per a tot <span class="math notranslate nohighlight">\(\gamma=\smtx abcd\in\SL_2(\Z)\)</span>,
+De fet, per a tot <span class="math notranslate nohighlight">\(\gamma=\smtx abcd\in\SL_2(\ZZ)\)</span>,
 <div class="math notranslate nohighlight">
 \[
 G_2(\gamma z) = (cz+d)^2G_2(z) - 2\pi i c(cz+d).
@@ -175,22 +320,7 @@ G_2(\gamma z) = (cz+d)^2G_2(z) - 2\pi i c(cz+d).
 G_2(z) = 2\zeta(2) - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n = \frac{\pi^2}{3}\left(1-24\sum_{n=1}^\infty \sigma-1(n)q^n\right).
 \]</div>
 </p>
-</section>
-<section id="l-expansio-de-la-funcio-discriminant">
-<h2><span class="section-number">2.3. </span>L&#8217;expansi&#243; de la funci&#243; discriminant<a class="headerlink" href="#l-expansio-de-la-funcio-discriminant" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
-<p>Volem donar una f&#243;rmula per <span class="math notranslate nohighlight">\(\Delta(z)=\frac{E_4(z)^3-E_6(z)^2}{1728}\)</span>. Per aix&#242;, considerem <span class="math notranslate nohighlight">\(\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}\)</span>. Veurem que aquestes dues funcions coincideixen (<span class="math notranslate nohighlight">\(q=e^{2\pi i z})\)</span>. Prenent la derivada logar&#237;tmica, obtenim (fixem-nos que <span class="math notranslate nohighlight">\(\dlog q = 2\pi i\)</span>)
-<div class="math notranslate nohighlight">
-\[
-\dlog \tilde\Delta = 2\pi i + 24\sum_{n=1}^\infty \frac{-2\pi i n q^n}{1-q^n} = 2\pi i\left(1-24\sum_{n=1}^\infty\frac{nq^n}{1-q^n}\right).
-\]</div>
-
-Observem que
-<div class="math notranslate nohighlight">
-\[
-\sum_{n=1}^\infty \frac{nq^n}{1-q^n}=\sum_{n=1}^\infty n\sum_{m=1}^\infty q^{nm} = \sum_{n\geq 1}\sigma_1(n)q^n.
-\]</div>
-
-Resumint,
+<p>Resumint,
 <div class="math notranslate nohighlight">
 \[
 \dlog\tilde\Delta = 2\pi i E_2.
@@ -205,8 +335,8 @@ Aix&#242; vol dir que per a tot <span class="math notranslate nohighlight">\(z\i
 Per tant, <span class="math notranslate nohighlight">\(z^{-12}\tilde\Delta(-1/z) = C \tilde\Delta(z)\)</span>. Evaluant a <span class="math notranslate nohighlight">\(z=i\)</span> podem veure que <span class="math notranslate nohighlight">\(C=1\)</span> (ja que <span class="math notranslate nohighlight">\(\Delta(i)\neq 0\)</span>) i que, per tant <span class="math notranslate nohighlight">\(\tilde\Delta\)</span> &#233;s una forma modular de pes <span class="math notranslate nohighlight">\(12\)</span>. Per tant, &#233;s un m&#250;ltiple de <span class="math notranslate nohighlight">\(\Delta(z)\)</span>, que ha de ser <span class="math notranslate nohighlight">\(1\)</span> perqu&#232; les s&#232;ries de Fourier comencen ambdues per <span class="math notranslate nohighlight">\(q+O(q^2)\)</span>.</p>
 </section>
 <section id="la-funcio-tau-de-ramanujan">
-<h2><span class="section-number">2.4. </span>La funci&#243; tau de Ramanujan<a class="headerlink" href="#la-funcio-tau-de-ramanujan" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
-<p>Recordem la funci&#243; <span class="math notranslate nohighlight">\(\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}\)</span>. Calculant els primers termes del producte, de seguida veiem que
+<h3><span class="section-number">2.3.3. </span>La funci&#243; tau de Ramanujan<a class="headerlink" href="#la-funcio-tau-de-ramanujan" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<p>Calculant els primers termes del producte <span class="math notranslate nohighlight">\(\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}\)</span>, de seguida veiem que
 <div class="math notranslate nohighlight">
 \[
 \tilde\Delta = \sum_{n\geq 1} \tau(n)q^n = q - 24 q^{2} + 252 q^{3} - 1472 q^{4} + 4830 q^{5} - 6048 q^{6} - 16744 q^{7} + O(q^{8}).
@@ -226,6 +356,7 @@ Ramanujan va ser el primer a estudiar la funci&#243; <span class="math notransla
 </ol>
 <p>A m&#233;s, Ramanujan va relacionar <span class="math notranslate nohighlight">\(\tau(n)\)</span> amb si <span class="math notranslate nohighlight">\(r_{24}(n)\)</span>, el nombre de maneres d&#8217;escriure <span class="math notranslate nohighlight">\(n\)</span> com a suma de <span class="math notranslate nohighlight">\(24\)</span> quadrats (!)</p>
 <p>Tot aix&#242;, vist un segle despr&#233;s, &#233;s relativament f&#224;cil de demostrar amb la teoria de les formes modulars. El teorema de Hecke que hem vist abans implica ja que <span class="math notranslate nohighlight">\(\abs{\tau(p)} =O(p^6)\)</span>, per&#242; per veure la fita m&#233;s fina conjecturada per Ramanujan haur&#237;em de fer servir resultats molt m&#233;s profunds de P.Deligne (1974).</p>
+</section>
 </section>
 </section>
 
@@ -249,10 +380,9 @@ Ramanujan va ser el primer a estudiar la funci&#243; <span class="math notransla
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="dia1.html">1. Primer dia</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. Segon dia</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#creixement-dels-coeficients">2.1. Creixement dels coeficients</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#la-serie-d-eisenstein-de-pes-2">2.2. La s&#232;rie d&#8217;Eisenstein de pes 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#la-q-expansio-de-les-series-d-eisenstein">2.1. La q-expansi&#243; de les s&#232;ries d&#8217;Eisenstein</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creixement-dels-coeficients">2.2. Creixement dels coeficients</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#l-expansio-de-la-funcio-discriminant">2.3. L&#8217;expansi&#243; de la funci&#243; discriminant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#la-funcio-tau-de-ramanujan">2.4. La funci&#243; tau de Ramanujan</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dia3.html">3. Tercer dia</a></li>
