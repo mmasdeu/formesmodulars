@@ -34,9 +34,7 @@
 extensions = ['sphinx.ext.mathjax',
     'sphinx.ext.githubpages',
     'sphinx.ext.todo',
-    'sphinx_math_dollar',
-    'sphinx_proof',
-    'sphinx_togglebutton']
+    'sphinx_math_dollar']
 
 
 mathjax3_config = { 'tex': {'macros': {}},
