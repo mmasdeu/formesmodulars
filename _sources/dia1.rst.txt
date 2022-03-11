@@ -62,7 +62,7 @@ $$
 
 Per tant, veiem que $\operatorname{SL}_2(\mathbb{R})$ actua a $\mathbb{H}$. També veiem que $-1$ actua trivialment, i per tant de fet tenim un grup del quocient $\PSL_2(\RR) = \SL_2(\RR)/\{\pm 1\}$, que de fet és *fidel*.
 
-**Remarca:** De fet, el grup $\PSL_2(\RR)$ és el grup d'automorfismes analítics d'$\HH$.
+**Remarca:** De fet, el grup $\PSL_2(\RR)$ és el grup d'automorfismes analítics de $\HH$.
 
 **Definició:** El grup $G = \SL_2(\RR)/\{\pm 1\}$ s'anomena el *grup modular*. Sovint confondrem una matriu $g = \smtx abcd$ amb la seva imatge a $G$.
 
@@ -206,7 +206,7 @@ Si $f$ és una funció modular de pes $k$, aleshores $v_\tau(f)=v_{g\tau}(f)$, p
 **Teorema (fórmula de la valència):** Si $f\neq 0$ és una funció dèbilment modular de pes $k$, es té
 $$v_{\infty}(f) + \frac{1}{2} v_{i}(f) +\frac{1}{3}v_{\rho}(f) +\sum_{\tau\in G\backslash \HH} v_{\tau}(f) = \frac{k}{12},
 $$
-on la suma recorre les òrbites de punts d'$\HH$ diferents de $i$, $\rho$ i $-\bar\rho$.
+on la suma recorre les òrbites de punts de $\HH$ diferents de $i$, $\rho$ i $-\bar\rho$.
 
 **Remarca:** la suma només conté un nombre finit de termes no nuls. En efecte, com que $f$ és meromorfa tenim que $\tilde f$ no té cap zero ni pol al disc $0<\abs{q}<r$ per algun $r >0$. Per tant, $f$ no té zeros ni pols a la regió $\Im(z)>\frac{\log(1/r)}{2\pi}$ i, llavors $f$ té tots els zeros i pols de $D$ a la regió compacta $D\cap \Im(z)< \frac{\log(1/r)}{2\pi}$, on només n'hi pot haver un nombre finit.
 

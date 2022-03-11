@@ -92,8 +92,62 @@ a_{p^{r+1}}(f) = a_p(f)a_{p^r}(f) - p^{k-1} a_{r-1}(f).
 </p>
 </section>
 </section>
+<section id="creixement-dels-coeficients">
+<h2><span class="section-number">3.2. </span>Creixement dels coeficients<a class="headerlink" href="#creixement-dels-coeficients" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<p>M&#233;s endavant ens interessar&#224; tenir fites per l&#8217;ordre de creixement dels
+coeficients de Fourier de les formes modulars.</p>
+<p><strong>Proposici&#243;:</strong> Si <span class="math notranslate nohighlight">\(f=E_k\)</span>, aleshores <span class="math notranslate nohighlight">\(a_n\approx n^{k-1}\)</span>. &#201;s a dir, que hi ha constants <span class="math notranslate nohighlight">\(A, B&gt;0\)</span> tals que
+<div class="math notranslate nohighlight">
+\[
+An^{k-1}\leq \abs{a_n}\leq Bn^{k-1}.
+\]</div>
+</p>
+<p><em>Prova:</em> Tenim <span class="math notranslate nohighlight">\(\abs{a_n} = A \sigma_{k-1}(n)\geq An^{k-1}\)</span>. D&#8217;altra banda,
+<div class="math notranslate nohighlight">
+\[
+\frac{\abs{a_n}}{n^{k-1}} = A \sum_{d\mid n} \frac{1}{d^{k-1}} \leq A\sum_{d=1}^\infty \frac{d^{k-1}} = A\zeta(k-1) &lt; \infty.\quad\qed
+\]</div>
+</p>
+<p>El creixement de les formes cuspidals &#233;s m&#233;s lent:</p>
+<p><strong>Teorema (Hecke):</strong> Si <span class="math notranslate nohighlight">\(f\)</span> &#233;s una forma cuspidal de pes <span class="math notranslate nohighlight">\(k\)</span>, llavors <span class="math notranslate nohighlight">\(a_n=O(n^{k/2})\)</span>.</p>
+<p><em>Prova:</em>
+Primer de tot, com que <span class="math notranslate nohighlight">\(a_0=0\)</span>, podem escriure <span class="math notranslate nohighlight">\(f(z)=q\sum_{n\geq 1}a_nq^{n-1}\)</span> i, per tant,
+<div class="math notranslate nohighlight">
+\[
+\abs{f(z)} = O(q)=O(e^{-2\pi \Im(z)}),\quad q\to 0.
+\]</div>
+</p>
+<p>Escrivim <span class="math notranslate nohighlight">\(z=x+iy\)</span>, i definim <span class="math notranslate nohighlight">\(\phi(z)=\abs{f(z)}y^{k/2}\)</span>. La modularitat de <span class="math notranslate nohighlight">\(f\)</span> fa que la funci&#243; <span class="math notranslate nohighlight">\(C^\infty\)</span> (no-holomorfa) <span class="math notranslate nohighlight">\(\phi\)</span> sigui invariant per <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span>, i <span class="math notranslate nohighlight">\(\phi(z)\to 0\)</span> quan <span class="math notranslate nohighlight">\(\Im(z)\to\infty\)</span>. Per tant, <span class="math notranslate nohighlight">\(\phi\)</span> &#233;s fitada: hi ha alguna constant <span class="math notranslate nohighlight">\(M\)</span> tal que
+<div class="math notranslate nohighlight">
+\[
+\abs{f(z)}\leq My^{-k/2},\quad z\in \HH.
+\]</div>
+
+Per com es calculen els coeficients de Fourier, tenim
+<div class="math notranslate nohighlight">
+\[
+a_n =  \int_0^1 f(x+iy)e^{-2\pi i n(x+iy)}dx,
+\]</div>
+
+i per tant
+<div class="math notranslate nohighlight">
+\[
+\abs{a_n} \leq Me^{2\pi n y}\int_0^1 y^{-k/2} e^{-2\pi inx}dx = My^{-k/2}e^{2\pi i n y}.
+\]</div>
+
+Aquesta igualtat &#233;s v&#224;lida per tot <span class="math notranslate nohighlight">\(y&gt;0\)</span>. En particular, per <span class="math notranslate nohighlight">\(y=1/n\)</span> dona
+<div class="math notranslate nohighlight">
+\[
+\abs{a_n}\leq e^{2\pi} M n^{k/2}.\qed
+\]</div>
+</p>
+<p><strong>Corol&#183;lari:</strong> Si <span class="math notranslate nohighlight">\(f\)</span> no &#233;s cuspidal, aleshores <span class="math notranslate nohighlight">\(a_n\approx n^{k-1}\)</span>.</p>
+<p><em>Prova:</em> Escrivim <span class="math notranslate nohighlight">\(f=\lambda E_k + h\)</span> amb <span class="math notranslate nohighlight">\(\lambda\neq 0\)</span> i <span class="math notranslate nohighlight">\(h\)</span> cuspidal, i apliquem els resultats anteriors. Com que els coeficients de <span class="math notranslate nohighlight">\(E_k\)</span> creixen
+molt m&#233;s r&#224;pid que els de <span class="math notranslate nohighlight">\(h\)</span>, el creixement de <span class="math notranslate nohighlight">\(f\)</span> &#233;s igual que el de <span class="math notranslate nohighlight">\(E_k\)</span>. <span class="math notranslate nohighlight">\(\qed\)</span></p>
+<p><strong>Remarca:</strong> Un teorema molt profund de Deligne (1973) demostra, de fet, que <span class="math notranslate nohighlight">\(a_n = O(n^{k-1/2}\sigma_0(n))=O(n^{k-1/2-\epsilon})\)</span> per a tot <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>. Abans del resultat de Deligne, aquest fet es coneixia com la conjectura de Petersson, que generalitzava una conjectura famosa de Ramanujan sobre la funci&#243; <span class="math notranslate nohighlight">\(\tau(n)\)</span>.</p>
+</section>
 <section id="la-funcio-l-associada-a-una-forma-modular">
-<h2><span class="section-number">3.2. </span>La funci&#243; L associada a una forma modular<a class="headerlink" href="#la-funcio-l-associada-a-una-forma-modular" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<h2><span class="section-number">3.3. </span>La funci&#243; L associada a una forma modular<a class="headerlink" href="#la-funcio-l-associada-a-una-forma-modular" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
 <p>Podem empaquetar tota la informaci&#243; que hem trobat de manera anal&#237;tica, mitjan&#231;ant la funci&#243;-L. Sigui
 <div class="math notranslate nohighlight">
 \[
@@ -103,7 +157,7 @@ L(f,s) = \sum_{n=1}^\infty a_n(f)n^{-s},\quad \Re(s)&gt;k.
 Observem que convergeix per a tot <span class="math notranslate nohighlight">\(\Re(s)&gt;k\)</span> gr&#224;cies a que controlem el creixement dels <span class="math notranslate nohighlight">\(a_n(f)\)</span>. Si <span class="math notranslate nohighlight">\(f\)</span> &#233;s cuspidal,
 aleshores sabem que la s&#232;rie convergeix a <span class="math notranslate nohighlight">\(\Re(s)&gt;k/2+1\)</span>.</p>
 <section id="el-producte-d-euler-i-l-equacio-funcional">
-<h3><span class="section-number">3.2.1. </span>El producte d&#8217;Euler i l&#8217;equaci&#243; funcional<a class="headerlink" href="#el-producte-d-euler-i-l-equacio-funcional" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<h3><span class="section-number">3.3.1. </span>El producte d&#8217;Euler i l&#8217;equaci&#243; funcional<a class="headerlink" href="#el-producte-d-euler-i-l-equacio-funcional" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
 <p><strong>Proposici&#243;:</strong> <span class="math notranslate nohighlight">\(f\)</span> &#233;s una forma pr&#242;pia normalitzada si i nom&#233;s si la funci&#243; <span class="math notranslate nohighlight">\(L(f,s)\)</span> t&#233; un producte d&#8217;Euler:
 <div class="math notranslate nohighlight">
 \[
@@ -190,7 +244,7 @@ Aquesta expressi&#243; convergeix per tot <span class="math notranslate nohighli
 <p><strong>Teorema (Weil):</strong> Sigui <span class="math notranslate nohighlight">\(L(\{a_n\},s) = \sum_{n=1}^\infty a_n n^{-s}\)</span> una s&#232;rie de Dirichlet associada a una successi&#243; <span class="math notranslate nohighlight">\(\{a_n\}_{n\geq 1}\)</span> tal que <span class="math notranslate nohighlight">\(\abs{a_n}=O(n^K)\)</span> per <span class="math notranslate nohighlight">\(K\)</span> suficientment gran. Suposem que la funci&#243; <span class="math notranslate nohighlight">\(\Lambda(\{a_n\},s)\)</span> associada tingui continuaci&#243; anal&#237;tica a tot <span class="math notranslate nohighlight">\(s\in\CC\)</span>, fitada en conjunts <span class="math notranslate nohighlight">\(\{\sigma_1\leq \Re(s)\leq \sigma_2\}\)</span> i que tingui una equaci&#243; funcional com l&#8217;anterior. Aleshores la funci&#243; <span class="math notranslate nohighlight">\(f(z)=\sum_{n=1}^\infty a_ne^{2\pi inz}\)</span> pertany a <span class="math notranslate nohighlight">\(S_k\)</span>.</p>
 </section>
 <section id="funcio-l-de-les-series-d-eisenstein">
-<h3><span class="section-number">3.2.2. </span>Funci&#243;-L de les s&#232;ries d&#8217;Eisenstein<a class="headerlink" href="#funcio-l-de-les-series-d-eisenstein" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<h3><span class="section-number">3.3.2. </span>Funci&#243;-L de les s&#232;ries d&#8217;Eisenstein<a class="headerlink" href="#funcio-l-de-les-series-d-eisenstein" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
 <p>Sigui <span class="math notranslate nohighlight">\(k\geq 4\)</span> un enter, i considerem la s&#232;rie d&#8217;Eisenstein <span class="math notranslate nohighlight">\(E_k = 1 - \frac{2k}{B_k}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n\)</span>.</p>
 <p><strong>Proposici&#243;:</strong> <span class="math notranslate nohighlight">\(T_p(E_k) = (1+p^{k-1})E_k\)</span>.
 <em>Prova:</em> Ho comprovem coeficient a coeficient. Si <span class="math notranslate nohighlight">\(p\nmid n\)</span>, hem de comprovar que
@@ -221,7 +275,7 @@ La primera equaci&#243; es comprova f&#224;cilment, i la segona es fa per inducc
 que coincideix amb el producte dels inversos dels factors d&#8217;Euler de <span class="math notranslate nohighlight">\(\zeta(s)\zeta(s-k+1)\)</span>.</p>
 </section>
 <section id="funcio-l-de-la-delta-de-ramanujan">
-<h3><span class="section-number">3.2.3. </span>Funci&#243;-L de la Delta de Ramanujan<a class="headerlink" href="#funcio-l-de-la-delta-de-ramanujan" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<h3><span class="section-number">3.3.3. </span>Funci&#243;-L de la Delta de Ramanujan<a class="headerlink" href="#funcio-l-de-la-delta-de-ramanujan" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
 <p>Recordem <span class="math notranslate nohighlight">\(\Delta(q)=q\prod_{n\geq 1} (1-q^n)^{24}\)</span>. Com ja hem vist, <span class="math notranslate nohighlight">\(S_{12}=\CC\Delta\)</span> i per tant <span class="math notranslate nohighlight">\(\Delta\)</span> &#233;s trivialment una forma pr&#242;pia per tots els operadors de Hecke, que a m&#233;s ja est&#224; normalitzada. Per tant:</p>
 <p><strong>Corol&#183;lari:</strong> Tenim:
 <div class="math notranslate nohighlight">
@@ -239,7 +293,7 @@ i
 </section>
 </section>
 <section id="el-producte-de-petersson">
-<h2><span class="section-number">3.3. </span>El producte de Petersson<a class="headerlink" href="#el-producte-de-petersson" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<h2><span class="section-number">3.4. </span>El producte de Petersson<a class="headerlink" href="#el-producte-de-petersson" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
 <p>Per estudiar m&#233;s a fons els espais <span class="math notranslate nohighlight">\(S_k\)</span>, els hem de dotar de m&#233;s estructura que la d&#8217;espai vectorial complex. Podem definir un producte escalar herm&#237;tic, de la seg&#252;ent manera: donades <span class="math notranslate nohighlight">\(f,g\in S_k\)</span>, considerem
 <div class="math notranslate nohighlight">
 \[
@@ -261,7 +315,7 @@ ja que <span class="math notranslate nohighlight">\(\frac{dxdy}{y^2}\)</span> &#
 <p>Com a conclusi&#243;, els operadors de Hecke <span class="math notranslate nohighlight">\(T_n\)</span> formen una fam&#237;lia d&#8217;operadors normals respecte el producte de Petersson. Per tant, <span class="math notranslate nohighlight">\(S_k\)</span> cont&#233; una base ortogonal de formes pr&#242;pies per <strong>tots</strong> els operadors de Hecke simult&#224;niament. Es diu que <span class="math notranslate nohighlight">\(S_k\)</span> satisf&#224; &#171;multiplicitat-1&#187;: donat una col&#183;lecci&#243; de valors propis <span class="math notranslate nohighlight">\(\{\lambda_n\}_{n\geq 1}\)</span>, hi ha com a molt una forma cuspidal pr&#242;pia <span class="math notranslate nohighlight">\(f\in S_k\)</span> tal que <span class="math notranslate nohighlight">\(T_n(f)=\lambda_n f\)</span>. A m&#233;s, pel teorema de Cayley-Hamilton tenim que els valors propis dels operadors de Hecke s&#243;n nombres algebraics reals!</p>
 </section>
 <section id="funcions-theta">
-<h2><span class="section-number">3.4. </span>Funcions theta<a class="headerlink" href="#funcions-theta" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<h2><span class="section-number">3.5. </span>Funcions theta<a class="headerlink" href="#funcions-theta" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
 <p>Sigui <span class="math notranslate nohighlight">\(V\)</span> un espai vectorial real de dimensi&#243; <span class="math notranslate nohighlight">\(n\)</span>, amb una mesura invariant <span class="math notranslate nohighlight">\(\mu\)</span>, i sigui <span class="math notranslate nohighlight">\(V'\)</span> l&#8217;espai dual. Si <span class="math notranslate nohighlight">\(f\)</span> &#233;s una funci&#243; &#171;bona&#187; (diferenciable, amb decreixement r&#224;pid) aleshores t&#233; una transformada de Fourier
 <div class="math notranslate nohighlight">
 \[
@@ -283,7 +337,7 @@ que &#233;s una funci&#243; a <span class="math notranslate nohighlight">\(V'\)<
 </p>
 </section>
 <section id="la-funcio-j-de-klein">
-<h2><span class="section-number">3.5. </span>La funci&#243; j de Klein<a class="headerlink" href="#la-funcio-j-de-klein" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<h2><span class="section-number">3.6. </span>La funci&#243; j de Klein<a class="headerlink" href="#la-funcio-j-de-klein" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
 <p>Definim la seg&#252;ent funci&#243; modular de pes <span class="math notranslate nohighlight">\(0\)</span>:
 <div class="math notranslate nohighlight">
 \[
@@ -328,10 +382,11 @@ Els coeficients s&#243;n tots enters, que a m&#233;s satisfan <span class="math 
 <li class="toctree-l1"><a class="reference internal" href="dia2.html">2. Segon dia</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. Tercer dia</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#operadors-de-hecke">3.1. Operadors de Hecke</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#la-funcio-l-associada-a-una-forma-modular">3.2. La funci&#243; L associada a una forma modular</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#el-producte-de-petersson">3.3. El producte de Petersson</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#funcions-theta">3.4. Funcions theta</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#la-funcio-j-de-klein">3.5. La funci&#243; j de Klein</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creixement-dels-coeficients">3.2. Creixement dels coeficients</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#la-funcio-l-associada-a-una-forma-modular">3.3. La funci&#243; L associada a una forma modular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#el-producte-de-petersson">3.4. El producte de Petersson</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#funcions-theta">3.5. Funcions theta</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#la-funcio-j-de-klein">3.6. La funci&#243; j de Klein</a></li>
 </ul>
 </li>
 </ul>
