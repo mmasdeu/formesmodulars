@@ -20,7 +20,7 @@ $$
 
 En particular, si $n=p$ és un primer, tenim
 $$
-(T_pf)(z) = p^{-1} \left(\sum_{b=0}^{p-1} f(\frac{z+b}{p}) + f(pz)\right).
+(T_pf)(z) = \frac{1}{p} \left(\sum_{b=0}^{p-1} f(\frac{z+b}{p}) + f(pz)\right).
 $$
 
 **Proposició:** La funció $T_nf$ és dèbilment modular de pes $k$. Si $f$ és holomorfa, també ho és $T_nf$. A més:
@@ -47,7 +47,7 @@ Formes pròpies
 Suposem ara que $f=\sum_{n\geq 0} a_n(f)q^n$ és una forma modular de pes $k>0$, que és pròpia per tots els $T_n$. És a dir, per cada $n\geq 1$ tenim $T_nf=\lambda_nf$, per algun $\lambda_n\in\CC$.
 
 
-**Teorema:**  $a_1(f)\neq 0$. Si $f$ està normalitzada de manera que $a_1(f)=1$, aleshores $a_n(f) = \lambda_n$.
+**Teorema:**  Si $f$ és pròpia, $a_1(f)\neq 0$. Si $f$ està normalitzada de manera que $a_1(f)=1$, aleshores $a_n(f) = \lambda_n$.
 
 *Prova:* Hem vist que $a_1(T_nf) = a_n(f)$. Com que $f$ és pròpia, $a_1(T_nf) = \lambda_n a_1(f)$. Per tant, $a_n(f) = \lambda_n a_1(f)$. Si suposem que $a_1(f)=0$, aleshores tindríem $a_n(f)=0$ per a tot $n\geq 1$, i per tant $f$ seria una constant. Però $k>0$, i per tant arribem a contradicció. $\qed$
 
@@ -55,11 +55,12 @@ Suposem ara que $f=\sum_{n\geq 0} a_n(f)q^n$ és una forma modular de pes $k>0$,
 
 **Corol·lari:** Si $f$ està normalitzada, aleshores
 $$
-a_m(f)a_n(f)=a_{mn}(f),\text{ i}
+a_m(f)a_n(f)=a_{mn}(f),\text{si $(m,n)=1$, i}
 $$
 $$
 a_{p^{r+1}}(f) = a_p(f)a_{p^r}(f) - p^{k-1} a_{r-1}(f).
 $$
+
 
 Creixement dels coeficients
 ===========================
@@ -112,7 +113,7 @@ molt més ràpid que els de $h$, el creixement de $f$ és igual que el de $E_k$.
 **Remarca:** Un teorema molt profund de Deligne (1973) demostra, de fet, que $a_n = O(n^{k-1/2}\sigma_0(n))=O(n^{k-1/2-\epsilon})$ per a tot $\epsilon>0$. Abans del resultat de Deligne, aquest fet es coneixia com la conjectura de Petersson, que generalitzava una conjectura famosa de Ramanujan sobre la funció $\tau(n)$.
 
 
-La funció L associada a una forma modular
+La funció-L associada a una forma modular
 =========================================
 
 Podem empaquetar tota la informació que hem trobat de manera analítica, mitjançant la funció-L. Sigui
@@ -157,6 +158,7 @@ $$
 $$
 \Lambda(f,s) = \int_0^\infty (f(it) - a_0)t^s\frac{dt}{t}.
 $$
+
 *Prova:*
 Calculem:
 $$
@@ -197,6 +199,7 @@ Funció-L de les sèries d'Eisenstein
 Sigui $k\geq 4$ un enter, i considerem la sèrie d'Eisenstein $E_k = 1 - \frac{2k}{B_k}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n$.
 
 **Proposició:** $T_p(E_k) = (1+p^{k-1})E_k$.
+
 *Prova:* Ho comprovem coeficient a coeficient. Si $p\nmid n$, hem de comprovar que
 $$
 \sigma_{k-1}(pn) = (1+p^{k-1})\sigma_{k-1}(n).
@@ -216,7 +219,11 @@ De manera alternativa, podem veure que l'invers del terme $p$-èssim del product
 $$
 1-\sigma_{k-1}(p)p^{-s} + p^{k-1-2s} = 1- p^{-s} - p^{k-1-s} + p^{k-1-2s} = (1-p^{-s})(1-p^{k-1-s}),
 $$
-que coincideix amb el producte dels inversos dels factors d'Euler de $\zeta(s)\zeta(s-k+1)$.
+que coincideix amb el producte dels inversos dels factors d'Euler de $\zeta(s)\zeta(s-k+1)$. Resumin, obtenim la factorització
+
+$$
+L(E_k,s) = \zeta(s)\zeta(s-k+1).
+$$
 
 Funció-L de la Delta de Ramanujan
 ---------------------------------
@@ -232,7 +239,7 @@ $$
 \tau(p)\tau(p^n) = \tau(p^{n+1})+p^{11}\tau(p^{n-1}),\quad \forall p\text{ primer}, n\geq 1.
 $$
 
-Es tenen resultats anàlegs per tots els espais $S_k$ de dimensió $1$, que són exactament $k=12,16,18,20,22,26$. Els generador és, en cada cas, $\Delta E_{k-12}$.
+Es tenen resultats anàlegs per tots els espais $S_k$ de dimensió $1$, que són exactament $k=12,16,18,20,22,26$. El generador és, en cada cas, $\Delta E_{k-12}$.
 
 El producte de Petersson
 ========================

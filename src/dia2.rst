@@ -280,15 +280,16 @@ Definim, per comoditat $P=E_2$, $Q=E_4$ i $R=E_6$ (aquesta és la notació origi
 
 **Teorema:** Es té:
 
-1. $\theta_1(P) = -Q$,
-2. $\theta_4(Q) = -R$, i
-3. $\theta_6(R) = -Q^2$.
 
-*Prova:* Les dues últimes són automàtiques, tenint en compte que $M_6$ i $M_8$ tenen dimensió $1$. Per veure la primera afirmació, només cal comprovar que $\theta_2(P)$ és una forma modular de pes $4$, i això es veu directament fent servir la propietat de transformació de $P$:
+1. $\theta_4(Q) = -\frac{1}{3}R$,
+2. $\theta_6(R) = -\frac{1}{2}Q^2$, i
+3. $D(P) = \frac{1}{12}(P^2-Q)$.
+
+*Prova:* Les dues primeres identitats són automàtiques, tenint en compte que $M_6$ i $M_8$ tenen dimensió $1$. Per veure l'ultima afirmació, només cal comprovar que $H = DP-\frac{1}{12}P^2$ és una forma modular de pes $4$, i això es veu directament fent servir la propietat de transformació de $P$:
 $$
-P'(-1/z)z^{-2} = 2zP(z)+z^2P'(z)+\frac{6}{i\pi},
+P'(-1/z)z^{-2} = 2zP(z)+z^2P'(z)+\frac{6}{i\pi}.
 $$
-i si definim $H(z) = \theta_1(P) = \frac{1}{2\pi i} P'(z) -\frac{1}{12}P^2(z)$, aleshores podem comprovar:
+Definim $H(z) = \frac{1}{2\pi i} P'(z) -\frac{1}{12}P^2(z)$, aleshores podem comprovar:
 $$
 H(-1/z) = \frac{1}{2\pi i} P'(-1/z) -\frac{1}{12}P(-1/z)^2 = (\cdots) = z^4 H(z).\quad\qed
 $$
@@ -296,9 +297,8 @@ $$
 
 **Corol·lari:** Les següents identitats de sèries formals es compleixen:
 
-1. $DP = \frac{1}{12}(P^2-Q)$
-2. $DQ = \frac{1}{3}(PQ-R)$, i
-3. $DR = \frac{1}{2}(PR-Q^2)$.
+1. $DQ = \frac{1}{3}(PQ-R)$,
+2. $DR = \frac{1}{2}(PR-Q^2)$.
 
 Amb aquestes identitats ja podem demostrar més resultats de Ramanujan. Per exemple:
 
@@ -316,3 +316,31 @@ Finalment, observem que $DQ = 240\sum_{n\geq 1} n \sigma_3(n)q^n$. Com que $240\
 $$
 \Delta =\sum_{n\geq 1}\tau(n)q^n\equiv \sum_{n\geq 1} n\sigma_3(n)q^n.\quad\qed
 $$
+
+**Teorema:** Per a tot $n\geq 1$, es té $\tau(n) \equiv n^2\sigma_7(n)\pmod{27}$.
+
+*Prova:* Aplicant les fórmules que hem trobat per $D$ i la regla del producte, arribem a
+$$
+D^2(Q^2) = \frac{1/2}P^2Q^2 +\frac{5}{18}Q^3 -PQR +\frac{2}{9}R^2.
+$$
+Fent servir que
+$$
+\frac{5}{18}Q^3 = \frac{5}{18}(Q^3-R^2) +\frac{5}{18}R^2 = 480\Delta+\frac{5}{18}R^2,
+$$
+obtenim
+$$
+D^2(Q^2) = 480\Delta +\frac{1}{2} P^2Q^2 - PQR+\frac{1}{2}R^2.
+$$
+Fent servir que $PQ=3DQ+R$, obtenim
+$$
+(PQ)^2 +R^2-2PQR = (3DQ+R)^2+R^2-2R(3DQ+R) = 9(DQ)^2,
+$$
+i per tant
+$$
+D^2(Q^2)=480\Delta + \frac{9}{2} (DQ)^2.
+$$
+Com que $D^2(Q^2) = 480\sum_{n\geq 1}\sigma_7(n)q^n$, per acabar només hem d'obervar que $DQ\equiv 0\pmod{9}$ i en deduïm que
+\[
+160\sum_{n\geq 1}\sigma_7(n)q^n \equiv 160\sum_{n\geq 1}\tau(n)q^n \pmod{27}.
+\]
+Com que $7\nmid 160$, ja hem acabat.$\qed$
