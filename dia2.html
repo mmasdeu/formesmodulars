@@ -369,17 +369,17 @@ Com que <span class="math notranslate nohighlight">\(E_6\)</span> t&#233; tots e
 <p>Definim, per comoditat <span class="math notranslate nohighlight">\(P=E_2\)</span>, <span class="math notranslate nohighlight">\(Q=E_4\)</span> i <span class="math notranslate nohighlight">\(R=E_6\)</span> (aquesta &#233;s la notaci&#243; original de Ramanujan).</p>
 <p><strong>Teorema:</strong> Es t&#233;:</p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(\theta_1(P) = -Q\)</span>,</p></li>
-<li><p><span class="math notranslate nohighlight">\(\theta_4(Q) = -R\)</span>, i</p></li>
-<li><p><span class="math notranslate nohighlight">\(\theta_6(R) = -Q^2\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta_4(Q) = -\frac{1}{3}R\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(\theta_6(R) = -\frac{1}{2}Q^2\)</span>, i</p></li>
+<li><p><span class="math notranslate nohighlight">\(D(P) = \frac{1}{12}(P^2-Q)\)</span>.</p></li>
 </ol>
-<p><em>Prova:</em> Les dues &#250;ltimes s&#243;n autom&#224;tiques, tenint en compte que <span class="math notranslate nohighlight">\(M_6\)</span> i <span class="math notranslate nohighlight">\(M_8\)</span> tenen dimensi&#243; <span class="math notranslate nohighlight">\(1\)</span>. Per veure la primera afirmaci&#243;, nom&#233;s cal comprovar que <span class="math notranslate nohighlight">\(\theta_2(P)\)</span> &#233;s una forma modular de pes <span class="math notranslate nohighlight">\(4\)</span>, i aix&#242; es veu directament fent servir la propietat de transformaci&#243; de <span class="math notranslate nohighlight">\(P\)</span>:
+<p><em>Prova:</em> Les dues primeres identitats s&#243;n autom&#224;tiques, tenint en compte que <span class="math notranslate nohighlight">\(M_6\)</span> i <span class="math notranslate nohighlight">\(M_8\)</span> tenen dimensi&#243; <span class="math notranslate nohighlight">\(1\)</span>. Per veure l&#8217;ultima afirmaci&#243;, nom&#233;s cal comprovar que <span class="math notranslate nohighlight">\(H = DP-\frac{1}{12}P^2\)</span> &#233;s una forma modular de pes <span class="math notranslate nohighlight">\(4\)</span>, i aix&#242; es veu directament fent servir la propietat de transformaci&#243; de <span class="math notranslate nohighlight">\(P\)</span>:
 <div class="math notranslate nohighlight">
 \[
-P'(-1/z)z^{-2} = 2zP(z)+z^2P'(z)+\frac{6}{i\pi},
+P'(-1/z)z^{-2} = 2zP(z)+z^2P'(z)+\frac{6}{i\pi}.
 \]</div>
 
-i si definim <span class="math notranslate nohighlight">\(H(z) = \theta_1(P) = \frac{1}{2\pi i} P'(z) -\frac{1}{12}P^2(z)\)</span>, aleshores podem comprovar:
+Definim <span class="math notranslate nohighlight">\(H(z) = \frac{1}{2\pi i} P'(z) -\frac{1}{12}P^2(z)\)</span>, aleshores podem comprovar:
 <div class="math notranslate nohighlight">
 \[
 H(-1/z) = \frac{1}{2\pi i} P'(-1/z) -\frac{1}{12}P(-1/z)^2 = (\cdots) = z^4 H(z).\quad\qed
@@ -387,8 +387,7 @@ H(-1/z) = \frac{1}{2\pi i} P'(-1/z) -\frac{1}{12}P(-1/z)^2 = (\cdots) = z^4 H(z)
 </p>
 <p><strong>Corol&#183;lari:</strong> Les seg&#252;ents identitats de s&#232;ries formals es compleixen:</p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(DP = \frac{1}{12}(P^2-Q)\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(DQ = \frac{1}{3}(PQ-R)\)</span>, i</p></li>
+<li><p><span class="math notranslate nohighlight">\(DQ = \frac{1}{3}(PQ-R)\)</span>,</p></li>
 <li><p><span class="math notranslate nohighlight">\(DR = \frac{1}{2}(PR-Q^2)\)</span>.</p></li>
 </ol>
 <p>Amb aquestes identitats ja podem demostrar m&#233;s resultats de Ramanujan. Per exemple:</p>
@@ -411,6 +410,42 @@ Finalment, observem que <span class="math notranslate nohighlight">\(DQ = 240\su
 \Delta =\sum_{n\geq 1}\tau(n)q^n\equiv \sum_{n\geq 1} n\sigma_3(n)q^n.\quad\qed
 \]</div>
 </p>
+<p><strong>Teorema:</strong> Per a tot <span class="math notranslate nohighlight">\(n\geq 1\)</span>, es t&#233; <span class="math notranslate nohighlight">\(\tau(n) \equiv n^2\sigma_7(n)\pmod{27}\)</span>.</p>
+<p><em>Prova:</em> Aplicant les f&#243;rmules que hem trobat per <span class="math notranslate nohighlight">\(D\)</span> i la regla del producte, arribem a
+<div class="math notranslate nohighlight">
+\[
+D^2(Q^2) = \frac{1/2}P^2Q^2 +\frac{5}{18}Q^3 -PQR +\frac{2}{9}R^2.
+\]</div>
+
+Fent servir que
+<div class="math notranslate nohighlight">
+\[
+\frac{5}{18}Q^3 = \frac{5}{18}(Q^3-R^2) +\frac{5}{18}R^2 = 480\Delta+\frac{5}{18}R^2,
+\]</div>
+
+obtenim
+<div class="math notranslate nohighlight">
+\[
+D^2(Q^2) = 480\Delta +\frac{1}{2} P^2Q^2 - PQR+\frac{1}{2}R^2.
+\]</div>
+
+Fent servir que <span class="math notranslate nohighlight">\(PQ=3DQ+R\)</span>, obtenim
+<div class="math notranslate nohighlight">
+\[
+(PQ)^2 +R^2-2PQR = (3DQ+R)^2+R^2-2R(3DQ+R) = 9(DQ)^2,
+\]</div>
+
+i per tant
+<div class="math notranslate nohighlight">
+\[
+D^2(Q^2)=480\Delta + \frac{9}{2} (DQ)^2.
+\]</div>
+
+Com que <span class="math notranslate nohighlight">\(D^2(Q^2) = 480\sum_{n\geq 1}\sigma_7(n)q^n\)</span>, per acabar nom&#233;s hem d&#8217;obervar que <span class="math notranslate nohighlight">\(DQ\equiv 0\pmod{9}\)</span> i en dedu&#239;m que
+\[
+160\sum_{n\geq 1}\sigma_7(n)q^n \equiv 160\sum_{n\geq 1}\tau(n)q^n \pmod{27}.
+\]
+Com que <span class="math notranslate nohighlight">\(7\nmid 160\)</span>, ja hem acabat.<span class="math notranslate nohighlight">\(\qed\)</span></p>
 </section>
 </section>
 

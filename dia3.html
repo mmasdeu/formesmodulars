@@ -50,7 +50,7 @@
 <p>En particular, si <span class="math notranslate nohighlight">\(n=p\)</span> &#233;s un primer, tenim
 <div class="math notranslate nohighlight">
 \[
-(T_pf)(z) = p^{-1} \left(\sum_{b=0}^{p-1} f(\frac{z+b}{p}) + f(pz)\right).
+(T_pf)(z) = \frac{1}{p} \left(\sum_{b=0}^{p-1} f(\frac{z+b}{p}) + f(pz)\right).
 \]</div>
 </p>
 <p><strong>Proposici&#243;:</strong> La funci&#243; <span class="math notranslate nohighlight">\(T_nf\)</span> &#233;s d&#232;bilment modular de pes <span class="math notranslate nohighlight">\(k\)</span>. Si <span class="math notranslate nohighlight">\(f\)</span> &#233;s holomorfa, tamb&#233; ho &#233;s <span class="math notranslate nohighlight">\(T_nf\)</span>. A m&#233;s:</p>
@@ -76,13 +76,13 @@ on entenem que <span class="math notranslate nohighlight">\(a_{m/p}(f)=0\)</span
 <section id="formes-propies">
 <h3><span class="section-number">3.1.2. </span>Formes pr&#242;pies<a class="headerlink" href="#formes-propies" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
 <p>Suposem ara que <span class="math notranslate nohighlight">\(f=\sum_{n\geq 0} a_n(f)q^n\)</span> &#233;s una forma modular de pes <span class="math notranslate nohighlight">\(k&gt;0\)</span>, que &#233;s pr&#242;pia per tots els <span class="math notranslate nohighlight">\(T_n\)</span>. &#201;s a dir, per cada <span class="math notranslate nohighlight">\(n\geq 1\)</span> tenim <span class="math notranslate nohighlight">\(T_nf=\lambda_nf\)</span>, per algun <span class="math notranslate nohighlight">\(\lambda_n\in\CC\)</span>.</p>
-<p><strong>Teorema:</strong>  <span class="math notranslate nohighlight">\(a_1(f)\neq 0\)</span>. Si <span class="math notranslate nohighlight">\(f\)</span> est&#224; normalitzada de manera que <span class="math notranslate nohighlight">\(a_1(f)=1\)</span>, aleshores <span class="math notranslate nohighlight">\(a_n(f) = \lambda_n\)</span>.</p>
+<p><strong>Teorema:</strong>  Si <span class="math notranslate nohighlight">\(f\)</span> &#233;s pr&#242;pia, <span class="math notranslate nohighlight">\(a_1(f)\neq 0\)</span>. Si <span class="math notranslate nohighlight">\(f\)</span> est&#224; normalitzada de manera que <span class="math notranslate nohighlight">\(a_1(f)=1\)</span>, aleshores <span class="math notranslate nohighlight">\(a_n(f) = \lambda_n\)</span>.</p>
 <p><em>Prova:</em> Hem vist que <span class="math notranslate nohighlight">\(a_1(T_nf) = a_n(f)\)</span>. Com que <span class="math notranslate nohighlight">\(f\)</span> &#233;s pr&#242;pia, <span class="math notranslate nohighlight">\(a_1(T_nf) = \lambda_n a_1(f)\)</span>. Per tant, <span class="math notranslate nohighlight">\(a_n(f) = \lambda_n a_1(f)\)</span>. Si suposem que <span class="math notranslate nohighlight">\(a_1(f)=0\)</span>, aleshores tindr&#237;em <span class="math notranslate nohighlight">\(a_n(f)=0\)</span> per a tot <span class="math notranslate nohighlight">\(n\geq 1\)</span>, i per tant <span class="math notranslate nohighlight">\(f\)</span> seria una constant. Per&#242; <span class="math notranslate nohighlight">\(k&gt;0\)</span>, i per tant arribem a contradicci&#243;. <span class="math notranslate nohighlight">\(\qed\)</span></p>
 <p><strong>Corol&#183;lari:</strong> Si <span class="math notranslate nohighlight">\(f\)</span> i <span class="math notranslate nohighlight">\(g\)</span> s&#243;n formes pr&#242;pies per tot <span class="math notranslate nohighlight">\(T_n\)</span> amb els mateixos valors propis, aleshores s&#243;n proporcionals.</p>
 <p><strong>Corol&#183;lari:</strong> Si <span class="math notranslate nohighlight">\(f\)</span> est&#224; normalitzada, aleshores
 <div class="math notranslate nohighlight">
 \[
-a_m(f)a_n(f)=a_{mn}(f),\text{ i}
+a_m(f)a_n(f)=a_{mn}(f),\text{si $(m,n)=1$, i}
 \]</div>
 
 <div class="math notranslate nohighlight">
@@ -147,7 +147,7 @@ molt m&#233;s r&#224;pid que els de <span class="math notranslate nohighlight">\
 <p><strong>Remarca:</strong> Un teorema molt profund de Deligne (1973) demostra, de fet, que <span class="math notranslate nohighlight">\(a_n = O(n^{k-1/2}\sigma_0(n))=O(n^{k-1/2-\epsilon})\)</span> per a tot <span class="math notranslate nohighlight">\(\epsilon&gt;0\)</span>. Abans del resultat de Deligne, aquest fet es coneixia com la conjectura de Petersson, que generalitzava una conjectura famosa de Ramanujan sobre la funci&#243; <span class="math notranslate nohighlight">\(\tau(n)\)</span>.</p>
 </section>
 <section id="la-funcio-l-associada-a-una-forma-modular">
-<h2><span class="section-number">3.3. </span>La funci&#243; L associada a una forma modular<a class="headerlink" href="#la-funcio-l-associada-a-una-forma-modular" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<h2><span class="section-number">3.3. </span>La funci&#243;-L associada a una forma modular<a class="headerlink" href="#la-funcio-l-associada-a-una-forma-modular" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
 <p>Podem empaquetar tota la informaci&#243; que hem trobat de manera anal&#237;tica, mitjan&#231;ant la funci&#243;-L. Sigui
 <div class="math notranslate nohighlight">
 \[
@@ -201,8 +201,8 @@ que ja sabem que &#233;s <span class="math notranslate nohighlight">\(0\)</span>
 \[
 \Lambda(f,s) = \int_0^\infty (f(it) - a_0)t^s\frac{dt}{t}.
 \]</div>
-
-<em>Prova:</em>
+</p>
+<p><em>Prova:</em>
 Calculem:
 <div class="math notranslate nohighlight">
 \[
@@ -246,8 +246,8 @@ Aquesta expressi&#243; convergeix per tot <span class="math notranslate nohighli
 <section id="funcio-l-de-les-series-d-eisenstein">
 <h3><span class="section-number">3.3.2. </span>Funci&#243;-L de les s&#232;ries d&#8217;Eisenstein<a class="headerlink" href="#funcio-l-de-les-series-d-eisenstein" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
 <p>Sigui <span class="math notranslate nohighlight">\(k\geq 4\)</span> un enter, i considerem la s&#232;rie d&#8217;Eisenstein <span class="math notranslate nohighlight">\(E_k = 1 - \frac{2k}{B_k}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n\)</span>.</p>
-<p><strong>Proposici&#243;:</strong> <span class="math notranslate nohighlight">\(T_p(E_k) = (1+p^{k-1})E_k\)</span>.
-<em>Prova:</em> Ho comprovem coeficient a coeficient. Si <span class="math notranslate nohighlight">\(p\nmid n\)</span>, hem de comprovar que
+<p><strong>Proposici&#243;:</strong> <span class="math notranslate nohighlight">\(T_p(E_k) = (1+p^{k-1})E_k\)</span>.</p>
+<p><em>Prova:</em> Ho comprovem coeficient a coeficient. Si <span class="math notranslate nohighlight">\(p\nmid n\)</span>, hem de comprovar que
 <div class="math notranslate nohighlight">
 \[
 \sigma_{k-1}(pn) = (1+p^{k-1})\sigma_{k-1}(n).
@@ -272,7 +272,12 @@ La primera equaci&#243; es comprova f&#224;cilment, i la segona es fa per inducc
 1-\sigma_{k-1}(p)p^{-s} + p^{k-1-2s} = 1- p^{-s} - p^{k-1-s} + p^{k-1-2s} = (1-p^{-s})(1-p^{k-1-s}),
 \]</div>
 
-que coincideix amb el producte dels inversos dels factors d&#8217;Euler de <span class="math notranslate nohighlight">\(\zeta(s)\zeta(s-k+1)\)</span>.</p>
+que coincideix amb el producte dels inversos dels factors d&#8217;Euler de <span class="math notranslate nohighlight">\(\zeta(s)\zeta(s-k+1)\)</span>. Resumin, obtenim la factoritzaci&#243;</p>
+<p><div class="math notranslate nohighlight">
+\[
+L(E_k,s) = \zeta(s)\zeta(s-k+1).
+\]</div>
+</p>
 </section>
 <section id="funcio-l-de-la-delta-de-ramanujan">
 <h3><span class="section-number">3.3.3. </span>Funci&#243;-L de la Delta de Ramanujan<a class="headerlink" href="#funcio-l-de-la-delta-de-ramanujan" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
@@ -289,7 +294,7 @@ i
 \tau(p)\tau(p^n) = \tau(p^{n+1})+p^{11}\tau(p^{n-1}),\quad \forall p\text{ primer}, n\geq 1.
 \]</div>
 </p>
-<p>Es tenen resultats an&#224;legs per tots els espais <span class="math notranslate nohighlight">\(S_k\)</span> de dimensi&#243; <span class="math notranslate nohighlight">\(1\)</span>, que s&#243;n exactament <span class="math notranslate nohighlight">\(k=12,16,18,20,22,26\)</span>. Els generador &#233;s, en cada cas, <span class="math notranslate nohighlight">\(\Delta E_{k-12}\)</span>.</p>
+<p>Es tenen resultats an&#224;legs per tots els espais <span class="math notranslate nohighlight">\(S_k\)</span> de dimensi&#243; <span class="math notranslate nohighlight">\(1\)</span>, que s&#243;n exactament <span class="math notranslate nohighlight">\(k=12,16,18,20,22,26\)</span>. El generador &#233;s, en cada cas, <span class="math notranslate nohighlight">\(\Delta E_{k-12}\)</span>.</p>
 </section>
 </section>
 <section id="el-producte-de-petersson">
@@ -383,7 +388,7 @@ Els coeficients s&#243;n tots enters, que a m&#233;s satisfan <span class="math 
 <li class="toctree-l1 current"><a class="current reference internal" href="#">3. Tercer dia</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#operadors-de-hecke">3.1. Operadors de Hecke</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creixement-dels-coeficients">3.2. Creixement dels coeficients</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#la-funcio-l-associada-a-una-forma-modular">3.3. La funci&#243; L associada a una forma modular</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#la-funcio-l-associada-a-una-forma-modular">3.3. La funci&#243;-L associada a una forma modular</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#el-producte-de-petersson">3.4. El producte de Petersson</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#funcions-theta">3.5. Funcions theta</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#la-funcio-j-de-klein">3.6. La funci&#243; j de Klein</a></li>
