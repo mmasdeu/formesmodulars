@@ -61,6 +61,57 @@ $$
 a_{p^{r+1}}(f) = a_p(f)a_{p^r}(f) - p^{k-1} a_{r-1}(f).
 $$
 
+Creixement dels coeficients
+===========================
+
+Més endavant ens interessarà tenir fites per l'ordre de creixement dels
+coeficients de Fourier de les formes modulars.
+
+**Proposició:** Si $f=E_k$, aleshores $a_n\approx n^{k-1}$. És a dir, que hi ha constants $A, B>0$ tals que
+$$
+An^{k-1}\leq \abs{a_n}\leq Bn^{k-1}.
+$$
+
+*Prova:* Tenim $\abs{a_n} = A \sigma_{k-1}(n)\geq An^{k-1}$. D'altra banda,
+$$
+\frac{\abs{a_n}}{n^{k-1}} = A \sum_{d\mid n} \frac{1}{d^{k-1}} \leq A\sum_{d=1}^\infty \frac{d^{k-1}} = A\zeta(k-1) < \infty.\quad\qed
+$$
+
+El creixement de les formes cuspidals és més lent:
+
+**Teorema (Hecke):** Si $f$ és una forma cuspidal de pes $k$, llavors $a_n=O(n^{k/2})$.
+
+*Prova:*
+Primer de tot, com que $a_0=0$, podem escriure $f(z)=q\sum_{n\geq 1}a_nq^{n-1}$ i, per tant,
+$$
+\abs{f(z)} = O(q)=O(e^{-2\pi \Im(z)}),\quad q\to 0.
+$$
+
+Escrivim $z=x+iy$, i definim $\phi(z)=\abs{f(z)}y^{k/2}$. La modularitat de $f$ fa que la funció $C^\infty$ (no-holomorfa) $\phi$ sigui invariant per $\SL_2(\ZZ)$, i $\phi(z)\to 0$ quan $\Im(z)\to\infty$. Per tant, $\phi$ és fitada: hi ha alguna constant $M$ tal que
+$$
+\abs{f(z)}\leq My^{-k/2},\quad z\in \HH.
+$$
+Per com es calculen els coeficients de Fourier, tenim
+$$
+a_n =  \int_0^1 f(x+iy)e^{-2\pi i n(x+iy)}dx,
+$$
+i per tant
+$$
+\abs{a_n} \leq Me^{2\pi n y}\int_0^1 y^{-k/2} e^{-2\pi inx}dx = My^{-k/2}e^{2\pi i n y}.
+$$
+Aquesta igualtat és vàlida per tot $y>0$. En particular, per $y=1/n$ dona
+$$
+\abs{a_n}\leq e^{2\pi} M n^{k/2}.\qed
+$$
+
+**Corol·lari:** Si $f$ no és cuspidal, aleshores $a_n\approx n^{k-1}$.
+
+*Prova:* Escrivim $f=\lambda E_k + h$ amb $\lambda\neq 0$ i $h$ cuspidal, i apliquem els resultats anteriors. Com que els coeficients de $E_k$ creixen
+molt més ràpid que els de $h$, el creixement de $f$ és igual que el de $E_k$. $\qed$
+
+**Remarca:** Un teorema molt profund de Deligne (1973) demostra, de fet, que $a_n = O(n^{k-1/2}\sigma_0(n))=O(n^{k-1/2-\epsilon})$ per a tot $\epsilon>0$. Abans del resultat de Deligne, aquest fet es coneixia com la conjectura de Petersson, que generalitzava una conjectura famosa de Ramanujan sobre la funció $\tau(n)$.
+
+
 La funció L associada a una forma modular
 =========================================
 

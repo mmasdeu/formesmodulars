@@ -63,7 +63,7 @@ $$
 $$
 Derivant-la successivament, obtenim el que es coneix com la **fórmula de Lipschitz**:
 $$
-\sum_{m\in\ZZ} \frac{1}{(m+z)^k} = \frac{(-1)^k (2\pi i)^k}{(k-1)!}\sum_{n=1}^\infty n^{k-1}q^n, \quad k\geq 2.
+\sum_{m\in\ZZ} \frac{1}{(z+m)^k} = \frac{(-1)^k (2\pi i)^k}{(k-1)!}\sum_{n=1}^\infty n^{k-1}q^n, \quad k\geq 2.
 $$
 
 **Proposició:** Per cada $k\geq 4$ parell, tenim
@@ -87,7 +87,12 @@ $$
 
 Per exemple,
 $$
-E_4=1+240\sum_{n\geq 1} \sigma_3(n)q^n,\quad E_6=1-504\sum_{n\geq 1} \sigma_5(n)q^n.
+E_4=1+240\sum_{n\geq 1} \sigma_3(n)q^n,\quad
+E_6=1-504\sum_{n\geq 1} \sigma_5(n)q^n,\\
+E_8=1+480\sum_{n\geq 1} \sigma_7(n)q^n,\quad
+E_{10} = 1-264\sum_{n\geq 1}\sigma_9(n)q^n,\\
+E_{12} = 1+\frac{65520}{691}\sum_{n\geq 1}\sigma_{11}(n)q^n,\quad
+E_{14} = 1-24\sum_{n\geq 1} \sigma_{13}(n)q^n.
 $$
 
 Una primera aplicació
@@ -105,66 +110,22 @@ $$
 $$
 
 
-Creixement dels coeficients
-===========================
-
-Més endavant ens interessarà tenir fites per l'ordre de creixement dels
-coeficients de Fourier de les formes modulars.
-
-**Proposició:** Si $f=E_k$, aleshores $a_n\approx n^{k-1}$. És a dir, que hi ha constants $A, B>0$ tals que
-$$
-An^{k-1}\leq \abs{a_n}\leq Bn^{k-1}.
-$$
-
-*Prova:* Tenim $\abs{a_n} = A \sigma_{k-1}(n)\geq An^{k-1}$. D'altra banda,
-$$
-\frac{\abs{a_n}}{n^{k-1}} = A \sum_{d\mid n} \frac{1}{d^{k-1}} \leq A\sum_{d=1}^\infty \frac{d^{k-1}} = A\zeta(k-1) < \infty.\quad\qed
-$$
-
-El creixement de les formes cuspidals és més lent:
-
-**Teorema (Hecke):** Si $f$ és una forma cuspidal de pes $k$, llavors $a_n=O(n^{k/2})$.
-
-*Prova:*
-Primer de tot, com que $a_0=0$, podem escriure $f(z)=q\sum_{n\geq 1}a_nq^{n-1}$ i, per tant,
-$$
-\abs{f(z)} = O(q)=O(e^{-2\pi \Im(z)}),\quad q\to 0.
-$$
-
-Escrivim $z=x+iy$, i definim $\phi(z)=\abs{f(z)}y^{k/2}$. La modularitat de $f$ fa que la funció $C^\infty$ (no-holomorfa) $\phi$ sigui invariant per $\SL_2(\ZZ)$, i $\phi(z)\to 0$ quan $\Im(z)\to\infty$. Per tant, $\phi$ és fitada: hi ha alguna constant $M$ tal que
-$$
-\abs{f(z)}\leq My^{-k/2},\quad z\in \HH.
-$$
-Per com es calculen els coeficients de Fourier, tenim
-$$
-a_n =  \int_0^1 f(x+iy)e^{-2\pi i n(x+iy)}dx,
-$$
-i per tant
-$$
-\abs{a_n} \leq Me^{2\pi n y}\int_0^1 y^{-k/2} e^{-2\pi inx}dx = My^{-k/2}e^{2\pi i n y}.
-$$
-Aquesta igualtat és vàlida per tot $y>0$. En particular, per $y=1/n$ dona
-$$
-\abs{a_n}\leq e^{2\pi} M n^{k/2}.\qed
-$$
-
-**Corol·lari:** Si $f$ no és cuspidal, aleshores $a_n\approx n^{k-1}$.
-
-*Prova:* Escrivim $f=\lambda E_k + h$ amb $\lambda\neq 0$ i $h$ cuspidal, i apliquem els resultats anteriors. Com que els coeficients d'$E_k$ creixen
-molt més ràpid que els de $h$, el creixement de $f$ és igual que el d'$E_k$. $\qed$
-
-
 L'expansió de la funció discriminant
 ====================================
 
-Volem donar una fórmula per $\Delta(z)=\frac{E_4(z)^3-E_6(z)^2}{1728}$. Per això, considerem $\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}$. Veurem que aquestes dues funcions coincideixen ($q=e^{2\pi i z})$. Prenent la derivada logarítmica, obtenim (fixem-nos que $\dlog q = 2\pi i$)
+Volem donar una fórmula per $\Delta(z)=\frac{E_4(z)^3-E_6(z)^2}{1728}$. Per això, considerem $\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}$ a on, com sempre, $q=e^{2\pi i z}$. Veurem que aquestes dues funcions coincideixen. Per fer-ho, prenem primer la derivada logarítmica de $\tilde\Delta$, i obtenim (fixem-nos que $\dlog q = 2\pi i$)
 $$
 \dlog \tilde\Delta = 2\pi i + 24\sum_{n=1}^\infty \frac{-2\pi i n q^n}{1-q^n} = 2\pi i\left(1-24\sum_{n=1}^\infty\frac{nq^n}{1-q^n}\right).
 $$
 Observem que
 $$
-\sum_{n=1}^\infty \frac{nq^n}{1-q^n}=\sum_{n=1}^\infty n\sum_{m=1}^\infty q^{nm} = \sum_{n\geq 1}\sigma_1(n)q^n.
+\sum_{n=1}^\infty \frac{nq^n}{1-q^n}=\sum_{n=1}^\infty n\sum_{m=1}^\infty q^{nm} = \sum_{n\geq 1}\sigma_1(n)q^n,
 $$
+i per tant obtenim
+$$
+\dlog\tilde\Delta = 2\pi i \left( 1-24\sum_{n\geq 1} \sigma_1(n)q^n\right).
+$$
+
 
 La sèrie d'Eisenstein de pes 2
 ------------------------------
@@ -179,7 +140,7 @@ G_2(z) = 2\zeta(2) + 2\sum_{m\neq 0}\sum_{n\in\ZZ} \frac{1}{(mz+n)^2}.
 $$
 Igual que hem fet amb les series d'Eisenstein de pes $k\geq 4$, podem calcular els coeficients de Fourier de $G_2$, i obtenim
 $$
-G_2(z)= 2\zeta(2)  - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n.
+G_2(z)= 2\zeta(2)  - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n=\frac{\pi^2}{3} E_2(z),\quad E_2(z)=1-24\sum_{n=1}^\infty \sigma_1(n)q^n.
 $$
 És clar, doncs, que $G_2(z+1)=G_2(z)$. Ara bé, si intentem calcular $G_2(-1/z)$ trobarem un comportament curiós:
 $$
@@ -217,9 +178,6 @@ $$
 \cot(\pi N/z) = i(1-2\sum_{m=0}^\infty e^{2\pi mN/z})\substack{\to\\{\tiny N\rightarrow\infty}} i.
 $$
 
-Relació amb la funció delta
----------------------------
-
 Resumint, hem trobat:
 
 **Teorema:** La funció $G_2$ satisfà, per a tot $z\in \HH$,
@@ -231,20 +189,23 @@ $$
 G_2(\gamma z) = (cz+d)^2G_2(z) - 2\pi i c(cz+d).
 $$
 
-A més, $G_2$ té la $q$ expansió
+En termes de la funció normalitzada $E_2(z)$, tenim
 $$
-G_2(z) = 2\zeta(2) - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n = \frac{\pi^2}{3}\left(1-24\sum_{n=1}^\infty \sigma-1(n)q^n\right).
+E_2(-1/z) = z^2E_2(z) - \frac{6i}{\pi}z.
 $$
 
-Resumint,
+Relació amb la funció delta
+---------------------------
+
+Els càlculs que hem fet fins ara ens demostren que
 $$
 \dlog\tilde\Delta = 2\pi i E_2.
 $$
-Això vol dir que per a tot $z\in\HH$,
+Podem calcular, per a tot $z\in\HH$,
 $$
-\dlog \left(z^{-12}\tilde\Delta(-1/z)\right) = \frac{-12}{z} + \dlog\tilde\Delta(-1/z) =  2\pi i E_2(z)=\dlog\tilde\Delta(z).
+\dlog \left(z^{-12}\tilde\Delta(-1/z)\right) = \frac{-12}{z} + \dlog\tilde\Delta(-1/z) = \frac{-12}{z} + 2\pi i(z^{-2}E_2(-1/z))= 2\pi i E_2(z)=\dlog\tilde\Delta(z).
 $$
-Per tant, $z^{-12}\tilde\Delta(-1/z) = C \tilde\Delta(z)$. Evaluant a $z=i$ podem veure que $C=1$ (ja que $\Delta(i)\neq 0$) i que, per tant $\tilde\Delta$ és una forma modular de pes $12$. Per tant, és un múltiple de $\Delta(z)$, que ha de ser $1$ perquè les sèries de Fourier comencen ambdues per $q+O(q^2)$.
+Per tant, $z^{-12}\tilde\Delta(-1/z) = C \tilde\Delta(z)$, per certa constant $C$. Evaluant a $z=i$ podem veure que $C=1$ (ja que $\Delta(i)\neq 0$) i que, per tant $\tilde\Delta$ és una forma modular de pes $12$. És doncs un múltiple de $\Delta(z)$, que ha de ser $1$ perquè ambdues sèries de Fourier comencen per $q+O(q^2)$.
 
 
 La funció tau de Ramanujan
@@ -254,7 +215,7 @@ Calculant els primers termes del producte $\tilde\Delta=q\prod_{n=1}^\infty(1-q^
 $$
 \tilde\Delta = \sum_{n\geq 1} \tau(n)q^n = q - 24 q^{2} + 252 q^{3} - 1472 q^{4} + 4830 q^{5} - 6048 q^{6} - 16744 q^{7} + O(q^{8}).
 $$
-Ramanujan va ser el primer a estudiar la funció $\tau(n)$ funció el 1916, i va conjecturar que:
+Ramanujan va ser el primer a estudiar la funció $\tau(n)$ el 1916, i va conjecturar que:
 
 1. $\tau(n)\tau(m)=\tau(nm)$ si $(n,m)=1$.
 2. $\tau(p^{k+1}) = \tau(p)\tau(p^k) - p^{11}\tau(p^{k-1})$, per a tot primer $p$ i $k\geq 1$; i
@@ -268,4 +229,90 @@ També va observar (sense demostrar-les) tot de congruències que satisfà:
 
 A més, Ramanujan va relacionar $\tau(n)$ amb si $r_{24}(n)$, el nombre de maneres d'escriure $n$ com a suma de $24$ quadrats (!)
 
-Tot això, vist un segle després, és relativament fàcil de demostrar amb la teoria de les formes modulars. El teorema de Hecke que hem vist abans implica ja que $\abs{\tau(p)} =O(p^6)$, però per veure la fita més fina conjecturada per Ramanujan hauríem de fer servir resultats molt més profunds de P.Deligne (1974).
+Tot això, vist un segle després, és relativament fàcil de demostrar amb la teoria de les formes modulars. El proper dia veurem que $\abs{\tau(p)} =O(p^6)$, però per veure la fita més fina conjecturada per Ramanujan hauríem de fer servir resultats molt més profunds de P.Deligne (1974).
+
+Vegem aquí una d'aquestes congruències:
+
+**Teorema:** Per a tot $n\geq 1$, es té
+$$
+\tau(n)\equiv \sigma_{11}(n)\pmod{691}.
+$$
+
+*Prova:* Treballarem a $M_{12}$, i amb les formes $\Delta$, $E_{12}$, $E_4^3$ i $E_6^2$. Resulta que
+$$
+E_{12} = 1 + \frac{65520}{691}\sum_{n\geq 1}\sigma_{11}(n)q^n.
+$$
+Igualant els dos primers coeficients, trobem la igualtat
+$$
+691 E_{12} = 441 E_4^3 + 250 E_6^2.
+$$
+Per altra banda, recordem que
+$$
+1728\Delta = E_4^3 - E_6^2.
+$$
+Per tant, tenim
+$$
+441\cdot 1728 \Delta = 441 E_4^3 - 441 E_6^2 = 691 E_{12} - 691 E_6^2.
+$$
+Mirant el terme $n$ d'aquesta expressió obtenim
+$$
+441\cdot 1728 \tau(n) = 65520 \sigma_{11}(n) - 691 a_n(E_6^2).
+$$
+Com que $E_6$ té tots els coeficients enters i $441\cdot 1728\equiv 566 \equiv 65520\pmod{691}$, obtenim el resultat.$\qed$
+
+L'operador diferencial de Serre
+================================
+
+Considerem l'operador diferencial $D=q\frac{d}{dq}=\frac{1}{2\pi i}\frac{d}{dz}$ actuant en les funcions diferenciables.
+
+**Definició:** L'operador diferencial de Serre és $\theta_k$
+$$
+\theta_k(f) = Df - \frac{k}{12}E_2 f.
+$$
+
+Aquest operador $\theta_k$ és lineal i satisfà la regla del producte, però el motiu que l'estudiem aquí és el següent:
+
+**Proposició:** $\theta_k$ porta formes modulars de pes $k$ a formes modulars de pes $k+2$, i preserva els subespais de formes cuspidals.
+
+*Prova:* Holomorfia a $\HH$ i a $i\infty$ és automàtica, per la definició. Només cal comprovar que $\theta_k(f)$ és dèbilment modular de pes $k$, i això és un simple exercici.
+
+Definim, per comoditat $P=E_2$, $Q=E_4$ i $R=E_6$ (aquesta és la notació original de Ramanujan).
+
+**Teorema:** Es té:
+
+1. $\theta_1(P) = -Q$,
+2. $\theta_4(Q) = -R$, i
+3. $\theta_6(R) = -Q^2$.
+
+*Prova:* Les dues últimes són automàtiques, tenint en compte que $M_6$ i $M_8$ tenen dimensió $1$. Per veure la primera afirmació, només cal comprovar que $\theta_2(P)$ és una forma modular de pes $4$, i això es veu directament fent servir la propietat de transformació de $P$:
+$$
+P'(-1/z)z^{-2} = 2zP(z)+z^2P'(z)+\frac{6}{i\pi},
+$$
+i si definim $H(z) = \theta_1(P) = \frac{1}{2\pi i} P'(z) -\frac{1}{12}P^2(z)$, aleshores podem comprovar:
+$$
+H(-1/z) = \frac{1}{2\pi i} P'(-1/z) -\frac{1}{12}P(-1/z)^2 = (\cdots) = z^4 H(z).\quad\qed
+$$
+
+
+**Corol·lari:** Les següents identitats de sèries formals es compleixen:
+
+1. $DP = \frac{1}{12}(P^2-Q)$
+2. $DQ = \frac{1}{3}(PQ-R)$, i
+3. $DR = \frac{1}{2}(PR-Q^2)$.
+
+Amb aquestes identitats ja podem demostrar més resultats de Ramanujan. Per exemple:
+
+**Teorema:** Per a tot $n\geq 1$, es té $\tau(n) \equiv n\sigma_3(n)\pmod 7$.
+
+*Prova:* Com que $1728\equiv 6\pmod 7$, tenim
+$$
+6\Delta = Q^3-R^2.
+$$
+D'altra banda, $Q^2=E_8\equiv P\pmod 7$, perquè $480\equiv -24\pmod 7$ i $n^{7}\equiv n\pmod 7$. A més, com que $504\equiv 0\pmod 7$, tenim $R\equiv 1\pmod{7}$. Aleshores:
+$$
+6\Delta = Q^3-R^2\equiv PQ-1 \equiv 3DQ\implies 2\Delta\equiv DQ \pmod 7.
+$$
+Finalment, observem que $DQ = 240\sum_{n\geq 1} n \sigma_3(n)q^n$. Com que $240\equiv 2\pmod 7$, en deduïm
+$$
+\Delta =\sum_{n\geq 1}\tau(n)q^n\equiv \sum_{n\geq 1} n\sigma_3(n)q^n.\quad\qed
+$$
