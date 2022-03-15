@@ -182,7 +182,7 @@ Resumint, hem trobat:
 
 **Teorema:** La funció $G_2$ satisfà, per a tot $z\in \HH$,
 $$
-G_2(z+1) = G_2(z),\quad z^{-2}G_2(-1/z)-G_2(z) = \frac{-2\pi i}{z}.
+G_2(z+1) = G_2(z),\quad G_2(-1/z) = z^2G_2(z) -2\pi i z.
 $$
 De fet, per a tot $\gamma=\smtx abcd\in\SL_2(\ZZ)$,
 $$
@@ -191,7 +191,7 @@ $$
 
 En termes de la funció normalitzada $E_2(z)$, tenim
 $$
-E_2(-1/z) = z^2E_2(z) - \frac{6i}{\pi}z.
+E_2(-1/z) = z^2E_2(z) +\frac{12 z}{2\pi i},\quad E_2(\gamma z) = (cz+d)^2E_2(z)+\frac{12}{2\pi i}c(cz+d).
 $$
 
 Relació amb la funció delta
@@ -226,8 +226,6 @@ També va observar (sense demostrar-les) tot de congruències que satisfà:
 1. $\tau(n)\equiv n^2\sigma_7(n)\pmod{27}$
 2. $\tau(n)\equiv n\sigma_3(n)\pmod{7}$
 3. $\tau(n)\equiv \sigma_{11}(n)\pmod{691}$.
-
-A més, Ramanujan va relacionar $\tau(n)$ amb si $r_{24}(n)$, el nombre de maneres d'escriure $n$ com a suma de $24$ quadrats (!)
 
 Tot això, vist un segle després, és relativament fàcil de demostrar amb la teoria de les formes modulars. El proper dia veurem que $\abs{\tau(p)} =O(p^6)$, però per veure la fita més fina conjecturada per Ramanujan hauríem de fer servir resultats molt més profunds de P.Deligne (1974).
 
@@ -321,7 +319,7 @@ $$
 
 *Prova:* Aplicant les fórmules que hem trobat per $D$ i la regla del producte, arribem a
 $$
-D^2(Q^2) = \frac{1/2}P^2Q^2 +\frac{5}{18}Q^3 -PQR +\frac{2}{9}R^2.
+D^2(Q^2) = \frac{1}{2}P^2Q^2 +\frac{5}{18}Q^3 -PQR +\frac{2}{9}R^2.
 $$
 Fent servir que
 $$
@@ -340,7 +338,7 @@ $$
 D^2(Q^2)=480\Delta + \frac{9}{2} (DQ)^2.
 $$
 Com que $D^2(Q^2) = 480\sum_{n\geq 1}\sigma_7(n)q^n$, per acabar només hem d'obervar que $DQ\equiv 0\pmod{9}$ i en deduïm que
-\[
+$$
 160\sum_{n\geq 1}\sigma_7(n)q^n \equiv 160\sum_{n\geq 1}\tau(n)q^n \pmod{27}.
-\]
+$$
 Com que $7\nmid 160$, ja hem acabat.$\qed$

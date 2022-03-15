@@ -265,28 +265,6 @@ ja que $\frac{dxdy}{y^2}$ és una mesura $\SL_2(\ZZ)$-invariant a $\HH$. Respect
 Com a conclusió, els operadors de Hecke $T_n$ formen una família d'operadors normals respecte el producte de Petersson. Per tant, $S_k$ conté una base ortogonal de formes pròpies per **tots** els operadors de Hecke simultàniament. Es diu que $S_k$ satisfà "multiplicitat-1": donat una col·lecció de valors propis $\{\lambda_n\}_{n\geq 1}$, hi ha com a molt una forma cuspidal pròpia $f\in S_k$ tal que $T_n(f)=\lambda_n f$. A més, pel teorema de Cayley-Hamilton tenim que els valors propis dels operadors de Hecke són nombres algebraics reals!
 
 
-Funcions theta
-==============
-
-Sigui $V$ un espai vectorial real de dimensió $n$, amb una mesura invariant $\mu$, i sigui $V'$ l'espai dual. Si $f$ és una funció "bona" (diferenciable, amb decreixement ràpid) aleshores té una transformada de Fourier
-$$
-\hat f (y) = \int_V e^{-2\pi i\langle x,y\rangle} f(x)d\mu(x),
-$$
-que és una funció a $V'$ també bona.
-
-Sigui $\Gamma$ un reticle a $V$, i sigui $\Gamma'$ el seu reticle dual:
-$$
-\Gamma' = \left\{y\in V': \forall x\in\Gamma, \langle x,y\rangle\in \ZZ\right\}.
-$$
-
-**Proposició:** Sigui $V=\mu(V/\Gamma)$ el covolum de $\Gamma$. Aleshores
-$$
-\sum_{x\in \Gamma} f(x) = \frac{1}{V} \sum_{y\in\Gamma'} \hat f(y).
-$$
-
-.. TODO: finish this!
-
-
 La funció j de Klein
 ====================
 Definim la següent funció modular de pes $0$:

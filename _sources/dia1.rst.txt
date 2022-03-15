@@ -239,7 +239,7 @@ En particular, $\dim M_k=\lfloor k/12\rfloor$ si $k\equiv 2 \pmod{12}$, i $\dim 
 
 *Prova:* Veiem primer que generen, cosa que és clara per $k\leq 6$. Per $k\geq 8$, fem inducció en $k$. Triem enters positius $i,j$ tals que $4i+6j=k$, i considerem $g =G_4^iG_6^j$, que no s'anula a l'infinit. Si $f\in M_k$, aleshores $f-\lambda g\in S_k$ per algun $\lambda\in\CC$. Per aquest $\lambda$, tenim $f-\lambda g = \Delta h$ amb $h\in M_{k-12}$. Apliquem ara la hipòtesi d'inducció a $h$, i ja estem.
 
-Si aquests monomis no fossin linealment independents, la funció $G_4^3/G_6^2$ satisfaria un polinomi amb coeficients a $\CC$ i, per tant, seria constant. Però això no pot ser, perquè $G_4$ s'anula a $\rho$ i $G_6$ no, per exemple.
+Si aquests monomis no fossin linealment independents, la funció $G_4^3/G_6^2$ satisfaria un polinomi amb coeficients a $\CC$ i, per tant, seria constant. Però això no pot ser, perquè $G_4$ s'anula a $\rho$ i $G_6$ no, per exemple.$\qed$
 
 **Remarca:** Es pot resumir l'anterior dient que $M=\bigoplus_{k\in\ZZ} M_k \cong \CC[G_4,G_6]$.
 

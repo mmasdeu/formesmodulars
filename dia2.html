@@ -260,7 +260,7 @@ Per poder calcular el l&#237;mit, observem que
 <p><strong>Teorema:</strong> La funci&#243; <span class="math notranslate nohighlight">\(G_2\)</span> satisf&#224;, per a tot <span class="math notranslate nohighlight">\(z\in \HH\)</span>,
 <div class="math notranslate nohighlight">
 \[
-G_2(z+1) = G_2(z),\quad z^{-2}G_2(-1/z)-G_2(z) = \frac{-2\pi i}{z}.
+G_2(z+1) = G_2(z),\quad G_2(-1/z) = z^2G_2(z) -2\pi i z.
 \]</div>
 
 De fet, per a tot <span class="math notranslate nohighlight">\(\gamma=\smtx abcd\in\SL_2(\ZZ)\)</span>,
@@ -272,7 +272,7 @@ G_2(\gamma z) = (cz+d)^2G_2(z) - 2\pi i c(cz+d).
 <p>En termes de la funci&#243; normalitzada <span class="math notranslate nohighlight">\(E_2(z)\)</span>, tenim
 <div class="math notranslate nohighlight">
 \[
-E_2(-1/z) = z^2E_2(z) - \frac{6i}{\pi}z.
+E_2(-1/z) = z^2E_2(z) +\frac{12 z}{2\pi i},\quad E_2(\gamma z) = (cz+d)^2E_2(z)+\frac{12}{2\pi i}c(cz+d).
 \]</div>
 </p>
 </section>
@@ -312,7 +312,6 @@ Ramanujan va ser el primer a estudiar la funci&#243; <span class="math notransla
 <li><p><span class="math notranslate nohighlight">\(\tau(n)\equiv n\sigma_3(n)\pmod{7}\)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\(\tau(n)\equiv \sigma_{11}(n)\pmod{691}\)</span>.</p></li>
 </ol>
-<p>A m&#233;s, Ramanujan va relacionar <span class="math notranslate nohighlight">\(\tau(n)\)</span> amb si <span class="math notranslate nohighlight">\(r_{24}(n)\)</span>, el nombre de maneres d&#8217;escriure <span class="math notranslate nohighlight">\(n\)</span> com a suma de <span class="math notranslate nohighlight">\(24\)</span> quadrats (!)</p>
 <p>Tot aix&#242;, vist un segle despr&#233;s, &#233;s relativament f&#224;cil de demostrar amb la teoria de les formes modulars. El proper dia veurem que <span class="math notranslate nohighlight">\(\abs{\tau(p)} =O(p^6)\)</span>, per&#242; per veure la fita m&#233;s fina conjecturada per Ramanujan haur&#237;em de fer servir resultats molt m&#233;s profunds de P.Deligne (1974).</p>
 <p>Vegem aqu&#237; una d&#8217;aquestes congru&#232;ncies:</p>
 <p><strong>Teorema:</strong> Per a tot <span class="math notranslate nohighlight">\(n\geq 1\)</span>, es t&#233;
@@ -414,7 +413,7 @@ Finalment, observem que <span class="math notranslate nohighlight">\(DQ = 240\su
 <p><em>Prova:</em> Aplicant les f&#243;rmules que hem trobat per <span class="math notranslate nohighlight">\(D\)</span> i la regla del producte, arribem a
 <div class="math notranslate nohighlight">
 \[
-D^2(Q^2) = \frac{1/2}P^2Q^2 +\frac{5}{18}Q^3 -PQR +\frac{2}{9}R^2.
+D^2(Q^2) = \frac{1}{2}P^2Q^2 +\frac{5}{18}Q^3 -PQR +\frac{2}{9}R^2.
 \]</div>
 
 Fent servir que
@@ -442,9 +441,11 @@ D^2(Q^2)=480\Delta + \frac{9}{2} (DQ)^2.
 \]</div>
 
 Com que <span class="math notranslate nohighlight">\(D^2(Q^2) = 480\sum_{n\geq 1}\sigma_7(n)q^n\)</span>, per acabar nom&#233;s hem d&#8217;obervar que <span class="math notranslate nohighlight">\(DQ\equiv 0\pmod{9}\)</span> i en dedu&#239;m que
+<div class="math notranslate nohighlight">
 \[
 160\sum_{n\geq 1}\sigma_7(n)q^n \equiv 160\sum_{n\geq 1}\tau(n)q^n \pmod{27}.
-\]
+\]</div>
+
 Com que <span class="math notranslate nohighlight">\(7\nmid 160\)</span>, ja hem acabat.<span class="math notranslate nohighlight">\(\qed\)</span></p>
 </section>
 </section>
