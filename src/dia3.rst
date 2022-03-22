@@ -236,7 +236,7 @@ De manera alternativa, podem veure que l'invers del terme $p$-èssim del product
 $$
 1-\sigma_{k-1}(p)p^{-s} + p^{k-1-2s} = 1- p^{-s} - p^{k-1-s} + p^{k-1-2s} = (1-p^{-s})(1-p^{k-1-s}),
 $$
-que coincideix amb el producte dels inversos dels factors d'Euler de $\zeta(s)\zeta(s-k+1)$. Resumin, obtenim la factorització
+que coincideix amb el producte dels inversos dels factors d'Euler de $\zeta(s)\zeta(s-k+1)$. Resumint, obtenim la factorització
 
 $$
 L(E_k,s) = \zeta(s)\zeta(s-k+1).
