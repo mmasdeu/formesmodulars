@@ -175,7 +175,7 @@ $$
 $$
 Per poder calcular el límit, observem que
 $$
-\cot(\pi N/z) = i(1-2\sum_{m=0}^\infty e^{2\pi mN/z})\substack{\to\\{\tiny N\rightarrow\infty}} i.
+\lim_{N\to\infty} \cot(\pi N/z) = \lim_{N\to\infty} i(1-2\sum_{m=0}^\infty e^{2\pi mN/z}) = i.
 $$
 
 Resumint, hem trobat:
