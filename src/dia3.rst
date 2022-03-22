@@ -249,7 +249,7 @@ El producte de Petersson
 
 Per estudiar més a fons els espais $S_k$, els hem de dotar de més estructura que la d'espai vectorial complex. Podem definir un producte escalar hermític, de la següent manera: donades $f,g\in S_k$, considerem
 $$
-\phi_{f,g} = = f(z)\overline{g(z)} y^{k}.
+\phi_{f,g} = f(z)\overline{g(z)} y^{k}.
 $$
 
 Si $\gamma\in\SL_2(\ZZ)$, podem veure fàcilment que $\phi_{f,g}(\gamma z) = \phi_{f,g}(z)$. Per tant, és una funció ben definida a $\SL_2(\ZZ)\backslash\HH$. Podem doncs considerar la integral
