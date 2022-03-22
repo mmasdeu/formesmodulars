@@ -342,3 +342,4 @@ $$
 160\sum_{n\geq 1}\sigma_7(n)q^n \equiv 160\sum_{n\geq 1}\tau(n)q^n \pmod{27}.
 $$
 Com que $7\nmid 160$, ja hem acabat.$\qed$
+
