@@ -272,7 +272,7 @@ Com a conclusió, els operadors de Hecke $T_n$ formen una família d'operadors n
 Formes modular amb nivell
 =========================
 
-Fins ara hem considerat formes modulars que es transformen bé pel grup modular $\PSL_2(\ZZ)$. És natural generalitzar la definició a altres subgrups de $çPSL_2(\RR)$ que actuin bé (de manera discreta) a $\HH$. Una família important la formen els coneguts com a *grups de Hecke*, indexada per enters $N\geq 1$:
+Fins ara hem considerat formes modulars que es transformen bé pel grup modular $\PSL_2(\ZZ)$. És natural generalitzar la definició a altres subgrups de $\PSL_2(\RR)$ que actuin bé (de manera discreta) a $\HH$. Una família important la formen els coneguts com a *grups de Hecke*, indexada per enters $N\geq 1$:
 $$
 \Gamma(N)\subseteq \Gamma_1(N)\subseteq \Gamma_0(N)\subseteq \SL_2(\ZZ),
 $$
@@ -349,17 +349,17 @@ E\colon\quad y^2 + y = x^3-x^2.
 $$
 No és de la forma anterior, però s'hi pot posar amb un canvi de variables, que faria els coeficients més grans. Si comptem els punts de la corba per uns quants primers obtenim, si calculem per cada primer $a_p=p+1-\#E(\mathbb{F}_p)$:
 
-====== == == == == == == == == == == ==
-$p$    2  3  5  7  11 13 17 19 23 29 31
-====== == == == == == == == == == == ==
-$a_p$  -2 -1  1 -2  1  4 -2  0 -1  0  7
-====== == == == == == == == == == == ==
+====== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
+$p$    $2$  $3$  $5$  $7$  $11$ $13$ $17$ $19$ $23$ $29$ $31$
+====== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
+$a_p$  $-2$ $-1$  $1$ $-2$  $1$  $4$ $-2$  $0$ $-1$  $0$  $7$
+====== ==== ==== ==== ==== ==== ==== ==== ==== ==== ==== ====
 
 Per altra banda, tenim la forma modular $f(z) = q\prod_{n=1}^\infty (1-q^n)^{2}(1-q^{11n})^2$, que té una expansió
 $$
-f(z) = q {\color{red}-2 q^{2}} {\color{red}-  q^{3}} + 2 q^{4} + {\color{red} q^{5}} + 2 q^{6} {\color{red}- 2 q^{7}} - 2 q^{9} - 2 q^{10} {\color{red}+  q^{11}} - 2 q^{12} + {\color{red}4 q^{13}} + 4 q^{14} -  q^{15} \\- 4 q^{16} {\color{red}- 2 q^{17}} + 4 q^{18} + 2 q^{20} + 2 q^{21} - 2 q^{22} {\color{red}-  q^{23}} - 4 q^{25} - 8 q^{26} + 5 q^{27} - 4 q^{28} + 2 q^{30} +{\color{red} 7 q^{31}} + O(q^{32})
+f(z) = q {\color{red}-2 q^{2}} {\color{red}-  q^{3}} + 2 q^{4} + {\color{red} q^{5}} + 2 q^{6} {\color{red}- 2 q^{7}} - 2 q^{9} - 2 q^{10} {\color{red}+  q^{11}} - 2 q^{12} + {\color{red}4 q^{13}} + 4 q^{14} -  q^{15} - 4 q^{16}\\ {\color{red}- 2 q^{17}} + 4 q^{18} + 2 q^{20} + 2 q^{21} - 2 q^{22} {\color{red}-  q^{23}} - 4 q^{25} - 8 q^{26} + 5 q^{27} - 4 q^{28} + 2 q^{30} +{\color{red} 7 q^{31}} + O(q^{32})
 $$
-i podem veure que els coeficients coincideixen.
+i podem veure que els coeficients coincideixen amb els obtinguts de la corba el·líptica.
 
 
 La funció j de Klein
