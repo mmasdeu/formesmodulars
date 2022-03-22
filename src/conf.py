@@ -182,6 +182,7 @@ latex_elements = {
    \end{tabular}\kern-\tabcolsep\\\begin{tabular}[t]{c}%
 }
 \input{mathsymbols.sty}
+\setlength{\headheight}{15pt}
 \setdefaultlanguage{ca}
 ''',
 
