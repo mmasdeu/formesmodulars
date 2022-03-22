@@ -306,7 +306,7 @@ En aquesta secció enunciarem una versió del famós teorema de modularitat, que
 
 Una corba el·líptica es pot pensar com una equació del tipus
 $$
-E\colon\quad y^2=x^3+ax+b,\quad a,b\in\ZZ.
+E\colon\quad y^2=x^3+ax+b,\quad a,b\in\ZZ, \Delta=-16(4a^3-27b^2)\neq 0.
 $$
 Hem d'entendre aquesta equació com la part afí d'una corba dins el pla projectiu, així que hi ha un punt de més, $\mathcal{O}=(0:1:0)$, amb les coordenades $x=X/Z$, $y=Y/Z$.
 
@@ -322,20 +322,20 @@ on
 $$
 L(E,s) = \prod_{p} L_p(E,s)^{-1},\quad
 L_p(E,s) = \begin{cases}
-1-a_p p^{-s} + p^{1-2s}&p\nmid N,\\
-1-a_p p^{-s}&p\parallel N,\\
-1 & p^2\mid N.
+1-a_p p^{-s} + p^{1-2s}&p\nmid \Delta,\\
+1-a_p p^{-s}&p\mid N\parallel N,\\
 \end{cases}
 $$
+on $a_p$ es defineix com $p+1-\#E(\mathbb{F}_p)$.
 
 Als anys 70 del segle passat, Eichler i Shimura van demostrar el següent resultat profund:
 
-**Teorema (Eichler-Shimura):** Sigui $f\in S_2(\Gamma_0(N))$ una forma modular pròpia de pes $2$,nivell $N$ i coeficients $a_n\in\ZZ$. A més, suposem que $f$ és "nova", és a dir que no "ve" de cap grup $\Gamma_0(M)$ amb $M\mid N$. Aleshores existeix una corba el·líptica $E$ de conductor $N$ tal que
+**Teorema (Eichler-Shimura):** Sigui $f\in S_2(\Gamma_0(N))$ una forma modular pròpia de pes $2$,nivell $N$ i coeficients $a_n\in\ZZ$. A més, suposem que $f$ és "nova", és a dir que no "ve" de cap grup $\Gamma_0(M)$ amb $M\mid N$. Aleshores existeix una corba el·líptica $E_f$ de conductor $N$ tal que
 $$
-L(E,s) = L(f,s).
+L(E_f,s) = L(f,s).
 $$
 
-El recíproc d'aquest teorema es coneixia com la conjectura de Shimura-Taniyama-Weil, i la seva demostració va dur Andrew Wiles a la portada del New York Times perquè als anys 90 del segle passat ja es sabia que un cas particular (quan $N$ és lliure de quadrats) implicava l'Últim Teorema de Fermat. El teorema complet va ser demostrat finalment el 2002.
+El recíproc d'aquest teorema es coneixia com la conjectura de Shimura-Taniyama-Weil, i la seva demostració va dur Andrew Wiles a la portada del New York Times perquè als anys 90 del segle passat ja es sabia que un cas particular (quan el "conductor" d'$E$ és lliure de quadrats) implicava l'Últim Teorema de Fermat. El teorema complet va ser demostrat finalment el 2002.
 
 **Teorema (Wiles, Taylor-Wiles, Breuil-Conrad-Diamond-Taylor):** Sigui $E$ una corba el·líptica definida sobre els racionals, i de conductor $N$. Aleshores existeix una forma pròpia cuspidal $f_E\in S_2(\Gamma_0(N))$ tal que, per a tot $p\nmid N$,
 $$

@@ -356,7 +356,7 @@ definits com
 <p>Una corba el&#183;l&#237;ptica es pot pensar com una equaci&#243; del tipus
 <div class="math notranslate nohighlight">
 \[
-E\colon\quad y^2=x^3+ax+b,\quad a,b\in\ZZ.
+E\colon\quad y^2=x^3+ax+b,\quad a,b\in\ZZ, \Delta=-16(4a^3-27b^2)\neq 0.
 \]</div>
 
 Hem d&#8217;entendre aquesta equaci&#243; com la part af&#237; d&#8217;una corba dins el pla projectiu, aix&#237; que hi ha un punt de m&#233;s, <span class="math notranslate nohighlight">\(\mathcal{O}=(0:1:0)\)</span>, amb les coordenades <span class="math notranslate nohighlight">\(x=X/Z\)</span>, <span class="math notranslate nohighlight">\(y=Y/Z\)</span>.</p>
@@ -377,20 +377,20 @@ on
 \[\begin{split}
 L(E,s) = \prod_{p} L_p(E,s)^{-1},\quad
 L_p(E,s) = \begin{cases}
-1-a_p p^{-s} + p^{1-2s}&amp;p\nmid N,\\
-1-a_p p^{-s}&amp;p\parallel N,\\
-1 &amp; p^2\mid N.
+1-a_p p^{-s} + p^{1-2s}&amp;p\nmid \Delta,\\
+1-a_p p^{-s}&amp;p\mid N\parallel N,\\
 \end{cases}
 \end{split}\]</div>
-</p>
+
+on <span class="math notranslate nohighlight">\(a_p\)</span> es defineix com <span class="math notranslate nohighlight">\(p+1-\#E(\mathbb{F}_p)\)</span>.</p>
 <p>Als anys 70 del segle passat, Eichler i Shimura van demostrar el seg&#252;ent resultat profund:</p>
-<p><strong>Teorema (Eichler-Shimura):</strong> Sigui <span class="math notranslate nohighlight">\(f\in S_2(\Gamma_0(N))\)</span> una forma modular pr&#242;pia de pes <span class="math notranslate nohighlight">\(2\)</span>,nivell <span class="math notranslate nohighlight">\(N\)</span> i coeficients <span class="math notranslate nohighlight">\(a_n\in\ZZ\)</span>. A m&#233;s, suposem que <span class="math notranslate nohighlight">\(f\)</span> &#233;s &#171;nova&#187;, &#233;s a dir que no &#171;ve&#187; de cap grup <span class="math notranslate nohighlight">\(\Gamma_0(M)\)</span> amb <span class="math notranslate nohighlight">\(M\mid N\)</span>. Aleshores existeix una corba el&#183;l&#237;ptica <span class="math notranslate nohighlight">\(E\)</span> de conductor <span class="math notranslate nohighlight">\(N\)</span> tal que
+<p><strong>Teorema (Eichler-Shimura):</strong> Sigui <span class="math notranslate nohighlight">\(f\in S_2(\Gamma_0(N))\)</span> una forma modular pr&#242;pia de pes <span class="math notranslate nohighlight">\(2\)</span>,nivell <span class="math notranslate nohighlight">\(N\)</span> i coeficients <span class="math notranslate nohighlight">\(a_n\in\ZZ\)</span>. A m&#233;s, suposem que <span class="math notranslate nohighlight">\(f\)</span> &#233;s &#171;nova&#187;, &#233;s a dir que no &#171;ve&#187; de cap grup <span class="math notranslate nohighlight">\(\Gamma_0(M)\)</span> amb <span class="math notranslate nohighlight">\(M\mid N\)</span>. Aleshores existeix una corba el&#183;l&#237;ptica <span class="math notranslate nohighlight">\(E_f\)</span> de conductor <span class="math notranslate nohighlight">\(N\)</span> tal que
 <div class="math notranslate nohighlight">
 \[
-L(E,s) = L(f,s).
+L(E_f,s) = L(f,s).
 \]</div>
 </p>
-<p>El rec&#237;proc d&#8217;aquest teorema es coneixia com la conjectura de Shimura-Taniyama-Weil, i la seva demostraci&#243; va dur Andrew Wiles a la portada del New York Times perqu&#232; als anys 90 del segle passat ja es sabia que un cas particular (quan <span class="math notranslate nohighlight">\(N\)</span> &#233;s lliure de quadrats) implicava l&#8217;&#218;ltim Teorema de Fermat. El teorema complet va ser demostrat finalment el 2002.</p>
+<p>El rec&#237;proc d&#8217;aquest teorema es coneixia com la conjectura de Shimura-Taniyama-Weil, i la seva demostraci&#243; va dur Andrew Wiles a la portada del New York Times perqu&#232; als anys 90 del segle passat ja es sabia que un cas particular (quan el &#171;conductor&#187; d&#8221;<span class="math notranslate nohighlight">\(E\)</span> &#233;s lliure de quadrats) implicava l&#8217;&#218;ltim Teorema de Fermat. El teorema complet va ser demostrat finalment el 2002.</p>
 <p><strong>Teorema (Wiles, Taylor-Wiles, Breuil-Conrad-Diamond-Taylor):</strong> Sigui <span class="math notranslate nohighlight">\(E\)</span> una corba el&#183;l&#237;ptica definida sobre els racionals, i de conductor <span class="math notranslate nohighlight">\(N\)</span>. Aleshores existeix una forma pr&#242;pia cuspidal <span class="math notranslate nohighlight">\(f_E\in S_2(\Gamma_0(N))\)</span> tal que, per a tot <span class="math notranslate nohighlight">\(p\nmid N\)</span>,
 <div class="math notranslate nohighlight">
 \[
