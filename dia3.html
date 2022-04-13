@@ -13,11 +13,12 @@
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
-    <script>window.MathJax = {"tex": {"macros": {"QQ": "{\\mathbb{Q}}", "ZZ": "{\\mathbb{Z}}", "RR": "{\\mathbb{R}}", "CC": "{\\mathbb{C}}", "HH": "{\\mathbb{H}}", "SL": "{\\operatorname{SL}}", "GL": "{\\operatorname{GL}}", "PSL": "{\\operatorname{PSL}}", "PGL": "{\\operatorname{PGL}}", "lto": "{\\longrightarrow}", "dfn": "{\\ensuremath{:=}}", "surjects": "{\\twoheadrightarrow}", "injects": "{\\hookrightarrow}", "id": "{\\ensuremath \\text{Id}}", "mtx": ["{\\left(\\begin{matrix}#1&#2\\\\#3&#4\\end{matrix}\\right)}", 4], "mat": ["{\\left(\\begin{matrix}#1\\end{matrix}\\right)}", 1], "smat": ["{\\left(\\begin{smallmatrix}#1\\end{smallmatrix}\\right)}", 1], "smtx": ["{\\left(\\begin{smallmatrix}#1&#2\\\\#3&#4\\end{smallmatrix}\\right)}", 4], "slz": "{\\operatorname{SL}_2(\\bZ)}", "to": "{\\longrightarrow}", "dlog": "{\\operatorname{dlog}}", "Im": "{\\operatorname{Im}}", "Re": "{\\operatorname{Re}}", "abs": ["{|#1|}", 1], "slsh": ["{|_{#1}}", 1], "qed": "{\\blacksquare}", "implies": "{\\Longrightarrow}"}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true}}</script>
+    <script>window.MathJax = {"tex": {"macros": {"QQ": "{\\mathbb{Q}}", "ZZ": "{\\mathbb{Z}}", "RR": "{\\mathbb{R}}", "FF": "{\\mathbb{F}}", "CC": "{\\mathbb{C}}", "HH": "{\\mathbb{H}}", "fX": "{\\mathfrak{X}}", "SL": "{\\operatorname{SL}}", "GL": "{\\operatorname{GL}}", "PSL": "{\\operatorname{PSL}}", "PGL": "{\\operatorname{PGL}}", "lto": "{\\longrightarrow}", "dfn": "{\\ensuremath{:=}}", "surjects": "{\\twoheadrightarrow}", "injects": "{\\hookrightarrow}", "id": "{\\ensuremath \\text{Id}}", "mtx": ["{\\left(\\begin{matrix}#1&#2\\\\#3&#4\\end{matrix}\\right)}", 4], "mat": ["{\\left(\\begin{matrix}#1\\end{matrix}\\right)}", 1], "smat": ["{\\left(\\begin{smallmatrix}#1\\end{smallmatrix}\\right)}", 1], "smtx": ["{\\left(\\begin{smallmatrix}#1&#2\\\\#3&#4\\end{smallmatrix}\\right)}", 4], "slz": "{\\operatorname{SL}_2(\\bZ)}", "to": "{\\longrightarrow}", "dlog": "{\\operatorname{dlog}}", "Im": "{\\operatorname{Im}}", "Re": "{\\operatorname{Re}}", "abs": ["{|#1|}", 1], "slsh": ["{|_{#1}}", 1], "qed": "{\\blacksquare}", "implies": "{\\Longrightarrow}"}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="shortcut icon" href="_static/favicon.ico"/>
     <link rel="index" title="&#205;ndex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
+    <link rel="next" title="4. Quart dia" href="dia4.html" />
     <link rel="prev" title="2. Segon dia" href="dia2.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
@@ -41,7 +42,7 @@
 <h2><span class="section-number">3.1. </span>Operadors de Hecke<a class="headerlink" href="#operadors-de-hecke" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
 <section id="definicio">
 <h3><span class="section-number">3.1.1. </span>Definici&#243;<a class="headerlink" href="#definicio" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
-<p>Sigui <span class="math notranslate nohighlight">\(f\)</span> una forma d&#232;bilment modular de pes <span class="math notranslate nohighlight">\(k\)</span> (&#233;s a dir, meromorfa i satisf&#224; la simetria corresponent per <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span>). Per cada <span class="math notranslate nohighlight">\(n\geq 1\)</span> i cada <span class="math notranslate nohighlight">\(d\mid n\)</span>, definim
+<p>Sigui <span class="math notranslate nohighlight">\(f\)</span> una forma d&#232;bilment modular de pes <span class="math notranslate nohighlight">\(k\)</span> (&#233;s a dir, meromorfa i satisfent la simetria corresponent per <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span>). Per cada <span class="math notranslate nohighlight">\(n\geq 1\)</span> i cada <span class="math notranslate nohighlight">\(d\mid n\)</span>, definim
 <div class="math notranslate nohighlight">
 \[
 (T_nf)(z) = n^{k-1} \sum_{e\geq 1, ed=n}\sum_{0\leq b &lt; d} d^{-k} f\left(\frac{ez+b}{d}\right).
@@ -123,7 +124,7 @@ An^{k-1}\leq \abs{a_n}\leq Bn^{k-1}.
 <p><em>Prova:</em> Tenim <span class="math notranslate nohighlight">\(\abs{a_n} = A \sigma_{k-1}(n)\geq An^{k-1}\)</span>. D&#8217;altra banda,
 <div class="math notranslate nohighlight">
 \[
-\frac{\abs{a_n}}{n^{k-1}} = A \sum_{d\mid n} \frac{1}{d^{k-1}} \leq A\sum_{d=1}^\infty \frac{d^{k-1}} = A\zeta(k-1) &lt; \infty.\quad\qed
+\frac{\abs{a_n}}{n^{k-1}} = A \sum_{d\mid n} \frac{1}{d^{k-1}} \leq A\sum_{d=1}^\infty \frac{1}{d^{k-1}} = A\zeta(k-1) &lt; \infty.\quad\qed
 \]</div>
 </p>
 <p>El creixement de les formes cuspidals &#233;s m&#233;s lent:</p>
@@ -526,6 +527,7 @@ e^{\pi\sqrt{163}} = 262537412640768743.999999999999250072597\ldots
 <li class="toctree-l2"><a class="reference internal" href="#la-funcio-j-de-klein">3.7. La funci&#243; j de Klein</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="dia4.html">4. Quart dia</a></li>
 </ul>
 
 
@@ -554,7 +556,7 @@ e^{\pi\sqrt{163}} = 262537412640768743.999999999999250072597\ldots
       &copy;2022, Marc Masdeu.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.4.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
