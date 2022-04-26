@@ -42,7 +42,7 @@
 <p><strong>Teorema (Clausen&#8211;von Staudt):</strong> Si <span class="math notranslate nohighlight">\(k\geq 2\)</span> &#233;s parell, aleshores
 <div class="math notranslate nohighlight">
 \[
-B_k + \sum_{p, p-1\mid k} \frac{1}{p} \in \ZZ.
+B_k + \sum_{p-1\mid k} \frac{1}{p} \in \ZZ.
 \]</div>
 </p>
 <p>La demostraci&#243; &#233;s relativament elemental, i no la farem en aquestes notes. Una conseq&#252;&#232;ncia f&#224;cil &#233;s que</p>
@@ -94,6 +94,7 @@ M(\FF_p) = \bigoplus_{i\in\ZZ/(p-1)\ZZ} M^i(\FF_p).
 <ol class="arabic simple" start="2">
 <li><p>Per <span class="math notranslate nohighlight">\(p=2,3\)</span>, tenim <span class="math notranslate nohighlight">\(M(\FF_p) = M^0(\FF_p)=\FF_p(\bar\Delta)\)</span>.</p></li>
 </ol>
+<p><em>Prova:</em> TODO</p>
 <p><strong>Teorema:</strong> Sigui <span class="math notranslate nohighlight">\(p\geq 3\)</span>, i siguin <span class="math notranslate nohighlight">\(f\in M_k(\ZZ_{(p)})\)</span> i <span class="math notranslate nohighlight">\(f'\in M_{k'}(\ZZ_{(p)})\)</span> dues formes modulars de pesos <span class="math notranslate nohighlight">\(k\)</span> i <span class="math notranslate nohighlight">\(k'\)</span> respectivament. Aleshores
 <div class="math notranslate nohighlight">
 \[
@@ -106,18 +107,19 @@ Si <span class="math notranslate nohighlight">\(p=2\)</span>, aleshores es t&#23
 f\equiv f'\pmod{2^m}\implies k\equiv k'\pmod{2^{m-2}}.
 \]</div>
 </p>
+<p><em>Prova:</em> TODO</p>
 <p>M&#233;s endavant veurem la demostraci&#243; d&#8217;aquests resultats. Per&#242; fixem-nos que en podem treure alguna conseq&#252;&#232;ncia f&#224;cil:</p>
-<p><strong>Proposici&#243; (congru&#232;ncies de Kummer per $a=1$):</strong> Si <span class="math notranslate nohighlight">\(k\equiv k'\not\equiv 0\pmod{p-1}\)</span> aleshores <span class="math notranslate nohighlight">\(\frac{B_k}{k} \equiv \frac{B_{k'}}{k'}\pmod p\)</span>.</p>
-<dl class="simple">
-<dt><em>Prova:</em></dt><dd><p>Sabem que <span class="math notranslate nohighlight">\(\sigma_{k-1}(n)\equiv \sigma_{k'-1}(n)\pmod{p}\)</span> per a tot <span class="math notranslate nohighlight">\(n\)</span>. Les congru&#232;ncies de Clausen&#8211;von Staudt ens diuen que <span class="math notranslate nohighlight">\(G_k\)</span> i <span class="math notranslate nohighlight">\(G_{k'}\)</span> viuen a <span class="math notranslate nohighlight">\(M_k(\ZZ_{(p)})\)</span>. Per tant, la reducci&#243; <span class="math notranslate nohighlight">\(\bar G_k - \bar G_{k'}\)</span> viu a <span class="math notranslate nohighlight">\(M^k(\FF_p)\)</span>. Per&#242; els termes no-constants de la <span class="math notranslate nohighlight">\(q\)</span>-expansi&#243; s&#8217;anul&#183;len tots, i per tant en deduim que
-$$
-\frac{B_k}{k} - \frac{B_{k&#8221;}}{k&#8221;} \in M^{k}(\FF_p)<span class="math notranslate nohighlight">\(.
-\)</span>$
-Essent la difer&#232;ncia de dues constants, tamb&#233; viuen a <span class="math notranslate nohighlight">\(M^0(\FF_p)\)</span> i , per tant, com que <span class="math notranslate nohighlight">\(p-1\nmid k\)</span>, el teorema de Swinnerton-Dyer ens diu que aquesta difer&#232;ncia &#233;s <span class="math notranslate nohighlight">\(0\)</span>.<span class="math notranslate nohighlight">\(\qed\)</span>.</p>
-</dd>
-</dl>
+<p><strong>Proposici&#243; (congru&#232;ncies de Kummer per a=1):</strong> Si <span class="math notranslate nohighlight">\(k\equiv k'\not\equiv 0\pmod{p-1}\)</span> aleshores <span class="math notranslate nohighlight">\(\frac{B_k}{k} \equiv \frac{B_{k'}}{k'}\pmod p\)</span>.</p>
+<p><em>Prova:</em>
+Sabem que <span class="math notranslate nohighlight">\(\sigma_{k-1}(n)\equiv \sigma_{k'-1}(n)\pmod{p}\)</span> per a tot <span class="math notranslate nohighlight">\(n\)</span>. Les congru&#232;ncies de Clausen&#8211;von Staudt ens diuen que <span class="math notranslate nohighlight">\(G_k\)</span> i <span class="math notranslate nohighlight">\(G_{k'}\)</span> viuen a <span class="math notranslate nohighlight">\(M_k(\ZZ_{(p)})\)</span>. Per tant, la reducci&#243; <span class="math notranslate nohighlight">\(\bar G_k - \bar G_{k'}\)</span> viu a <span class="math notranslate nohighlight">\(M^k(\FF_p)\)</span>. Per&#242; els termes no-constants de la <span class="math notranslate nohighlight">\(q\)</span>-expansi&#243; s&#8217;anul&#183;len tots, i per tant en deduim que
+<div class="math notranslate nohighlight">
+\[
+\frac{B_k}{k} - \frac{B_{k'}}{k'} \in M^{k}(\FF_p).
+\]</div>
+
+Essent la difer&#232;ncia de dues constants, tamb&#233; viuen a <span class="math notranslate nohighlight">\(M^0(\FF_p)\)</span> i , per tant, com que <span class="math notranslate nohighlight">\(p-1\nmid k\)</span>, el teorema de Swinnerton-Dyer ens diu que aquesta difer&#232;ncia &#233;s <span class="math notranslate nohighlight">\(0\)</span>. <span class="math notranslate nohighlight">\(\qed\)</span></p>
 <section id="formes-modulars-p-adiques">
-<h2><span class="section-number">4.1. </span>Formes modulars <span class="math notranslate nohighlight">\(p\)</span>-&#224;diques<a class="headerlink" href="#formes-modulars-p-adiques" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<h2><span class="section-number">4.1. </span>Formes modulars p-&#224;diques<a class="headerlink" href="#formes-modulars-p-adiques" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
 <p>Considerem l&#8217;anell de les formes modulars amb coeficients racionals <span class="math notranslate nohighlight">\(M(\QQ)\)</span>. Podem definir-hi una valoraci&#243; <span class="math notranslate nohighlight">\(p\)</span>-&#224;dica (que indueix una norma) definint
 <div class="math notranslate nohighlight">
 \[
@@ -188,7 +190,7 @@ f-f' = a_0-a_0'\in M_{\kappa}(\QQ_p)\cap M_{0}(\QQ_p)=0.
 Per tant <span class="math notranslate nohighlight">\(\{a_0^{(i)}\}\)</span> convergeix a <span class="math notranslate nohighlight">\(a_0\)</span>. <span class="math notranslate nohighlight">\(\qed\)</span></p>
 </section>
 <section id="la-funcio-zeta-p-adica">
-<h2><span class="section-number">4.3. </span>La funci&#243; zeta <span class="math notranslate nohighlight">\(p\)</span>-&#224;dica<a class="headerlink" href="#la-funcio-zeta-p-adica" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<h2><span class="section-number">4.3. </span>La funci&#243; zeta p-&#224;dica<a class="headerlink" href="#la-funcio-zeta-p-adica" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
 <p>Recordem la modificaci&#243; <span class="math notranslate nohighlight">\(p\)</span>-&#224;dica de la funci&#243; de divisors
 <div class="math notranslate nohighlight">
 \[
@@ -207,7 +209,7 @@ Sigui ara <span class="math notranslate nohighlight">\(\{k_i\}_i\subseteq \ZZ\)<
 \zeta^*(1-k):=a_0 = \lim_{i\to\infty} \frac{-B_{k_i}}{2k_i} = \frac{1}{2} \lim_{i\to\infty} \zeta(1-k_i).
 \]</div>
 </p>
-<p>Obtenim aix&#237; una funci&#243; <span class="math notranslate nohighlight">\(\zeta^*(\kappa)\)</span>, definida per elements senars <span class="math notranslate nohighlight">\(\kappa\fX\smallsetminus\{1\}\)</span>. La segona part de la proposici&#243; anterior ens diu que <span class="math notranslate nohighlight">\(\zeta^*\)</span> &#233;s cont&#237;nua (perqu&#232; els coeficients <span class="math notranslate nohighlight">\(\kappa\mapsto \sigma_{\kappa}(n)\)</span> ho s&#243;n).</p>
+<p>Obtenim aix&#237; una funci&#243; <span class="math notranslate nohighlight">\(\zeta^*(\kappa)\)</span>, definida per elements senars <span class="math notranslate nohighlight">\(\kappa\in\fX\smallsetminus\{1\}\)</span>. La segona part de la proposici&#243; anterior ens diu que <span class="math notranslate nohighlight">\(\zeta^*\)</span> &#233;s cont&#237;nua (perqu&#232; els coeficients <span class="math notranslate nohighlight">\(\kappa\mapsto \sigma_{\kappa}(n)\)</span> ho s&#243;n).</p>
 <p>Suposem que <span class="math notranslate nohighlight">\(\kappa\in \ZZ_{\geq 2}\)</span> &#233;s un enter. Aleshores podem calcular
 <div class="math notranslate nohighlight">
 \[
@@ -246,9 +248,9 @@ Sigui ara <span class="math notranslate nohighlight">\(\{k_i\}_i\subseteq \ZZ\)<
 <li class="toctree-l1"><a class="reference internal" href="dia2.html">2. Segon dia</a></li>
 <li class="toctree-l1"><a class="reference internal" href="dia3.html">3. Tercer dia</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">4. Quart dia</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#formes-modulars-p-adiques">4.1. Formes modulars <span class="math notranslate nohighlight">\(p\)</span>-&#224;diques</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#formes-modulars-p-adiques">4.1. Formes modulars p-&#224;diques</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#el-terme-constant-a-partir-dels-altres-termes">4.2. El terme constant a partir dels altres termes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#la-funcio-zeta-p-adica">4.3. La funci&#243; zeta <span class="math notranslate nohighlight">\(p\)</span>-&#224;dica</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#la-funcio-zeta-p-adica">4.3. La funci&#243; zeta p-&#224;dica</a></li>
 </ul>
 </li>
 </ul>

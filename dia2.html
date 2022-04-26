@@ -353,10 +353,10 @@ Mirant el terme <span class="math notranslate nohighlight">\(n\)</span> d&#8217;
 Com que <span class="math notranslate nohighlight">\(E_6\)</span> t&#233; tots els coeficients enters i <span class="math notranslate nohighlight">\(441\cdot 1728\equiv 566 \equiv 65520\pmod{691}\)</span>, obtenim el resultat.<span class="math notranslate nohighlight">\(\qed\)</span></p>
 </section>
 </section>
-<section id="l-operador-diferencial-de-serre">
-<h2><span class="section-number">2.3. </span>L&#8217;operador diferencial de Serre<a class="headerlink" href="#l-operador-diferencial-de-serre" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<section id="l-operador-diferencial-de-ramanujan-serre">
+<h2><span class="section-number">2.3. </span>L&#8217;operador diferencial de Ramanujan-Serre<a class="headerlink" href="#l-operador-diferencial-de-ramanujan-serre" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
 <p>Considerem l&#8217;operador diferencial <span class="math notranslate nohighlight">\(D=q\frac{d}{dq}=\frac{1}{2\pi i}\frac{d}{dz}\)</span> actuant en les funcions diferenciables.</p>
-<p><strong>Definici&#243;:</strong> L&#8217;operador diferencial de Serre &#233;s <span class="math notranslate nohighlight">\(\theta_k\)</span>
+<p><strong>Definici&#243;:</strong> L&#8217;operador diferencial de Ramanujan-Serre &#233;s <span class="math notranslate nohighlight">\(\theta_k\)</span>
 <div class="math notranslate nohighlight">
 \[
 \theta_k(f) = Df - \frac{k}{12}E_2 f.
@@ -368,11 +368,11 @@ Com que <span class="math notranslate nohighlight">\(E_6\)</span> t&#233; tots e
 <p>Definim, per comoditat <span class="math notranslate nohighlight">\(P=E_2\)</span>, <span class="math notranslate nohighlight">\(Q=E_4\)</span> i <span class="math notranslate nohighlight">\(R=E_6\)</span> (aquesta &#233;s la notaci&#243; original de Ramanujan).</p>
 <p><strong>Teorema:</strong> Es t&#233;:</p>
 <ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(\theta_4(Q) = -\frac{1}{3}R\)</span>,</p></li>
-<li><p><span class="math notranslate nohighlight">\(\theta_6(R) = -\frac{1}{2}Q^2\)</span>, i</p></li>
-<li><p><span class="math notranslate nohighlight">\(D(P) = \frac{1}{12}(P^2-Q)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(DP = \frac{1}{12}(P^2-Q)\)</span>.</p></li>
+<li><p><span class="math notranslate nohighlight">\(DQ = \frac{1}{3}(PQ-R)\)</span>,</p></li>
+<li><p><span class="math notranslate nohighlight">\(DR = \frac{1}{2}(PR-Q^2)\)</span>, i</p></li>
 </ol>
-<p><em>Prova:</em> Les dues primeres identitats s&#243;n autom&#224;tiques, tenint en compte que <span class="math notranslate nohighlight">\(M_6\)</span> i <span class="math notranslate nohighlight">\(M_8\)</span> tenen dimensi&#243; <span class="math notranslate nohighlight">\(1\)</span>. Per veure l&#8217;ultima afirmaci&#243;, nom&#233;s cal comprovar que <span class="math notranslate nohighlight">\(H = DP-\frac{1}{12}P^2\)</span> &#233;s una forma modular de pes <span class="math notranslate nohighlight">\(4\)</span>, i aix&#242; es veu directament fent servir la propietat de transformaci&#243; de <span class="math notranslate nohighlight">\(P\)</span>:
+<p><em>Prova:</em> Les dues &#250;ltimes identitats s&#243;n equivalents a <span class="math notranslate nohighlight">\(\theta_4(Q) = -\frac{1}{3}R\)</span> i <span class="math notranslate nohighlight">\(\theta_6(R)=-\frac{1}{2}Q^2\)</span>, respectivament. La demostraci&#243; &#233;s autom&#224;tica, tenint en compte que <span class="math notranslate nohighlight">\(M_6\)</span> i <span class="math notranslate nohighlight">\(M_8\)</span> tenen dimensi&#243; <span class="math notranslate nohighlight">\(1\)</span>. Per veure la primera afirmaci&#243;, nom&#233;s cal comprovar que <span class="math notranslate nohighlight">\(H = DP-\frac{1}{12}P^2\)</span> &#233;s una forma modular de pes <span class="math notranslate nohighlight">\(4\)</span>, i aix&#242; es veu directament fent servir la propietat de transformaci&#243; de <span class="math notranslate nohighlight">\(P\)</span>:
 <div class="math notranslate nohighlight">
 \[
 P'(-1/z)z^{-2} = 2zP(z)+z^2P'(z)+\frac{6}{i\pi}.
@@ -384,11 +384,6 @@ Definim <span class="math notranslate nohighlight">\(H(z) = \frac{1}{2\pi i} P'(
 H(-1/z) = \frac{1}{2\pi i} P'(-1/z) -\frac{1}{12}P(-1/z)^2 = (\cdots) = z^4 H(z).\quad\qed
 \]</div>
 </p>
-<p><strong>Corol&#183;lari:</strong> Les seg&#252;ents identitats de s&#232;ries formals es compleixen:</p>
-<ol class="arabic simple">
-<li><p><span class="math notranslate nohighlight">\(DQ = \frac{1}{3}(PQ-R)\)</span>,</p></li>
-<li><p><span class="math notranslate nohighlight">\(DR = \frac{1}{2}(PR-Q^2)\)</span>.</p></li>
-</ol>
 <p>Amb aquestes identitats ja podem demostrar m&#233;s resultats de Ramanujan. Per exemple:</p>
 <p><strong>Teorema:</strong> Per a tot <span class="math notranslate nohighlight">\(n\geq 1\)</span>, es t&#233; <span class="math notranslate nohighlight">\(\tau(n) \equiv n\sigma_3(n)\pmod 7\)</span>.</p>
 <p><em>Prova:</em> Com que <span class="math notranslate nohighlight">\(1728\equiv 6\pmod 7\)</span>, tenim
@@ -472,7 +467,7 @@ Com que <span class="math notranslate nohighlight">\(7\nmid 160\)</span>, ja hem
 <li class="toctree-l1 current"><a class="current reference internal" href="#">2. Segon dia</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#la-q-expansio-de-les-series-d-eisenstein">2.1. La q-expansi&#243; de les s&#232;ries d&#8217;Eisenstein</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#l-expansio-de-la-funcio-discriminant">2.2. L&#8217;expansi&#243; de la funci&#243; discriminant</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#l-operador-diferencial-de-serre">2.3. L&#8217;operador diferencial de Serre</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#l-operador-diferencial-de-ramanujan-serre">2.3. L&#8217;operador diferencial de Ramanujan-Serre</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="dia3.html">3. Tercer dia</a></li>

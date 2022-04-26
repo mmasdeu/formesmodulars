@@ -10,7 +10,7 @@ Recordem les congruències de Clausen--von Staudt pels nombres de Bernoulli
 
 **Teorema (Clausen--von Staudt):** Si $k\geq 2$ és parell, aleshores
 $$
-B_k + \sum_{p, p-1\mid k} \frac{1}{p} \in \ZZ.
+B_k + \sum_{p-1\mid k} \frac{1}{p} \in \ZZ.
 $$
 
 La demostració és relativament elemental, i no la farem en aquestes notes. Una conseqüència fàcil és que
@@ -53,6 +53,8 @@ $$
 
 2. Per $p=2,3$, tenim $M(\FF_p) = M^0(\FF_p)=\FF_p(\bar\Delta)$.
 
+*Prova:* TODO
+
 **Teorema:** Sigui $p\geq 3$, i siguin $f\in M_k(\ZZ_{(p)})$ i $f'\in M_{k'}(\ZZ_{(p)})$ dues formes modulars de pesos $k$ i $k'$ respectivament. Aleshores
 $$
 f\equiv f'\pmod{p^m}\implies k\equiv k'\pmod{(p-1)p^{m-1}}.
@@ -62,19 +64,21 @@ $$
 f\equiv f'\pmod{2^m}\implies k\equiv k'\pmod{2^{m-2}}.
 $$
 
+*Prova:* TODO
+
 Més endavant veurem la demostració d'aquests resultats. Però fixem-nos que en podem treure alguna conseqüència fàcil:
 
-**Proposició (congruències de Kummer per $a=1$):** Si $k\equiv k'\not\equiv 0\pmod{p-1}$ aleshores $\frac{B_k}{k} \equiv \frac{B_{k'}}{k'}\pmod p$.
+**Proposició (congruències de Kummer per a=1):** Si $k\equiv k'\not\equiv 0\pmod{p-1}$ aleshores $\frac{B_k}{k} \equiv \frac{B_{k'}}{k'}\pmod p$.
 
-*Prova:* 
- Sabem que $\sigma_{k-1}(n)\equiv \sigma_{k'-1}(n)\pmod{p}$ per a tot $n$. Les congruències de Clausen--von Staudt ens diuen que $G_k$ i $G_{k'}$ viuen a $M_k(\ZZ_{(p)})$. Per tant, la reducció $\bar G_k - \bar G_{k'}$ viu a $M^k(\FF_p)$. Però els termes no-constants de la $q$-expansió s'anul·len tots, i per tant en deduim que
- $$
- \frac{B_k}{k} - \frac{B_{k'}}{k'} \in M^{k}(\FF_p)$.
- $$
- Essent la diferència de dues constants, també viuen a $M^0(\FF_p)$ i , per tant, com que $p-1\nmid k$, el teorema de Swinnerton-Dyer ens diu que aquesta diferència és $0$.$\qed$.
+*Prova:*
+Sabem que $\sigma_{k-1}(n)\equiv \sigma_{k'-1}(n)\pmod{p}$ per a tot $n$. Les congruències de Clausen--von Staudt ens diuen que $G_k$ i $G_{k'}$ viuen a $M_k(\ZZ_{(p)})$. Per tant, la reducció $\bar G_k - \bar G_{k'}$ viu a $M^k(\FF_p)$. Però els termes no-constants de la $q$-expansió s'anul·len tots, i per tant en deduim que
+$$
+\frac{B_k}{k} - \frac{B_{k'}}{k'} \in M^{k}(\FF_p).
+$$
+Essent la diferència de dues constants, també viuen a $M^0(\FF_p)$ i , per tant, com que $p-1\nmid k$, el teorema de Swinnerton-Dyer ens diu que aquesta diferència és $0$. $\qed$
 
 
-Formes modulars $p$-àdiques
+Formes modulars p-àdiques
 ---------------------------
 
 Considerem l'anell de les formes modulars amb coeficients racionals $M(\QQ)$. Podem definir-hi una valoració $p$-àdica (que indueix una norma) definint
@@ -138,7 +142,7 @@ f-f' = a_0-a_0'\in M_{\kappa}(\QQ_p)\cap M_{0}(\QQ_p)=0.
 $$
 Per tant $\{a_0^{(i)}\}$ convergeix a $a_0$. $\qed$
 
-La funció zeta $p$-àdica
+La funció zeta p-àdica
 ------------------------
 
 Recordem la modificació $p$-àdica de la funció de divisors
@@ -154,7 +158,7 @@ $$
 \zeta^*(1-k):=a_0 = \lim_{i\to\infty} \frac{-B_{k_i}}{2k_i} = \frac{1}{2} \lim_{i\to\infty} \zeta(1-k_i).
 $$
 
-Obtenim així una funció $\zeta^*(\kappa)$, definida per elements senars $\kappa\fX\smallsetminus\{1\}$. La segona part de la proposició anterior ens diu que $\zeta^*$ és contínua (perquè els coeficients $\kappa\mapsto \sigma_{\kappa}(n)$ ho són).
+Obtenim així una funció $\zeta^*(\kappa)$, definida per elements senars $\kappa\in\fX\smallsetminus\{1\}$. La segona part de la proposició anterior ens diu que $\zeta^*$ és contínua (perquè els coeficients $\kappa\mapsto \sigma_{\kappa}(n)$ ho són).
 
 Suposem que $\kappa\in \ZZ_{\geq 2}$ és un enter. Aleshores podem calcular
 $$
