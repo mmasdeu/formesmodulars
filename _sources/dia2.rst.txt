@@ -4,7 +4,7 @@
 Segon dia
 ***************************
 
-La q-expansió de les sèries d'Eisenstein
+q-expansió de les sèries d'Eisenstein
 ========================================
 
 Els nombres de Bernoulli

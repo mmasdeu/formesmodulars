@@ -4,7 +4,7 @@
 <html lang="CA">
   <head>
     <meta charset="ascii" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>1. Primer dia &#8212; Formes Modulars 1.0 documentaci&#243;</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
@@ -12,6 +12,7 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script>window.MathJax = {"tex": {"macros": {"QQ": "{\\mathbb{Q}}", "ZZ": "{\\mathbb{Z}}", "RR": "{\\mathbb{R}}", "FF": "{\\mathbb{F}}", "CC": "{\\mathbb{C}}", "HH": "{\\mathbb{H}}", "fX": "{\\mathfrak{X}}", "SL": "{\\operatorname{SL}}", "GL": "{\\operatorname{GL}}", "PSL": "{\\operatorname{PSL}}", "PGL": "{\\operatorname{PGL}}", "lto": "{\\longrightarrow}", "dfn": "{\\ensuremath{:=}}", "surjects": "{\\twoheadrightarrow}", "injects": "{\\hookrightarrow}", "id": "{\\ensuremath \\text{Id}}", "mtx": ["{\\left(\\begin{matrix}#1&#2\\\\#3&#4\\end{matrix}\\right)}", 4], "mat": ["{\\left(\\begin{matrix}#1\\end{matrix}\\right)}", 1], "smat": ["{\\left(\\begin{smallmatrix}#1\\end{smallmatrix}\\right)}", 1], "smtx": ["{\\left(\\begin{smallmatrix}#1&#2\\\\#3&#4\\end{smallmatrix}\\right)}", 4], "slz": "{\\operatorname{SL}_2(\\bZ)}", "to": "{\\longrightarrow}", "dlog": "{\\operatorname{dlog}}", "Im": "{\\operatorname{Im}}", "Re": "{\\operatorname{Re}}", "abs": ["{|#1|}", 1], "slsh": ["{|_{#1}}", 1], "qed": "{\\blacksquare}", "implies": "{\\Longrightarrow}"}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -37,7 +38,7 @@
           <div class="body" role="main">
             
   <section id="primer-dia">
-<span id="day1"></span><h1><span class="section-number">1. </span>Primer dia<a class="headerlink" href="#primer-dia" title="Link permanent a aquest t&#237;tol">&#182;</a></h1>
+<span id="day1"></span><h1><span class="section-number">1. </span>Primer dia<a class="headerlink" href="#primer-dia" title="Permalink to this heading">&#182;</a></h1>
 <p>Abans d&#8217;introduir els objects que estudiarem, &#233;s natural preguntar-nos per qu&#232; els estudiem (a m&#233;s del fet que s&#243;n objectes matem&#224;tics extremadament bonics).</p>
 <p>Resulta que molts problemes en la teoria de nombres (i en altres ci&#232;ncies) tracten de <em>comptar</em> certs objectes. Per exemple, podem comptar el nombre de particions d&#8217;n enter <span class="math notranslate nohighlight">\(n\)</span> (maneres d&#8217;obtenir <span class="math notranslate nohighlight">\(n\)</span> com a suma de naturals positius ordenats), o el nombre de solucions m&#242;dul <span class="math notranslate nohighlight">\(n\)</span> de l&#8217;equaci&#243; <span class="math notranslate nohighlight">\(y^2+y=x^3-x^2\)</span>, o b&#233; el nombre de maneres d&#8217;escriure <span class="math notranslate nohighlight">\(n\)</span> com a suma de <span class="math notranslate nohighlight">\(2\)</span> quadrats,&#8230; Doncs resulta que per tots els problemes anteriors (i molts d&#8217;altres) aquests recomptes donen, un cop escrits en forma de s&#232;rie de pot&#232;ncies, una forma modular.</p>
 <p>El fet anterior ja seria de per si interessant, ja que estudiar formes modulars ens permetria estudiar tots aquests problemes a la vegada. El que &#233;s encara m&#233;s sorprenent &#233;s que resulta que les formes modulars constitueixen espais vectorials de dimensi&#243; finita, i aix&#242; fa que si podem construir suficients exemples, podem descobrir identitats sorprenents. Com a mostra, podem enunciar alguns teoremes que aprofiten aquest fet:</p>
@@ -77,7 +78,7 @@ Sigui <span class="math notranslate nohighlight">\(\tau(n)\)</span> el coeficien
 \]</div>
 </p>
 <section id="definicions-basiques">
-<h2><span class="section-number">1.1. </span>Definicions b&#224;siques<a class="headerlink" href="#definicions-basiques" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<h2><span class="section-number">1.1. </span>Definicions b&#224;siques<a class="headerlink" href="#definicions-basiques" title="Permalink to this heading">&#182;</a></h2>
 <p>Considerem el semipl&#224; superior de Poincar&#233;,
 <div class="math notranslate nohighlight">
 \[
@@ -106,7 +107,7 @@ mitjan&#231;ant les anomenades <em>transformacions lineals fraccion&#224;ries</e
 <p><strong>Definici&#243;:</strong> El grup <span class="math notranslate nohighlight">\(G = \SL_2(\RR)/\{\pm 1\}\)</span> s&#8217;anomena el <em>grup modular</em>. Sovint confondrem una matriu <span class="math notranslate nohighlight">\(g = \smtx abcd\)</span> amb la seva imatge a <span class="math notranslate nohighlight">\(G\)</span>.</p>
 </section>
 <section id="el-domini-fonamental">
-<h2><span class="section-number">1.2. </span>El domini fonamental<a class="headerlink" href="#el-domini-fonamental" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<h2><span class="section-number">1.2. </span>El domini fonamental<a class="headerlink" href="#el-domini-fonamental" title="Permalink to this heading">&#182;</a></h2>
 <p>Considerem dos elements a <span class="math notranslate nohighlight">\(G\)</span> que jugaran un paper important:
 <div class="math notranslate nohighlight">
 \[
@@ -158,9 +159,9 @@ Com que <span class="math notranslate nohighlight">\(y^2&gt;3/4\)</span>, aix&#2
 <p><strong>Corol&#183;lari:</strong> L&#8217;aplicaci&#243; de pas al quocient <span class="math notranslate nohighlight">\(D \to \HH/G\)</span> &#233;s exhaustiva, i la seva restricci&#243; a l&#8217;interior de <span class="math notranslate nohighlight">\(D\)</span> &#233;s injectiva.</p>
 </section>
 <section id="formes-modulars">
-<h2><span class="section-number">1.3. </span>Formes modulars<a class="headerlink" href="#formes-modulars" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<h2><span class="section-number">1.3. </span>Formes modulars<a class="headerlink" href="#formes-modulars" title="Permalink to this heading">&#182;</a></h2>
 <section id="definicions">
-<h3><span class="section-number">1.3.1. </span>Definicions<a class="headerlink" href="#definicions" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<h3><span class="section-number">1.3.1. </span>Definicions<a class="headerlink" href="#definicions" title="Permalink to this heading">&#182;</a></h3>
 <p><strong>Definici&#243;:</strong> Diem que una funci&#243; <span class="math notranslate nohighlight">\(f\)</span> meromorfa a <span class="math notranslate nohighlight">\(\HH\)</span> &#233;s <em>d&#232;bilment modular</em> de pes <span class="math notranslate nohighlight">\(k\in\ZZ\)</span> si
 <div class="math notranslate nohighlight">
 \[f(g z) = (cz+d)^k f(z),\forall g=\smtx abcd \in\SL_2(\ZZ).\]</div>
@@ -191,7 +192,7 @@ que convergeix per a tot <span class="math notranslate nohighlight">\(z\in \HH\)
 <p><strong>Remarca:</strong> Si multipliquem una forma modular <span class="math notranslate nohighlight">\(f\)</span> de pes <span class="math notranslate nohighlight">\(k\)</span> amb una <span class="math notranslate nohighlight">\(f'\)</span> de pes <span class="math notranslate nohighlight">\(k'\)</span> obtindrem una forma <span class="math notranslate nohighlight">\(ff'\)</span> de pes <span class="math notranslate nohighlight">\(k+k'\)</span>. Obtenim aix&#237; un anell graduat <span class="math notranslate nohighlight">\(M=\bigoplus_{k\in\ZZ} M_k\)</span>.</p>
 </section>
 <section id="series-d-eisenstein">
-<h3><span class="section-number">1.3.2. </span>S&#232;ries d&#8217;Eisenstein<a class="headerlink" href="#series-d-eisenstein" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<h3><span class="section-number">1.3.2. </span>S&#232;ries d&#8217;Eisenstein<a class="headerlink" href="#series-d-eisenstein" title="Permalink to this heading">&#182;</a></h3>
 <p>Per ara els &#250;nics exemples que tenim de formes modulars s&#243;n les constants, que s&#243;n formes modulars de pes zero (de fet, s&#243;n les &#250;niques formes modulars de pes zero). Si considerem una funci&#243; holomorfa <span class="math notranslate nohighlight">\(h\)</span> qualsevol, aleshores una manera de construir una funci&#243; modular &#233;s &#171;simetritzar-la&#187;, &#233;s a dir, considerrar <span class="math notranslate nohighlight">\(\sum_{g\in G} h\slsh{k} g\)</span>. El problema &#233;s que en general aquesta suma no t&#233; per qu&#232; convergir. Una segona idea seria considerar una funci&#243; que ja sigui invariant per algun subgrup de <span class="math notranslate nohighlight">\(H\leq G\)</span>, i aleshores nom&#233;s simetritzar per <span class="math notranslate nohighlight">\(G/H\)</span>. La versi&#243; m&#233;s senzilla d&#8217;aquest principi &#233;s considerar la funci&#243; constant <span class="math notranslate nohighlight">\(1\)</span>. Si <span class="math notranslate nohighlight">\(H=\{ \pm \smtx{1}{t}{0}{1}\}\)</span>, veiem que <span class="math notranslate nohighlight">\(1\slsh{k} h=1\)</span> per a tot <span class="math notranslate nohighlight">\(h\in H\)</span>. Per tant, podem considerar
 <div class="math notranslate nohighlight">
 \[
@@ -247,9 +248,9 @@ que &#233;s una corba el&#183;l&#237;ptica amb discriminant justament <span clas
 </section>
 </section>
 <section id="l-espai-de-les-formes-modulars">
-<h2><span class="section-number">1.4. </span>L&#8217;espai de les formes modulars<a class="headerlink" href="#l-espai-de-les-formes-modulars" title="Link permanent a aquest t&#237;tol">&#182;</a></h2>
+<h2><span class="section-number">1.4. </span>L&#8217;espai de les formes modulars<a class="headerlink" href="#l-espai-de-les-formes-modulars" title="Permalink to this heading">&#182;</a></h2>
 <section id="zeros-i-pols-d-una-funcio-modular">
-<h3><span class="section-number">1.4.1. </span>Zeros i pols d&#8217;una funci&#243; modular<a class="headerlink" href="#zeros-i-pols-d-una-funcio-modular" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<h3><span class="section-number">1.4.1. </span>Zeros i pols d&#8217;una funci&#243; modular<a class="headerlink" href="#zeros-i-pols-d-una-funcio-modular" title="Permalink to this heading">&#182;</a></h3>
 <p>Sigui <span class="math notranslate nohighlight">\(f\neq 0\)</span> una funci&#243; meromorfa a <span class="math notranslate nohighlight">\(\HH\)</span>, i sigui <span class="math notranslate nohighlight">\(\tau\in\HH\)</span>. Escrivim <span class="math notranslate nohighlight">\(v_{\tau}(f)\)</span> com l&#8217;enter tal que <span class="math notranslate nohighlight">\((z-\tau)^{- v_{\tau}(f)} f(z)\)</span> &#233;s holomorfa i diferent de zero a <span class="math notranslate nohighlight">\(z=\tau\)</span> (l&#8217;ordre de <span class="math notranslate nohighlight">\(f\)</span> a <span class="math notranslate nohighlight">\(\tau\)</span>).</p>
 <p>Si <span class="math notranslate nohighlight">\(f\)</span> &#233;s una funci&#243; modular de pes <span class="math notranslate nohighlight">\(k\)</span>, aleshores <span class="math notranslate nohighlight">\(v_\tau(f)=v_{g\tau}(f)\)</span>, perqu&#232; <span class="math notranslate nohighlight">\(cz+d\)</span> &#233;s holomorfa i diferent de zero a tot <span class="math notranslate nohighlight">\(\HH\)</span>. Tamb&#233; podem definir <span class="math notranslate nohighlight">\(v_\infty(f)=n_0\)</span> si <span class="math notranslate nohighlight">\(\tilde f(q)=\sum_{n\geq n_0} a_nq^n\)</span> amb <span class="math notranslate nohighlight">\(a_{n_0}\neq 0\)</span>.</p>
 <p><strong>Teorema (f&#243;rmula de la val&#232;ncia):</strong> Si <span class="math notranslate nohighlight">\(f\neq 0\)</span> &#233;s una funci&#243; d&#232;bilment modular de pes <span class="math notranslate nohighlight">\(k\)</span>, es t&#233;
@@ -262,7 +263,7 @@ on la suma recorre les &#242;rbites de punts de <span class="math notranslate no
 <p>El teorema es demostra aplicant el teorema del residu a un contorn adequat, i no el farem en aquestes notes.</p>
 </section>
 <section id="l-algebra-de-formes-modulars">
-<h3><span class="section-number">1.4.2. </span>L&#8217;&#224;lgebra de formes modulars<a class="headerlink" href="#l-algebra-de-formes-modulars" title="Link permanent a aquest t&#237;tol">&#182;</a></h3>
+<h3><span class="section-number">1.4.2. </span>L&#8217;&#224;lgebra de formes modulars<a class="headerlink" href="#l-algebra-de-formes-modulars" title="Permalink to this heading">&#182;</a></h3>
 <p>Escrivim <span class="math notranslate nohighlight">\(M_k\)</span> com el <span class="math notranslate nohighlight">\(\CC\)</span>-espai vectorial format per les formes modulars de pes <span class="math notranslate nohighlight">\(k\)</span>, i <span class="math notranslate nohighlight">\(S_k\)</span> com el subespai format per les formes cuspidals. Com que <span class="math notranslate nohighlight">\(S_k=\ker( f\mapsto f(\infty))\)</span>, tenim <span class="math notranslate nohighlight">\(\dim M_k/S_k\leq 1\)</span>. A m&#233;s, quan <span class="math notranslate nohighlight">\(k\geq 4\)</span> les s&#232;ries d&#8217;Eisenstein s&#243;n de <span class="math notranslate nohighlight">\(M_k\smallsetminus S_k\)</span> i, per tant <span class="math notranslate nohighlight">\(M_k = \CC G_k \oplus S_k\)</span>.</p>
 <p>Aplicarem la f&#243;rmula de la val&#232;ncia a alguns casos senzills. Per exemple, si <span class="math notranslate nohighlight">\(f\)</span> &#233;s una funci&#243; holomorfa, aleshores tots els termes que apareixen a l&#8217;esquerra s&#243;n positius o zero, i per tant <span class="math notranslate nohighlight">\(M_k=0\)</span> per <span class="math notranslate nohighlight">\(k&lt;0\)</span>. Per <span class="math notranslate nohighlight">\(k=2\)</span>, veiem que no hi ha manera d&#8217;obtenir <span class="math notranslate nohighlight">\(1/6\)</span> sumant m&#250;ltiples de <span class="math notranslate nohighlight">\(1\)</span>, <span class="math notranslate nohighlight">\(1/2\)</span> i <span class="math notranslate nohighlight">\(1/3\)</span>, i per tant <span class="math notranslate nohighlight">\(M_2=0\)</span>.</p>
 <p>Ara, apliquem la f&#243;rmula a <span class="math notranslate nohighlight">\(G_4\)</span>. Podem escriure <span class="math notranslate nohighlight">\(1/3 = 0 + 1/2\cdot 0 + 1/3\cdot 1+0\)</span> (i nom&#233;s d&#8217;aquesta manera), i per tant <span class="math notranslate nohighlight">\(G_4(\rho)=0\)</span> (amb ordre <span class="math notranslate nohighlight">\(1\)</span>), i no s&#8217;anul&#183;la enlloc m&#233;s. De forma semblant, <span class="math notranslate nohighlight">\(v_{i}(G_6) = 1\)</span> i aquest &#233;s l&#8217;&#250;nic punt on s&#8217;anul&#183;la <span class="math notranslate nohighlight">\(G_6\)</span>. Observem llavors que <span class="math notranslate nohighlight">\(\Delta(i)\neq 0\)</span> i que, per tant <span class="math notranslate nohighlight">\(\Delta\neq 0\)</span>. A m&#233;s, per construcci&#243; <span class="math notranslate nohighlight">\(v_{\infty}(\Delta)\geq 1\)</span>. Per tant, la f&#243;rmula de la val&#232;ncia ens diu que <span class="math notranslate nohighlight">\(\Delta\)</span> no s&#8217;anul&#183;la a <span class="math notranslate nohighlight">\(\HH\)</span>, i t&#233; un zero simple a l&#8217;infinit.</p>
@@ -331,7 +332,7 @@ on la suma recorre les &#242;rbites de punts de <span class="math notranslate no
     </form>
     </div>
 </div>
-<script>$('#searchbox').show(0);</script>
+<script>document.getElementById('searchbox').style.display = "block"</script>
         </div>
       </div>
       <div class="clearer"></div>
@@ -340,7 +341,7 @@ on la suma recorre les &#242;rbites de punts de <span class="math notranslate no
       &copy;2022, Marc Masdeu.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
