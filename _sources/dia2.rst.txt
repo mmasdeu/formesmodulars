@@ -73,9 +73,9 @@ $$
 
 *Prova:* Expandim $G_k(z)$ com
 $$
-G_k(z)=\sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k} =2\zeta(k) + 2\sum_{n=1}^\infty\sum_{m\in\ZZ} \frac{1}{(cz+d)^k}.
+G_k(z)=\sum_{(m,n)\neq (0,0)} \frac{1}{(mz+n)^k} =2\zeta(k) + 2\sum_{m=1}^\infty\sum_{n\in\ZZ} \frac{1}{(mz+n)^k}.
 $$
-Aplicant la igualtat bàsica anterior amb $cz$ en comptes de $z$, tenim
+Aplicant la igualtat bàsica anterior amb $mz$ en comptes de $z$, tenim
 $$
 G_k(z) = 2\zeta(k) +2\frac{(-1)^k (2\pi i)^k}{(k-1)!} \sum_{d=1}^\infty \sum_{a=1}^\infty d^{k-1} q^{ad} = 2\zeta(k) + \frac{2(2\pi i)^k}{(k-1)!}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
 $$

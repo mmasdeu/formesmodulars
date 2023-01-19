@@ -4,19 +4,17 @@
 <html lang="CA">
   <head>
     <meta charset="ascii" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>4. Quart dia &#8212; Formes Modulars 1.0 documentaci&#243;</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script>window.MathJax = {"tex": {"macros": {"QQ": "{\\mathbb{Q}}", "ZZ": "{\\mathbb{Z}}", "RR": "{\\mathbb{R}}", "FF": "{\\mathbb{F}}", "CC": "{\\mathbb{C}}", "HH": "{\\mathbb{H}}", "fX": "{\\mathfrak{X}}", "SL": "{\\operatorname{SL}}", "GL": "{\\operatorname{GL}}", "PSL": "{\\operatorname{PSL}}", "PGL": "{\\operatorname{PGL}}", "lto": "{\\longrightarrow}", "dfn": "{\\ensuremath{:=}}", "surjects": "{\\twoheadrightarrow}", "injects": "{\\hookrightarrow}", "id": "{\\ensuremath \\text{Id}}", "mtx": ["{\\left(\\begin{matrix}#1&#2\\\\#3&#4\\end{matrix}\\right)}", 4], "mat": ["{\\left(\\begin{matrix}#1\\end{matrix}\\right)}", 1], "smat": ["{\\left(\\begin{smallmatrix}#1\\end{smallmatrix}\\right)}", 1], "smtx": ["{\\left(\\begin{smallmatrix}#1&#2\\\\#3&#4\\end{smallmatrix}\\right)}", 4], "slz": "{\\operatorname{SL}_2(\\bZ)}", "to": "{\\longrightarrow}", "dlog": "{\\operatorname{dlog}}", "Im": "{\\operatorname{Im}}", "Re": "{\\operatorname{Re}}", "abs": ["{|#1|}", 1], "slsh": ["{|_{#1}}", 1], "qed": "{\\blacksquare}", "implies": "{\\Longrightarrow}"}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="&#205;ndex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
     <link rel="prev" title="3. Tercer dia" href="dia3.html" />
@@ -59,7 +57,7 @@ k \equiv 0 \pmod{(p-1)p^\alpha} \implies \frac{k}{B_k}\equiv 0\pmod{p^{\alpha+1}
 E_k(q) = 1 - \frac{2k}{Bk} \sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
 \]</div>
 
-El corol&#183;lari anterior ens diu que <span class="math notranslate nohighlight">\(E_{(p-1)p^\alpha} \equiv 1 \pmod{p^{\alpha+1}}\)</span>. En particular, <span class="math notranslate nohighlight">\(E_{p-1}\equiv 1\pmod p\)</span>. Aqu&#237;, les congru&#232;ncies s&#243;n de <span class="math notranslate nohighlight">\(q\)</span>-expansions, &#233;s a dir, estem dient que la s&#232;rie <span class="math notranslate nohighlight">\(E_{p-1}-1\)</span> t&#233; tots els coeficients divisibles per <span class="math notranslate nohighlight">\(p\)</span>.</p>
+El corol&#183;lari anterior ens diu que, per a tot <span class="math notranslate nohighlight">\(r\in\ZZ\)</span> i <span class="math notranslate nohighlight">\(\alpha\geq 0\)</span>, tenim <span class="math notranslate nohighlight">\(E_{r(p-1)p^\alpha} \equiv 1 \pmod{p^{\alpha+1}}\)</span>. En particular, <span class="math notranslate nohighlight">\(E_{p-1}\equiv 1\pmod p\)</span>. Aqu&#237;, les congru&#232;ncies s&#243;n de <span class="math notranslate nohighlight">\(q\)</span>-expansions, &#233;s a dir, estem dient que la s&#232;rie <span class="math notranslate nohighlight">\(E_{p-1}-1\)</span> t&#233; tots els coeficients divisibles per <span class="math notranslate nohighlight">\(p\)</span>.</p>
 <p>Escrivim <span class="math notranslate nohighlight">\(\ZZ_{(p)} = \{ x \in \QQ ~:~ v_p(x)\geq 0\}\)</span> (s&#8217;anomena l&#8217;anell dels <span class="math notranslate nohighlight">\(p\)</span>-enters), i considerem els espais
 <div class="math notranslate nohighlight">
 \[
@@ -86,7 +84,7 @@ M^i(\FF_p) = \bigcup_{k\equiv i\pmod{p-1}} M_k(\FF_p).
 
 Finalment, tamb&#233; considerem <span class="math notranslate nohighlight">\(M(\FF_p)\subseteq \FF_p[[q]]\)</span> com la suma de tots els <span class="math notranslate nohighlight">\(M_k(\FF_p)\)</span>, i de manera an&#224;loga considerem tamb&#233; <span class="math notranslate nohighlight">\(M(\ZZ_{(p)})\)</span>. El morfisme de reducci&#243; dona lloc a un morfisme d&#8217;anells <span class="math notranslate nohighlight">\(M(\ZZ_{(p)})\to M(\FF_p)\)</span>. Fixem-nos que <span class="math notranslate nohighlight">\(E_{p-1}-1\in M(\ZZ_{(p)})\)</span> &#233;s al nucli d&#8217;aquesta aplicaci&#243;. Escrivim <span class="math notranslate nohighlight">\(A=E_{p-1}\)</span>, i recordem que escrivim <span class="math notranslate nohighlight">\(Q=E_4\)</span> i <span class="math notranslate nohighlight">\(R=E_6\)</span>. Sabem que <span class="math notranslate nohighlight">\(A\)</span> es pot escriure com un cert polinomi &#171;homogeni&#187; en <span class="math notranslate nohighlight">\(Q,R\)</span>, que denotarem com <span class="math notranslate nohighlight">\(A=A(Q,R)\)</span>.</p>
 <p><strong>Teorema (Swinnerton-Dyer):</strong></p>
-<p>1. Si <span class="math notranslate nohighlight">\(p\geq 5\)</span>, aleshores <span class="math notranslate nohighlight">\(\ker\operatorname{red} = A - 1\)</span>. Per tant, <span class="math notranslate nohighlight">\(M(\FF_p) \cong \FF_p(X, Y)/(\bar A(X,Y) - 1)\)</span>. A m&#233;s,
+<p>1. Si <span class="math notranslate nohighlight">\(p\geq 5\)</span>, aleshores <span class="math notranslate nohighlight">\(\ker\operatorname{red} = A - 1\)</span>. Per tant, <span class="math notranslate nohighlight">\(M(\FF_p) \cong \FF_p[X, Y]/(\bar A(X,Y) - 1)\)</span>. A m&#233;s,
 <div class="math notranslate nohighlight">
 \[
 M(\FF_p) = \bigoplus_{i\in\ZZ/(p-1)\ZZ} M^i(\FF_p).
@@ -127,16 +125,16 @@ Essent la difer&#232;ncia de dues constants, tamb&#233; viuen a <span class="mat
 v_p(f) = \inf_{n} v_p(a_n),\quad f(q) = \sum_{n\geq 0}a_nq^n.
 \]</div>
 
-Aquesta definici&#243; t&#233; sentit, perqu&#232; les formes modulars tenen denominadors fitats: s&#243;n polinomis homogenis en <span class="math notranslate nohighlight">\(Q\)</span> i <span class="math notranslate nohighlight">\(R\)</span> a coeficients racionals, i <span class="math notranslate nohighlight">\(Q\)</span> i <span class="math notranslate nohighlight">\(R\)</span> tenen denominadors enters.</p>
-<p><strong>Definici&#243;:</strong> L&#8217;anell <span class="math notranslate nohighlight">\(M(\QQ_p)\subseteq \QQ_p[[q]]\)</span> &#233;s la completaci&#243; de <span class="math notranslate nohighlight">\(M(\QQ)\)</span> respecte la norma induida per <span class="math notranslate nohighlight">\(v_p\)</span>. M&#233;s concretament, una <span class="math notranslate nohighlight">\(q\)</span>-expansi&#243; <span class="math notranslate nohighlight">\(f\in \QQ_p[[q]]\)</span> &#233;s de <span class="math notranslate nohighlight">\(M(\QQ_p\)</span> si, i nom&#233;s si, existeix una successi&#243; de formes modulars <span class="math notranslate nohighlight">\(\{f_m\}_m\subseteq M(\QQ)\)</span> tals que <span class="math notranslate nohighlight">\(\lim_m f_m= f\)</span> (converg&#232;ncia uniforme).</p>
+Aquesta definici&#243; t&#233; sentit, perqu&#232; les formes modulars tenen denominadors fitats: s&#243;n polinomis &#171;homogenis&#187; en <span class="math notranslate nohighlight">\(Q\)</span> i <span class="math notranslate nohighlight">\(R\)</span> a coeficients racionals, i <span class="math notranslate nohighlight">\(Q\)</span> i <span class="math notranslate nohighlight">\(R\)</span> tenen denominadors enters.</p>
+<p><strong>Definici&#243;:</strong> L&#8217;anell <span class="math notranslate nohighlight">\(M(\QQ_p)\subseteq \QQ_p[[q]]\)</span> &#233;s la completaci&#243; de <span class="math notranslate nohighlight">\(M(\QQ)\)</span> respecte la norma induida per <span class="math notranslate nohighlight">\(v_p\)</span>. M&#233;s concretament, una <span class="math notranslate nohighlight">\(q\)</span>-expansi&#243; <span class="math notranslate nohighlight">\(f\in \QQ_p[[q]]\)</span> &#233;s de <span class="math notranslate nohighlight">\(M(\QQ_p)\)</span> si, i nom&#233;s si, existeix una successi&#243; de formes modulars <span class="math notranslate nohighlight">\((f_m)_m\subseteq M(\QQ)\)</span> tals que <span class="math notranslate nohighlight">\(\lim_m f_m= f\)</span> (converg&#232;ncia uniforme).</p>
 <p>Considerem ara <span class="math notranslate nohighlight">\(f=\lim_m f_m\)</span> una forma modular <span class="math notranslate nohighlight">\(p\)</span>-&#224;dica, i suposem que <span class="math notranslate nohighlight">\(f_m\)</span> t&#233; pes <span class="math notranslate nohighlight">\(k_m\)</span>. Pel teorema de la secci&#243; anterior, la successi&#243; d&#8217;enters <span class="math notranslate nohighlight">\(\{k_m\}_m\)</span> convergeix <span class="math notranslate nohighlight">\(p\)</span>-&#224;dicament a un element <span class="math notranslate nohighlight">\(\kappa \in\fX\)</span>, on
 <div class="math notranslate nohighlight">
 \[
-\fX = \varprojlim_m \ZZ/(p-1)p^m\ZZ \cong \ZZ/(p-1)\ZZ \times \ZZ_p.
+\fX = \varprojlim_m\ \ZZ/(p-1)p^m\ZZ \cong \ZZ/(p-1)\ZZ \times \ZZ_p.
 \]</div>
 
 Direm que <span class="math notranslate nohighlight">\(f\)</span> t&#233; pes <span class="math notranslate nohighlight">\(\kappa\)</span>, i escriurem <span class="math notranslate nohighlight">\(M_\kappa(\QQ_p)\)</span> pel subespai de formes modulars <span class="math notranslate nohighlight">\(p\)</span>-&#224;diques de pes <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
-<p><strong>Remarca:</strong> El conjunt <span class="math notranslate nohighlight">\(\fX\)</span>, que s&#8217;anomena l&#8221;<em>espai de pesos</em>, el podem pensar com un espai de car&#224;cters. Fixem-nos que <span class="math notranslate nohighlight">\(\ZZ_p^\times \cong \mu_{p-1} \times (1+p\ZZ_p)\)</span> (on <span class="math notranslate nohighlight">\(\mu_{p-1}\)</span> &#233;s el grup c&#237;clic format per les arrels <span class="math notranslate nohighlight">\((p-1)\)</span>-&#232;ssimes de la unitat), via <span class="math notranslate nohighlight">\(x\mapsto \omega(x)\langle x\rangle\)</span>. Els car&#224;cters multiplicatius de <span class="math notranslate nohighlight">\(1+p\ZZ_p\)</span> s&#243;n tots de la forma <span class="math notranslate nohighlight">\(\alpha\mapsto \alpha^{\kappa}\)</span>, per <span class="math notranslate nohighlight">\(\kappa\in\ZZ_p\)</span>. Per tant, els car&#224;cters de <span class="math notranslate nohighlight">\(\ZZ_p^\times\)</span> s&#243;n de la forma <span class="math notranslate nohighlight">\((u,\alpha)\mapsto \chi_{(h,\kappa)}(u,\alpha)=(u^h, \alpha^\kappa)\)</span>. Aix&#237;,
+<p><strong>Remarca:</strong> El conjunt <span class="math notranslate nohighlight">\(\fX\)</span>, que s&#8217;anomena &#171;l&#8217;espai de pesos&#187;, el podem pensar com un espai de car&#224;cters. Fixem-nos que <span class="math notranslate nohighlight">\(\ZZ_p^\times \cong \mu_{p-1} \times (1+p\ZZ_p)\)</span> (on <span class="math notranslate nohighlight">\(\mu_{p-1}\)</span> &#233;s el grup c&#237;clic format per les arrels <span class="math notranslate nohighlight">\((p-1)\)</span>-&#232;ssimes de la unitat), via <span class="math notranslate nohighlight">\(x\mapsto \omega(x)\langle x\rangle\)</span>. Els car&#224;cters multiplicatius de <span class="math notranslate nohighlight">\(1+p\ZZ_p\)</span> s&#243;n tots de la forma <span class="math notranslate nohighlight">\(\alpha\mapsto \alpha^{\kappa}\)</span>, per <span class="math notranslate nohighlight">\(\kappa\in\ZZ_p\)</span>. Per tant, els car&#224;cters de <span class="math notranslate nohighlight">\(\ZZ_p^\times\)</span> s&#243;n de la forma <span class="math notranslate nohighlight">\((u,\alpha)\mapsto \chi_{(h,\kappa)}(u,\alpha)=(u^h, \alpha^\kappa)\)</span>. Aix&#237;,
 <div class="math notranslate nohighlight">
 \[
 \fX= \operatorname{Hom}_{\text{cont}}(\ZZ_p^\times,\ZZ_p^\times), \quad (h,\kappa)\mapsto \chi_{(h,\kappa)}.
@@ -146,7 +144,7 @@ Direm que <span class="math notranslate nohighlight">\(f\)</span> t&#233; pes <s
 <p><strong>Teorema:</strong> Siguin <span class="math notranslate nohighlight">\(f\)</span> i <span class="math notranslate nohighlight">\(f'\)</span> formes modulars <span class="math notranslate nohighlight">\(p\)</span>-&#224;diques de pesos <span class="math notranslate nohighlight">\(\kappa\)</span> i <span class="math notranslate nohighlight">\(\kappa'\)</span>, respectivament. Suposem que <span class="math notranslate nohighlight">\(v_p(f-f')\geq v_p(f)+m\)</span> per algun <span class="math notranslate nohighlight">\(m\geq 1\)</span>. Aleshores, si <span class="math notranslate nohighlight">\(p\geq 3\)</span>,
 <div class="math notranslate nohighlight">
 \[
-\kappa\cong \kappa' \pmod{(p-1)p^{m-1}}.
+\kappa\equiv \kappa' \pmod{(p-1)p^{m-1}}.
 \]</div>
 
 (Per <span class="math notranslate nohighlight">\(p=2\)</span> cal canviar l&#8217;exponent <span class="math notranslate nohighlight">\(m-1\)</span> per <span class="math notranslate nohighlight">\(m-2\)</span>).</p>
@@ -158,12 +156,10 @@ Direm que <span class="math notranslate nohighlight">\(f\)</span> t&#233; pes <s
 <p>1. Sigui <span class="math notranslate nohighlight">\(f=\sum_n a_n q^n\in M_{\kappa}(\QQ_p)\)</span> una forma modular <span class="math notranslate nohighlight">\(p\)</span>-&#224;dica de pes <span class="math notranslate nohighlight">\(\kappa\in\fX\)</span>. Si <span class="math notranslate nohighlight">\(\kappa\not\equiv 0 \pmod{(p-1)p^m}\)</span> per algun <span class="math notranslate nohighlight">\(m\geq 0\)</span>, aleshores
 <div class="math notranslate nohighlight">
 \[
-v_p(a_0)\geq v_p(f) -m.
+v_p(a_0)+m\geq \inf_{n\geq 1} v_p(a_n).
 \]</div>
-</p>
-<ol class="arabic simple" start="2">
-<li><p>Sigui <span class="math notranslate nohighlight">\(\{f_m\}_m\subseteq M(\QQ_p)\)</span> una successi&#243; de formes modulars <span class="math notranslate nohighlight">\(p\)</span>-adiques de pesos <span class="math notranslate nohighlight">\(\{\kappa_m\}_m\)</span>. Escrivim <span class="math notranslate nohighlight">\(f_m = \lim_n f_m^{(n)}\)</span>, on <span class="math notranslate nohighlight">\(f_m^{(n)} = \sum_{n} a_n^{(m)} q^n\)</span>. Suposem que <span class="math notranslate nohighlight">\(\lim_m a_n^{(m)} = a_n\)</span> uniformement en <span class="math notranslate nohighlight">\(n\)</span> i que <span class="math notranslate nohighlight">\(\lim\kappa_m=\kappa\neq 0\)</span>. Aleshores <span class="math notranslate nohighlight">\(\lim_m a_0^{(m)}= a_0\)</span>, i <span class="math notranslate nohighlight">\(f=\sum_{n}a_nq^n\)</span> &#233;s una forma modular <span class="math notranslate nohighlight">\(p\)</span>-&#224;dica de pes <span class="math notranslate nohighlight">\(\kappa\)</span>.</p></li>
-</ol>
+
+2. Sigui <span class="math notranslate nohighlight">\((f_m)_m\subseteq M(\QQ_p)\)</span> una successi&#243; de formes modulars <span class="math notranslate nohighlight">\(p\)</span>-adiques de pesos <span class="math notranslate nohighlight">\(\{\kappa_m\}_m\)</span>. Escrivim <span class="math notranslate nohighlight">\(f_m = \lim_n f_m^{(n)}\)</span>, on <span class="math notranslate nohighlight">\(f_m^{(n)} = \sum_{n} a_n^{(m)} q^n\)</span>. Suposem que <span class="math notranslate nohighlight">\(\lim_m a_n^{(m)} = a_n\)</span> uniformement en <span class="math notranslate nohighlight">\(n\)</span> i que <span class="math notranslate nohighlight">\(\lim\kappa_m=\kappa\neq 0\)</span>. Aleshores <span class="math notranslate nohighlight">\(\lim_m a_0^{(m)}= a_0\)</span>, i <span class="math notranslate nohighlight">\(f=\sum_{n}a_nq^n\)</span> &#233;s una forma modular <span class="math notranslate nohighlight">\(p\)</span>-&#224;dica de pes <span class="math notranslate nohighlight">\(\kappa\)</span>.</p>
 <p><em>Prova:</em> Per demostrar (1), observem primer que si <span class="math notranslate nohighlight">\(a_0=0\)</span> aleshores ja estem. Si no, <span class="math notranslate nohighlight">\(a_0\in M_0(\QQ_p)\)</span> i per tant tenim, per la proposici&#243; anterior, que
 <div class="math notranslate nohighlight">
 \[
@@ -179,16 +175,16 @@ v_p(a_0)+m\geq v_p(f)+m \geq \inf_{n\geq 1} v_p(a_n).
 <p>Per demostrar (2), prenem un <span class="math notranslate nohighlight">\(m\)</span> prou gran tal que <span class="math notranslate nohighlight">\(\kappa\not\equiv 0 \pmod{(p-1)p^{m}}\)</span>. Aleshores podem trobar <span class="math notranslate nohighlight">\(t \in \ZZ\)</span> tal que, per <span class="math notranslate nohighlight">\(i\)</span> suficientment gran,
 <div class="math notranslate nohighlight">
 \[
-v_p(a_{n}^{(i)})\geq t\forall n\geq 1.
+v_p(a_{n}^{(i)})\geq t,\quad \forall n\geq 1.
 \]</div>
 </p>
-<p>L&#8217;apartat anterior ens dona doncs que <span class="math notranslate nohighlight">\(v_p(a_{0}^{(i)})&gt;t-m\)</span> per a tot <span class="math notranslate nohighlight">\(i\)</span> suficientment gran. Com que <span class="math notranslate nohighlight">\(p^{t-m}\ZZ_{p}\)</span> &#233;s compacte, hi ha una subsuccessi&#243; dels <span class="math notranslate nohighlight">\(\{a_0^{(i)}\}_i\)</span> convergint a <span class="math notranslate nohighlight">\(a_0\)</span>, i <span class="math notranslate nohighlight">\(f=\sum_{n\geq 0} a_n q^{n}\in M_{\kappa}(\QQ_p)\)</span>. Si <span class="math notranslate nohighlight">\(a_0'\)</span> fos el l&#237;mit d&#8217;una altra subsuccessi&#243;, aleshores obtindr&#237;em una altra <span class="math notranslate nohighlight">\(f'\)</span>, i
+<p>L&#8217;apartat anterior ens dona doncs que <span class="math notranslate nohighlight">\(v_p(a_{0}^{(i)})&gt;t-m\)</span> per a tot <span class="math notranslate nohighlight">\(i\)</span> suficientment gran. Com que <span class="math notranslate nohighlight">\(p^{t-m}\ZZ_{p}\)</span> &#233;s compacte, hi ha una subsuccessi&#243; de <span class="math notranslate nohighlight">\((a_0^{(i)})_i\)</span> convergint a <span class="math notranslate nohighlight">\(a_0\)</span>, i <span class="math notranslate nohighlight">\(f=\sum_{n\geq 0} a_n q^{n}\in M_{\kappa}(\QQ_p)\)</span>. Si <span class="math notranslate nohighlight">\(a_0'\)</span> fos el l&#237;mit d&#8217;una altra subsuccessi&#243;, aleshores obtindr&#237;em una altra <span class="math notranslate nohighlight">\(f'\)</span>, i
 <div class="math notranslate nohighlight">
 \[
 f-f' = a_0-a_0'\in M_{\kappa}(\QQ_p)\cap M_{0}(\QQ_p)=0.
 \]</div>
 
-Per tant <span class="math notranslate nohighlight">\(\{a_0^{(i)}\}\)</span> convergeix a <span class="math notranslate nohighlight">\(a_0\)</span>. <span class="math notranslate nohighlight">\(\qed\)</span></p>
+Per tant <span class="math notranslate nohighlight">\((a_0^{(i)})_i\)</span> convergeix a <span class="math notranslate nohighlight">\(a_0\)</span>. <span class="math notranslate nohighlight">\(\qed\)</span></p>
 </section>
 <section id="la-funcio-zeta-p-adica">
 <h2><span class="section-number">4.3. </span>La funci&#243; zeta p-&#224;dica<a class="headerlink" href="#la-funcio-zeta-p-adica" title="Permalink to this heading">&#182;</a></h2>
@@ -204,7 +200,7 @@ on entenem que <span class="math notranslate nohighlight">\(\sigma_k(n/p)=0\)</s
 \sigma_k^*(n)\equiv \sigma_{k'}^*(n)\pmod{p^m}.
 \]</div>
 
-Sigui ara <span class="math notranslate nohighlight">\(\{k_i\}_i\subseteq \ZZ\)</span> una successi&#243; d&#8217;enters amb <span class="math notranslate nohighlight">\(k_i\to\kappa\)</span> <span class="math notranslate nohighlight">\(p\)</span>-&#224;dicament, i tals que <span class="math notranslate nohighlight">\(k_i\to\infty\)</span> en sentit arquimedi&#224;. Suposem que <span class="math notranslate nohighlight">\(\kappa\)</span> &#233;s parell i diferent de zero. Aleshores <span class="math notranslate nohighlight">\(\sigma_{k_i}^*(n)\to\sigma_{\kappa}^*(n)\)</span> de manera uniforme en <span class="math notranslate nohighlight">\(n\)</span>. Obtenim de la proposici&#243; anterior que hi ha una forma modular <span class="math notranslate nohighlight">\(p\)</span>-&#224;dica <span class="math notranslate nohighlight">\(G_\kappa^*=a_0+\sum_{n\geq 1} \sigma_\kappa^*(n)q^n\)</span>, on
+Sigui ara <span class="math notranslate nohighlight">\((k_i)_i\subseteq \ZZ\)</span> una successi&#243; d&#8217;enters amb <span class="math notranslate nohighlight">\(k_i\to\kappa\)</span> <span class="math notranslate nohighlight">\(p\)</span>-&#224;dicament, i tals que <span class="math notranslate nohighlight">\(k_i\to\infty\)</span> en sentit arquimedi&#224;. Suposem que <span class="math notranslate nohighlight">\(\kappa\)</span> &#233;s parell i diferent de zero. Aleshores <span class="math notranslate nohighlight">\(\sigma_{k_i}^*(n)\to\sigma_{\kappa}^*(n)\)</span> de manera uniforme en <span class="math notranslate nohighlight">\(n\)</span>. Obtenim de la proposici&#243; anterior que hi ha una forma modular <span class="math notranslate nohighlight">\(p\)</span>-&#224;dica <span class="math notranslate nohighlight">\(G_\kappa^*=a_0+\sum_{n\geq 1} \sigma_\kappa^*(n)q^n\)</span>, on
 <div class="math notranslate nohighlight">
 \[
 \zeta^*(1-k):=a_0 = \lim_{i\to\infty} \frac{-B_{k_i}}{2k_i} = \frac{1}{2} \lim_{i\to\infty} \zeta(1-k_i).
@@ -282,8 +278,8 @@ Sigui ara <span class="math notranslate nohighlight">\(\{k_i\}_i\subseteq \ZZ\)<
       &copy;2022, Marc Masdeu.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
       |
       <a href="_sources/dia4.rst.txt"

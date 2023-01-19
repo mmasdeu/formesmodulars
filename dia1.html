@@ -4,19 +4,17 @@
 <html lang="CA">
   <head>
     <meta charset="ascii" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
     <title>1. Primer dia &#8212; Formes Modulars 1.0 documentaci&#243;</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-    <script src="_static/jquery.js"></script>
-    <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
+    <script src="_static/sphinx_highlight.js"></script>
     <script>window.MathJax = {"tex": {"macros": {"QQ": "{\\mathbb{Q}}", "ZZ": "{\\mathbb{Z}}", "RR": "{\\mathbb{R}}", "FF": "{\\mathbb{F}}", "CC": "{\\mathbb{C}}", "HH": "{\\mathbb{H}}", "fX": "{\\mathfrak{X}}", "SL": "{\\operatorname{SL}}", "GL": "{\\operatorname{GL}}", "PSL": "{\\operatorname{PSL}}", "PGL": "{\\operatorname{PGL}}", "lto": "{\\longrightarrow}", "dfn": "{\\ensuremath{:=}}", "surjects": "{\\twoheadrightarrow}", "injects": "{\\hookrightarrow}", "id": "{\\ensuremath \\text{Id}}", "mtx": ["{\\left(\\begin{matrix}#1&#2\\\\#3&#4\\end{matrix}\\right)}", 4], "mat": ["{\\left(\\begin{matrix}#1\\end{matrix}\\right)}", 1], "smat": ["{\\left(\\begin{smallmatrix}#1\\end{smallmatrix}\\right)}", 1], "smtx": ["{\\left(\\begin{smallmatrix}#1&#2\\\\#3&#4\\end{smallmatrix}\\right)}", 4], "slz": "{\\operatorname{SL}_2(\\bZ)}", "to": "{\\longrightarrow}", "dlog": "{\\operatorname{dlog}}", "Im": "{\\operatorname{Im}}", "Re": "{\\operatorname{Re}}", "abs": ["{|#1|}", 1], "slsh": ["{|_{#1}}", 1], "qed": "{\\blacksquare}", "implies": "{\\Longrightarrow}"}}, "tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]], "processEscapes": true}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="icon" href="_static/favicon.ico"/>
     <link rel="index" title="&#205;ndex" href="genindex.html" />
     <link rel="search" title="Cerca" href="search.html" />
     <link rel="next" title="2. Segon dia" href="dia2.html" />
@@ -102,9 +100,9 @@ mitjan&#231;ant les anomenades <em>transformacions lineals fraccion&#224;ries</e
 \Im(gz) = \frac{\Im(z)}{ \abs{cz+d} ^2}.
 \]</div>
 </p>
-<p>Per tant, veiem que <span class="math notranslate nohighlight">\(\operatorname{SL}_2(\mathbb{R})\)</span> actua a <span class="math notranslate nohighlight">\(\mathbb{H}\)</span>. Tamb&#233; veiem que <span class="math notranslate nohighlight">\(-1\)</span> actua trivialment, i per tant de fet tenim un grup del quocient <span class="math notranslate nohighlight">\(\PSL_2(\RR) = \SL_2(\RR)/\{\pm 1\}\)</span>, que de fet &#233;s <em>fidel</em>.</p>
+<p>Per tant, veiem que <span class="math notranslate nohighlight">\(\operatorname{SL}_2(\mathbb{R})\)</span> actua a <span class="math notranslate nohighlight">\(\mathbb{H}\)</span>. Tamb&#233; veiem que <span class="math notranslate nohighlight">\(-1\)</span> actua trivialment, i per tant de fet tenim una acci&#243; del quocient <span class="math notranslate nohighlight">\(\PSL_2(\RR) = \SL_2(\RR)/\{\pm 1\}\)</span>, que de fet &#233;s <em>fidel</em>.</p>
 <p><strong>Remarca:</strong> De fet, el grup <span class="math notranslate nohighlight">\(\PSL_2(\RR)\)</span> &#233;s el grup d&#8217;automorfismes anal&#237;tics de <span class="math notranslate nohighlight">\(\HH\)</span>.</p>
-<p><strong>Definici&#243;:</strong> El grup <span class="math notranslate nohighlight">\(G = \SL_2(\RR)/\{\pm 1\}\)</span> s&#8217;anomena el <em>grup modular</em>. Sovint confondrem una matriu <span class="math notranslate nohighlight">\(g = \smtx abcd\)</span> amb la seva imatge a <span class="math notranslate nohighlight">\(G\)</span>.</p>
+<p><strong>Definici&#243;:</strong> El grup <span class="math notranslate nohighlight">\(G = \PSL_2(\RR)\)</span> s&#8217;anomena el <em>grup modular</em>. Sovint confondrem una matriu <span class="math notranslate nohighlight">\(g = \smtx abcd\)</span> amb la seva imatge a <span class="math notranslate nohighlight">\(G\)</span>.</p>
 </section>
 <section id="el-domini-fonamental">
 <h2><span class="section-number">1.2. </span>El domini fonamental<a class="headerlink" href="#el-domini-fonamental" title="Permalink to this heading">&#182;</a></h2>
@@ -141,13 +139,13 @@ Es t&#233; el seg&#252;ent:</p>
 <li><p>El grup <span class="math notranslate nohighlight">\(G\)</span> est&#224; generat per <span class="math notranslate nohighlight">\(S\)</span> i <span class="math notranslate nohighlight">\(T\)</span>. De fet, es t&#233; <span class="math notranslate nohighlight">\(G=\langle S, T | S^2=(ST)^3=1 \rangle\)</span>.</p></li>
 </ol>
 <p><em>Prova:</em>
-Considerem <span class="math notranslate nohighlight">\(G'=\langle S, T\rangle\)</span>. Donat <span class="math notranslate nohighlight">\(z\in\HH\)</span>, trobarem <span class="math notranslate nohighlight">\(g'\in G'\)</span> tal que <span class="math notranslate nohighlight">\(g'z\in D\)</span>. Si escrivim <span class="math notranslate nohighlight">\(g=\smtx abcd\)</span> un element de <span class="math notranslate nohighlight">\(G'\)</span> arbitrari, aleshores per la f&#243;rmula
+Considerem <span class="math notranslate nohighlight">\(G'=\langle S, T\rangle\)</span>. Donat <span class="math notranslate nohighlight">\(z\in\HH\)</span>, trobarem <span class="math notranslate nohighlight">\(g'\in G'\)</span> tal que <span class="math notranslate nohighlight">\(g'z\in D\)</span>. Escrivim <span class="math notranslate nohighlight">\(g=\smtx abcd\)</span> un element de <span class="math notranslate nohighlight">\(G'\)</span> arbitrari, i observem que hi ha un nombre finit de parelles <span class="math notranslate nohighlight">\((c,d)\)</span> tals que <span class="math notranslate nohighlight">\(\abs{cz+d}&lt;M\)</span> (per qualsevol <span class="math notranslate nohighlight">\(M\)</span> fixat). Aleshores per la f&#243;rmula
 <div class="math notranslate nohighlight">
 \[
 \Im(gz)=\frac{\Im(z)}{\abs{cz+d}^2}
 \]</div>
 
-veiem que hi ha un nombre finit de parelles <span class="math notranslate nohighlight">\((c,d)\)</span> tal que <span class="math notranslate nohighlight">\(\abs{cz+d}&lt;M\)</span> per qualsevol <span class="math notranslate nohighlight">\(M\)</span>. Per tant, hi ha algun <span class="math notranslate nohighlight">\(g\in G'\)</span> que maximitza <span class="math notranslate nohighlight">\(\Im(gz)\)</span>. Triem ara <span class="math notranslate nohighlight">\(n\in\ZZ\)</span> tal que <span class="math notranslate nohighlight">\(T^ngz\)</span> tingui part real entre <span class="math notranslate nohighlight">\(-1/2\)</span> i <span class="math notranslate nohighlight">\(1/2\)</span>. Aleshores &#233;s f&#224;cil veure que <span class="math notranslate nohighlight">\(z'=T^ngz\)</span> &#233;s a <span class="math notranslate nohighlight">\(D\)</span> (si no ho fos, seria perqu&#232; <span class="math notranslate nohighlight">\(\abs{z'}&lt;1\)</span>, per&#242; aleshores <span class="math notranslate nohighlight">\(-1/z'\)</span> tindria part imagin&#224;ria m&#233;s gran, contradicci&#243;).</p>
+veiem que hi ha algun <span class="math notranslate nohighlight">\(g\in G'\)</span> que maximitza <span class="math notranslate nohighlight">\(\Im(gz)\)</span>. Triem ara <span class="math notranslate nohighlight">\(n\in\ZZ\)</span> tal que <span class="math notranslate nohighlight">\(T^ngz\)</span> tingui part real entre <span class="math notranslate nohighlight">\(-1/2\)</span> i <span class="math notranslate nohighlight">\(1/2\)</span>. Aleshores &#233;s f&#224;cil veure que <span class="math notranslate nohighlight">\(z'=T^ngz\)</span> &#233;s a <span class="math notranslate nohighlight">\(D\)</span> (si no ho fos, seria perqu&#232; <span class="math notranslate nohighlight">\(\abs{z'}&lt;1\)</span>, per&#242; aleshores <span class="math notranslate nohighlight">\(-1/z'\)</span> tindria part imagin&#224;ria m&#233;s gran, contradicci&#243;).</p>
 <p>Per demostrar el segon punt, suposem que <span class="math notranslate nohighlight">\(z\)</span> i <span class="math notranslate nohighlight">\(gz\)</span> pertanyen a <span class="math notranslate nohighlight">\(D\)</span>. Per simetria, podem assumir que <span class="math notranslate nohighlight">\(\Im(gz)\geq \Im(z)\)</span>, &#233;s a dir,
 <div class="math notranslate nohighlight">
 \[
@@ -181,7 +179,7 @@ Aleshores veiem que <span class="math notranslate nohighlight">\(f\)</span> &#23
 \[\tilde f(q) = \sum_{n=-\infty}^\infty a_nq^n.\]</div>
 
 Direm aleshores que <span class="math notranslate nohighlight">\(f\)</span> &#233;s <em>meromorfa a l&#8217;infinit</em> si <span class="math notranslate nohighlight">\(\tilde f\)</span> &#233;s meromorfa a <span class="math notranslate nohighlight">\(q=0\)</span> (<span class="math notranslate nohighlight">\(a_n=0\)</span> per <span class="math notranslate nohighlight">\(n&lt;&lt;0\)</span>). Tamb&#233; direm que <span class="math notranslate nohighlight">\(f\)</span> &#233;s <em>holomorfa a l&#8217;infinit</em> si <span class="math notranslate nohighlight">\(a_n=0\)</span> per <span class="math notranslate nohighlight">\(n &lt; 0\)</span>, i <span class="math notranslate nohighlight">\(f\)</span> s&#8217;anul&#183;la a l&#8217;infinit si <span class="math notranslate nohighlight">\(a_n=0\)</span> per <span class="math notranslate nohighlight">\(n\leq 0\)</span>.</p>
-<p><strong>Definici&#243;:</strong> Una <em>forma modular</em> de pes <span class="math notranslate nohighlight">\(k\)</span> &#233;s una funci&#243; d&#232;bilment modular que &#233;s holomorfa a tot arreu, incloent l&#8217;infinit. Si aquesta s&#8217;anula a l&#8217;infinit, l&#8217;anomenarem una <em>forma cuspidal</em>.</p>
+<p><strong>Definici&#243;:</strong> Una <em>forma modular</em> de pes <span class="math notranslate nohighlight">\(k\)</span> &#233;s una funci&#243; d&#232;bilment modular que &#233;s holomorfa a tot arreu, incloent l&#8217;infinit. Si aquesta s&#8217;anula a l&#8217;infinit, l&#8217;anomenarem una <em>forma cuspidal</em>. Denotem per <span class="math notranslate nohighlight">\(M_k\)</span> el <span class="math notranslate nohighlight">\(\CC\)</span>-espai vectorial de les formes modulars de pes <span class="math notranslate nohighlight">\(k\)</span>, i per <span class="math notranslate nohighlight">\(S_k\subseteq M_k\)</span> el subespai de les formes cuspidals.</p>
 <p>Resumint, una forma modular de pes <span class="math notranslate nohighlight">\(k\)</span> ve donada per una s&#232;rie
 <div class="math notranslate nohighlight">
 \[
@@ -193,7 +191,7 @@ que convergeix per a tot <span class="math notranslate nohighlight">\(z\in \HH\)
 </section>
 <section id="series-d-eisenstein">
 <h3><span class="section-number">1.3.2. </span>S&#232;ries d&#8217;Eisenstein<a class="headerlink" href="#series-d-eisenstein" title="Permalink to this heading">&#182;</a></h3>
-<p>Per ara els &#250;nics exemples que tenim de formes modulars s&#243;n les constants, que s&#243;n formes modulars de pes zero (de fet, s&#243;n les &#250;niques formes modulars de pes zero). Si considerem una funci&#243; holomorfa <span class="math notranslate nohighlight">\(h\)</span> qualsevol, aleshores una manera de construir una funci&#243; modular &#233;s &#171;simetritzar-la&#187;, &#233;s a dir, considerrar <span class="math notranslate nohighlight">\(\sum_{g\in G} h\slsh{k} g\)</span>. El problema &#233;s que en general aquesta suma no t&#233; per qu&#232; convergir. Una segona idea seria considerar una funci&#243; que ja sigui invariant per algun subgrup de <span class="math notranslate nohighlight">\(H\leq G\)</span>, i aleshores nom&#233;s simetritzar per <span class="math notranslate nohighlight">\(G/H\)</span>. La versi&#243; m&#233;s senzilla d&#8217;aquest principi &#233;s considerar la funci&#243; constant <span class="math notranslate nohighlight">\(1\)</span>. Si <span class="math notranslate nohighlight">\(H=\{ \pm \smtx{1}{t}{0}{1}\}\)</span>, veiem que <span class="math notranslate nohighlight">\(1\slsh{k} h=1\)</span> per a tot <span class="math notranslate nohighlight">\(h\in H\)</span>. Per tant, podem considerar
+<p>Per ara els &#250;nics exemples que tenim de formes modulars s&#243;n les constants, que s&#243;n formes modulars de pes zero (de fet, s&#243;n les &#250;niques formes modulars de pes zero). Si considerem una funci&#243; holomorfa <span class="math notranslate nohighlight">\(h\)</span> qualsevol, aleshores una manera de construir una funci&#243; modular &#233;s &#171;simetritzar-la&#187;, &#233;s a dir, considerar <span class="math notranslate nohighlight">\(\sum_{g\in G} h\slsh{k} g\)</span>. El problema &#233;s que en general aquesta suma no t&#233; per qu&#232; convergir. Una segona idea seria considerar una funci&#243; que ja sigui invariant per algun subgrup de <span class="math notranslate nohighlight">\(H\leq G\)</span>, i aleshores nom&#233;s simetritzar per <span class="math notranslate nohighlight">\(G/H\)</span>. La versi&#243; m&#233;s senzilla d&#8217;aquest principi &#233;s considerar la funci&#243; constant <span class="math notranslate nohighlight">\(1\)</span>. Si <span class="math notranslate nohighlight">\(H=\{ \pm \smtx{1}{t}{0}{1}\}\)</span>, veiem que <span class="math notranslate nohighlight">\(1\slsh{k} h=1\)</span> per a tot <span class="math notranslate nohighlight">\(h\in H\)</span>. Per tant, podem considerar
 <div class="math notranslate nohighlight">
 \[
 G_k(z) = \sum_{\gamma \in H\backslash \SL_2(\ZZ)} 1\slsh{k} \gamma= \sum_{\smtx abcd \in H \backslash \SL_2(\ZZ)} \frac{1}{(cz+d)^{k}}.
@@ -341,8 +339,8 @@ on la suma recorre les &#242;rbites de punts de <span class="math notranslate no
       &copy;2022, Marc Masdeu.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 5.0.2</a>
-      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.13</a>
       
       |
       <a href="_sources/dia1.rst.txt"
