@@ -117,7 +117,7 @@ Per les sèries d'Eisenstein, l'únic terme "interessant" és el constant, ja qu
 
 1. Sigui $f=\sum_n a_n q^n\in M_{\kappa}(\QQ_p)$ una forma modular $p$-àdica de pes $\kappa\in\fX$. Si $\kappa\not\equiv 0 \pmod{(p-1)p^m}$ per algun $m\geq 0$, aleshores
 $$
-v_p(a_0)+m\geq \inf_{n\eq 1} v_p(a_n).
+v_p(a_0)+m\geq \inf_{n\geq 1} v_p(a_n).
 $$
 2. Sigui $(f_m)_m\subseteq M(\QQ_p)$ una successió de formes modulars $p$-adiques de pesos $\{\kappa_m\}_m$. Escrivim $f_m = \lim_n f_m^{(n)}$, on $f_m^{(n)} = \sum_{n} a_n^{(m)} q^n$. Suposem que $\lim_m a_n^{(m)} = a_n$ uniformement en $n$ i que $\lim\kappa_m=\kappa\neq 0$. Aleshores $\lim_m a_0^{(m)}= a_0$, i $f=\sum_{n}a_nq^n$ és una forma modular $p$-àdica de pes $\kappa$.
 
