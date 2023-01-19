@@ -60,11 +60,11 @@ $$
 \Im(gz) = \frac{\Im(z)}{ \abs{cz+d} ^2}.
 $$
 
-Per tant, veiem que $\operatorname{SL}_2(\mathbb{R})$ actua a $\mathbb{H}$. També veiem que $-1$ actua trivialment, i per tant de fet tenim un grup del quocient $\PSL_2(\RR) = \SL_2(\RR)/\{\pm 1\}$, que de fet és *fidel*.
+Per tant, veiem que $\operatorname{SL}_2(\mathbb{R})$ actua a $\mathbb{H}$. També veiem que $-1$ actua trivialment, i per tant de fet tenim una acció del quocient $\PSL_2(\RR) = \SL_2(\RR)/\{\pm 1\}$, que de fet és *fidel*.
 
 **Remarca:** De fet, el grup $\PSL_2(\RR)$ és el grup d'automorfismes analítics de $\HH$.
 
-**Definició:** El grup $G = \SL_2(\RR)/\{\pm 1\}$ s'anomena el *grup modular*. Sovint confondrem una matriu $g = \smtx abcd$ amb la seva imatge a $G$.
+**Definició:** El grup $G = \PSL_2(\RR)$ s'anomena el *grup modular*. Sovint confondrem una matriu $g = \smtx abcd$ amb la seva imatge a $G$.
 
 El domini fonamental
 ====================
@@ -96,11 +96,11 @@ Es té el següent:
 #. El grup $G$ està generat per $S$ i $T$. De fet, es té $G=\langle S, T | S^2=(ST)^3=1 \rangle$.
 
 *Prova:*
-Considerem $G'=\langle S, T\rangle$. Donat $z\in\HH$, trobarem $g'\in G'$ tal que $g'z\in D$. Si escrivim $g=\smtx abcd$ un element de $G'$ arbitrari, aleshores per la fórmula
+Considerem $G'=\langle S, T\rangle$. Donat $z\in\HH$, trobarem $g'\in G'$ tal que $g'z\in D$. Escrivim $g=\smtx abcd$ un element de $G'$ arbitrari, i observem que hi ha un nombre finit de parelles $(c,d)$ tals que $\abs{cz+d}<M$ (per qualsevol $M$ fixat). Aleshores per la fórmula
 $$
 \Im(gz)=\frac{\Im(z)}{\abs{cz+d}^2}
 $$
-veiem que hi ha un nombre finit de parelles $(c,d)$ tal que $\abs{cz+d}<M$ per qualsevol $M$. Per tant, hi ha algun $g\in G'$ que maximitza $\Im(gz)$. Triem ara $n\in\ZZ$ tal que $T^ngz$ tingui part real entre $-1/2$ i $1/2$. Aleshores és fàcil veure que $z'=T^ngz$ és a $D$ (si no ho fos, seria perquè $\abs{z'}<1$, però aleshores $-1/z'$ tindria part imaginària més gran, contradicció).
+veiem que hi ha algun $g\in G'$ que maximitza $\Im(gz)$. Triem ara $n\in\ZZ$ tal que $T^ngz$ tingui part real entre $-1/2$ i $1/2$. Aleshores és fàcil veure que $z'=T^ngz$ és a $D$ (si no ho fos, seria perquè $\abs{z'}<1$, però aleshores $-1/z'$ tindria part imaginària més gran, contradicció).
 
 Per demostrar el segon punt, suposem que $z$ i $gz$ pertanyen a $D$. Per simetria, podem assumir que $\Im(gz)\geq \Im(z)$, és a dir,
 $$
@@ -136,7 +136,7 @@ Fixem-nos que, si $f(z+1)=f(z)$ per a tot $z\in \HH$, aleshores podem composar a
 $$\tilde f(q) = \sum_{n=-\infty}^\infty a_nq^n.$$
 Direm aleshores que $f$ és *meromorfa a l'infinit* si $\tilde f$ és meromorfa a $q=0$ ($a_n=0$ per $n<<0$). També direm que $f$ és *holomorfa a l'infinit* si $a_n=0$ per $n < 0$, i $f$ s'anul·la a l'infinit si $a_n=0$ per $n\leq 0$.
 
-**Definició:** Una *forma modular* de pes $k$ és una funció dèbilment modular que és holomorfa a tot arreu, incloent l'infinit. Si aquesta s'anula a l'infinit, l'anomenarem una *forma cuspidal*.
+**Definició:** Una *forma modular* de pes $k$ és una funció dèbilment modular que és holomorfa a tot arreu, incloent l'infinit. Si aquesta s'anula a l'infinit, l'anomenarem una *forma cuspidal*. Denotem per $M_k$ el $\CC$-espai vectorial de les formes modulars de pes $k$, i per $S_k\subseteq M_k$ el subespai de les formes cuspidals.
 
 Resumint, una forma modular de pes $k$ ve donada per una sèrie
 $$
@@ -152,7 +152,7 @@ que convergeix per a tot $z\in \HH$, i que satisfà $f(-1/z) = z^kf(z)$.
 
 Sèries d'Eisenstein
 -------------------
-Per ara els únics exemples que tenim de formes modulars són les constants, que són formes modulars de pes zero (de fet, són les úniques formes modulars de pes zero). Si considerem una funció holomorfa $h$ qualsevol, aleshores una manera de construir una funció modular és "simetritzar-la", és a dir, considerrar $\sum_{g\in G} h\slsh{k} g$. El problema és que en general aquesta suma no té per què convergir. Una segona idea seria considerar una funció que ja sigui invariant per algun subgrup de $H\leq G$, i aleshores només simetritzar per $G/H$. La versió més senzilla d'aquest principi és considerar la funció constant $1$. Si $H=\{ \pm \smtx{1}{t}{0}{1}\}$, veiem que $1\slsh{k} h=1$ per a tot $h\in H$. Per tant, podem considerar
+Per ara els únics exemples que tenim de formes modulars són les constants, que són formes modulars de pes zero (de fet, són les úniques formes modulars de pes zero). Si considerem una funció holomorfa $h$ qualsevol, aleshores una manera de construir una funció modular és "simetritzar-la", és a dir, considerar $\sum_{g\in G} h\slsh{k} g$. El problema és que en general aquesta suma no té per què convergir. Una segona idea seria considerar una funció que ja sigui invariant per algun subgrup de $H\leq G$, i aleshores només simetritzar per $G/H$. La versió més senzilla d'aquest principi és considerar la funció constant $1$. Si $H=\{ \pm \smtx{1}{t}{0}{1}\}$, veiem que $1\slsh{k} h=1$ per a tot $h\in H$. Per tant, podem considerar
 $$
 G_k(z) = \sum_{\gamma \in H\backslash \SL_2(\ZZ)} 1\slsh{k} \gamma= \sum_{\smtx abcd \in H \backslash \SL_2(\ZZ)} \frac{1}{(cz+d)^{k}}.
 $$

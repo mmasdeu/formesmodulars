@@ -24,7 +24,7 @@ Recordem les sèries d'Eisenstein $E_k$,
 $$
 E_k(q) = 1 - \frac{2k}{Bk} \sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
 $$
-El corol·lari anterior ens diu que $E_{(p-1)p^\alpha} \equiv 1 \pmod{p^{\alpha+1}}$. En particular, $E_{p-1}\equiv 1\pmod p$. Aquí, les congruències són de $q$-expansions, és a dir, estem dient que la sèrie $E_{p-1}-1$ té tots els coeficients divisibles per $p$.
+El corol·lari anterior ens diu que, per a tot $r\in\ZZ$ i $\alpha\geq 0$, tenim $E_{r(p-1)p^\alpha} \equiv 1 \pmod{p^{\alpha+1}}$. En particular, $E_{p-1}\equiv 1\pmod p$. Aquí, les congruències són de $q$-expansions, és a dir, estem dient que la sèrie $E_{p-1}-1$ té tots els coeficients divisibles per $p$.
 
 Escrivim $\ZZ_{(p)} = \{ x \in \QQ ~:~ v_p(x)\geq 0\}$ (s'anomena l'anell dels $p$-enters), i considerem els espais
 $$
@@ -46,7 +46,7 @@ Finalment, també considerem $M(\FF_p)\subseteq \FF_p[[q]]$ com la suma de tots 
 
 **Teorema (Swinnerton-Dyer):**
 
-1. Si $p\geq 5$, aleshores $\ker\operatorname{red} = A - 1$. Per tant, $M(\FF_p) \cong \FF_p(X, Y)/(\bar A(X,Y) - 1)$. A més,
+1. Si $p\geq 5$, aleshores $\ker\operatorname{red} = A - 1$. Per tant, $M(\FF_p) \cong \FF_p[X, Y]/(\bar A(X,Y) - 1)$. A més,
 $$
 M(\FF_p) = \bigoplus_{i\in\ZZ/(p-1)\ZZ} M^i(\FF_p).
 $$
@@ -85,17 +85,17 @@ Considerem l'anell de les formes modulars amb coeficients racionals $M(\QQ)$. Po
 $$
 v_p(f) = \inf_{n} v_p(a_n),\quad f(q) = \sum_{n\geq 0}a_nq^n.
 $$
-Aquesta definició té sentit, perquè les formes modulars tenen denominadors fitats: són polinomis homogenis en $Q$ i $R$ a coeficients racionals, i $Q$ i $R$ tenen denominadors enters.
+Aquesta definició té sentit, perquè les formes modulars tenen denominadors fitats: són polinomis "homogenis" en $Q$ i $R$ a coeficients racionals, i $Q$ i $R$ tenen denominadors enters.
 
-**Definició:** L'anell $M(\QQ_p)\subseteq \QQ_p[[q]]$ és la completació de $M(\QQ)$ respecte la norma induida per $v_p$. Més concretament, una $q$-expansió $f\in \QQ_p[[q]]$ és de $M(\QQ_p$ si, i només si, existeix una successió de formes modulars $\{f_m\}_m\subseteq M(\QQ)$ tals que $\lim_m f_m= f$ (convergència uniforme).
+**Definició:** L'anell $M(\QQ_p)\subseteq \QQ_p[[q]]$ és la completació de $M(\QQ)$ respecte la norma induida per $v_p$. Més concretament, una $q$-expansió $f\in \QQ_p[[q]]$ és de $M(\QQ_p)$ si, i només si, existeix una successió de formes modulars $(f_m)_m\subseteq M(\QQ)$ tals que $\lim_m f_m= f$ (convergència uniforme).
 
 Considerem ara $f=\lim_m f_m$ una forma modular $p$-àdica, i suposem que $f_m$ té pes $k_m$. Pel teorema de la secció anterior, la successió d'enters $\{k_m\}_m$ convergeix $p$-àdicament a un element $\kappa \in\fX$, on
 $$
-\fX = \varprojlim_m \ZZ/(p-1)p^m\ZZ \cong \ZZ/(p-1)\ZZ \times \ZZ_p.
+\fX = \varprojlim_m\ \ZZ/(p-1)p^m\ZZ \cong \ZZ/(p-1)\ZZ \times \ZZ_p.
 $$
 Direm que $f$ té pes $\kappa$, i escriurem $M_\kappa(\QQ_p)$ pel subespai de formes modulars $p$-àdiques de pes $\kappa$.
 
-**Remarca:** El conjunt $\fX$, que s'anomena l'*espai de pesos*, el podem pensar com un espai de caràcters. Fixem-nos que $\ZZ_p^\times \cong \mu_{p-1} \times (1+p\ZZ_p)$ (on $\mu_{p-1}$ és el grup cíclic format per les arrels $(p-1)$-èssimes de la unitat), via $x\mapsto \omega(x)\langle x\rangle$. Els caràcters multiplicatius de $1+p\ZZ_p$ són tots de la forma $\alpha\mapsto \alpha^{\kappa}$, per $\kappa\in\ZZ_p$. Per tant, els caràcters de $\ZZ_p^\times$ són de la forma $(u,\alpha)\mapsto \chi_{(h,\kappa)}(u,\alpha)=(u^h, \alpha^\kappa)$. Així,
+**Remarca:** El conjunt $\fX$, que s'anomena "l'espai de pesos", el podem pensar com un espai de caràcters. Fixem-nos que $\ZZ_p^\times \cong \mu_{p-1} \times (1+p\ZZ_p)$ (on $\mu_{p-1}$ és el grup cíclic format per les arrels $(p-1)$-èssimes de la unitat), via $x\mapsto \omega(x)\langle x\rangle$. Els caràcters multiplicatius de $1+p\ZZ_p$ són tots de la forma $\alpha\mapsto \alpha^{\kappa}$, per $\kappa\in\ZZ_p$. Per tant, els caràcters de $\ZZ_p^\times$ són de la forma $(u,\alpha)\mapsto \chi_{(h,\kappa)}(u,\alpha)=(u^h, \alpha^\kappa)$. Així,
 $$
 \fX= \operatorname{Hom}_{\text{cont}}(\ZZ_p^\times,\ZZ_p^\times), \quad (h,\kappa)\mapsto \chi_{(h,\kappa)}.
 $$
@@ -104,7 +104,7 @@ El teorema de la secció anterior es pot formular en termes de formes modulars $
 
 **Teorema:** Siguin $f$ i $f'$ formes modulars $p$-àdiques de pesos $\kappa$ i $\kappa'$, respectivament. Suposem que $v_p(f-f')\geq v_p(f)+m$ per algun $m\geq 1$. Aleshores, si $p\geq 3$,
 $$
-\kappa\cong \kappa' \pmod{(p-1)p^{m-1}}.
+\kappa\equiv \kappa' \pmod{(p-1)p^{m-1}}.
 $$
 (Per $p=2$ cal canviar l'exponent $m-1$ per $m-2$).
 
@@ -117,10 +117,9 @@ Per les sèries d'Eisenstein, l'únic terme "interessant" és el constant, ja qu
 
 1. Sigui $f=\sum_n a_n q^n\in M_{\kappa}(\QQ_p)$ una forma modular $p$-àdica de pes $\kappa\in\fX$. Si $\kappa\not\equiv 0 \pmod{(p-1)p^m}$ per algun $m\geq 0$, aleshores
 $$
-v_p(a_0)\geq v_p(f) -m.
+v_p(a_0)+m\geq \inf_{n\eq 1} v_p(a_n).
 $$
-
-2. Sigui $\{f_m\}_m\subseteq M(\QQ_p)$ una successió de formes modulars $p$-adiques de pesos $\{\kappa_m\}_m$. Escrivim $f_m = \lim_n f_m^{(n)}$, on $f_m^{(n)} = \sum_{n} a_n^{(m)} q^n$. Suposem que $\lim_m a_n^{(m)} = a_n$ uniformement en $n$ i que $\lim\kappa_m=\kappa\neq 0$. Aleshores $\lim_m a_0^{(m)}= a_0$, i $f=\sum_{n}a_nq^n$ és una forma modular $p$-àdica de pes $\kappa$.
+2. Sigui $(f_m)_m\subseteq M(\QQ_p)$ una successió de formes modulars $p$-adiques de pesos $\{\kappa_m\}_m$. Escrivim $f_m = \lim_n f_m^{(n)}$, on $f_m^{(n)} = \sum_{n} a_n^{(m)} q^n$. Suposem que $\lim_m a_n^{(m)} = a_n$ uniformement en $n$ i que $\lim\kappa_m=\kappa\neq 0$. Aleshores $\lim_m a_0^{(m)}= a_0$, i $f=\sum_{n}a_nq^n$ és una forma modular $p$-àdica de pes $\kappa$.
 
 *Prova:* Per demostrar (1), observem primer que si $a_0=0$ aleshores ja estem. Si no, $a_0\in M_0(\QQ_p)$ i per tant tenim, per la proposició anterior, que
 $$
@@ -133,14 +132,14 @@ $$
 
 Per demostrar (2), prenem un $m$ prou gran tal que $\kappa\not\equiv 0 \pmod{(p-1)p^{m}}$. Aleshores podem trobar $t \in \ZZ$ tal que, per $i$ suficientment gran,
 $$
-v_p(a_{n}^{(i)})\geq t\forall n\geq 1.
+v_p(a_{n}^{(i)})\geq t,\quad \forall n\geq 1.
 $$
 
-L'apartat anterior ens dona doncs que $v_p(a_{0}^{(i)})>t-m$ per a tot $i$ suficientment gran. Com que $p^{t-m}\ZZ_{p}$ és compacte, hi ha una subsuccessió dels $\{a_0^{(i)}\}_i$ convergint a $a_0$, i $f=\sum_{n\geq 0} a_n q^{n}\in M_{\kappa}(\QQ_p)$. Si $a_0'$ fos el límit d'una altra subsuccessió, aleshores obtindríem una altra $f'$, i
+L'apartat anterior ens dona doncs que $v_p(a_{0}^{(i)})>t-m$ per a tot $i$ suficientment gran. Com que $p^{t-m}\ZZ_{p}$ és compacte, hi ha una subsuccessió de $(a_0^{(i)})_i$ convergint a $a_0$, i $f=\sum_{n\geq 0} a_n q^{n}\in M_{\kappa}(\QQ_p)$. Si $a_0'$ fos el límit d'una altra subsuccessió, aleshores obtindríem una altra $f'$, i
 $$
 f-f' = a_0-a_0'\in M_{\kappa}(\QQ_p)\cap M_{0}(\QQ_p)=0.
 $$
-Per tant $\{a_0^{(i)}\}$ convergeix a $a_0$. $\qed$
+Per tant $(a_0^{(i)})_i$ convergeix a $a_0$. $\qed$
 
 La funció zeta p-àdica
 ------------------------
@@ -153,7 +152,7 @@ on entenem que $\sigma_k(n/p)=0$ si $p\nmid n$. Si $k\equiv k'\pmod{(p-1)p^{m-1}
 $$
 \sigma_k^*(n)\equiv \sigma_{k'}^*(n)\pmod{p^m}.
 $$
-Sigui ara $\{k_i\}_i\subseteq \ZZ$ una successió d'enters amb $k_i\to\kappa$ $p$-àdicament, i tals que $k_i\to\infty$ en sentit arquimedià. Suposem que $\kappa$ és parell i diferent de zero. Aleshores $\sigma_{k_i}^*(n)\to\sigma_{\kappa}^*(n)$ de manera uniforme en $n$. Obtenim de la proposició anterior que hi ha una forma modular $p$-àdica $G_\kappa^*=a_0+\sum_{n\geq 1} \sigma_\kappa^*(n)q^n$, on
+Sigui ara $(k_i)_i\subseteq \ZZ$ una successió d'enters amb $k_i\to\kappa$ $p$-àdicament, i tals que $k_i\to\infty$ en sentit arquimedià. Suposem que $\kappa$ és parell i diferent de zero. Aleshores $\sigma_{k_i}^*(n)\to\sigma_{\kappa}^*(n)$ de manera uniforme en $n$. Obtenim de la proposició anterior que hi ha una forma modular $p$-àdica $G_\kappa^*=a_0+\sum_{n\geq 1} \sigma_\kappa^*(n)q^n$, on
 $$
 \zeta^*(1-k):=a_0 = \lim_{i\to\infty} \frac{-B_{k_i}}{2k_i} = \frac{1}{2} \lim_{i\to\infty} \zeta(1-k_i).
 $$
