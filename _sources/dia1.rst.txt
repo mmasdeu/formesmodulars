@@ -6,7 +6,7 @@ Primer dia
 
 Abans d'introduir els objects que estudiarem, és natural preguntar-nos per què els estudiem (a més del fet que són objectes matemàtics extremadament bonics).
 
-Resulta que molts problemes en la teoria de nombres (i en altres ciències) tracten de *comptar* certs objectes. Per exemple, podem comptar el nombre de particions d'n enter $n$ (maneres d'obtenir $n$ com a suma de naturals positius ordenats), o el nombre de solucions mòdul $n$ de l'equació $y^2+y=x^3-x^2$, o bé el nombre de maneres d'escriure $n$ com a suma de $2$ quadrats,... Doncs resulta que per tots els problemes anteriors (i molts d'altres) aquests recomptes donen, un cop escrits en forma de sèrie de potències, una forma modular.
+Resulta que molts problemes en la teoria de nombres (i en altres ciències) tracten de *comptar* certs objectes. Per exemple, podem comptar el nombre de particions d'un enter $n$ (maneres d'obtenir $n$ com a suma de naturals positius ordenats), o el nombre de solucions mòdul $n$ de l'equació $y^2+y=x^3-x^2$, o bé el nombre de maneres d'escriure $n$ com a suma de $2$ quadrats,... Doncs resulta que per tots els problemes anteriors (i molts d'altres) aquests recomptes donen, un cop escrits en forma de sèrie de potències, una forma modular.
 
 El fet anterior ja seria de per si interessant, ja que estudiar formes modulars ens permetria estudiar tots aquests problemes a la vegada. El que és encara més sorprenent és que resulta que les formes modulars constitueixen espais vectorials de dimensió finita, i això fa que si podem construir suficients exemples, podem descobrir identitats sorprenents. Com a mostra, podem enunciar alguns teoremes que aprofiten aquest fet:
 
@@ -21,9 +21,9 @@ q\prod_{n=1}^\infty (1-q^n)^2(1-q^{11n})^2.
 $$
 
 **Teorema (Fermat):**
-Sigui $r_2(n)$ el nombre de maneres d'escriure $n$ com a suma de $2$ quadrats. Aleshores, per tot $n\geq 1$ es té:
+El nombre de maneres d'escriure $n$ com a suma de $2$ quadrats és
 $$
-r_2(n)=4\sum_{d\equiv 1\mod 4} d - 4\sum_{d\equiv 3\mod 4} d,
+4\sum_{\substack{d\mid n\\d \equiv 1\mod 4}} d - 4\sum_{\substack{d\mid n\\d \equiv 3\mod 4}} d,
 $$
 on les sumes recorren els divisors $d$ de $n$ positius.
 

@@ -38,7 +38,7 @@
   <section id="primer-dia">
 <span id="day1"></span><h1><span class="section-number">1. </span>Primer dia<a class="headerlink" href="#primer-dia" title="Permalink to this heading">&#182;</a></h1>
 <p>Abans d&#8217;introduir els objects que estudiarem, &#233;s natural preguntar-nos per qu&#232; els estudiem (a m&#233;s del fet que s&#243;n objectes matem&#224;tics extremadament bonics).</p>
-<p>Resulta que molts problemes en la teoria de nombres (i en altres ci&#232;ncies) tracten de <em>comptar</em> certs objectes. Per exemple, podem comptar el nombre de particions d&#8217;n enter <span class="math notranslate nohighlight">\(n\)</span> (maneres d&#8217;obtenir <span class="math notranslate nohighlight">\(n\)</span> com a suma de naturals positius ordenats), o el nombre de solucions m&#242;dul <span class="math notranslate nohighlight">\(n\)</span> de l&#8217;equaci&#243; <span class="math notranslate nohighlight">\(y^2+y=x^3-x^2\)</span>, o b&#233; el nombre de maneres d&#8217;escriure <span class="math notranslate nohighlight">\(n\)</span> com a suma de <span class="math notranslate nohighlight">\(2\)</span> quadrats,&#8230; Doncs resulta que per tots els problemes anteriors (i molts d&#8217;altres) aquests recomptes donen, un cop escrits en forma de s&#232;rie de pot&#232;ncies, una forma modular.</p>
+<p>Resulta que molts problemes en la teoria de nombres (i en altres ci&#232;ncies) tracten de <em>comptar</em> certs objectes. Per exemple, podem comptar el nombre de particions d&#8217;un enter <span class="math notranslate nohighlight">\(n\)</span> (maneres d&#8217;obtenir <span class="math notranslate nohighlight">\(n\)</span> com a suma de naturals positius ordenats), o el nombre de solucions m&#242;dul <span class="math notranslate nohighlight">\(n\)</span> de l&#8217;equaci&#243; <span class="math notranslate nohighlight">\(y^2+y=x^3-x^2\)</span>, o b&#233; el nombre de maneres d&#8217;escriure <span class="math notranslate nohighlight">\(n\)</span> com a suma de <span class="math notranslate nohighlight">\(2\)</span> quadrats,&#8230; Doncs resulta que per tots els problemes anteriors (i molts d&#8217;altres) aquests recomptes donen, un cop escrits en forma de s&#232;rie de pot&#232;ncies, una forma modular.</p>
 <p>El fet anterior ja seria de per si interessant, ja que estudiar formes modulars ens permetria estudiar tots aquests problemes a la vegada. El que &#233;s encara m&#233;s sorprenent &#233;s que resulta que les formes modulars constitueixen espais vectorials de dimensi&#243; finita, i aix&#242; fa que si podem construir suficients exemples, podem descobrir identitats sorprenents. Com a mostra, podem enunciar alguns teoremes que aprofiten aquest fet:</p>
 <p><strong>Teorema:</strong>
 Per a tot primer <span class="math notranslate nohighlight">\(p\)</span>, es t&#233;:
@@ -54,11 +54,11 @@ q\prod_{n=1}^\infty (1-q^n)^2(1-q^{11n})^2.
 \]</div>
 </p>
 <p><strong>Teorema (Fermat):</strong>
-Sigui <span class="math notranslate nohighlight">\(r_2(n)\)</span> el nombre de maneres d&#8217;escriure <span class="math notranslate nohighlight">\(n\)</span> com a suma de <span class="math notranslate nohighlight">\(2\)</span> quadrats. Aleshores, per tot <span class="math notranslate nohighlight">\(n\geq 1\)</span> es t&#233;:
+El nombre de maneres d&#8217;escriure <span class="math notranslate nohighlight">\(n\)</span> com a suma de <span class="math notranslate nohighlight">\(2\)</span> quadrats &#233;s
 <div class="math notranslate nohighlight">
-\[
-r_2(n)=4\sum_{d\equiv 1\mod 4} d - 4\sum_{d\equiv 3\mod 4} d,
-\]</div>
+\[\begin{split}
+4\sum_{\substack{d\mid n\\d \equiv 1\mod 4}} d - 4\sum_{\substack{d\mid n\\d \equiv 3\mod 4}} d,
+\end{split}\]</div>
 
 on les sumes recorren els divisors <span class="math notranslate nohighlight">\(d\)</span> de <span class="math notranslate nohighlight">\(n\)</span> positius.</p>
 <p><strong>Teorema:</strong>
