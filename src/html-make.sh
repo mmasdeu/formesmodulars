@@ -1,2 +1,2 @@
 make clean html
-open build/html/index.html
+xdg-open build/html/index.html
