@@ -154,12 +154,13 @@ Sèries d'Eisenstein
 -------------------
 Per ara els únics exemples que tenim de formes modulars són les constants, que són formes modulars de pes zero (de fet, són les úniques formes modulars de pes zero). Si considerem una funció holomorfa $h$ qualsevol, aleshores una manera de construir una funció modular és "simetritzar-la", és a dir, considerar $\sum_{g\in G} h\slsh{k} g$. El problema és que en general aquesta suma no té per què convergir. Una segona idea seria considerar una funció que ja sigui invariant per algun subgrup de $H\leq G$, i aleshores només simetritzar per $G/H$. La versió més senzilla d'aquest principi és considerar la funció constant $1$. Si $H=\{ \pm \smtx{1}{t}{0}{1}\}$, veiem que $1\slsh{k} h=1$ per a tot $h\in H$. Per tant, podem considerar
 $$
-G_k(z) = \sum_{\gamma \in H\backslash \SL_2(\ZZ)} 1\slsh{k} \gamma= \sum_{\smtx abcd \in H \backslash \SL_2(\ZZ)} \frac{1}{(cz+d)^{k}}.
+\tilde G_k(z) = \sum_{\gamma \in H\backslash \SL_2(\ZZ)} 1\slsh{k} \gamma= \sum_{\smtx abcd \in H \backslash \SL_2(\ZZ)} \frac{1}{(cz+d)^{k}}.
 $$
-Fixem-nos que, donada una matriu $\smtx abcd\in \SL_2(\ZZ)$, la classe lateral $H\smtx abcd$ està formada per totes les matrius de la forma $\smtx{a'}{b'}{c}{d}\in\SL_2(\ZZ)$. Per tant, podem reescriure
+Fixem-nos que, donada una matriu $\smtx abcd\in \SL_2(\ZZ)$, la classe lateral $H\smtx abcd$ està formada per totes les matrius de la forma $\smtx{a'}{b'}{c}{d}\in\SL_2(\ZZ)$. És a dir, les classes laterals venen indexades per parelles $(c,d)\in\ZZ^2$ amb $\gcd(c,d)=1$. És més comú considerar totes les parelles diferents de $(0,0)$, i definir
 $$
-G_k(z) = \sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k},
+G_k(z) = \sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k}.
 $$
+La relació entre $G_k$ i $\tilde G_k$ és un factor de $\zeta(k)$ (exercici).
 
 **Proposició:** Si $k>2$, la funció $G_k(z)$ és una forma modular de pes $k$. El seu valor a l'infinit és $2\zeta(k)$, on $\zeta$ és la funció zeta de Riemann.
 
