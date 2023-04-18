@@ -17,7 +17,7 @@ $$
 $$
 on $a_p$ és el coeficient de $q^p$ de la sèrie formal
 $$
-q\prod_{n=1}^\infty (1-q^n)^2(1-q^{11n})^2.
+q\prod_{n=1}^\infty (1-q^n)^2(1-q^{11n})^2=q-2q^2-q^3+2q^4+q^5+2q^6-2q^7+\cdots.
 $$
 
 **Teorema (Fermat):**
@@ -96,7 +96,7 @@ Es té el següent:
 #. El grup $G$ està generat per $S$ i $T$. De fet, es té $G=\langle S, T | S^2=(ST)^3=1 \rangle$.
 
 *Prova:*
-Considerem $G'=\langle S, T\rangle$. Donat $z\in\HH$, trobarem $g'\in G'$ tal que $g'z\in D$. Escrivim $g=\smtx abcd$ un element de $G'$ arbitrari, i observem que hi ha un nombre finit de parelles $(c,d)$ tals que $\abs{cz+d}<M$ (per qualsevol $M$ fixat). Aleshores per la fórmula
+Considerem $G'=\langle S, T\rangle$. Donat $z\in\HH$, trobarem $g'\in G'$ tal que $g'z\in D$. Escrivim $g=\smtx abcd$ un element de $G'$ arbitrari, i observem que hi ha un nombre finit de parelles $(c,d)$ tals que $\abs{cz+d}<M$ (per qualsevol $M$ fixat): si escrivim $z=x+iy$, aleshores $\abs{cz+d}>\abs{cx+d}$ i $\abs{cz+d}>\abs{cy}$ i, per tant, hi ha un nombre finit de $c$ i de $d$ que el fan més petit. Aleshores per la fórmula
 $$
 \Im(gz)=\frac{\Im(z)}{\abs{cz+d}^2}
 $$
@@ -168,7 +168,7 @@ La relació entre $G_k$ i $\tilde G_k$ és un factor de $\zeta(k)$ (exercici).
 $$
 \#\{ (c,d)\neq (0,0) : N \leq \abs{c\rho - d}< N+1\} = O(N)
 $$
-i $\sum_{n\geq 1} 1/n^{k-1}$ convergeix per $k>2$, ja estem. Com que $D$ és compacte, la sèrie $G_k(z)$ convergeix normalment a $D$ i, com que podem traslladar $D$ per recobrir tot $\HH$ amb elements de $\SL_2(\ZZ)$, en deduïm que $G_k(z)$ també convergeix a tot $\HH$ a una funció holomorfa.
+i $\sum_{n\geq 1} 1/n^{k-1}$ convergeix per $k>2$, ja estem. Com que $D$ és compacte, la sèrie $G_k(z)$ convergeix normalment a $D$ (vol dir que la sèrie de les sup-normes convergeix) i, com que podem traslladar $D$ per recobrir tot $\HH$ amb elements de $\SL_2(\ZZ)$, en deduïm que $G_k(z)$ també convergeix a tot $\HH$ a una funció holomorfa.
 
 Per calcular $G_k(\infty)$, prenem el límit quan $\Im(z)\to\infty$, i això ho podem fer mantenint $z$ a $D$. En aquest cas, gràcies a la convergència uniforme de la sèrie podem prendre el límit terme a terme. Els termes que tenen $c\neq 0$ tots van a $0$, i només ens queda
 $$
@@ -179,7 +179,7 @@ Podem normalitzar $G_k$ per tal que prengui el valor $1$ a l'infinit, i obtenim 
 $$
 \Delta(z) = \frac{E_4^3 - E_6^2}{1728}
 $$
-és una forma cuspidal de pes $12$, anomenada la funció discriminant.
+és una forma cuspidal de pes $12$, anomenada la funció discriminant (més endavant veurem per què hem dividit per $1728$).
 
 **Remarca:** Definim, per $\tau\in\HH$ i $w\in\CC$, la funció $\wp$ de Weierstrass, com
 $$
