@@ -6,7 +6,7 @@
     <meta charset="ascii" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
 
-    <title>1. Primer dia &#8212; Formes Modulars 1.0 documentaci&#243;</title>
+    <title>1. Primer dia &#8212; Formes Modulars 2.0 documentaci&#243;</title>
     <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
@@ -36,7 +36,7 @@
           <div class="body" role="main">
             
   <section id="primer-dia">
-<span id="day1"></span><h1><span class="section-number">1. </span>Primer dia<a class="headerlink" href="#primer-dia" title="Permalink to this heading">&#182;</a></h1>
+<span id="dia1"></span><h1><span class="section-number">1. </span>Primer dia<a class="headerlink" href="#primer-dia" title="Permalink to this heading">&#182;</a></h1>
 <p>Abans d&#8217;introduir els objects que estudiarem, &#233;s natural preguntar-nos per qu&#232; els estudiem (a m&#233;s del fet que s&#243;n objectes matem&#224;tics extremadament bonics).</p>
 <p>Resulta que molts problemes en la teoria de nombres (i en altres ci&#232;ncies) tracten de <em>comptar</em> certs objectes. Per exemple, podem comptar el nombre de particions d&#8217;un enter <span class="math notranslate nohighlight">\(n\)</span> (maneres d&#8217;obtenir <span class="math notranslate nohighlight">\(n\)</span> com a suma de naturals positius ordenats), o el nombre de solucions m&#242;dul <span class="math notranslate nohighlight">\(n\)</span> de l&#8217;equaci&#243; <span class="math notranslate nohighlight">\(y^2+y=x^3-x^2\)</span>, o b&#233; el nombre de maneres d&#8217;escriure <span class="math notranslate nohighlight">\(n\)</span> com a suma de <span class="math notranslate nohighlight">\(2\)</span> quadrats,&#8230; Doncs resulta que per tots els problemes anteriors (i molts d&#8217;altres) aquests recomptes donen, un cop escrits en forma de s&#232;rie de pot&#232;ncies, una forma modular.</p>
 <p>El fet anterior ja seria de per si interessant, ja que estudiar formes modulars ens permetria estudiar tots aquests problemes a la vegada. El que &#233;s encara m&#233;s sorprenent &#233;s que resulta que les formes modulars constitueixen espais vectorials de dimensi&#243; finita, i aix&#242; fa que si podem construir suficients exemples, podem descobrir identitats sorprenents. Com a mostra, podem enunciar alguns teoremes que aprofiten aquest fet:</p>
@@ -50,7 +50,7 @@ Per a tot primer <span class="math notranslate nohighlight">\(p\)</span>, es t&#
 on <span class="math notranslate nohighlight">\(a_p\)</span> &#233;s el coeficient de <span class="math notranslate nohighlight">\(q^p\)</span> de la s&#232;rie formal
 <div class="math notranslate nohighlight">
 \[
-q\prod_{n=1}^\infty (1-q^n)^2(1-q^{11n})^2.
+q\prod_{n=1}^\infty (1-q^n)^2(1-q^{11n})^2=q-2q^2-q^3+2q^4+q^5+2q^6-2q^7+\cdots.
 \]</div>
 </p>
 <p><strong>Teorema (Fermat):</strong>
@@ -139,7 +139,7 @@ Es t&#233; el seg&#252;ent:</p>
 <li><p>El grup <span class="math notranslate nohighlight">\(G\)</span> est&#224; generat per <span class="math notranslate nohighlight">\(S\)</span> i <span class="math notranslate nohighlight">\(T\)</span>. De fet, es t&#233; <span class="math notranslate nohighlight">\(G=\langle S, T | S^2=(ST)^3=1 \rangle\)</span>.</p></li>
 </ol>
 <p><em>Prova:</em>
-Considerem <span class="math notranslate nohighlight">\(G'=\langle S, T\rangle\)</span>. Donat <span class="math notranslate nohighlight">\(z\in\HH\)</span>, trobarem <span class="math notranslate nohighlight">\(g'\in G'\)</span> tal que <span class="math notranslate nohighlight">\(g'z\in D\)</span>. Escrivim <span class="math notranslate nohighlight">\(g=\smtx abcd\)</span> un element de <span class="math notranslate nohighlight">\(G'\)</span> arbitrari, i observem que hi ha un nombre finit de parelles <span class="math notranslate nohighlight">\((c,d)\)</span> tals que <span class="math notranslate nohighlight">\(\abs{cz+d}&lt;M\)</span> (per qualsevol <span class="math notranslate nohighlight">\(M\)</span> fixat). Aleshores per la f&#243;rmula
+Considerem <span class="math notranslate nohighlight">\(G'=\langle S, T\rangle\)</span>. Donat <span class="math notranslate nohighlight">\(z\in\HH\)</span>, trobarem <span class="math notranslate nohighlight">\(g'\in G'\)</span> tal que <span class="math notranslate nohighlight">\(g'z\in D\)</span>. Escrivim <span class="math notranslate nohighlight">\(g=\smtx abcd\)</span> un element de <span class="math notranslate nohighlight">\(G'\)</span> arbitrari, i observem que hi ha un nombre finit de parelles <span class="math notranslate nohighlight">\((c,d)\)</span> tals que <span class="math notranslate nohighlight">\(\abs{cz+d}&lt;M\)</span> (per qualsevol <span class="math notranslate nohighlight">\(M\)</span> fixat): si escrivim <span class="math notranslate nohighlight">\(z=x+iy\)</span>, aleshores <span class="math notranslate nohighlight">\(\abs{cz+d}&gt;\abs{cx+d}\)</span> i <span class="math notranslate nohighlight">\(\abs{cz+d}&gt;\abs{cy}\)</span> i, per tant, hi ha un nombre finit de <span class="math notranslate nohighlight">\(c\)</span> i de <span class="math notranslate nohighlight">\(d\)</span> que el fan m&#233;s petit. Aleshores per la f&#243;rmula
 <div class="math notranslate nohighlight">
 \[
 \Im(gz)=\frac{\Im(z)}{\abs{cz+d}^2}
@@ -194,15 +194,16 @@ que convergeix per a tot <span class="math notranslate nohighlight">\(z\in \HH\)
 <p>Per ara els &#250;nics exemples que tenim de formes modulars s&#243;n les constants, que s&#243;n formes modulars de pes zero (de fet, s&#243;n les &#250;niques formes modulars de pes zero). Si considerem una funci&#243; holomorfa <span class="math notranslate nohighlight">\(h\)</span> qualsevol, aleshores una manera de construir una funci&#243; modular &#233;s &#171;simetritzar-la&#187;, &#233;s a dir, considerar <span class="math notranslate nohighlight">\(\sum_{g\in G} h\slsh{k} g\)</span>. El problema &#233;s que en general aquesta suma no t&#233; per qu&#232; convergir. Una segona idea seria considerar una funci&#243; que ja sigui invariant per algun subgrup de <span class="math notranslate nohighlight">\(H\leq G\)</span>, i aleshores nom&#233;s simetritzar per <span class="math notranslate nohighlight">\(G/H\)</span>. La versi&#243; m&#233;s senzilla d&#8217;aquest principi &#233;s considerar la funci&#243; constant <span class="math notranslate nohighlight">\(1\)</span>. Si <span class="math notranslate nohighlight">\(H=\{ \pm \smtx{1}{t}{0}{1}\}\)</span>, veiem que <span class="math notranslate nohighlight">\(1\slsh{k} h=1\)</span> per a tot <span class="math notranslate nohighlight">\(h\in H\)</span>. Per tant, podem considerar
 <div class="math notranslate nohighlight">
 \[
-G_k(z) = \sum_{\gamma \in H\backslash \SL_2(\ZZ)} 1\slsh{k} \gamma= \sum_{\smtx abcd \in H \backslash \SL_2(\ZZ)} \frac{1}{(cz+d)^{k}}.
+\tilde G_k(z) = \sum_{\gamma \in H\backslash \SL_2(\ZZ)} 1\slsh{k} \gamma= \sum_{\smtx abcd \in H \backslash \SL_2(\ZZ)} \frac{1}{(cz+d)^{k}}.
 \]</div>
 
-Fixem-nos que, donada una matriu <span class="math notranslate nohighlight">\(\smtx abcd\in \SL_2(\ZZ)\)</span>, la classe lateral <span class="math notranslate nohighlight">\(H\smtx abcd\)</span> est&#224; formada per totes les matrius de la forma <span class="math notranslate nohighlight">\(\smtx{a'}{b'}{c}{d}\in\SL_2(\ZZ)\)</span>. Per tant, podem reescriure
+Fixem-nos que, donada una matriu <span class="math notranslate nohighlight">\(\smtx abcd\in \SL_2(\ZZ)\)</span>, la classe lateral <span class="math notranslate nohighlight">\(H\smtx abcd\)</span> est&#224; formada per totes les matrius de la forma <span class="math notranslate nohighlight">\(\smtx{a'}{b'}{c}{d}\in\SL_2(\ZZ)\)</span>. &#201;s a dir, les classes laterals venen indexades per parelles <span class="math notranslate nohighlight">\((c,d)\in\ZZ^2\)</span> amb <span class="math notranslate nohighlight">\(\gcd(c,d)=1\)</span>. &#201;s m&#233;s com&#250; considerar totes les parelles diferents de <span class="math notranslate nohighlight">\((0,0)\)</span>, i definir
 <div class="math notranslate nohighlight">
 \[
-G_k(z) = \sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k},
+G_k(z) = \sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k}.
 \]</div>
-</p>
+
+La relaci&#243; entre <span class="math notranslate nohighlight">\(G_k\)</span> i <span class="math notranslate nohighlight">\(\tilde G_k\)</span> &#233;s un factor de <span class="math notranslate nohighlight">\(\zeta(k)\)</span> (exercici).</p>
 <p><strong>Proposici&#243;:</strong> Si <span class="math notranslate nohighlight">\(k&gt;2\)</span>, la funci&#243; <span class="math notranslate nohighlight">\(G_k(z)\)</span> &#233;s una forma modular de pes <span class="math notranslate nohighlight">\(k\)</span>. El seu valor a l&#8217;infinit &#233;s <span class="math notranslate nohighlight">\(2\zeta(k)\)</span>, on <span class="math notranslate nohighlight">\(\zeta\)</span> &#233;s la funci&#243; zeta de Riemann.</p>
 <p><em>Prova:</em> Ens cal primer veure la converg&#232;ncia de la s&#232;rie per tot <span class="math notranslate nohighlight">\(z\)</span>. Considerem primer <span class="math notranslate nohighlight">\(z\in D\)</span> fixat, i podem veure f&#224;cilment que <span class="math notranslate nohighlight">\(\abs{c z + d}^2 \geq c^2-cd+d^2= \abs{c\rho - d}^2\)</span>. Com que
 <div class="math notranslate nohighlight">
@@ -210,7 +211,7 @@ G_k(z) = \sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k},
 \#\{ (c,d)\neq (0,0) : N \leq \abs{c\rho - d}&lt; N+1\} = O(N)
 \]</div>
 
-i <span class="math notranslate nohighlight">\(\sum_{n\geq 1} 1/n^{k-1}\)</span> convergeix per <span class="math notranslate nohighlight">\(k&gt;2\)</span>, ja estem. Com que <span class="math notranslate nohighlight">\(D\)</span> &#233;s compacte, la s&#232;rie <span class="math notranslate nohighlight">\(G_k(z)\)</span> convergeix normalment a <span class="math notranslate nohighlight">\(D\)</span> i, com que podem traslladar <span class="math notranslate nohighlight">\(D\)</span> per recobrir tot <span class="math notranslate nohighlight">\(\HH\)</span> amb elements de <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span>, en dedu&#239;m que <span class="math notranslate nohighlight">\(G_k(z)\)</span> tamb&#233; convergeix a tot <span class="math notranslate nohighlight">\(\HH\)</span> a una funci&#243; holomorfa.</p>
+i <span class="math notranslate nohighlight">\(\sum_{n\geq 1} 1/n^{k-1}\)</span> convergeix per <span class="math notranslate nohighlight">\(k&gt;2\)</span>, ja estem. Com que <span class="math notranslate nohighlight">\(D\)</span> &#233;s compacte, la s&#232;rie <span class="math notranslate nohighlight">\(G_k(z)\)</span> convergeix normalment a <span class="math notranslate nohighlight">\(D\)</span> (vol dir que la s&#232;rie de les sup-normes convergeix) i, com que podem traslladar <span class="math notranslate nohighlight">\(D\)</span> per recobrir tot <span class="math notranslate nohighlight">\(\HH\)</span> amb elements de <span class="math notranslate nohighlight">\(\SL_2(\ZZ)\)</span>, en dedu&#239;m que <span class="math notranslate nohighlight">\(G_k(z)\)</span> tamb&#233; convergeix a tot <span class="math notranslate nohighlight">\(\HH\)</span> a una funci&#243; holomorfa.</p>
 <p>Per calcular <span class="math notranslate nohighlight">\(G_k(\infty)\)</span>, prenem el l&#237;mit quan <span class="math notranslate nohighlight">\(\Im(z)\to\infty\)</span>, i aix&#242; ho podem fer mantenint <span class="math notranslate nohighlight">\(z\)</span> a <span class="math notranslate nohighlight">\(D\)</span>. En aquest cas, gr&#224;cies a la converg&#232;ncia uniforme de la s&#232;rie podem prendre el l&#237;mit terme a terme. Els termes que tenen <span class="math notranslate nohighlight">\(c\neq 0\)</span> tots van a <span class="math notranslate nohighlight">\(0\)</span>, i nom&#233;s ens queda
 <div class="math notranslate nohighlight">
 \[
@@ -223,7 +224,7 @@ i <span class="math notranslate nohighlight">\(\sum_{n\geq 1} 1/n^{k-1}\)</span>
 \Delta(z) = \frac{E_4^3 - E_6^2}{1728}
 \]</div>
 
-&#233;s una forma cuspidal de pes <span class="math notranslate nohighlight">\(12\)</span>, anomenada la funci&#243; discriminant.</p>
+&#233;s una forma cuspidal de pes <span class="math notranslate nohighlight">\(12\)</span>, anomenada la funci&#243; discriminant (m&#233;s endavant veurem per qu&#232; hem dividit per <span class="math notranslate nohighlight">\(1728\)</span>).</p>
 <p><strong>Remarca:</strong> Definim, per <span class="math notranslate nohighlight">\(\tau\in\HH\)</span> i <span class="math notranslate nohighlight">\(w\in\CC\)</span>, la funci&#243; <span class="math notranslate nohighlight">\(\wp\)</span> de Weierstrass, com
 <div class="math notranslate nohighlight">
 \[
@@ -336,7 +337,7 @@ on la suma recorre les &#242;rbites de punts de <span class="math notranslate no
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2022, Marc Masdeu.
+      &copy;2023, Marc Masdeu.
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 6.1.3</a>
