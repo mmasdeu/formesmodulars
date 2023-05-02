@@ -10,7 +10,7 @@ Operadors de Hecke
 Definició
 -----------
 
-Sigui $f$ una forma dèbilment modular de pes $k$ (és a dir, meromorfa i satisfent la simetria corresponent per $\SL_2(\ZZ)$). Per cada $n\geq 1$ i cada $d\mid n$, definim
+Sigui $f$ una forma dèbilment modular de pes $k$ (és a dir, meromorfa i satisfent la simetria corresponent per $\SL_2(\ZZ)$). Per cada $n\geq 1$, definim
 $$
 (T_nf)(z) = n^{k-1} \sum_{e\geq 1, ed=n}\sum_{0\leq b < d} d^{-k} f\left(\frac{ez+b}{d}\right).
 $$
@@ -124,7 +124,7 @@ $$
 *Prova:* Escrivim $f=\lambda E_k + h$ amb $\lambda\neq 0$ i $h$ cuspidal, i apliquem els resultats anteriors. Com que els coeficients de $E_k$ creixen
 molt més ràpid que els de $h$, el creixement de $f$ és igual que el de $E_k$. $\qed$
 
-**Remarca:** Un teorema molt profund de Deligne (1973) demostra, de fet, que $a_n = O(n^{k-1/2}\sigma_0(n))=O(n^{k-1/2-\epsilon})$ per a tot $\epsilon>0$. Abans del resultat de Deligne, aquest fet es coneixia com la conjectura de Petersson, que generalitzava una conjectura famosa de Ramanujan sobre la funció $\tau(n)$.
+**Remarca:** Un teorema molt profund de Deligne (1973) demostra, de fet, que $a_n = O(n^{(k-1)/2}\sigma_0(n))=O(n^{(k-1)/2-\epsilon})$ per a tot $\epsilon>0$. Abans del resultat de Deligne, aquest fet es coneixia com la conjectura de Petersson, que generalitzava una conjectura famosa de Ramanujan sobre la funció $\tau(n)$.
 
 
 La funció-L associada a una forma modular
@@ -323,7 +323,7 @@ $$
 L(E,s) = \prod_{p} L_p(E,s)^{-1},\quad
 L_p(E,s) = \begin{cases}
 1-a_p p^{-s} + p^{1-2s}&p\nmid \Delta,\\
-1-a_p p^{-s}&p\mid N\parallel N,\\
+1-a_p p^{-s}&p\parallel N,\\
 \end{cases}
 $$
 on $a_p$ es defineix com $p+1-\#E(\mathbb{F}_p)$.
