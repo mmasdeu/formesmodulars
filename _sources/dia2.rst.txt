@@ -106,7 +106,7 @@ $$
 $$
 i
 $$
-\sigma_{13}(n) = 11\sigma_9(n) - 10\sigma_{3}(n) +2640 \sum_{m=1}^n \sigma_3(n)\sigma_9(m-n).
+\sigma_{13}(n) = 11\sigma_9(n) - 10\sigma_{3}(n) +2640 \sum_{m=1}^n \sigma_3(n)\sigma_9(n-m).
 $$
 
 

@@ -106,7 +106,7 @@ Per demostrar el segon punt, suposem que $z$ i $gz$ pertanyen a $D$. Per simetri
 $$
 \abs{cz+d}^2=(cx+d)^2 + (cy)^2\leq 1, \quad z=x+iy.
 $$
-Com que $y^2>3/4$, això implica que $\abs{c}\leq 1$. Analitzant els diferents casos $c=0$, $c=1$ i $c=-1$ obtenim el que quedava per demostrar, excepte el fet que $G=G'$.
+Com que $y^2 \geq 3/4$, això implica que $\abs{c}\leq 1$. Analitzant els diferents casos $c=0$, $c=1$ i $c=-1$ obtenim el que quedava per demostrar, excepte el fet que $G=G'$.
 
 Sigui ara $g\in G$ un element arbitrari, i prenem $z_0$ a l'interior de $D$. Considerem $z=gz_0$, i trobarem $g'\in G'$ tal que $g'z$ pertanyi a $D$. Pel què hem vist $g'z=z_0$ i d'aquí obtenim $g'g=1$, i per tant $g$ pertany a $G'$. $\qed$
 
@@ -164,7 +164,7 @@ La relació entre $G_k$ i $\tilde G_k$ és un factor de $\zeta(k)$ (exercici).
 
 **Proposició:** Si $k>2$, la funció $G_k(z)$ és una forma modular de pes $k$. El seu valor a l'infinit és $2\zeta(k)$, on $\zeta$ és la funció zeta de Riemann.
 
-*Prova:* Ens cal primer veure la convergència de la sèrie per tot $z$. Considerem primer $z\in D$ fixat, i podem veure fàcilment que $\abs{c z + d}^2 \geq c^2-cd+d^2= \abs{c\rho - d}^2$. Com que
+*Prova:* Ens cal primer veure la convergència de la sèrie per tot $z$. Considerem primer $z\in D$ fixat, i podem veure fàcilment que $\abs{c z + d}^2 \geq c^2-cd+d^2= \abs{c\rho + d}^2$. Com que
 $$
 \#\{ (c,d)\neq (0,0) : N \leq \abs{c\rho - d}< N+1\} = O(N)
 $$
