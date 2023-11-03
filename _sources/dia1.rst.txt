@@ -79,7 +79,7 @@ S^2=1,\quad (ST)^3=1.
 $$
 Considerem ara el conjunt $D\subseteq \HH$ definit com
 $$
-D = \{ z \in \HH : \Re(z)\leq 1/2, \abs{z} \geq 1 \}.
+D = \{ z \in \HH : \abs{\Re(z)}\leq 1/2, \abs{z} \geq 1 \}.
 $$
 Es té el següent:
 
