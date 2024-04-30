@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ca" xml:lang="ca"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Formes Modulars - 3&nbsp; Tercer dia</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./dia4.html" rel="next">
+<link href="./dia2.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Cap resultat",
+    "search-matching-documents-text": "documents que coincideixen",
+    "search-copy-link-title": "Copia l'enllaç a la cerca",
+    "search-hide-matches-text": "Amaga les coincidències addicionals",
+    "search-more-match-text": "altra coincidència en aquest document",
+    "search-more-matches-text": "altres coincidències en aquest document",
+    "search-clear-button-title": "Neteja",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel·la",
+    "search-submit-button-title": "Envia",
+    "search-label": "Cerca"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Commuta la navegació de la barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dia3.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tercer dia</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Commuta la navegació de la barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Formes Modulars</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://www.github.com/mmasdeu/formesmodulars" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./Formes-Modulars.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Cerca"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefaci</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dia1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Primer dia</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dia2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Segon dia</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dia3.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tercer dia</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dia4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quart dia</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bibliografia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliografia</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Taula de continguts</h2>
+   
+  <ul>
+  <li><a href="#operadors-de-hecke" id="toc-operadors-de-hecke" class="nav-link active" data-scroll-target="#operadors-de-hecke"><span class="header-section-number">3.1</span> Operadors de Hecke</a>
+  <ul class="collapse">
+  <li><a href="#definició" id="toc-definició" class="nav-link" data-scroll-target="#definició"><span class="header-section-number">3.1.1</span> Definició</a></li>
+  <li><a href="#formes-pròpies" id="toc-formes-pròpies" class="nav-link" data-scroll-target="#formes-pròpies"><span class="header-section-number">3.1.2</span> Formes pròpies</a></li>
+  <li><a href="#aplicació-a-la-tau-de-ramanujan" id="toc-aplicació-a-la-tau-de-ramanujan" class="nav-link" data-scroll-target="#aplicació-a-la-tau-de-ramanujan"><span class="header-section-number">3.1.3</span> Aplicació a la tau de Ramanujan</a></li>
+  </ul></li>
+  <li><a href="#creixement-dels-coeficients" id="toc-creixement-dels-coeficients" class="nav-link" data-scroll-target="#creixement-dels-coeficients"><span class="header-section-number">3.2</span> Creixement dels coeficients</a></li>
+  <li><a href="#la-funció-l-associada-a-una-forma-modular" id="toc-la-funció-l-associada-a-una-forma-modular" class="nav-link" data-scroll-target="#la-funció-l-associada-a-una-forma-modular"><span class="header-section-number">3.3</span> La funció-L associada a una forma modular</a>
+  <ul class="collapse">
+  <li><a href="#el-producte-deuler-i-lequació-funcional" id="toc-el-producte-deuler-i-lequació-funcional" class="nav-link" data-scroll-target="#el-producte-deuler-i-lequació-funcional"><span class="header-section-number">3.3.1</span> El producte d’Euler i l’equació funcional</a></li>
+  <li><a href="#funció-l-de-les-sèries-deisenstein" id="toc-funció-l-de-les-sèries-deisenstein" class="nav-link" data-scroll-target="#funció-l-de-les-sèries-deisenstein"><span class="header-section-number">3.3.2</span> Funció-L de les sèries d’Eisenstein</a></li>
+  </ul></li>
+  <li><a href="#el-producte-de-petersson" id="toc-el-producte-de-petersson" class="nav-link" data-scroll-target="#el-producte-de-petersson"><span class="header-section-number">3.4</span> El producte de Petersson</a></li>
+  <li><a href="#formes-modulars-amb-nivell" id="toc-formes-modulars-amb-nivell" class="nav-link" data-scroll-target="#formes-modulars-amb-nivell"><span class="header-section-number">3.5</span> Formes modulars amb nivell</a></li>
+  <li><a href="#corbes-ellíptiques-i-modularitat" id="toc-corbes-ellíptiques-i-modularitat" class="nav-link" data-scroll-target="#corbes-ellíptiques-i-modularitat"><span class="header-section-number">3.6</span> Corbes el·líptiques i modularitat</a></li>
+  <li><a href="#la-funció-j-de-klein" id="toc-la-funció-j-de-klein" class="nav-link" data-scroll-target="#la-funció-j-de-klein"><span class="header-section-number">3.7</span> La funció j de Klein</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tercer dia</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="hidden">
+
+</div>
+<section id="operadors-de-hecke" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="operadors-de-hecke"><span class="header-section-number">3.1</span> Operadors de Hecke</h2>
+<section id="definició" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="definició"><span class="header-section-number">3.1.1</span> Definició</h3>
+<p>Sigui <span class="math inline">\(f\)</span> una forma dèbilment modular de pes <span class="math inline">\(k\)</span> (és a dir, meromorfa i satisfent la simetria corresponent per <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span>). Per cada <span class="math inline">\(n\geq 1\)</span>, definim <span class="math display">\[
+(T_nf)(z) = n^{k-1} \sum_{e\geq 1, ed=n}\sum_{0\leq b &lt; d} d^{-k} f\left(\frac{ez+b}{d}\right).
+\]</span></p>
+<p>En particular, si <span class="math inline">\(n=p\)</span> és un primer, tenim <span class="math display">\[
+(T_pf)(z) = \frac{1}{p} \left(\sum_{b=0}^{p-1} f(\frac{z+b}{p}) + f(pz)\right).
+\]</span></p>
+<p><strong>Proposició:</strong> La funció <span class="math inline">\(T_nf\)</span> és dèbilment modular de pes <span class="math inline">\(k\)</span>. Si <span class="math inline">\(f\)</span> és holomorfa, també ho és <span class="math inline">\(T_nf\)</span>. A més:</p>
+<ol type="1">
+<li><span class="math inline">\(T_m T_n = T_n T_m = T_{nm}\)</span> si <span class="math inline">\((m,n)=1\)</span>.</li>
+<li><span class="math inline">\(T_{p^{r+1}} = T_p T_{p^r} - p^{k-1} T_{p^{r-1}}\)</span> si <span class="math inline">\(p\)</span> és primer i <span class="math inline">\(n\geq 1\)</span>.</li>
+</ol>
+<p>Podem calcular l’efecte d’aquests operadors en les <span class="math inline">\(q\)</span>-expansions, obtenint:</p>
+<p><strong>Proposició:</strong> Si <span class="math inline">\(f(z)=\sum_{m\in \mathbb{Z}} a_m(f)q^m\)</span> és meromorfa l’infinit, aleshores <span class="math inline">\(T_nf(z)=\sum_{m\in\mathbb{Z}} a_m(T_nf)q^m\)</span> també ho és, i <span class="math display">\[
+a_m(T_nf) = \sum_{d \mid (m,n)} d^{k-1} a_{mn/d^2}(f).
+\]</span></p>
+<p>En particular, <span class="math inline">\(a_0(T_nf) = \sigma_{k-1}(n) a_0(f)\)</span>, <span class="math inline">\(a_1(T_nf) = a_n(f)\)</span> i, si <span class="math inline">\(n=p\)</span> és un primer, <span class="math display">\[
+a_m(T_pf) = a_{pm}(f) + p^{k-1} a_{m/p}(f),
+\]</span> on entenem que <span class="math inline">\(a_{m/p}(f)=0\)</span> si <span class="math inline">\(p\)</span> no divideix <span class="math inline">\(m\)</span>.</p>
+<p><strong>Corol·lari:</strong> Els operadors <span class="math inline">\(T_n\)</span> actuen a <span class="math inline">\(M_k\)</span> i <span class="math inline">\(S_k\)</span>, i commuten entre si.</p>
+</section>
+<section id="formes-pròpies" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="formes-pròpies"><span class="header-section-number">3.1.2</span> Formes pròpies</h3>
+<p>Suposem ara que <span class="math inline">\(f=\sum_{n\geq 0} a_n(f)q^n\)</span> és una forma modular de pes <span class="math inline">\(k&gt;0\)</span>, que és pròpia per tots els <span class="math inline">\(T_n\)</span>. És a dir, per cada <span class="math inline">\(n\geq 1\)</span> tenim <span class="math inline">\(T_nf=\lambda_nf\)</span>, per algun <span class="math inline">\(\lambda_n\in\mathbb{C}\)</span>.</p>
+<p><strong>Teorema:</strong> Si <span class="math inline">\(f\)</span> és pròpia, <span class="math inline">\(a_1(f)\neq 0\)</span>. Si <span class="math inline">\(f\)</span> està normalitzada de manera que <span class="math inline">\(a_1(f)=1\)</span>, aleshores <span class="math inline">\(a_n(f) = \lambda_n\)</span>.</p>
+<p><em>Prova:</em> Hem vist que <span class="math inline">\(a_1(T_nf) = a_n(f)\)</span>. Com que <span class="math inline">\(f\)</span> és pròpia, <span class="math inline">\(a_1(T_nf) = \lambda_n a_1(f)\)</span>. Per tant, <span class="math inline">\(a_n(f) = \lambda_n a_1(f)\)</span>. Si suposem que <span class="math inline">\(a_1(f)=0\)</span>, aleshores tindríem <span class="math inline">\(a_n(f)=0\)</span> per a tot <span class="math inline">\(n\geq 1\)</span>, i per tant <span class="math inline">\(f\)</span> seria una constant. Però <span class="math inline">\(k&gt;0\)</span>, i per tant arribem a contradicció. <span class="math inline">\(\blacksquare\)</span></p>
+<p><strong>Corol·lari:</strong> Si <span class="math inline">\(f\)</span> i <span class="math inline">\(g\)</span> són formes pròpies per tot <span class="math inline">\(T_n\)</span> amb els mateixos valors propis, aleshores són proporcionals.</p>
+<p><strong>Corol·lari:</strong> Si <span class="math inline">\(f\)</span> és pròpia i està normalitzada, aleshores <span class="math display">\[
+a_m(f)a_n(f)=a_{mn}(f),\text{si $(m,n)=1$, i}
+\]</span> <span class="math display">\[
+a_{p^{r+1}}(f) = a_p(f)a_{p^r}(f) - p^{k-1} a_{r-1}(f).
+\]</span></p>
+</section>
+<section id="aplicació-a-la-tau-de-ramanujan" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="aplicació-a-la-tau-de-ramanujan"><span class="header-section-number">3.1.3</span> Aplicació a la tau de Ramanujan</h3>
+<p>Recordem <span class="math inline">\(\Delta(q)=q\prod_{n\geq 1} (1-q^n)^{24}\)</span>. Com ja hem vist, <span class="math inline">\(S_{12}=\mathbb{C}\Delta\)</span> i per tant <span class="math inline">\(\Delta\)</span> és trivialment una forma pròpia per tots els operadors de Hecke, que a més ja està normalitzada. Per tant:</p>
+<p><strong>Corol·lari:</strong> Tenim: <span class="math display">\[
+\tau(nm)=\tau(n)\tau(m),\quad (n,m)=1,
+\]</span> i <span class="math display">\[
+\tau(p)\tau(p^n) = \tau(p^{n+1})+p^{11}\tau(p^{n-1}),\quad \forall p\text{ primer}, n\geq 1.
+\]</span></p>
+<p>Es tenen resultats anàlegs per tots els espais <span class="math inline">\(S_k\)</span> de dimensió <span class="math inline">\(1\)</span>, que són exactament <span class="math inline">\(k=12,16,18,20,22,26\)</span>. El generador és, en cada cas, <span class="math inline">\(\Delta E_{k-12}\)</span>.</p>
+</section>
+</section>
+<section id="creixement-dels-coeficients" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="creixement-dels-coeficients"><span class="header-section-number">3.2</span> Creixement dels coeficients</h2>
+<p>Més endavant ens interessarà tenir fites per l’ordre de creixement dels coeficients de Fourier de les formes modulars.</p>
+<p><strong>Proposició:</strong> Si <span class="math inline">\(f=E_k\)</span>, aleshores <span class="math inline">\(a_n\approx n^{k-1}\)</span>. És a dir, que hi ha constants <span class="math inline">\(A, B&gt;0\)</span> tals que <span class="math display">\[
+An^{k-1}\leq |a_n|\leq Bn^{k-1}.
+\]</span></p>
+<p><em>Prova:</em> Tenim <span class="math inline">\(|a_n| = A \sigma_{k-1}(n)\geq An^{k-1}\)</span>. D’altra banda, <span class="math display">\[
+\frac{|a_n|}{n^{k-1}} = A \sum_{d\mid n} \frac{1}{d^{k-1}} \leq A\sum_{d=1}^\infty \frac{1}{d^{k-1}} = A\zeta(k-1) &lt; \infty.\quad\blacksquare
+\]</span></p>
+<p>El creixement de les formes cuspidals és més lent:</p>
+<p><strong>Teorema (Hecke):</strong> Si <span class="math inline">\(f\)</span> és una forma cuspidal de pes <span class="math inline">\(k\)</span>, llavors <span class="math inline">\(a_n=O(n^{k/2})\)</span>.</p>
+<p><em>Prova:</em> Primer de tot, com que <span class="math inline">\(a_0=0\)</span>, podem escriure <span class="math inline">\(f(z)=q\sum_{n\geq 1}a_nq^{n-1}\)</span> i, per tant, <span class="math display">\[
+|f(z)| = O(q)=O(e^{-2\pi \Im(z)}),\quad q\longrightarrow 0.
+\]</span></p>
+<p>Escrivim <span class="math inline">\(z=x+iy\)</span>, i definim <span class="math inline">\(\phi(z)=|f(z)|y^{k/2}\)</span>. La modularitat de <span class="math inline">\(f\)</span> fa que la funció <span class="math inline">\(C^\infty\)</span> (no-holomorfa) <span class="math inline">\(\phi\)</span> sigui invariant per <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span>, i <span class="math inline">\(\phi(z)\longrightarrow 0\)</span> quan <span class="math inline">\(\Im(z)\longrightarrow\infty\)</span>. Per tant, <span class="math inline">\(\phi\)</span> és fitada: hi ha alguna constant <span class="math inline">\(M\)</span> tal que <span class="math display">\[
+|f(z)|\leq My^{-k/2},\quad z\in \mathbb{H}.
+\]</span> Per com es calculen els coeficients de Fourier, tenim <span class="math display">\[
+a_n =  \int_0^1 f(x+iy)e^{-2\pi i n(x+iy)}dx,
+\]</span> i per tant <span class="math display">\[
+|a_n| \leq Me^{2\pi n y}\int_0^1 y^{-k/2} e^{-2\pi inx}dx = My^{-k/2}e^{2\pi i n y}.
+\]</span> Aquesta igualtat és vàlida per tot <span class="math inline">\(y&gt;0\)</span>. En particular, per <span class="math inline">\(y=1/n\)</span> dona <span class="math display">\[
+|a_n|\leq e^{2\pi} M n^{k/2}.\blacksquare
+\]</span></p>
+<p><strong>Corol·lari:</strong> Si <span class="math inline">\(f\)</span> no és cuspidal, aleshores <span class="math inline">\(a_n\approx n^{k-1}\)</span>.</p>
+<p><em>Prova:</em> Escrivim <span class="math inline">\(f=\lambda E_k + h\)</span> amb <span class="math inline">\(\lambda\neq 0\)</span> i <span class="math inline">\(h\)</span> cuspidal, i apliquem els resultats anteriors. Com que els coeficients de <span class="math inline">\(E_k\)</span> creixen molt més ràpid que els de <span class="math inline">\(h\)</span>, el creixement de <span class="math inline">\(f\)</span> és igual que el de <span class="math inline">\(E_k\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
+<p><strong>Remarca:</strong> Un teorema molt profund de Deligne (1973) demostra, de fet, que <span class="math inline">\(a_n = O(n^{(k-1)/2}\sigma_0(n))=O(n^{(k-1)/2-\epsilon})\)</span> per a tot <span class="math inline">\(\epsilon&gt;0\)</span>. Abans del resultat de Deligne, aquest fet es coneixia com la conjectura de Petersson, que generalitzava una conjectura famosa de Ramanujan sobre la funció <span class="math inline">\(\tau(n)\)</span>.</p>
+</section>
+<section id="la-funció-l-associada-a-una-forma-modular" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="la-funció-l-associada-a-una-forma-modular"><span class="header-section-number">3.3</span> La funció-L associada a una forma modular</h2>
+<p>Podem empaquetar tota la informació que hem trobat de manera analítica, mitjançant la funció-L. Sigui <span class="math display">\[
+L(f,s) = \sum_{n=1}^\infty a_n(f)n^{-s}.
+\]</span> Observem que convergeix per a tot <span class="math inline">\(\Re(s)&gt;k\)</span> gràcies a que controlem el creixement dels <span class="math inline">\(a_n(f)\)</span>. Si <span class="math inline">\(f\)</span> és cuspidal, aleshores sabem que la sèrie convergeix a <span class="math inline">\(\Re(s)&gt;k/2+1\)</span>.</p>
+<section id="el-producte-deuler-i-lequació-funcional" class="level3" data-number="3.3.1">
+<h3 data-number="3.3.1" class="anchored" data-anchor-id="el-producte-deuler-i-lequació-funcional"><span class="header-section-number">3.3.1</span> El producte d’Euler i l’equació funcional</h3>
+<p><strong>Proposició:</strong> Si <span class="math inline">\(f\)</span> és una forma pròpia normalitzada, aleshores la funció <span class="math inline">\(L(f,s)\)</span> té un producte d’Euler: <span class="math display">\[
+L(f,s) = \prod_{p\text{ primer}} \frac{1}{1-a_p(f)p^{-s} + p^{k-1-2s}}.
+\]</span></p>
+<p><em>Prova</em>: Els coeficients <span class="math inline">\(a_{n}(f)\)</span> formen una successió multiplicativa i, per tant, <span class="math display">\[
+L(f,s) = \prod_p \sum_{r=0}^\infty a_{p^r}(f)p^{-rs}.
+\]</span> Per tant, si escrivim <span class="math inline">\(T=p^{-s}\)</span>, hem de demostrar <span class="math display">\[
+\sum_{r=0}^\infty a_{p^r}(f)T^r = \left(1-a_p(f)T + p^{k-1}T^2\right)^{-1}.
+\]</span> Equivalentment, podem demostrar <span class="math display">\[
+\left(1-a_p(f)T + p^{k-1}T^2\right)\sum_{r=0}^\infty a_{p^r}(f)T^r = 1.
+\]</span> El coeficient de <span class="math inline">\(T\)</span> és <span class="math inline">\(a_p(f)-a_p(f)=0\)</span>. El de <span class="math inline">\(T^{r+1}\)</span> és, per a tot <span class="math inline">\(r\geq 1\)</span>, <span class="math display">\[
+a_{p^{r+1}} - a_pa_{p^{r}} + p^{k-1}a_{p^{r-1}},
+\]</span> que ja sabem que és <span class="math inline">\(0\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
+<p><strong>Remarca:</strong> El recíproc també és cert, i la demostració és essentialment el mateix argument fet a l’inrevés.</p>
+<p>Per escriure l’equació funcional, escrivim <span class="math inline">\(\Lambda(f,s) = (2\pi)^{-s} \Gamma(s) L(f,s)\)</span>, on <span class="math display">\[
+\Gamma(s) = \int_0^{\infty} t^{s}e^{-t}\frac{dt}{t}.
+\]</span></p>
+<p>Podem trobar una formula integral per <span class="math inline">\(\Lambda(f,s)\)</span>: <span class="math display">\[
+\Lambda(f,s) = (2\pi)^{-s} \int_0^\infty t^s e^{-t}\frac{dt}{t} \sum_{n=1}^\infty a_nn^{-s} = \sum_{n=1}^\infty a_n \int_0^\infty \left(\frac{t}{2\pi n}\right)^s e^{-t}\frac{dt}{t}.
+\]</span> Si fem el canvi de variables <span class="math inline">\(t\mapsto t/(2\pi n)\)</span> al terme <span class="math inline">\(n\)</span>-èssim, obtenim <span class="math display">\[
+\sum_{n=1}^\infty a_n\int_0^\infty t^s e^{-2\pi n t} \frac{dt}{t} = \int_0^\infty \left(\sum_{n=1}^\infty a_ne^{-2\pi nt}\right) t^s\frac{dt}{t}.
+\]</span></p>
+<p>Per tant, hem vist:</p>
+<p><strong>Proposició:</strong> <span class="math inline">\(\Lambda(f,s) = \int_0^\infty (f(it) - a_0)t^s\frac{dt}{t}\)</span>.</p>
+<p>Volem extendre <span class="math inline">\(\Lambda(f,s)\)</span> a tot el pla complex, però la integral tal i com la tenim té problemes de convergència prop de <span class="math inline">\(t=0\)</span>. Suposem, per simplicar, que <span class="math inline">\(a_0=0\)</span>. Podem trencar la integral <span class="math display">\[
+\int_0^\infty f(it)t^{s}\frac{dt}{t} = \int_0^1(\cdots)+\int_1^\infty(\cdots)
+\]</span> i, fent servir que <span class="math inline">\(f(i/t) = i^kt^kf(it)\)</span> trobem, fent el canvi <span class="math inline">\(t\mapsto 1/t\)</span>, <span class="math display">\[
+\int_0^1  f(it)t^{s}\frac{dt}{t} = (-1)^{k/2} \int_1^\infty f(it)t^{k-s}\frac{dt}{t}.
+\]</span> Per tant, <span class="math display">\[
+\Lambda(f,s) = \int_1^\infty f(it) (t^s + (-1)^{k/2} t^{k-s})\frac{dt}{t}.
+\]</span> Aquesta expressió convergeix per tot <span class="math inline">\(s\in\mathbb{C}\)</span>. A més a més, obtenim l’equació funcional, que relaciona <span class="math inline">\(s\)</span> amb <span class="math inline">\(k-s\)</span>: <span class="math display">\[
+\Lambda(f,k-s) = (-1)^{k/2} \Lambda(f,s).
+\]</span></p>
+<p><strong>Remarca:</strong> Si <span class="math inline">\(f\in M_k\)</span> no és cuspidal, aleshores <span class="math inline">\(\Lambda(f,s)\)</span> no té una continuació holomorfa (només meromorfa), però l’equació funcional es segueix satisfent.</p>
+<p>Hi ha un teorema recíproc, que no demostrarem.</p>
+<p><strong>Teorema (Weil):</strong> Sigui <span class="math inline">\(L(\{a_n\},s) = \sum_{n=1}^\infty a_n n^{-s}\)</span> una sèrie de Dirichlet associada a una successió <span class="math inline">\(\{a_n\}_{n\geq 1}\)</span> tal que <span class="math inline">\(|a_n|=O(n^K)\)</span> per <span class="math inline">\(K\)</span> suficientment gran. Suposem que la funció <span class="math inline">\(\Lambda(\{a_n\},s)\)</span> associada tingui continuació analítica a tot <span class="math inline">\(s\in\mathbb{C}\)</span>, fitada en conjunts <span class="math inline">\(\{\sigma_1\leq \Re(s)\leq \sigma_2\}\)</span> i que tingui una equació funcional com l’anterior. Aleshores la funció <span class="math inline">\(f(z)=\sum_{n=1}^\infty a_ne^{2\pi inz}\)</span> és una forma cuspidal de pes <span class="math inline">\(k\)</span>.</p>
+</section>
+<section id="funció-l-de-les-sèries-deisenstein" class="level3" data-number="3.3.2">
+<h3 data-number="3.3.2" class="anchored" data-anchor-id="funció-l-de-les-sèries-deisenstein"><span class="header-section-number">3.3.2</span> Funció-L de les sèries d’Eisenstein</h3>
+<p>Sigui <span class="math inline">\(k\geq 4\)</span> un enter, i considerem la sèrie d’Eisenstein <span class="math inline">\(E_k = 1 - \frac{2k}{B_k}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n\)</span>.</p>
+<p><strong>Proposició:</strong> <span class="math inline">\(T_p(E_k) = (1+p^{k-1})E_k\)</span>.</p>
+<p><em>Prova:</em> Ho comprovem coeficient a coeficient. Si <span class="math inline">\(p\nmid n\)</span>, hem de comprovar que <span class="math display">\[
+\sigma_{k-1}(pn) = (1+p^{k-1})\sigma_{k-1}(n).
+\]</span> Per altra banda, si <span class="math inline">\(n = p^em\)</span> amb <span class="math inline">\(p\nmid m\)</span> i <span class="math inline">\(e\geq 1\)</span>, hem de veure que <span class="math display">\[
+\sigma_{k-1}(p^{e+1}m) + p^{k-1} \sigma_{k-1}(p^{e-1}m) = (1+p^{k-1})\sigma_{k-1}(p^em).
+\]</span> La primera equació es comprova fàcilment, i la segona es fa per inducció en <span class="math inline">\(e\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
+<p>Podem ara calcular ara la seva sèrie de Dirichlet: <span class="math display">\[
+\sum_{n=1}^\infty \sigma_{k-1}(n)n^{-s} = \sum_{a,d\geq 1} \frac{a^{k-1}}{a^sd^s} = \left(\sum_{d\geq 1} d^{-s}\right)\left(\sum_{a\geq 1} a^{k-s-1}\right) = \zeta(s)\zeta(s-k+1).
+\]</span></p>
+<p>De manera alternativa, podem veure que l’invers del terme <span class="math inline">\(p\)</span>-èssim del producte d’Euler és <span class="math display">\[
+1-\sigma_{k-1}(p)p^{-s} + p^{k-1-2s} = 1- p^{-s} - p^{k-1-s} + p^{k-1-2s} = (1-p^{-s})(1-p^{k-1-s}),
+\]</span> que coincideix amb el producte dels inversos dels factors d’Euler de <span class="math inline">\(\zeta(s)\zeta(s-k+1)\)</span>. Resumint, obtenim la factorització</p>
+<p><span class="math display">\[
+L(E_k,s) = \zeta(s)\zeta(s-k+1).
+\]</span></p>
+</section>
+</section>
+<section id="el-producte-de-petersson" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="el-producte-de-petersson"><span class="header-section-number">3.4</span> El producte de Petersson</h2>
+<p>Per estudiar més a fons els espais <span class="math inline">\(S_k\)</span>, els hem de dotar de més estructura que la d’espai vectorial complex. Podem definir un producte escalar hermític, de la següent manera: donades <span class="math inline">\(f,g\in S_k\)</span>, considerem <span class="math display">\[
+\phi_{f,g} = f(z)\overline{g(z)} y^{k}.
+\]</span></p>
+<p>Si <span class="math inline">\(\gamma\in\operatorname{SL}_2(\mathbb{Z})\)</span>, podem veure fàcilment que <span class="math inline">\(\phi_{f,g}(\gamma z) = \phi_{f,g}(z)\)</span>. Per tant, és una funció ben definida a <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\backslash\mathbb{H}\)</span>. Podem doncs considerar la integral <span class="math display">\[
+\langle f,g\rangle = \frac{3}{\pi}\int_{\operatorname{SL}_2(\mathbb{Z})\backslash\mathbb{H}} f(z)\overline{g(z)} y^{k-2}dxdy,
+\]</span> ja que <span class="math inline">\(\frac{dxdy}{y^2}\)</span> és una mesura <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span>-invariant a <span class="math inline">\(\mathbb{H}\)</span>. Respecte aquesta mesura, el domini fonamental de <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span> té volum <span class="math inline">\(\frac{\pi}{3}\)</span>, i per això escollim la normalització anterior.</p>
+<p><strong>Proposició:</strong> El producte <span class="math inline">\(\langle\cdot,\cdot\rangle\)</span> és hermític i definit positiu. És a dir:</p>
+<ol type="1">
+<li><span class="math inline">\(\langle a_1f_1+a_2f_2,g\rangle = a_1\langle f_1,g\rangle + a_2\langle f_2,g\rangle\)</span>,</li>
+<li><span class="math inline">\(\langle g,f\rangle = \overline{\langle f,g\rangle}\)</span>, i</li>
+<li><span class="math inline">\(\langle f,f\rangle\geq 0\)</span>, amb igualtat només si <span class="math inline">\(f=0\)</span>.</li>
+</ol>
+<p><strong>Proposició:</strong> Per a tot <span class="math inline">\(n\geq 1\)</span>, tenim <span class="math inline">\(\langle T_n f, g\rangle=\langle f, T_ng\rangle\)</span>.</p>
+<p>Com a conclusió, els operadors de Hecke <span class="math inline">\(T_n\)</span> formen una família d’operadors normals respecte el producte de Petersson. Per tant, <span class="math inline">\(S_k\)</span> conté una base ortogonal de formes pròpies per <strong>tots</strong> els operadors de Hecke simultàniament. Es diu que <span class="math inline">\(S_k\)</span> satisfà “multiplicitat-1”: donat una col·lecció de valors propis <span class="math inline">\(\{\lambda_n\}_{n\geq 1}\)</span>, hi ha com a molt una forma cuspidal pròpia <span class="math inline">\(f\in S_k\)</span> tal que <span class="math inline">\(T_n(f)=\lambda_n f\)</span>. A més, pel teorema de Cayley-Hamilton tenim que els valors propis dels operadors de Hecke són nombres algebraics reals!</p>
+</section>
+<section id="formes-modulars-amb-nivell" class="level2" data-number="3.5">
+<h2 data-number="3.5" class="anchored" data-anchor-id="formes-modulars-amb-nivell"><span class="header-section-number">3.5</span> Formes modulars amb nivell</h2>
+<p>Fins ara hem considerat formes modulars que es transformen bé pel grup modular <span class="math inline">\(\operatorname{PSL}_2(\mathbb{Z})\)</span>. És natural generalitzar la definició a altres subgrups de <span class="math inline">\(\operatorname{PSL}_2(\mathbb{R})\)</span> que actuin bé (de manera discreta) a <span class="math inline">\(\mathbb{H}\)</span>. Una família important la formen els coneguts com a <em>grups de Hecke</em>, indexada per enters <span class="math inline">\(N\geq 1\)</span>: <span class="math display">\[
+\Gamma(N)\subseteq \Gamma_1(N)\subseteq \Gamma_0(N)\subseteq \operatorname{SL}_2(\mathbb{Z}),
+\]</span> definits com <span class="math display">\[
+\Gamma(N) = \{ \left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) : \left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) \equiv \left(\begin{smallmatrix}1&amp;0\\0&amp;1\end{smallmatrix}\right) \pmod{N}\},
+\]</span> <span class="math display">\[
+\Gamma_1(N) = \{\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) : \left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) \equiv \left(\begin{smallmatrix}1&amp;*\\0&amp;1\end{smallmatrix}\right) \pmod{N}\},
+\]</span> <span class="math display">\[
+\Gamma_0(N) = \{\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) : \left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) \equiv \left(\begin{smallmatrix}*&amp;*\\0&amp;*\end{smallmatrix}\right) \pmod{N}\}.
+\]</span></p>
+<p>La definició de formes modulars de nivell <span class="math inline">\(\Gamma\)</span> (on <span class="math inline">\(\Gamma\)</span> és un d’aquests grups) és bastant natural:</p>
+<p><strong>Definició:</strong> Una funció holomorfa <span class="math inline">\(f\colon \mathbb{H}\longrightarrow\mathbb{C}\)</span> és una forma modular de pes <span class="math inline">\(k\)</span> i nivell <span class="math inline">\(\Gamma\)</span> si:</p>
+<ol type="1">
+<li><span class="math inline">\(f(\gamma z) = (cz+d)^k f(z), \text{per a tot }\gamma=\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) \in \Gamma\)</span>,</li>
+<li><span class="math inline">\((cz+d)^{-k}f(\gamma z)\)</span> és holomorfa a l’infinit, per a tot <span class="math inline">\(\gamma\in \operatorname{SL}_2(\mathbb{Z})\)</span>.</li>
+</ol>
+<p>Fixem-nos que la definició demana que <span class="math inline">\(f(\gamma z)\)</span> sigui holomorfa a l’infinit per a tota <span class="math inline">\(\gamma\)</span> de <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span>. Quan <span class="math inline">\(\Gamma=\operatorname{SL}_2(\mathbb{Z})\)</span> aquesta condició només l’hem de comprovar per <span class="math inline">\(f(z)\)</span>, però ara cal imposar més condicions.</p>
+<p>Es té un anàleg per la fórmula de la valència, valid per tots aquests grups. Si escrivim <span class="math inline">\(M_k(\Gamma)\)</span> (resp. <span class="math inline">\(S_k(\Gamma)\)</span>) per les formes modulars (resp. cuspidals) de pes <span class="math inline">\(k\)</span> i nivell <span class="math inline">\(\Gamma\)</span>, es demostra de manera semblant que aquests espais són de dimensió finita. També es té una teoria d’operadors de Hecke i de producte de Petersson.</p>
+</section>
+<section id="corbes-ellíptiques-i-modularitat" class="level2" data-number="3.6">
+<h2 data-number="3.6" class="anchored" data-anchor-id="corbes-ellíptiques-i-modularitat"><span class="header-section-number">3.6</span> Corbes el·líptiques i modularitat</h2>
+<p>En aquesta secció enunciarem una versió del famós teorema de modularitat, que va jugar un paper central a la demostració de l’Últim teorema de Fermat.</p>
+<p>Una corba el·líptica es pot pensar com una equació del tipus <span class="math display">\[
+E\colon\quad y^2=x^3+ax+b,\quad a,b\in\mathbb{Z}, \Delta=-16(4a^3-27b^2)\neq 0.
+\]</span> Hem d’entendre aquesta equació com la part afí d’una corba dins el pla projectiu, així que hi ha un punt de més, <span class="math inline">\(\mathcal{O}=(0:1:0)\)</span>, amb les coordenades <span class="math inline">\(x=X/Z\)</span>, <span class="math inline">\(y=Y/Z\)</span>.</p>
+<p>Quan reduïm els coeficients mòdul <span class="math inline">\(p\)</span>, obtenim una corba definida sobre <span class="math inline">\(\mathbb{F}_p\)</span>. A les corbes sobre cossos finits se’ls pot associar una funció “zeta”: <span class="math display">\[
+Z_p(E,T) = \exp\left(\sum_{m=1}^\infty \frac{\#E(\mathbb{F}_{p^{m}})}{m}T^m\right).
+\]</span> Resulta que, al ser <span class="math inline">\(E\)</span> una corba el·líptica, es té <span class="math display">\[
+\prod_{p} Z_p(E,p^{-s}) = \frac{\zeta(s)\zeta(s-1)}{L(E,s)},
+\]</span> on <span class="math display">\[
+L(E,s) = \prod_{p} L_p(E,s)^{-1},\quad
+L_p(E,s) = \begin{cases}
+1-a_p p^{-s} + p^{1-2s}&amp;p\nmid \Delta,\\
+1-a_p p^{-s}&amp;p\parallel N,\\
+\end{cases}
+\]</span> on <span class="math inline">\(a_p\)</span> es defineix com <span class="math inline">\(p+1-\#E(\mathbb{F}_p)\)</span>.</p>
+<p>Als anys 70 del segle passat, Eichler i Shimura van demostrar el següent resultat profund:</p>
+<p><strong>Teorema (Eichler-Shimura):</strong> Sigui <span class="math inline">\(f\in S_2(\Gamma_0(N))\)</span> una forma modular pròpia de pes <span class="math inline">\(2\)</span>,nivell <span class="math inline">\(N\)</span> i coeficients <span class="math inline">\(a_n\in\mathbb{Z}\)</span>. A més, suposem que <span class="math inline">\(f\)</span> és “nova”, és a dir que no “ve” de cap grup <span class="math inline">\(\Gamma_0(M)\)</span> amb <span class="math inline">\(M\mid N\)</span>. Aleshores existeix una corba el·líptica <span class="math inline">\(E_f\)</span> de conductor <span class="math inline">\(N\)</span> tal que <span class="math display">\[
+L(E_f,s) = L(f,s).
+\]</span></p>
+<p>El recíproc d’aquest teorema es coneixia com la conjectura de Shimura-Taniyama-Weil, i la seva demostració va dur Andrew Wiles a la portada del New York Times perquè als anys 90 del segle passat ja es sabia que un cas particular (quan el “conductor” d’<span class="math inline">\(E\)</span> és lliure de quadrats) implicava l’Últim Teorema de Fermat. El teorema complet va ser demostrat finalment el 2002.</p>
+<p><strong>Teorema (Wiles, Taylor-Wiles, Breuil-Conrad-Diamond-Taylor):</strong> Sigui <span class="math inline">\(E\)</span> una corba el·líptica definida sobre els racionals, i de conductor <span class="math inline">\(N\)</span>. Aleshores existeix una forma pròpia cuspidal <span class="math inline">\(f_E\in S_2(\Gamma_0(N))\)</span> tal que, per a tot <span class="math inline">\(p\nmid N\)</span>, <span class="math display">\[
+a_p(f) = p+1-\# E(\mathbb{F}_p).
+\]</span> De fet, es té que <span class="math inline">\(L(E,s) = L(f_E,s)\)</span>.</p>
+<p><strong>Exemple:</strong> Considerem la corba amb etiqueta LMFDB <span class="math inline">\(11.a3\)</span>, que té per equació <span class="math display">\[
+E\colon\quad y^2 + y = x^3-x^2.
+\]</span> No és de la forma anterior, però s’hi pot posar amb un canvi de variables, que faria els coeficients més grans. Si comptem els punts de la corba per uns quants primers obtenim, si calculem per cada primer <span class="math inline">\(a_p=p+1-\#E(\mathbb{F}_p)\)</span>:</p>
+<table class="table">
+<colgroup>
+<col style="width: 8%">
+<col style="width: 10%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 10%">
+<col style="width: 8%">
+<col style="width: 8%">
+<col style="width: 10%">
+<col style="width: 8%">
+<col style="width: 6%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th><span class="math inline">\(p\)</span></th>
+<th><span class="math inline">\(2\)</span></th>
+<th><span class="math inline">\(3\)</span></th>
+<th><span class="math inline">\(5\)</span></th>
+<th><span class="math inline">\(7\)</span></th>
+<th><span class="math inline">\(11\)</span></th>
+<th><span class="math inline">\(13\)</span></th>
+<th><span class="math inline">\(17\)</span></th>
+<th><span class="math inline">\(19\)</span></th>
+<th><span class="math inline">\(23\)</span></th>
+<th><span class="math inline">\(29\)</span></th>
+<th><span class="math inline">\(31\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(a_p\)</span></td>
+<td><span class="math inline">\(-2\)</span></td>
+<td><span class="math inline">\(-1\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(-2\)</span></td>
+<td><span class="math inline">\(1\)</span></td>
+<td><span class="math inline">\(4\)</span></td>
+<td><span class="math inline">\(-2\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(-1\)</span></td>
+<td><span class="math inline">\(0\)</span></td>
+<td><span class="math inline">\(7\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Per altra banda, tenim la forma modular <span class="math inline">\(f(z) = q\prod_{n=1}^\infty (1-q^n)^{2}(1-q^{11n})^2\)</span>, que té una expansió <span class="math display">\[\begin{align*}
+f(z) &amp;= q {\color{red}-2 q^{2}} {\color{red}-  q^{3}} + 2 q^{4} + {\color{red} q^{5}} + 2 q^{6} {\color{red}- 2 q^{7}} - 2 q^{9} - 2 q^{10} {\color{red}+  q^{11}} - 2 q^{12}\\
+&amp;+ {\color{red}4 q^{13}} + 4 q^{14} -  q^{15} - 4 q^{16} {\color{red}- 2 q^{17}} + 4 q^{18} + 2 q^{20} + 2 q^{21} - 2 q^{22}\\
+&amp;{\color{red}-  q^{23}}- 4 q^{25} - 8 q^{26} + 5 q^{27} - 4 q^{28} + 2 q^{30} +{\color{red} 7 q^{31}} + O(q^{32})
+\end{align*}\]</span></p>
+<p>i podem veure que els coeficients coincideixen amb els obtinguts de la corba el·líptica.</p>
+</section>
+<section id="la-funció-j-de-klein" class="level2" data-number="3.7">
+<h2 data-number="3.7" class="anchored" data-anchor-id="la-funció-j-de-klein"><span class="header-section-number">3.7</span> La funció j de Klein</h2>
+<p>Definim la següent funció modular de pes <span class="math inline">\(0\)</span>: <span class="math display">\[
+j = E_2^3 / \Delta.
+\]</span> Veiem que <span class="math inline">\(j\)</span> té un holomorfa a tot <span class="math inline">\(\mathbb{H}\)</span>, perquè <span class="math inline">\(\Delta\)</span> no s’anula. A més, té un pol simple a l’infinit, provinent del zero simple de <span class="math inline">\(\Delta\)</span>.</p>
+<p><strong>Proposició:</strong> L’aplicació <span class="math inline">\(z\mapsto j(z)\)</span> identifica <span class="math inline">\(\operatorname{PSL}_2(\mathbb{R})\backslash \mathbb{H}\)</span> amb <span class="math inline">\(\mathbb{C}\)</span>.</p>
+<p><em>Prova:</em> com que <span class="math inline">\(j\)</span> és invariant per <span class="math inline">\(G\)</span>, obtenim una funció ben definida <span class="math inline">\(G\backslash \mathbb{H}\longrightarrow\mathbb{C}\)</span>. Hem de veure que, per a tot <span class="math inline">\(\lambda\mathbb{C}\)</span>, existeix un únic <span class="math inline">\(z\in G\backslash\mathbb{H}\)</span> tal que <span class="math inline">\(j(z)=\lambda\)</span> o, el què és el mateix, que la funció <span class="math inline">\(f_\lambda(z)=E_2(z)^3 - \lambda\Delta(z)\)</span> té un únic zero mòdul <span class="math inline">\(G\)</span>. Aplicant la fórmula de la valència a <span class="math inline">\(f_\lambda\)</span> (que té pes <span class="math inline">\(12\)</span>) veiem que hem de descomposar <span class="math inline">\(1\)</span> de la forma <span class="math inline">\(a + b/2 + c/3\)</span> amb <span class="math inline">\(a,b,c\geq 0\)</span>. Les úniques possibilitats són <span class="math inline">\((1,0,0)\)</span>, <span class="math inline">\((0,2,0)\)</span>, <span class="math inline">\((0,0,3)\)</span>, i per tant hi ha un únic zero de <span class="math inline">\(f_\lambda\)</span> a <span class="math inline">\(G\backslash\mathbb{H}\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
+<p>De fet, la funció <span class="math inline">\(j\)</span> dona lloc a totes les funcions modulars de pes zero:</p>
+<p><strong>Proposició:</strong> Tota funció modular de pes zero és una funció racional en <span class="math inline">\(j\)</span>.</p>
+<p><em>Prova:</em> Sigui <span class="math inline">\(f\)</span> una funció modular. Multiplicant-la per un polinomi en <span class="math inline">\(j\)</span>, posem suposar que és holomorfa a <span class="math inline">\(\mathbb{H}\)</span>. D’altra banda, com que <span class="math inline">\(\Delta\)</span> té un zero simple a l’infinit, podem multiplicar <span class="math inline">\(f\)</span> per <span class="math inline">\(\Delta^n\)</span> de manera que <span class="math inline">\(g=\Delta^nf\)</span> sigui holomorfa també a l’infinit. Aleshores <span class="math inline">\(g\)</span> és una forma modular de pes <span class="math inline">\(12n\)</span>, que podem escriure com un polinomi (4,6)-homogeni en <span class="math inline">\(E_4\)</span> i <span class="math inline">\(E_6\)</span>, de grau <span class="math inline">\(12n\)</span>. Per linealitat, n’hi ha prou amb veure que <span class="math inline">\(f=E_4^iE_6^j/\Delta^n\)</span> és una funció racional en <span class="math inline">\(j\)</span>. Observem però que, com que <span class="math inline">\(4i+6j=12n\)</span>, tant <span class="math inline">\(p=i/3\)</span> com <span class="math inline">\(q=j/2\)</span> són enters i, per tant, <span class="math inline">\(f=E_4^{3p}E_6^{2q}/\Delta^{p+q}=(\frac{E_4^3}{\Delta})^p(\frac{E_6^2}{\Delta})^q\)</span>. Però tant <span class="math inline">\(E_4^3/\Delta\)</span> com <span class="math inline">\(E_6^2/\Delta\)</span> són funcions racionals en <span class="math inline">\(j\)</span>, i ja estem. <span class="math inline">\(\blacksquare\)</span></p>
+<p><strong>Remarca:</strong> A partir de les <span class="math inline">\(q\)</span>-expansions de les sèries d’Eisenstein podem obtenir la de <span class="math inline">\(j\)</span>: <span class="math display">\[
+j(z)=\frac{1}{q} + 744 + 196884q + 21493760q^2+\cdots
+\]</span> Els coeficients són tots enters, que a més satisfan <span class="math inline">\(n\equiv 0\pmod{p^i}\implies c(n) \equiv 0 \pmod{p^i}\)</span> per <span class="math inline">\(p=2,3,5,7,11\)</span> (per <span class="math inline">\(p=2,3,5\)</span> la divisilitat de <span class="math inline">\(c(n)\)</span> és per <span class="math inline">\(2^{3i+8}\)</span>, <span class="math inline">\(3^{2i+3}\)</span> i <span class="math inline">\(5^{i+1}\)</span>, respectivament).</p>
+<p>El següent teorema és sorprenent: ens diu que la funció transcendent <span class="math inline">\(j(z)\)</span> pren valors algebraics quan l’argument és quadràtic.</p>
+<p><strong>Teorema:</strong> Si <span class="math inline">\(\tau\in\mathbb{H}\)</span> genera un cos quadràtic, aleshores <span class="math inline">\(j(\tau)\)</span> és algebraic.</p>
+<p><em>Prova:</em> Suposem que <span class="math inline">\(A\tau^2+B\tau+C=0\)</span>, amb <span class="math inline">\(A\neq 0\)</span>. Aleshores la matriu <span class="math inline">\(M=\left(\begin{smallmatrix}B&amp;C\\-A&amp;0\end{smallmatrix}\right)\)</span> té determinant <span class="math inline">\(N = AC\)</span> i fixa <span class="math inline">\(\tau\)</span>. El grup <span class="math inline">\(\Gamma=\operatorname{SL}_2(\mathbb{Z})\cap M^{-1}\operatorname{SL}_2(\mathbb{Z})M\)</span> és d’índex finit a <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span>, i tant <span class="math inline">\(j(z)\)</span> com <span class="math inline">\(j(Nz)\)</span> són formes modulars meromorfes pel grup <span class="math inline">\(\Gamma\)</span>. Per tant, són algebraicament dependents: hi ha un polinomi <span class="math inline">\(P(X,Y)\in \mathbb{C}[X,Y]\)</span> tal que <span class="math inline">\(P(j(z), j(Nz))=0\)</span>. Mirant la <span class="math inline">\(q\)</span>-expansió de <span class="math inline">\(j(z)\)</span> i <span class="math inline">\(j(Nz)\)</span> es veu que <span class="math inline">\(\mathbb{Q}[X,Y]\)</span>. Resulta aleshores que <span class="math inline">\(j(\tau)\)</span> és arrel del polinomi <span class="math inline">\(P(X,X)\in\mathbb{Q}[X]\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
+<p>Per exemple, es pot demostrar que <span class="math inline">\(j(\frac{1+\sqrt{-163}}{2}) = (640320)^3\)</span>. D’aquí se’n dedueix la famosa “identitat” <span class="math display">\[
+e^{\pi\sqrt{163}} = 262537412640768743.999999999999250072597\ldots
+\]</span></p>
+<p>De fet, la funció <span class="math inline">\(j\)</span> ens permet apropar-nos al somni de joventut de Kronecker. Kronecker i Weber van demostrar el 1884 el següent teorema:</p>
+<p><strong>Teorema (Kronecker-Weber):</strong> Sigui <span class="math inline">\(H\)</span> una extensió abeliana de <span class="math inline">\(\mathbb{Q}\)</span>. Aleshores existeix <span class="math inline">\(n\geq 1\)</span> tal que <span class="math inline">\(H\subseteq \mathbb{Q}(e^{2\pi i/n})\)</span>.</p>
+<p>Es va preguntar si les extensions abelianes d’altres cossos diferents de <span class="math inline">\(\mathbb{Q}\)</span> també es poden obtenir adjuntant valors “especials” d’alguna funció anàloga a l’exponencial. Doncs bé, tenim:</p>
+<p><strong>Teorema (Kronecker, Weber, Takagi, Hasse):</strong> Sigui <span class="math inline">\(H\)</span> una extensió abeliana d’un cos quadràtic imaginari <span class="math inline">\(K\)</span>. Aleshores existeix un <span class="math inline">\(n\geq 1\)</span> i un <span class="math inline">\(\tau\)</span> quadràtic tal que <span class="math inline">\(H\subseteq K(e^{2\pi i/n}, j(\tau), j(n\tau))\)</span>.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiat!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiat!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./dia2.html" class="pagination-link" aria-label="Segon dia">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Segon dia</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./dia4.html" class="pagination-link" aria-label="Quart dia">
+        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quart dia</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
