@@ -1,0 +1,169 @@
+{{< include macros.qmd >}}
+# Quart dia
+
+Avui veurem les formes modulars $p$-àdiques des del punt de vista de J.-P. Serre, i com ens permeten una construcció alternativa de la funció $p$-àdica de Kubota--Leopoldt.
+
+Recordem les congruències de Clausen--von Staudt pels nombres de Bernoulli
+
+**Teorema (Clausen--von Staudt):** Si $k\geq 2$ és parell, aleshores
+$$
+B_k + \sum_{p-1\mid k} \frac{1}{p} \in \ZZ.
+$$
+
+La demostració és relativament elemental, i no la farem en aquestes notes. Una conseqüència fàcil és que
+
+**Corol·lari:** Per a tot primer $p$ es té
+$$
+k \equiv 0 \pmod{(p-1)p^\alpha} \implies \frac{k}{B_k}\equiv 0\pmod{p^{\alpha+1}}.
+$$
+
+Recordem les sèries d'Eisenstein $E_k$,
+$$
+E_k(q) = 1 - \frac{2k}{Bk} \sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
+$$
+El corol·lari anterior ens diu que, per a tot $r\in\ZZ$ i $\alpha\geq 0$, tenim $E_{r(p-1)p^\alpha} \equiv 1 \pmod{p^{\alpha+1}}$. En particular, $E_{p-1}\equiv 1\pmod p$. Aquí, les congruències són de $q$-expansions, és a dir, estem dient que la sèrie $E_{p-1}-1$ té tots els coeficients divisibles per $p$.
+
+Escrivim $\ZZ_{(p)} = \{ x \in \QQ ~:~ v_p(x)\geq 0\}$ (s'anomena l'anell dels $p$-enters), i considerem els espais
+$$
+M_k(\ZZ_{(p)}) = M_k \cap \ZZ_{(p)}[[q]],
+$$
+és a dir el subanell format per les formes modulars de pes $k$ tals que els coeficients de la seva $q$-expansió són tots $p$-enters. Tenim una aplicació de reducció
+$$
+\operatorname{red} \colon M_k(\ZZ_{(p)}) \to \FF_p[[q]], \quad f \mapsto \overline f.
+$$
+La imatge d'aquesta aplicació l'anomenarem $M_k(\FF_p)$. Fixem-nos que, com que $\bar E_{p-1} = 1$, tenim inclusions
+$$
+M_k(\FF_p)\subseteq M_{k+(p-1)}(\FF_p)\subseteq\cdots\subseteq M_{k+t(p-1)}(\FF_p)\cdots
+$$
+i per tant té sentit considerar la unió de tots aquests anells. Per cada $i\in \ZZ/(p-1)\ZZ$, definim
+$$
+M^i(\FF_p) = \bigcup_{k\equiv i\pmod{p-1}} M_k(\FF_p).
+$$
+Finalment, també considerem $M(\FF_p)\subseteq \FF_p[[q]]$ com la suma de tots els $M_k(\FF_p)$, i de manera anàloga considerem també $M(\ZZ_{(p)})$. El morfisme de reducció dona lloc a un morfisme d'anells $M(\ZZ_{(p)})\to M(\FF_p)$. Fixem-nos que $E_{p-1}-1\in M(\ZZ_{(p)})$ és al nucli d'aquesta aplicació. Escrivim $A=E_{p-1}$, i recordem que escrivim $Q=E_4$ i $R=E_6$. Sabem que $A$ es pot escriure com un cert polinomi "homogeni" en $Q,R$, que denotarem com $A=A(Q,R)$.
+
+**Teorema (Swinnerton-Dyer):**
+
+1. Si $p\geq 5$, aleshores $\ker\operatorname{red} = A - 1$. Per tant, $M(\FF_p) \cong \FF_p[X, Y]/(\bar A(X,Y) - 1)$. A més,
+$$
+M(\FF_p) = \bigoplus_{i\in\ZZ/(p-1)\ZZ} M^i(\FF_p).
+$$
+
+2. Per $p=2,3$, tenim $M(\FF_p) = M^0(\FF_p)=\FF_p(\bar\Delta)$.
+
+*Prova:* TODO
+
+**Teorema:** Sigui $p\geq 3$, i siguin $f\in M_k(\ZZ_{(p)})$ i $f'\in M_{k'}(\ZZ_{(p)})$ dues formes modulars de pesos $k$ i $k'$ respectivament. Aleshores
+$$
+f\equiv f'\pmod{p^m}\implies k\equiv k'\pmod{(p-1)p^{m-1}}.
+$$
+Si $p=2$, aleshores es té
+$$
+f\equiv f'\pmod{2^m}\implies k\equiv k'\pmod{2^{m-2}}.
+$$
+
+*Prova:* TODO
+
+Més endavant veurem la demostració d'aquests resultats. Però fixem-nos que en podem treure alguna conseqüència fàcil:
+
+**Proposició (congruències de Kummer per a=1):** Si $k\equiv k'\not\equiv 0\pmod{p-1}$ aleshores $\frac{B_k}{k} \equiv \frac{B_{k'}}{k'}\pmod p$.
+
+*Prova:*
+Sabem que $\sigma_{k-1}(n)\equiv \sigma_{k'-1}(n)\pmod{p}$ per a tot $n$. Les congruències de Clausen--von Staudt ens diuen que $G_k$ i $G_{k'}$ viuen a $M_k(\ZZ_{(p)})$. Per tant, la reducció $\bar G_k - \bar G_{k'}$ viu a $M^k(\FF_p)$. Però els termes no-constants de la $q$-expansió s'anul·len tots, i per tant en deduim que
+$$
+\frac{B_k}{k} - \frac{B_{k'}}{k'} \in M^{k}(\FF_p).
+$$
+Essent la diferència de dues constants, també viuen a $M^0(\FF_p)$ i , per tant, com que $p-1\nmid k$, el teorema de Swinnerton-Dyer ens diu que aquesta diferència és $0$. $\qed$
+
+
+## Formes modulars p-àdiques
+
+
+Considerem l'anell de les formes modulars amb coeficients racionals $M(\QQ)$. Podem definir-hi una valoració $p$-àdica (que indueix una norma) definint
+$$
+v_p(f) = \inf_{n} v_p(a_n),\quad f(q) = \sum_{n\geq 0}a_nq^n.
+$$
+Aquesta definició té sentit, perquè les formes modulars tenen denominadors fitats: són polinomis "homogenis" en $Q$ i $R$ a coeficients racionals, i $Q$ i $R$ tenen denominadors enters.
+
+**Definició:** L'anell $M(\QQ_p)\subseteq \QQ_p[[q]]$ és la completació de $M(\QQ)$ respecte la norma induida per $v_p$. Més concretament, una $q$-expansió $f\in \QQ_p[[q]]$ és de $M(\QQ_p)$ si, i només si, existeix una successió de formes modulars $(f_m)_m\subseteq M(\QQ)$ tals que $\lim_m f_m= f$ (convergència uniforme).
+
+Considerem ara $f=\lim_m f_m$ una forma modular $p$-àdica, i suposem que $f_m$ té pes $k_m$. Pel teorema de la secció anterior, la successió d'enters $\{k_m\}_m$ convergeix $p$-àdicament a un element $\kappa \in\fX$, on
+$$
+\fX = \varprojlim_m\ \ZZ/(p-1)p^m\ZZ \cong \ZZ/(p-1)\ZZ \times \ZZ_p.
+$$
+Direm que $f$ té pes $\kappa$, i escriurem $M_\kappa(\QQ_p)$ pel subespai de formes modulars $p$-àdiques de pes $\kappa$.
+
+**Remarca:** El conjunt $\fX$, que s'anomena "l'espai de pesos", el podem pensar com un espai de caràcters. Fixem-nos que $\ZZ_p^\times \cong \mu_{p-1} \times (1+p\ZZ_p)$ (on $\mu_{p-1}$ és el grup cíclic format per les arrels $(p-1)$-èssimes de la unitat), via $x\mapsto \omega(x)\langle x\rangle$. Els caràcters multiplicatius de $1+p\ZZ_p$ són tots de la forma $\alpha\mapsto \alpha^{\kappa}$, per $\kappa\in\ZZ_p$. Per tant, els caràcters de $\ZZ_p^\times$ són de la forma $(u,\alpha)\mapsto \chi_{(h,\kappa)}(u,\alpha)=(u^h, \alpha^\kappa)$. Així,
+$$
+\fX= \operatorname{Hom}_{\text{cont}}(\ZZ_p^\times,\ZZ_p^\times), \quad (h,\kappa)\mapsto \chi_{(h,\kappa)}.
+$$
+
+El teorema de la secció anterior es pot formular en termes de formes modulars $p$-àdiques:
+
+**Teorema:** Siguin $f$ i $f'$ formes modulars $p$-àdiques de pesos $\kappa$ i $\kappa'$, respectivament. Suposem que $v_p(f-f')\geq v_p(f)+m$ per algun $m\geq 1$. Aleshores, si $p\geq 3$,
+$$
+\kappa\equiv \kappa' \pmod{(p-1)p^{m-1}}.
+$$
+(Per $p=2$ cal canviar l'exponent $m-1$ per $m-2$).
+
+## El terme constant a partir dels altres termes
+
+
+Per les sèries d'Eisenstein, l'únic terme "interessant" és el constant, ja que la resta de termes estan formats per funcions ben conegudes. El següent resultat ens permet deduir propietats del terme constant a partir de conèixer els termes d'ordre més alt.
+
+**Proposició:**
+
+1. Sigui $f=\sum_n a_n q^n\in M_{\kappa}(\QQ_p)$ una forma modular $p$-àdica de pes $\kappa\in\fX$. Si $\kappa\not\equiv 0 \pmod{(p-1)p^m}$ per algun $m\geq 0$, aleshores
+$$
+v_p(a_0)+m\geq \inf_{n\geq 1} v_p(a_n).
+$$
+2. Sigui $(f_m)_m\subseteq M(\QQ_p)$ una successió de formes modulars $p$-adiques de pesos $\{\kappa_m\}_m$. Escrivim $f_m = \lim_n f_m^{(n)}$, on $f_m^{(n)} = \sum_{n} a_n^{(m)} q^n$. Suposem que $\lim_m a_n^{(m)} = a_n$ uniformement en $n$ i que $\lim\kappa_m=\kappa\neq 0$. Aleshores $\lim_m a_0^{(m)}= a_0$, i $f=\sum_{n}a_nq^n$ és una forma modular $p$-àdica de pes $\kappa$.
+
+*Prova:* Per demostrar (1), observem primer que si $a_0=0$ aleshores ja estem. Si no, $a_0\in M_0(\QQ_p)$ i per tant tenim, per la proposició anterior, que
+$$
+v_p(f-a_0)<v_p(f)+m+1.
+$$
+Per tant,
+$$
+v_p(a_0)+m\geq v_p(f)+m \geq \inf_{n\geq 1} v_p(a_n).
+$$
+
+Per demostrar (2), prenem un $m$ prou gran tal que $\kappa\not\equiv 0 \pmod{(p-1)p^{m}}$. Aleshores podem trobar $t \in \ZZ$ tal que, per $i$ suficientment gran,
+$$
+v_p(a_{n}^{(i)})\geq t,\quad \forall n\geq 1.
+$$
+
+L'apartat anterior ens dona doncs que $v_p(a_{0}^{(i)})>t-m$ per a tot $i$ suficientment gran. Com que $p^{t-m}\ZZ_{p}$ és compacte, hi ha una subsuccessió de $(a_0^{(i)})_i$ convergint a $a_0$, i $f=\sum_{n\geq 0} a_n q^{n}\in M_{\kappa}(\QQ_p)$. Si $a_0'$ fos el límit d'una altra subsuccessió, aleshores obtindríem una altra $f'$, i
+$$
+f-f' = a_0-a_0'\in M_{\kappa}(\QQ_p)\cap M_{0}(\QQ_p)=0.
+$$
+Per tant $(a_0^{(i)})_i$ convergeix a $a_0$. $\qed$
+
+## La funció zeta p-àdica
+
+
+Recordem la modificació $p$-àdica de la funció de divisors
+$$
+\sigma_k^*(n) = \sum_{d\mid n,p\nmid d} d^k = \sigma_k(n) -p^k\sigma_k(n/p),
+$$
+on entenem que $\sigma_k(n/p)=0$ si $p\nmid n$. Si $k\equiv k'\pmod{(p-1)p^{m-1}}$, aleshores
+$$
+\sigma_k^*(n)\equiv \sigma_{k'}^*(n)\pmod{p^m}.
+$$
+Sigui ara $(k_i)_i\subseteq \ZZ$ una successió d'enters amb $k_i\to\kappa$ $p$-àdicament, i tals que $k_i\to\infty$ en sentit arquimedià. Suposem que $\kappa$ és parell i diferent de zero. Aleshores $\sigma_{k_i}^*(n)\to\sigma_{\kappa}^*(n)$ de manera uniforme en $n$. Obtenim de la proposició anterior que hi ha una forma modular $p$-àdica $G_\kappa^*=a_0+\sum_{n\geq 1} \sigma_\kappa^*(n)q^n$, on
+$$
+\zeta^*(1-k):=a_0 = \lim_{i\to\infty} \frac{-B_{k_i}}{2k_i} = \frac{1}{2} \lim_{i\to\infty} \zeta(1-k_i).
+$$
+
+Obtenim així una funció $\zeta^*(\kappa)$, definida per elements senars $\kappa\in\fX\smallsetminus\{1\}$. La segona part de la proposició anterior ens diu que $\zeta^*$ és contínua (perquè els coeficients $\kappa\mapsto \sigma_{\kappa}(n)$ ho són).
+
+Suposem que $\kappa\in \ZZ_{\geq 2}$ és un enter. Aleshores podem calcular
+$$
+\zeta^*(1-\kappa) = \lim_{i\to\infty} \zeta(1-k_i)=\lim_{i\to\infty} \prod_\ell \frac{1}{1-\ell^{k_i-1}} = \prod_{\ell\neq p} \frac{1}{1-\ell^{k-1}} = (1-p^{k-1}) \zeta(1-k).
+$$
+
+Com que $\zeta^*$ és contínua i interpola en un conjunt dens, ha de ser la funció de Kubota--Leopoldt que ja hem vist. És a dir, que obtenim (assumim $p\neq 2$ per simplicitat):
+
+**Teorema:** Si $p\neq 2$  i $(s,u)\in\ZZ_p\times \ZZ/(p-1)\ZZ\cong\fX$, tenim
+$$
+\zeta^*(s,u)=L_p(s\omega^{1-u}).
+$$

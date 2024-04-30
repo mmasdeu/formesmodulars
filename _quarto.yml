@@ -1,0 +1,39 @@
+project:
+  type: book
+
+  
+
+book:
+  title: "Formes Modulars"
+  author: "Marc Masdeu"
+
+  date: "4/29/2024"
+  chapters:
+    - index.qmd
+    - dia1.qmd
+    - dia2.qmd
+    - dia3.qmd
+    - dia4.qmd
+    - bibliografia.qmd
+  sidebar:
+    pinned: true
+  repo-url: https://www.github.com/mmasdeu/formesmodulars   
+  search: 
+    location: sidebar
+    type: textbox
+  downloads: [pdf]
+
+bibliography: references.bib
+
+format:
+  html:
+    lang: ca
+    theme: cosmo
+  pdf:
+    lang: ca
+    documentclass: scrreprt
+    colorlinks: true
+    toc: true
+    number-sections: true
+
+
