@@ -1,38 +1,5 @@
-# Prefaci {.unnumbered}
+# Introducció {.unnumbered}
 
 La referència bàsica d'aquests apunts és el llibre @serre2012. Si voleu aprofundir més, podeu consultar @diamond-shurman2005.
 
-Tipografiat amb Quarto. Per saber-ne més, vegeu <https://quarto.org/docs/books>.
-
-\providecommand{\QQ}{\mathbb{Q}}
-\providecommand{\ZZ}{\mathbb{Z}}
-\providecommand{\RR}{\mathbb{R}}
-\providecommand{\FF}{\mathbb{F}}
-\providecommand{\CC}{\mathbb{C}}
-\providecommand{\HH}{\mathbb{H}}
-
-\providecommand{\fX}{\mathfrak{X}}
-
-\providecommand{\SL}{\operatorname{SL}}
-\providecommand{\GL}{\operatorname{GL}}
-\providecommand{\PSL}{\operatorname{PSL}}
-\providecommand{\PGL}{\operatorname{PGL}}
-
-\providecommand{\lto}{\longrightarrow}
-\providecommand{\dfn}{\ensuremath{:=}}
-\providecommand{\surjects}{\twoheadrightarrow}
-\providecommand{\injects}{\hookrightarrow}
-\providecommand{\id}{\ensuremath \text{Id}}
-\providecommand{\tns}[1][]{\otimes_{\!#1}}
-\providecommand{\mtx}[4]{\left(\begin{matrix}#1&#2\\#3&#4\end{matrix}\right)}
-\providecommand{\mat}[1]{\left(\begin{matrix}#1\end{matrix}\right)}
-\providecommand{\smat}[1]{\left(\begin{smallmatrix}#1\end{smallmatrix}\right)}
-\providecommand{\smtx}[4]{\left(\begin{smallmatrix}#1&#2\\#3&#4\end{smallmatrix}\right)}
-
-\providecommand{\slz}{\operatorname{SL}_2(\bZ)}
-\providecommand{\to}{\longrightarrow}
-\providecommand{\dlog}{\operatorname{dlog}}
-
-\providecommand{\abs}[1]{|#1|}
-\providecommand{\slsh}[1]{|_{#1}}
-\providecommand{\qed}{\blacksquare}
+Tipografiat amb Quarto. Per saber més, vegeu <https://quarto.org/docs/books>.
