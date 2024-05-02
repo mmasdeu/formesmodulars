@@ -8,7 +8,7 @@ book:
   subtitle: "Un introducció a la cinquena operació bàsica"
   author: "Marc Masdeu"
 
-  date: "4/29/2024"
+  date: "2/5/2024"
   chapters:
     - index.qmd
     - dia1.qmd

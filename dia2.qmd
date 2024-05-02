@@ -212,14 +212,12 @@ $$
 \dlog\tilde\Delta = 2\pi i E_2.
 $$
 Podem calcular, per a tot $z\in\HH$,
-
-```{=tex}
 \begin{align*}
 \dlog \left(z^{-12}\tilde\Delta(-1/z)\right) &= \frac{-12}{z} + \dlog\tilde\Delta(-1/z)\\
 &= \frac{-12}{z} + 2\pi i(z^{-2}E_2(-1/z))\\
 &= 2\pi i E_2(z)=\dlog\tilde\Delta(z).
 \end{align*}
-```
+
 Per tant, $z^{-12}\tilde\Delta(-1/z) = C \tilde\Delta(z)$, per certa constant $C$. Evaluant a $z=i$ podem veure que $C=1$ (ja que $\Delta(i)\neq 0$) i que, per tant $\tilde\Delta$ és una forma modular de pes $12$. És doncs un múltiple de $\Delta(z)$, que ha de ser $1$ perquè ambdues sèries de Fourier comencen per $q+O(q^2)$.
 
 ### La funció tau de Ramanujan
