@@ -1,12 +1,10 @@
 {{< include macros.qmd >}}
-# Segon dia
 
+# Segon dia
 
 ## q-expansió de les sèries d'Eisenstein
 
-
 ### Els nombres de Bernoulli
-
 
 Es defineixen com els coeficients de la sèrie de Taylor de
 $$
@@ -19,14 +17,17 @@ t = \sum_{k=0}^\infty B_k \frac{t^k}{k!} \sum_{\ell=1}^\infty \frac{t^\ell}{\ell
 $$
 De fet, veiem que $B_0=1$, $B_1=-1/2$, i $B_k=0$ per a tot $k\geq 3$ senar. També podem calcular $B_2=1/6$, $B_4=-1/30$,...
 
-L'interès en els nombres de Bernoulli prové del fet que són la "part racional" dels valors de la funció zeta de Riemann en els enters parells (per exemple, $\zeta(2)=\pi^2/6$, $\zeta(4)=\pi^4/90$,...
+L'interès en els nombres de Bernoulli prové del fet que són la "part racional" dels valors de la funció zeta de Riemann en els enters parells (per exemple, $\zeta(2)=\pi^2/6$, $\zeta(4)=\pi^4/90$,...).
 
-**Proposició:** si $n\geq 2$ és un enter parell,
+::: {#prp-}
+Si $n\geq 2$ és un enter parell,
 $$
 \zeta(n) = \frac {2^{n-1}\pi^{n} |B_{n}|} {n!}
 $$
+:::
 
-*Prova:* Substituint $t=2iz$ a la definició dels nombres de Bernoulli obtenim la fórmula
+::: proof
+Substituint $t=2iz$ a la definició dels nombres de Bernoulli obtenim la fórmula
 $$
 z\cot z = \sum_{k=0}^\infty |B_{2k}|\frac{2^{2k}z^{2k}}{(2k)!}.
 $$
@@ -38,11 +39,10 @@ n'obtenim, fent la derivada logarítmica,
 $$
 z\cot z = 1+2\sum_{n=1}^\infty \frac{z^2}{z^2-n^2\pi^2}=1-2\sum_{n=1}^\infty\sum_{k=1}^\infty \frac{z^{2k}}{n^{2k}{\pi^{2k}}}.
 $$
-Arribem al resultat comparant el terme de $z^{2k}$ de cada equació.$\qed$
-
+Arribem al resultat comparant el terme de $z^{2k}$ de cada equació.
+:::
 
 ### Expansions de les sèries d'Eisenstein
-
 
 Observem que, de la igualtat
 $$
@@ -65,52 +65,52 @@ $$
 \sum_{m\in\ZZ} \frac{1}{(z+m)^k} = \frac{(-1)^k (2\pi i)^k}{(k-1)!}\sum_{n=1}^\infty n^{k-1}q^n, \quad k\geq 2.
 $$
 
-**Proposició:** Per cada $k\geq 4$ parell, tenim
+::: {#prp-}
+Per cada $k\geq 4$ parell, tenim
 $$
 G_k(z) = 2\zeta(k) + 2\frac{(2\pi i)^{k}}{(k-1)!} \sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
 $$
+:::
 
-*Prova:* Expandim $G_k(z)$ com
+::: proof
+Expandim $G_k(z)$ com
 $$
 G_k(z)=\sum_{(m,n)\neq (0,0)} \frac{1}{(mz+n)^k} =2\zeta(k) + 2\sum_{m=1}^\infty\sum_{n\in\ZZ} \frac{1}{(mz+n)^k}.
 $$
 Aplicant la igualtat bàsica anterior amb $mz$ en comptes de $z$, tenim
-$$
-G_k(z) = 2\zeta(k) +2\frac{(-1)^k (2\pi i)^k}{(k-1)!} \sum_{d=1}^\infty \sum_{a=1}^\infty d^{k-1} q^{ad} = 2\zeta(k) + \frac{2(2\pi i)^k}{(k-1)!}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
-$$
+\begin{align*}
+G_k(z) &= 2\zeta(k) +2\frac{(-1)^k (2\pi i)^k}{(k-1)!} \sum_{d=1}^\infty \sum_{a=1}^\infty d^{k-1} q^{ad}\\
+&= 2\zeta(k) + \frac{2(2\pi i)^k}{(k-1)!}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
+\end{align*}
+:::
 
-**Corol·lari:** Tenim $G_k(z)=2\zeta(k)E_k(z)$, amb
+::: {#cor-}
+Tenim $G_k(z)=2\zeta(k)E_k(z)$, amb
 $$
 E_k(z) = 1-\frac{2k}{B_k}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
 $$
+:::
 
 Per exemple,
-$$
-E_4=1+240\sum_{n\geq 1} \sigma_3(n)q^n,\quad
-E_6=1-504\sum_{n\geq 1} \sigma_5(n)q^n,\\
-E_8=1+480\sum_{n\geq 1} \sigma_7(n)q^n,\quad
-E_{10} = 1-264\sum_{n\geq 1}\sigma_9(n)q^n,\\
-E_{12} = 1+\frac{65520}{691}\sum_{n\geq 1}\sigma_{11}(n)q^n,\quad
-E_{14} = 1-24\sum_{n\geq 1} \sigma_{13}(n)q^n.
-$$
+\begin{align*}
+E_4&=1+240\sum_{n\geq 1} \sigma_3(n)q^n,&
+E_6&=1-504\sum_{n\geq 1} \sigma_5(n)q^n,\\
+E_8&=1+480\sum_{n\geq 1} \sigma_7(n)q^n,&
+E_{10} &= 1-264\sum_{n\geq 1}\sigma_9(n)q^n,\\
+E_{12} &= 1+\frac{65520}{691}\sum_{n\geq 1}\sigma_{11}(n)q^n,&
+E_{14} &= 1-24\sum_{n\geq 1} \sigma_{13}(n)q^n.
+\end{align*}
 
 ### Una primera aplicació
 
 Ja hem vist que $M_8$, $M_{10}$ i $M_{14}$ tenen dimensió $1$. Per tant, $E_4^2=E_8$, $E_4E_6=E_{10}$ i $E_4E_{10}=E_{14}$. Comparant coeficients de les corresponents expansions, obtenim les identitats
-$$
-\sigma_7(n)=\sigma_3(n)+120\sum_{m=1}^{n-1} \sigma_3(m)\sigma_3(n-m),
-$$
-$$
-11\sigma_9(n)=21\sigma_5(n)-10\sigma_3(n)+5040\sum_{m=1}^{n-1} \sigma_3(m)\sigma_5(n-m),
-$$
-i
-$$
-\sigma_{13}(n) = 11\sigma_9(n) - 10\sigma_{3}(n) +2640 \sum_{m=1}^n \sigma_3(n)\sigma_9(n-m).
-$$
-
+\begin{align*}
+\sigma_7(n)&=\sigma_3(n)+120\sum_{m=1}^{n-1} \sigma_3(m)\sigma_3(n-m),\\
+11\sigma_9(n)&=21\sigma_5(n)-10\sigma_3(n)+5040\sum_{m=1}^{n-1} \sigma_3(m)\sigma_5(n-m), i\\
+\sigma_{13}(n) &= 11\sigma_9(n) - 10\sigma_{3}(n) +2640 \sum_{m=1}^n \sigma_3(n)\sigma_9(n-m).
+\end{align*}
 
 ## L'expansió de la funció discriminant
-
 
 Volem donar una fórmula per $\Delta(z)=\frac{E_4(z)^3-E_6(z)^2}{1728}$. Per això, considerem $\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}$ a on, com sempre, $q=e^{2\pi i z}$. Veurem que aquestes dues funcions coincideixen. Per fer-ho, prenem primer la derivada logarítmica de $\tilde\Delta$, i obtenim (fixem-nos que $\dlog q = 2\pi i$)
 $$
@@ -125,9 +125,7 @@ $$
 \dlog\tilde\Delta = 2\pi i \left( 1-24\sum_{n\geq 1} \sigma_1(n)q^n\right).
 $$
 
-
 ### La sèrie d'Eisenstein de pes 2
-
 
 Considerem la funció
 $$
@@ -145,33 +143,45 @@ $$
 $$
 G_2(-1/z) = \sum_{m=-\infty}^\infty\sum_{n=-\infty}^\infty \frac{z^2}{(nz+m)^2} = z^2\sum_{n=-\infty}^\infty\sum_{m=-\infty}^\infty \frac{1}{(mz+n)^2}.
 $$
+
 Fixem-nos que l'ordre dels sumatoris està canviat! Per relacionar-ho altra vegada amb $G(z)$, ens cal primer poder-la escriure com la suma d'una sèrie absolutament convergent.
 
-**Lema:** Es pot escriure
+::: {#lem-}
+Es pot escriure
 $$
 G_2(z) = 2\zeta(2) + \sum_{m\neq 0,n\in\ZZ}\frac{1}{(mz+n)^2(mz+n+1)},
 $$
 on la sèrie és absolutament convergent.
+:::
 
-*Prova:* Només cal calcular
+::: {.proof}
+Només cal calcular
+
 $$
 \sum_{m\neq 0}\sum_{n\in\ZZ} \frac{1}{(mz+n)(mz+n+1)} = \sum_{m\neq 0}\sum_{n\in\ZZ} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right) = \sum_{m\neq 0} 0 = 0.
 $$
 
-Per tant, podem restar el terme general de sobre de la sèrie que defineix $G_2(z)$, per obtenir
-$$
-G_2(z) = 2\zeta(2) + \sum_{m\neq 0}\sum_{n\in\ZZ} \left(\frac{1}{(mz+n)^2}-\frac{1}{(mz+n)(mz+n+1)}\right)\\=2\zeta(2)+\sum_{m\neq 0
-}\sum_{n\in\ZZ}\frac{1}{(mz+n)^2(mz+n+1)}.\quad\qed
-$$
+Per tant, podem restar el terme general de la sèrie que defineix $G_2(z)$, per obtenir
+\begin{align*}
+G_2(z) &= 2\zeta(2) + \sum_{m\neq 0}\sum_{n\in\ZZ} \left(\frac{1}{(mz+n)^2}-\frac{1}{(mz+n)(mz+n+1)}\right)\\
+&=2\zeta(2)+\sum_{m\neq 0
+}\sum_{n\in\ZZ}\frac{1}{(mz+n)^2(mz+n+1)}.
+\end{align*}
+:::
 
 Ara podem veure com es transforma $G_2$:
-$$
-z^{-2}G_2(-1/z)-G_2(z)= \sum_{n\in \ZZ}\sum_{m\neq 0}\left(\frac{1}{(mz+n)^2} - \frac{1}{(mz+n)^2(mz+n+1)}\right)\\= \sum_{n\in\ZZ}\sum_{m\neq 0} \frac{1}{(mz+n)(mz+n+1)} = \sum_{n\in\ZZ}\sum_{m\neq 0}\left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right)
-$$
+\begin{align*}
+z^{-2}G_2(-1/z)-G_2(z)&= \sum_{n\in \ZZ}\sum_{m\neq 0}\left(\frac{1}{(mz+n)^2} - \frac{1}{(mz+n)^2(mz+n+1)}\right)\\
+&= \sum_{n\in\ZZ}\sum_{m\neq 0} \frac{1}{(mz+n)(mz+n+1)}\\
+&= \sum_{n\in\ZZ}\sum_{m\neq 0}\left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right)
+\end{align*}
 Aquesta última suma la podem calcular explícitament:
-$$
-\sum_{n=-N}^{N-1}\sum_{m\neq 0} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right) =  \sum_{m\neq 0}\sum_{n=-N}^{N-1} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right)\\= \sum_{m\neq 0} \left(\frac{1}{mz-N}-\frac{1}{mz+N}\right) = \frac{-2\pi}{z}\cot(\pi N/z).
-$$
+\begin{align*}
+\sum_{n=-N}^{N-1}\sum_{m\neq 0} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right) &=  \sum_{m\neq 0}\sum_{n=-N}^{N-1} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right)\\
+&= \sum_{m\neq 0} \left(\frac{1}{mz-N}-\frac{1}{mz+N}\right) \\
+&= \frac{-2\pi}{z}\cot(\pi N/z).
+\end{align*}
+
 Per poder calcular el límit, observem que
 $$
 \lim_{N\to\infty} \cot(\pi N/z) = \lim_{N\to\infty} i(1-2\sum_{m=0}^\infty e^{2\pi mN/z}) = i.
@@ -179,7 +189,8 @@ $$
 
 Resumint, hem trobat:
 
-**Teorema:** La funció $G_2$ satisfà, per a tot $z\in \HH$,
+::: {#thm-transG2}
+La funció $G_2$ satisfà, per a tot $z\in \HH$,
 $$
 G_2(z+1) = G_2(z),\quad G_2(-1/z) = z^2G_2(z) -2\pi i z.
 $$
@@ -192,9 +203,9 @@ En termes de la funció normalitzada $E_2(z)$, tenim
 $$
 E_2(-1/z) = z^2E_2(z) +\frac{12 z}{2\pi i},\quad E_2(\gamma z) = (cz+d)^2E_2(z)+\frac{12}{2\pi i}c(cz+d).
 $$
+:::
 
 ### Relació amb la funció delta
-
 
 Els càlculs que hem fet fins ara ens demostren que
 $$
@@ -202,17 +213,16 @@ $$
 $$
 Podem calcular, per a tot $z\in\HH$,
 
+```{=tex}
 \begin{align*}
 \dlog \left(z^{-12}\tilde\Delta(-1/z)\right) &= \frac{-12}{z} + \dlog\tilde\Delta(-1/z)\\
 &= \frac{-12}{z} + 2\pi i(z^{-2}E_2(-1/z))\\
 &= 2\pi i E_2(z)=\dlog\tilde\Delta(z).
 \end{align*}
-
+```
 Per tant, $z^{-12}\tilde\Delta(-1/z) = C \tilde\Delta(z)$, per certa constant $C$. Evaluant a $z=i$ podem veure que $C=1$ (ja que $\Delta(i)\neq 0$) i que, per tant $\tilde\Delta$ és una forma modular de pes $12$. És doncs un múltiple de $\Delta(z)$, que ha de ser $1$ perquè ambdues sèries de Fourier comencen per $q+O(q^2)$.
 
-
 ### La funció tau de Ramanujan
-
 
 Calculant els primers termes del producte $\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}$, de seguida veiem que
 \begin{align*}
@@ -222,26 +232,29 @@ Calculant els primers termes del producte $\tilde\Delta=q\prod_{n=1}^\infty(1-q^
 
 Ramanujan va ser el primer a estudiar la funció $\tau(n)$ el 1916, i va conjecturar que:
 
-1. $\tau(n)\tau(m)=\tau(nm)$ si $(n,m)=1$.
-2. $\tau(p^{k+1}) = \tau(p)\tau(p^k) - p^{11}\tau(p^{k-1})$, per a tot primer $p$ i $k\geq 1$; i
-3. $|\tau(p)| \leq 2p^{11/2}$ per a tot primer $p$.
+1.  $\tau(n)\tau(m)=\tau(nm)$ si $(n,m)=1$.
+2.  $\tau(p^{k+1}) = \tau(p)\tau(p^k) - p^{11}\tau(p^{k-1})$, per a tot primer $p$ i $k\geq 1$; i
+3.  $|\tau(p)| \leq 2p^{11/2}$ per a tot primer $p$.
 
 També va observar (sense demostrar-les) tot de congruències que satisfà:
 
-1. $\tau(n)\equiv n^2\sigma_7(n)\pmod{27}$
-2. $\tau(n)\equiv n\sigma_3(n)\pmod{7}$
-3. $\tau(n)\equiv \sigma_{11}(n)\pmod{691}$.
+1.  $\tau(n)\equiv n^2\sigma_7(n)\pmod{27}$
+2.  $\tau(n)\equiv n\sigma_3(n)\pmod{7}$
+3.  $\tau(n)\equiv \sigma_{11}(n)\pmod{691}$.
 
 Tot això, vist un segle després, és relativament fàcil de demostrar amb la teoria de les formes modulars. El proper dia veurem que $|\tau(p)| =O(p^6)$, però per veure la fita més fina conjecturada per Ramanujan hauríem de fer servir resultats molt més profunds de P.Deligne (1974).
 
 Vegem aquí una d'aquestes congruències:
 
-**Teorema:** Per a tot $n\geq 1$, es té
+::: {#thm-}
+Per a tot $n\geq 1$, es té
 $$
 \tau(n)\equiv \sigma_{11}(n)\pmod{691}.
 $$
+:::
 
-*Prova:* Treballarem a $M_{12}$, i amb les formes $\Delta$, $E_{12}$, $E_4^3$ i $E_6^2$. Resulta que
+::: {.proof}
+Treballarem a $M_{12}$, i amb les formes $\Delta$, $E_{12}$, $E_4^3$ i $E_6^2$. Resulta que
 $$
 E_{12} = 1 + \frac{65520}{691}\sum_{n\geq 1}\sigma_{11}(n)q^n.
 $$
@@ -261,34 +274,42 @@ Mirant el terme $n$ d'aquesta expressió obtenim
 $$
 441\cdot 1728 \tau(n) = 65520 \sigma_{11}(n) - 691 a_n(E_6^2).
 $$
-Com que $E_6$ té tots els coeficients enters i $441\cdot 1728\equiv 566 \equiv 65520\pmod{691}$, obtenim el resultat.$\qed$
+Com que $E_6$ té tots els coeficients enters i $441\cdot 1728\equiv 566 \equiv 65520\pmod{691}$, obtenim el resultat.
+:::
 
 ## L'operador diferencial de Ramanujan-Serre
 
-
 Considerem l'operador diferencial $D=q\frac{d}{dq}=\frac{1}{2\pi i}\frac{d}{dz}$ actuant en les funcions diferenciables.
 
-**Definició:** L'operador diferencial de Ramanujan-Serre és $\theta_k$
+::: {#def-theta-ramanujan-serre}
+L'operador diferencial de Ramanujan-Serre és $\theta_k$:
 $$
 \theta_k(f) = Df - \frac{k}{12}E_2 f.
 $$
+:::
 
 Aquest operador $\theta_k$ és lineal i satisfà la regla del producte, però el motiu que l'estudiem aquí és el següent:
 
-**Proposició:** $\theta_k$ porta formes modulars de pes $k$ a formes modulars de pes $k+2$, i preserva els subespais de formes cuspidals.
+::: {#prp-}
+$\theta_k$ porta formes modulars de pes $k$ a formes modulars de pes $k+2$, i preserva els subespais de formes cuspidals.
+:::
 
-*Prova:* Holomorfia a $\HH$ i a $i\infty$ és automàtica, per la definició. Només cal comprovar que $\theta_k(f)$ és dèbilment modular de pes $k$, i això és un simple exercici.
+::: {.proof}
+Holomorfia a $\HH$ i a $i\infty$ és automàtica, per la definició. Només cal comprovar que $\theta_k(f)$ és dèbilment modular de pes $k$, i això és un simple exercici.
+:::
 
 Definim, per comoditat $P=E_2$, $Q=E_4$ i $R=E_6$ (aquesta és la notació original de Ramanujan).
 
-**Teorema:** Es té:
+::: {#prp-}
+Es té:
 
 1. $DP = \frac{1}{12}(P^2-Q)$.
 2. $DQ = \frac{1}{3}(PQ-R)$,
 3. $DR = \frac{1}{2}(PR-Q^2)$, i
+:::
 
-
-*Prova:* Les dues últimes identitats són equivalents a $\theta_4(Q) = -\frac{1}{3}R$ i $\theta_6(R)=-\frac{1}{2}Q^2$, respectivament. La demostració és automàtica, tenint en compte que $M_6$ i $M_8$ tenen dimensió $1$. Per veure la primera afirmació, només cal comprovar que $H = DP-\frac{1}{12}P^2$ és una forma modular de pes $4$, i això es veu directament fent servir la propietat de transformació de $P$:
+::: {.proof}
+Les dues últimes identitats són equivalents a $\theta_4(Q) = -\frac{1}{3}R$ i $\theta_6(R)=-\frac{1}{2}Q^2$, respectivament. La demostració és automàtica, tenint en compte que $M_6$ i $M_8$ tenen dimensió $1$. Per veure la primera afirmació, només cal comprovar que $H = DP-\frac{1}{12}P^2$ és una forma modular de pes $4$, i això es veu directament fent servir la propietat de transformació de $P$:
 $$
 P'(-1/z)z^{-2} = 2zP(z)+z^2P'(z)+\frac{6}{i\pi}.
 $$
@@ -296,13 +317,16 @@ Definim $H(z) = \frac{1}{2\pi i} P'(z) -\frac{1}{12}P^2(z)$, aleshores podem com
 $$
 H(-1/z) = \frac{1}{2\pi i} P'(-1/z) -\frac{1}{12}P(-1/z)^2 = (\cdots) = z^4 H(z).\quad\qed
 $$
-
+:::
 
 Amb aquestes identitats ja podem demostrar més resultats de Ramanujan. Per exemple:
 
-**Teorema:** Per a tot $n\geq 1$, es té $\tau(n) \equiv n\sigma_3(n)\pmod 7$.
+::: {#prp-}
+Per a tot $n\geq 1$, es té $\tau(n) \equiv n\sigma_3(n)\pmod 7$.
+:::
 
-*Prova:* Com que $1728\equiv 6\pmod 7$, tenim
+::: {.proof}
+Com que $1728\equiv 6\pmod 7$, tenim
 $$
 6\Delta = Q^3-R^2.
 $$
@@ -312,12 +336,16 @@ $$
 $$
 Finalment, observem que $DQ = 240\sum_{n\geq 1} n \sigma_3(n)q^n$. Com que $240\equiv 2\pmod 7$, en deduïm
 $$
-\Delta =\sum_{n\geq 1}\tau(n)q^n\equiv \sum_{n\geq 1} n\sigma_3(n)q^n.\quad\qed
+\Delta =\sum_{n\geq 1}\tau(n)q^n\equiv \sum_{n\geq 1} n\sigma_3(n)q^n.
 $$
+:::
 
-**Teorema:** Per a tot $n\geq 1$, es té $\tau(n) \equiv n^2\sigma_7(n)\pmod{27}$.
+::: {#prp-}
+Per a tot $n\geq 1$, es té $\tau(n) \equiv n^2\sigma_7(n)\pmod{27}$.
+:::
 
-*Prova:* Aplicant les fórmules que hem trobat per $D$ i la regla del producte, arribem a
+::: {.proof}
+Aplicant les fórmules que hem trobat per $D$ i la regla del producte, arribem a
 $$
 D^2(Q^2) = \frac{1}{2}P^2Q^2 +\frac{5}{18}Q^3 -PQR +\frac{2}{9}R^2.
 $$
@@ -342,5 +370,5 @@ Com que $D^2(Q^2) = 480\sum_{n\geq 1}\sigma_7(n)q^n$, per acabar només hem d'ob
 $$
 160\sum_{n\geq 1}\sigma_7(n)q^n \equiv 160\sum_{n\geq 1}\tau(n)q^n \pmod{27}.
 $$
-Com que $7\nmid 160$, ja hem acabat.$\qed$
-
+Com que $7\nmid 160$, ja hem acabat.
+:::

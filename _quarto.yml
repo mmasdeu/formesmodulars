@@ -5,6 +5,7 @@ project:
 
 book:
   title: "Formes Modulars"
+  subtitle: "Un introducció a la cinquena operació bàsica"
   author: "Marc Masdeu"
 
   date: "4/29/2024"
@@ -28,6 +29,8 @@ bibliography: references.bib
 format:
   html:
     lang: ca
+    language:
+      title-block-author-single: "Autor"
     theme: cosmo
   pdf:
     lang: ca
@@ -35,5 +38,6 @@ format:
     colorlinks: true
     toc: true
     number-sections: true
-
+    cite-method: biblatex
+    
 

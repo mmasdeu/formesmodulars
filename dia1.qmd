@@ -1,4 +1,5 @@
 {{< include macros.qmd >}}
+
 # Primer dia
 
 
@@ -8,7 +9,7 @@ Resulta que molts problemes en la teoria de nombres (i en altres ciències) trac
 
 El fet anterior ja seria de per si interessant, ja que estudiar formes modulars ens permetria estudiar tots aquests problemes a la vegada. El que és encara més sorprenent és que resulta que les formes modulars constitueixen espais vectorials de dimensió finita, i això fa que si podem construir suficients exemples, podem descobrir identitats sorprenents. Com a mostra, podem enunciar alguns teoremes que aprofiten aquest fet:
 
-**Teorema:**
+::: {#thm-1}
 Per a tot primer $p$, es té:
 $$
 \#\{(x,y)\in\ZZ/p\times\ZZ/p : y^2+y=x^3-x^2\} = p - a_p,
@@ -17,8 +18,10 @@ on $a_p$ és el coeficient de $q^p$ de la sèrie formal
 $$
 q\prod_{n=1}^\infty (1-q^n)^2(1-q^{11n})^2=q-2q^2-q^3+2q^4+q^5+2q^6-2q^7+\cdots.
 $$
+:::
 
-**Teorema (Fermat):**
+::: {#thm-fermat}
+## Fermat
 El nombre de maneres d'escriure $n$ com a suma de $2$ quadrats és
 
 $$
@@ -26,18 +29,22 @@ $$
 $$
 
 on les sumes recorren els divisors $d$ de $n$ positius.
+:::
 
-**Teorema:**
+::: {#thm-cubic}
 Sigui $a_p$ el nombre d'arrels del polinomi $x^3-x-1$ a $\ZZ/p\ZZ$. Aleshores per tot primer $p\neq 23$, $a_p-1$ és el coeficient de $q^p$ de la sèrie formal
 $$
 q\prod_{n=1}^\infty (1-q^n)(1-q^{23n}).
 $$
+:::
 
-**Teorema (Ramanujan):**
+::: {#thm-ramanujan}
+## Ramanujan
 Sigui $\tau(n)$ el coeficient de $q^n$ de la sèrie formal $\Delta(q)=q\prod_{n\geq 1} (1-q^n)^{24}$. Aleshores per a tot $n\geq 1$,
 $$
 \tau(n) \equiv \sum_{d\mid n} d^{11} \pmod{691}.
 $$
+:::
 
 ## Definicions bàsiques
 
@@ -53,18 +60,24 @@ $$
 
 Aquest grup actua en els complexos (de fet, a $\mathbb{C} \cup \{\infty\}$)
 mitjançant les anomenades *transformacions lineals fraccionàries*:
-$$g\cdot z =\smtx{a}{b}{c}{d}\cdot z = \frac{az+b}{cz+d}.$$
+$$
+g\cdot z =\smtx{a}{b}{c}{d}\cdot z = \frac{az+b}{cz+d}.
+$$
 
 Es té una fórmula  senzilla per la part imaginària d'aquesta quantitat:
 $$
 \Im(gz) = \frac{\Im(z)}{ |cz+d|^2}.
 $$
 
-Per tant, veiem que $\operatorname{SL}_2(\mathbb{R})$ actua a $\mathbb{H}$. També veiem que $-1$ actua trivialment, i per tant de fet tenim una acció del quocient $\PSL_2(\RR) = \SL_2(\RR)/\{\pm 1\}$, que de fet és *fidel*.
+Per tant, veiem que $\operatorname{SL}_2(\mathbb{R})$ actua a $\mathbb{H}$. Com que $-1$ actua trivialment, de fet tenim una acció del quocient $\PSL_2(\RR) = \SL_2(\RR)/\{\pm 1\}$, que de fet és *fidel*.
 
-**Remarca:** De fet, el grup $\PSL_2(\RR)$ és el grup d'automorfismes analítics de $\HH$.
+::: {#rem-}
+De fet, el grup $\PSL_2(\RR)$ és el grup d'automorfismes analítics d'$\HH$.
+:::
 
-**Definició:** El grup $G = \PSL_2(\RR)$ s'anomena el *grup modular*. Sovint confondrem una matriu $g = \smtx abcd$ amb la seva imatge a $G$.
+::: {#def-grup-modular}
+El grup $G = \PSL_2(\RR)$ s'anomena el *grup modular*. Sovint confondrem una matriu $g = \smtx abcd$ amb la seva imatge a $G$.
+:::
 
 ## El domini fonamental
 
@@ -82,8 +95,8 @@ D = \{ z \in \HH : |\Re(z)|\leq 1/2, |z| \geq 1 \}.
 $$
 Es té el següent:
 
-**Teorema:**
 
+::: {#thm-fundom}
 1. Per cada $z\in\HH$ hi ha algun $g\in G$ tal que $gz\in D$.
 #. Siguin $z, z'\in D$ congruents mòdul $G$. Aleshores o bé $\Re(z)=\pm 1/2$ i $z=z'\pm 1$, o bé $|z| = 1$ i $z'=-1/z$.
 #. Sigui $z\in D$, i considerem $G_z=\{g \in G: g z = z\}$. Aleshores $G_z=1$ excepte si:
@@ -93,8 +106,9 @@ Es té el següent:
    #. $z = -\bar\rho=e^{\pi i /3}$, i aleshores $G_{-\bar\rho}=\{1, (TS), (TS)^2\}$.
 
 #. El grup $G$ està generat per $S$ i $T$. De fet, es té $G=\langle S, T | S^2=(ST)^3=1 \rangle$.
+:::
 
-*Prova:*
+:::{#proof}
 Considerem $G'=\langle S, T\rangle$. Donat $z\in\HH$, trobarem $g'\in G'$ tal que $g'z\in D$. Escrivim $g=\smtx abcd$ un element de $G'$ arbitrari, i observem que hi ha un nombre finit de parelles $(c,d)$ tals que $|cz+d|<M$ (per qualsevol $M$ fixat): si escrivim $z=x+iy$, aleshores $|cz+d|>|cx+d|$ i $|cz+d|>|cy|$ i, per tant, hi ha un nombre finit de $c$ i de $d$ que el fan més petit. Aleshores per la fórmula
 $$
 \Im(gz)=\frac{\Im(z)}{|cz+d|^2}
@@ -107,10 +121,12 @@ $$
 $$
 Com que $y^2 \geq 3/4$, això implica que $|c|\leq 1$. Analitzant els diferents casos $c=0$, $c=1$ i $c=-1$ obtenim el que quedava per demostrar, excepte el fet que $G=G'$.
 
-Sigui ara $g\in G$ un element arbitrari, i prenem $z_0$ a l'interior de $D$. Considerem $z=gz_0$, i trobarem $g'\in G'$ tal que $g'z$ pertanyi a $D$. Pel què hem vist $g'z=z_0$ i d'aquí obtenim $g'g=1$, i per tant $g$ pertany a $G'$. $\qed$
+Sigui ara $g\in G$ un element arbitrari, i prenem $z_0$ a l'interior de $D$. Considerem $z=gz_0$, i trobarem $g'\in G'$ tal que $g'z$ pertanyi a $D$. Pel què hem vist $g'z=z_0$ i d'aquí obtenim $g'g=1$, i per tant $g$ pertany a $G'$.
+:::
 
-**Corol·lari:** L'aplicació de pas al quocient $D \to \HH/G$ és exhaustiva, i la seva restricció a l'interior de $D$ és injectiva.
-
+::: {#cor-}
+L'aplicació de pas al quocient $D \to \HH/G$ és exhaustiva, i la seva restricció a l'interior de $D$ és injectiva.
+:::
 
 
 ## Formes modulars
@@ -119,17 +135,27 @@ Sigui ara $g\in G$ un element arbitrari, i prenem $z_0$ a l'interior de $D$. Con
 ### Definicions
 
 
-**Definició:** Diem que una funció $f$ meromorfa a $\HH$ és *dèbilment modular* de pes $k\in\ZZ$ si
-$$f(g z) = (cz+d)^k f(z),\forall g=\smtx abcd \in\SL_2(\ZZ).$$
+::: {#def-debilment-modular}
+Diem que una funció $f$ meromorfa a $\HH$ és *dèbilment modular* de pes $k\in\ZZ$ si
+$$
+f(g z) = (cz+d)^k f(z),\forall g=\smtx abcd \in\SL_2(\ZZ).
+$$
+:::
 
 És convenient introduir aquí la notació "slash": definim $f \slsh{k} g$ com la funció (que depèn de $k$, encara que no ho posem a la notació)
-$$(f \slsh{k} g)(z) = (cz+d)^{-k} f(z).$$
+$$
+(f \slsh{k} g)(z) = (cz+d)^{-k} f(z).
+$$
 Aleshores veiem que $f$ és dèbilment modular si, i només si, $f\slsh{k} g=f$ per a tot $g\in \SL_2(\ZZ)$.
 
 Com que $G$ està generat pels elements $S$ i $T$, aquesta condició és equivalent a demanar que, per a tot $z\in \HH$,
-$$f(z+1)=f(z),\quad f(-1/z) = z^{k}f(z).$$
+$$
+f(z+1)=f(z),\quad f(-1/z) = z^{k}f(z).
+$$
 
-**Remarca:** Aplicant la definició a $-1\in \SL_2(\ZZ)$ obtenim que $f(z)=(-1)^k f(z)$. Per tant, si $k$ és senar només la funció $0$ és dèbilment modular. Demanarem doncs, d'aquí en endavant, que $k$ sigui parell.
+::: {#rem-} 
+Aplicant la definició a $-1\in \SL_2(\ZZ)$ obtenim que $f(z)=(-1)^k f(z)$. Per tant, si $k$ és senar només la funció $0$ és dèbilment modular. Demanarem doncs, d'aquí en endavant, que $k$ sigui parell.
+:::
 
 Fixem-nos que, si $f(z+1)=f(z)$ per a tot $z\in \HH$, aleshores podem composar amb el canvi $q=e^{2\pi i z}$ i obtenir una funció $\tilde f(q)$ definida a
 
@@ -137,18 +163,24 @@ $$
 \tilde{\HH}=\{q\in \CC : 0 < |q| < 1 \}.
 $$
 Aleshores, $\tilde f$ tindrà una sèrie de Laurent al voltant de $q=0$:
-$$\tilde f(q) = \sum_{n=-\infty}^\infty a_nq^n.$$
+$$
+\tilde f(q) = \sum_{n=-\infty}^\infty a_nq^n.
+$$
 Direm aleshores que $f$ és *meromorfa a l'infinit* si $\tilde f$ és meromorfa a $q=0$ ($a_n=0$ per $n<<0$). També direm que $f$ és *holomorfa a l'infinit* si $a_n=0$ per $n < 0$, i $f$ s'anul·la a l'infinit si $a_n=0$ per $n\leq 0$.
 
-**Definició:** Una *forma modular* de pes $k$ és una funció dèbilment modular que és holomorfa a tot arreu, incloent l'infinit. Si aquesta s'anula a l'infinit, l'anomenarem una *forma cuspidal*. Denotem per $M_k$ el $\CC$-espai vectorial de les formes modulars de pes $k$, i per $S_k\subseteq M_k$ el subespai de les formes cuspidals.
+::: {#def-forma-modular}
+Una *forma modular* de pes $k$ és una funció dèbilment modular que és holomorfa a tot arreu, incloent l'infinit. Si aquesta s'anula a l'infinit, l'anomenarem una *forma cuspidal*. Denotem per $M_k$ el $\CC$-espai vectorial de les formes modulars de pes $k$, i per $S_k\subseteq M_k$ el subespai de les formes cuspidals.
 
+:::
 Resumint, una forma modular de pes $k$ ve donada per una sèrie
 $$
 f(z) = \sum_{n=0}^\infty a_n q^n = \sum_{n=0}^\infty a_ne^{2\pi i nz},
 $$
 que convergeix per a tot $z\in \HH$, i que satisfà $f(-1/z) = z^kf(z)$.
 
-**Remarca:** Si multipliquem una forma modular $f$ de pes $k$ amb una $f'$ de pes $k'$ obtindrem una forma $ff'$ de pes $k+k'$. Obtenim així un anell graduat $M=\bigoplus_{k\in\ZZ} M_k$.
+::: {#rem-} 
+Si multipliquem una forma modular $f$ de pes $k$ amb una $f'$ de pes $k'$ obtindrem una forma $ff'$ de pes $k+k'$. Obtenim així un anell graduat $M=\bigoplus_{k\in\ZZ} M_k$.
+:::
 
 
 ### Sèries d'Eisenstein
@@ -163,9 +195,12 @@ G_k(z) = \sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k}.
 $$
 La relació entre $G_k$ i $\tilde G_k$ és un factor de $\zeta(k)$ (exercici).
 
-**Proposició:** Si $k>2$, la funció $G_k(z)$ és una forma modular de pes $k$. El seu valor a l'infinit és $2\zeta(k)$, on $\zeta$ és la funció zeta de Riemann.
+::: {#prp-}
+Si $k>2$, la funció $G_k(z)$ és una forma modular de pes $k$. El seu valor a l'infinit és $2\zeta(k)$, on $\zeta$ és la funció zeta de Riemann.
+:::
 
-*Prova:* Ens cal primer veure la convergència de la sèrie per tot $z$. Considerem primer $z\in D$ fixat, i podem veure fàcilment que $|c z + d|^2 \geq c^2-cd+d^2= |c\rho + d|^2$. Com que
+::: {.proof}
+Ens cal primer veure la convergència de la sèrie per tot $z$. Considerem primer $z\in D$ fixat, i podem veure fàcilment que $|c z + d|^2 \geq c^2-cd+d^2= |c\rho + d|^2$. Com que
 $$
 \#\{ (c,d)\neq (0,0) : N \leq |c\rho - d|< N+1\} = O(N)
 $$
@@ -175,6 +210,7 @@ Per calcular $G_k(\infty)$, prenem el límit quan $\Im(z)\to\infty$, i això ho 
 $$
 \lim G_k(z) = \sum_{n\neq 0} n^{-k} = 2 \zeta(k).
 $$
+:::
 
 Podem normalitzar $G_k$ per tal que prengui el valor $1$ a l'infinit, i obtenim $E_k(z)=\frac{1}{2\zeta(k)} G_k(z)$. Aleshores podem fer combinacions de sèries d'Eisenstein per obtenir altres formes modulars. Per exemple,
 $$
@@ -182,7 +218,8 @@ $$
 $$
 és una forma cuspidal de pes $12$, anomenada la funció discriminant (més endavant veurem per què hem dividit per $1728$).
 
-**Remarca:** Definim, per $\tau\in\HH$ i $w\in\CC$, la funció $\wp$ de Weierstrass, com
+::: {#rem-}
+Definim, per $\tau\in\HH$ i $w\in\CC$, la funció $\wp$ de Weierstrass, com
 $$
 \wp_\tau(w)=\frac{1}{w^2}+\sum_{(c,d)\neq (0,0)} \left(\frac{1}{(w-c\tau-d)^2}-\frac{1}{(c\tau+d)^2}\right).
 $$
@@ -195,6 +232,7 @@ $$
 y^2=4x^3-60G_4(\tau)x-140G_6(\tau),
 $$
 que és una corba el·líptica amb discriminant justament $16\Delta(\tau)$, que per tant és diferent de zero.
+:::
 
 ## L'espai de les formes modulars
 
@@ -205,12 +243,17 @@ Sigui $f\neq 0$ una funció meromorfa a $\HH$, i sigui $\tau\in\HH$. Escrivim $v
 
 Si $f$ és una funció modular de pes $k$, aleshores $v_\tau(f)=v_{g\tau}(f)$, perquè $cz+d$ és holomorfa i diferent de zero a tot $\HH$. També podem definir $v_\infty(f)=n_0$ si $\tilde f(q)=\sum_{n\geq n_0} a_nq^n$ amb $a_{n_0}\neq 0$.
 
-**Teorema (fórmula de la valència):** Si $f\neq 0$ és una funció dèbilment modular de pes $k$, es té
+::: {#thm-valencia}
+## fórmula de la valència
+Si $f\neq 0$ és una funció dèbilment modular de pes $k$, es té
 $$v_{\infty}(f) + \frac{1}{2} v_{i}(f) +\frac{1}{3}v_{\rho}(f) +\sum_{\tau\in G\backslash \HH} v_{\tau}(f) = \frac{k}{12},
 $$
 on la suma recorre les òrbites de punts de $\HH$ diferents de $i$, $\rho$ i $-\bar\rho$.
+:::
 
-**Remarca:** la suma només conté un nombre finit de termes no nuls. En efecte, com que $f$ és meromorfa tenim que $\tilde f$ no té cap zero ni pol al disc $0<|q|<r$ per algun $r >0$. Per tant, $f$ no té zeros ni pols a la regió $\Im(z)>\frac{\log(1/r)}{2\pi}$ i, llavors $f$ té tots els zeros i pols de $D$ a la regió compacta $D\cap \Im(z)< \frac{\log(1/r)}{2\pi}$, on només n'hi pot haver un nombre finit.
+::: {#rem-} 
+La suma només conté un nombre finit de termes no nuls. En efecte, com que $f$ és meromorfa tenim que $\tilde f$ no té cap zero ni pol al disc $0<|q|<r$ per algun $r >0$. Per tant, $f$ no té zeros ni pols a la regió $\Im(z)>\frac{\log(1/r)}{2\pi}$ i, llavors $f$ té tots els zeros i pols de $D$ a la regió compacta $D\cap \Im(z)< \frac{\log(1/r)}{2\pi}$, on només n'hi pot haver un nombre finit.
+:::
 
 El teorema es demostra aplicant el teorema del residu a un contorn adequat, i no el farem en aquestes notes.
 
@@ -229,19 +272,25 @@ Podem acabar calculant per $k\leq 10$ els espais $M_k$. En aquest cas, $k-12 < 0
 
 Resumim el què hem demostrat:
 
-**Teorema:**
-
+::: {#thm-Mk}
 1. $M_k=0$ per $k<0$ i $k=2$.
 2. $M_0=\CC\cdot 1$, $M_4=\CC\cdot G_4$, $M_6=\CC\cdot G_6$, $M_8=\CC\cdot G_8$ i $M_{10} = \CC\cdot G_{10}$. En aquests casos, $S_k=0$.
 3. La multiplicació per $\Delta$ indueix un isomorfisme $M_{k-12}\cong S_k$.
 
 En particular, $\dim M_k=\lfloor k/12\rfloor$ si $k\equiv 2 \pmod{12}$, i $\dim M_k=\lfloor k/12\rfloor +1$ si $k\neq 2\pmod{12}$.
+:::
 
-**Corol·lari:** L'espai $M_k$ té com a base el conjunt de monomis $G_4^iG_6^j$, on $i,j\geq 0$ són enters amb $4i+6j=k$.
+::: {#cor-}
+L'espai $M_k$ té com a base el conjunt de monomis $G_4^iG_6^j$, on $i,j\geq 0$ són enters amb $4i+6j=k$.
+:::
 
-*Prova:* Veiem primer que generen, cosa que és clara per $k\leq 6$. Per $k\geq 8$, fem inducció en $k$. Triem enters positius $i,j$ tals que $4i+6j=k$, i considerem $g =G_4^iG_6^j$, que no s'anula a l'infinit. Si $f\in M_k$, aleshores $f-\lambda g\in S_k$ per algun $\lambda\in\CC$. Per aquest $\lambda$, tenim $f-\lambda g = \Delta h$ amb $h\in M_{k-12}$. Apliquem ara la hipòtesi d'inducció a $h$, i ja estem.
+::: {.proof}
+Veiem primer que generen, cosa que és clara per $k\leq 6$. Per $k\geq 8$, fem inducció en $k$. Triem enters positius $i,j$ tals que $4i+6j=k$, i considerem $g =G_4^iG_6^j$, que no s'anula a l'infinit. Si $f\in M_k$, aleshores $f-\lambda g\in S_k$ per algun $\lambda\in\CC$. Per aquest $\lambda$, tenim $f-\lambda g = \Delta h$ amb $h\in M_{k-12}$. Apliquem ara la hipòtesi d'inducció a $h$, i ja estem.
 
 Si aquests monomis no fossin linealment independents, la funció $G_4^3/G_6^2$ satisfaria un polinomi amb coeficients a $\CC$ i, per tant, seria constant. Però això no pot ser, perquè $G_4$ s'anula a $\rho$ i $G_6$ no, per exemple.$\qed$
+:::
 
-**Remarca:** Es pot resumir l'anterior dient que $M=\bigoplus_{k\in\ZZ} M_k \cong \CC[G_4,G_6]$.
+::: {#rem-} 
+Es pot resumir l'anterior dient que $M=\bigoplus_{k\in\ZZ} M_k \cong \CC[G_4,G_6]$.
+:::
 
