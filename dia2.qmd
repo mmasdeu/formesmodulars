@@ -315,7 +315,7 @@ P'(-1/z)z^{-2} = 2zP(z)+z^2P'(z)+\frac{6}{i\pi}.
 $$
 Definim $H(z) = \frac{1}{2\pi i} P'(z) -\frac{1}{12}P^2(z)$, aleshores podem comprovar:
 $$
-H(-1/z) = \frac{1}{2\pi i} P'(-1/z) -\frac{1}{12}P(-1/z)^2 = (\cdots) = z^4 H(z).\quad\qed
+H(-1/z) = \frac{1}{2\pi i} P'(-1/z) -\frac{1}{12}P(-1/z)^2 = (\cdots) = z^4 H(z).
 $$
 :::
 
