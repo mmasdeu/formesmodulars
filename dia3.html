@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ca" xml:lang="ca"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -237,55 +237,79 @@ window.Quarto = {
 <p>En particular, si <span class="math inline">\(n=p\)</span> és un primer, tenim <span class="math display">\[
 (T_pf)(z) = \frac{1}{p} \left(\sum_{b=0}^{p-1} f(\frac{z+b}{p}) + f(pz)\right).
 \]</span></p>
-<p><strong>Proposició:</strong> La funció <span class="math inline">\(T_nf\)</span> és dèbilment modular de pes <span class="math inline">\(k\)</span>. Si <span class="math inline">\(f\)</span> és holomorfa, també ho és <span class="math inline">\(T_nf\)</span>. A més:</p>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposició 3.1</strong></span> La funció <span class="math inline">\(T_nf\)</span> és dèbilment modular de pes <span class="math inline">\(k\)</span>. Si <span class="math inline">\(f\)</span> és holomorfa, també ho és <span class="math inline">\(T_nf\)</span>. A més:</p>
 <ol type="1">
 <li><span class="math inline">\(T_m T_n = T_n T_m = T_{nm}\)</span> si <span class="math inline">\((m,n)=1\)</span>.</li>
 <li><span class="math inline">\(T_{p^{r+1}} = T_p T_{p^r} - p^{k-1} T_{p^{r-1}}\)</span> si <span class="math inline">\(p\)</span> és primer i <span class="math inline">\(n\geq 1\)</span>.</li>
 </ol>
+</div>
 <p>Podem calcular l’efecte d’aquests operadors en les <span class="math inline">\(q\)</span>-expansions, obtenint:</p>
-<p><strong>Proposició:</strong> Si <span class="math inline">\(f(z)=\sum_{m\in \mathbb{Z}} a_m(f)q^m\)</span> és meromorfa l’infinit, aleshores <span class="math inline">\(T_nf(z)=\sum_{m\in\mathbb{Z}} a_m(T_nf)q^m\)</span> també ho és, i <span class="math display">\[
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposició 3.2</strong></span> Si <span class="math inline">\(f(z)=\sum_{m\in \mathbb{Z}} a_m(f)q^m\)</span> és meromorfa l’infinit, aleshores <span class="math inline">\(T_nf(z)=\sum_{m\in\mathbb{Z}} a_m(T_nf)q^m\)</span> també ho és, i</p>
+<p><span class="math display">\[
 a_m(T_nf) = \sum_{d \mid (m,n)} d^{k-1} a_{mn/d^2}(f).
 \]</span></p>
 <p>En particular, <span class="math inline">\(a_0(T_nf) = \sigma_{k-1}(n) a_0(f)\)</span>, <span class="math inline">\(a_1(T_nf) = a_n(f)\)</span> i, si <span class="math inline">\(n=p\)</span> és un primer, <span class="math display">\[
 a_m(T_pf) = a_{pm}(f) + p^{k-1} a_{m/p}(f),
 \]</span> on entenem que <span class="math inline">\(a_{m/p}(f)=0\)</span> si <span class="math inline">\(p\)</span> no divideix <span class="math inline">\(m\)</span>.</p>
-<p><strong>Corol·lari:</strong> Els operadors <span class="math inline">\(T_n\)</span> actuen a <span class="math inline">\(M_k\)</span> i <span class="math inline">\(S_k\)</span>, i commuten entre si.</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corol·lari 3.1</strong></span> Els operadors <span class="math inline">\(T_n\)</span> actuen a <span class="math inline">\(M_k\)</span> i <span class="math inline">\(S_k\)</span>, i commuten entre si.</p>
+</div>
 </section>
 <section id="formes-pròpies" class="level3" data-number="3.1.2">
 <h3 data-number="3.1.2" class="anchored" data-anchor-id="formes-pròpies"><span class="header-section-number">3.1.2</span> Formes pròpies</h3>
 <p>Suposem ara que <span class="math inline">\(f=\sum_{n\geq 0} a_n(f)q^n\)</span> és una forma modular de pes <span class="math inline">\(k&gt;0\)</span>, que és pròpia per tots els <span class="math inline">\(T_n\)</span>. És a dir, per cada <span class="math inline">\(n\geq 1\)</span> tenim <span class="math inline">\(T_nf=\lambda_nf\)</span>, per algun <span class="math inline">\(\lambda_n\in\mathbb{C}\)</span>.</p>
-<p><strong>Teorema:</strong> Si <span class="math inline">\(f\)</span> és pròpia, <span class="math inline">\(a_1(f)\neq 0\)</span>. Si <span class="math inline">\(f\)</span> està normalitzada de manera que <span class="math inline">\(a_1(f)=1\)</span>, aleshores <span class="math inline">\(a_n(f) = \lambda_n\)</span>.</p>
-<p><em>Prova:</em> Hem vist que <span class="math inline">\(a_1(T_nf) = a_n(f)\)</span>. Com que <span class="math inline">\(f\)</span> és pròpia, <span class="math inline">\(a_1(T_nf) = \lambda_n a_1(f)\)</span>. Per tant, <span class="math inline">\(a_n(f) = \lambda_n a_1(f)\)</span>. Si suposem que <span class="math inline">\(a_1(f)=0\)</span>, aleshores tindríem <span class="math inline">\(a_n(f)=0\)</span> per a tot <span class="math inline">\(n\geq 1\)</span>, i per tant <span class="math inline">\(f\)</span> seria una constant. Però <span class="math inline">\(k&gt;0\)</span>, i per tant arribem a contradicció. <span class="math inline">\(\blacksquare\)</span></p>
-<p><strong>Corol·lari:</strong> Si <span class="math inline">\(f\)</span> i <span class="math inline">\(g\)</span> són formes pròpies per tot <span class="math inline">\(T_n\)</span> amb els mateixos valors propis, aleshores són proporcionals.</p>
-<p><strong>Corol·lari:</strong> Si <span class="math inline">\(f\)</span> és pròpia i està normalitzada, aleshores <span class="math display">\[
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 3.1</strong></span> Si <span class="math inline">\(f\)</span> és pròpia, <span class="math inline">\(a_1(f)\neq 0\)</span>. Si <span class="math inline">\(f\)</span> està normalitzada de manera que <span class="math inline">\(a_1(f)=1\)</span>, aleshores <span class="math inline">\(a_n(f) = \lambda_n\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Hem vist que <span class="math inline">\(a_1(T_nf) = a_n(f)\)</span>. Com que <span class="math inline">\(f\)</span> és pròpia, <span class="math inline">\(a_1(T_nf) = \lambda_n a_1(f)\)</span>. Per tant, <span class="math inline">\(a_n(f) = \lambda_n a_1(f)\)</span>. Si suposem que <span class="math inline">\(a_1(f)=0\)</span>, aleshores tindríem <span class="math inline">\(a_n(f)=0\)</span> per a tot <span class="math inline">\(n\geq 1\)</span>, i per tant <span class="math inline">\(f\)</span> seria una constant. Però <span class="math inline">\(k&gt;0\)</span>, i per tant arribem a contradicció.</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corol·lari 3.2</strong></span> Si <span class="math inline">\(f\)</span> i <span class="math inline">\(g\)</span> són formes pròpies per tot <span class="math inline">\(T_n\)</span> amb els mateixos valors propis, aleshores són proporcionals.</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corol·lari 3.3</strong></span> Si <span class="math inline">\(f\)</span> és pròpia i està normalitzada, aleshores <span class="math display">\[
 a_m(f)a_n(f)=a_{mn}(f),\text{si $(m,n)=1$, i}
 \]</span> <span class="math display">\[
 a_{p^{r+1}}(f) = a_p(f)a_{p^r}(f) - p^{k-1} a_{r-1}(f).
 \]</span></p>
+</div>
 </section>
 <section id="aplicació-a-la-tau-de-ramanujan" class="level3" data-number="3.1.3">
 <h3 data-number="3.1.3" class="anchored" data-anchor-id="aplicació-a-la-tau-de-ramanujan"><span class="header-section-number">3.1.3</span> Aplicació a la tau de Ramanujan</h3>
 <p>Recordem <span class="math inline">\(\Delta(q)=q\prod_{n\geq 1} (1-q^n)^{24}\)</span>. Com ja hem vist, <span class="math inline">\(S_{12}=\mathbb{C}\Delta\)</span> i per tant <span class="math inline">\(\Delta\)</span> és trivialment una forma pròpia per tots els operadors de Hecke, que a més ja està normalitzada. Per tant:</p>
-<p><strong>Corol·lari:</strong> Tenim: <span class="math display">\[
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corol·lari 3.4</strong></span> Tenim: <span class="math display">\[
 \tau(nm)=\tau(n)\tau(m),\quad (n,m)=1,
 \]</span> i <span class="math display">\[
 \tau(p)\tau(p^n) = \tau(p^{n+1})+p^{11}\tau(p^{n-1}),\quad \forall p\text{ primer}, n\geq 1.
 \]</span></p>
+</div>
 <p>Es tenen resultats anàlegs per tots els espais <span class="math inline">\(S_k\)</span> de dimensió <span class="math inline">\(1\)</span>, que són exactament <span class="math inline">\(k=12,16,18,20,22,26\)</span>. El generador és, en cada cas, <span class="math inline">\(\Delta E_{k-12}\)</span>.</p>
 </section>
 </section>
 <section id="creixement-dels-coeficients" class="level2" data-number="3.2">
 <h2 data-number="3.2" class="anchored" data-anchor-id="creixement-dels-coeficients"><span class="header-section-number">3.2</span> Creixement dels coeficients</h2>
 <p>Més endavant ens interessarà tenir fites per l’ordre de creixement dels coeficients de Fourier de les formes modulars.</p>
-<p><strong>Proposició:</strong> Si <span class="math inline">\(f=E_k\)</span>, aleshores <span class="math inline">\(a_n\approx n^{k-1}\)</span>. És a dir, que hi ha constants <span class="math inline">\(A, B&gt;0\)</span> tals que <span class="math display">\[
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposició 3.3</strong></span> Si <span class="math inline">\(f=E_k\)</span>, aleshores <span class="math inline">\(a_n\approx n^{k-1}\)</span>. És a dir, que hi ha constants <span class="math inline">\(A, B&gt;0\)</span> tals que <span class="math display">\[
 An^{k-1}\leq |a_n|\leq Bn^{k-1}.
 \]</span></p>
-<p><em>Prova:</em> Tenim <span class="math inline">\(|a_n| = A \sigma_{k-1}(n)\geq An^{k-1}\)</span>. D’altra banda, <span class="math display">\[
-\frac{|a_n|}{n^{k-1}} = A \sum_{d\mid n} \frac{1}{d^{k-1}} \leq A\sum_{d=1}^\infty \frac{1}{d^{k-1}} = A\zeta(k-1) &lt; \infty.\quad\blacksquare
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Tenim <span class="math inline">\(|a_n| = A \sigma_{k-1}(n)\geq An^{k-1}\)</span>. D’altra banda, <span class="math display">\[
+\frac{|a_n|}{n^{k-1}} = A \sum_{d\mid n} \frac{1}{d^{k-1}} \leq A\sum_{d=1}^\infty \frac{1}{d^{k-1}} = A\zeta(k-1) &lt; \infty.
 \]</span></p>
+</div>
 <p>El creixement de les formes cuspidals és més lent:</p>
-<p><strong>Teorema (Hecke):</strong> Si <span class="math inline">\(f\)</span> és una forma cuspidal de pes <span class="math inline">\(k\)</span>, llavors <span class="math inline">\(a_n=O(n^{k/2})\)</span>.</p>
-<p><em>Prova:</em> Primer de tot, com que <span class="math inline">\(a_0=0\)</span>, podem escriure <span class="math inline">\(f(z)=q\sum_{n\geq 1}a_nq^{n-1}\)</span> i, per tant, <span class="math display">\[
+<div id="thm-hecke" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 3.2 (Hecke)</strong></span> Si <span class="math inline">\(f\)</span> és una forma cuspidal de pes <span class="math inline">\(k\)</span>, llavors <span class="math inline">\(a_n=O(n^{k/2})\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Primer de tot, com que <span class="math inline">\(a_0=0\)</span>, podem escriure <span class="math inline">\(f(z)=q\sum_{n\geq 1}a_nq^{n-1}\)</span> i, per tant, <span class="math display">\[
 |f(z)| = O(q)=O(e^{-2\pi \Im(z)}),\quad q\longrightarrow 0.
 \]</span></p>
 <p>Escrivim <span class="math inline">\(z=x+iy\)</span>, i definim <span class="math inline">\(\phi(z)=|f(z)|y^{k/2}\)</span>. La modularitat de <span class="math inline">\(f\)</span> fa que la funció <span class="math inline">\(C^\infty\)</span> (no-holomorfa) <span class="math inline">\(\phi\)</span> sigui invariant per <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span>, i <span class="math inline">\(\phi(z)\longrightarrow 0\)</span> quan <span class="math inline">\(\Im(z)\longrightarrow\infty\)</span>. Per tant, <span class="math inline">\(\phi\)</span> és fitada: hi ha alguna constant <span class="math inline">\(M\)</span> tal que <span class="math display">\[
@@ -295,11 +319,18 @@ a_n =  \int_0^1 f(x+iy)e^{-2\pi i n(x+iy)}dx,
 \]</span> i per tant <span class="math display">\[
 |a_n| \leq Me^{2\pi n y}\int_0^1 y^{-k/2} e^{-2\pi inx}dx = My^{-k/2}e^{2\pi i n y}.
 \]</span> Aquesta igualtat és vàlida per tot <span class="math inline">\(y&gt;0\)</span>. En particular, per <span class="math inline">\(y=1/n\)</span> dona <span class="math display">\[
-|a_n|\leq e^{2\pi} M n^{k/2}.\blacksquare
+|a_n|\leq e^{2\pi} M n^{k/2}.
 \]</span></p>
-<p><strong>Corol·lari:</strong> Si <span class="math inline">\(f\)</span> no és cuspidal, aleshores <span class="math inline">\(a_n\approx n^{k-1}\)</span>.</p>
-<p><em>Prova:</em> Escrivim <span class="math inline">\(f=\lambda E_k + h\)</span> amb <span class="math inline">\(\lambda\neq 0\)</span> i <span class="math inline">\(h\)</span> cuspidal, i apliquem els resultats anteriors. Com que els coeficients de <span class="math inline">\(E_k\)</span> creixen molt més ràpid que els de <span class="math inline">\(h\)</span>, el creixement de <span class="math inline">\(f\)</span> és igual que el de <span class="math inline">\(E_k\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
-<p><strong>Remarca:</strong> Un teorema molt profund de Deligne (1973) demostra, de fet, que <span class="math inline">\(a_n = O(n^{(k-1)/2}\sigma_0(n))=O(n^{(k-1)/2-\epsilon})\)</span> per a tot <span class="math inline">\(\epsilon&gt;0\)</span>. Abans del resultat de Deligne, aquest fet es coneixia com la conjectura de Petersson, que generalitzava una conjectura famosa de Ramanujan sobre la funció <span class="math inline">\(\tau(n)\)</span>.</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corol·lari 3.5</strong></span> Si <span class="math inline">\(f\)</span> no és cuspidal, aleshores <span class="math inline">\(a_n\approx n^{k-1}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Escrivim <span class="math inline">\(f=\lambda E_k + h\)</span> amb <span class="math inline">\(\lambda\neq 0\)</span> i <span class="math inline">\(h\)</span> cuspidal, i apliquem els resultats anteriors. Com que els coeficients de <span class="math inline">\(E_k\)</span> creixen molt més ràpid que els de <span class="math inline">\(h\)</span>, el creixement de <span class="math inline">\(f\)</span> és igual que el de <span class="math inline">\(E_k\)</span>.</p>
+</div>
+<div id="rem-" class="proof remark">
+<p><span class="proof-title"><em>Observació 3.5</em>. </span>Un teorema molt profund de Deligne (1973) demostra, de fet, que <span class="math inline">\(a_n = O(n^{(k-1)/2}\sigma_0(n))=O(n^{(k-1)/2-\epsilon})\)</span> per a tot <span class="math inline">\(\epsilon&gt;0\)</span>. Abans del resultat de Deligne, aquest fet es coneixia com la conjectura de Petersson, que generalitzava una conjectura famosa de Ramanujan sobre la funció <span class="math inline">\(\tau(n)\)</span>.</p>
+</div>
 </section>
 <section id="la-funció-l-associada-a-una-forma-modular" class="level2" data-number="3.3">
 <h2 data-number="3.3" class="anchored" data-anchor-id="la-funció-l-associada-a-una-forma-modular"><span class="header-section-number">3.3</span> La funció-L associada a una forma modular</h2>
@@ -308,10 +339,13 @@ L(f,s) = \sum_{n=1}^\infty a_n(f)n^{-s}.
 \]</span> Observem que convergeix per a tot <span class="math inline">\(\Re(s)&gt;k\)</span> gràcies a que controlem el creixement dels <span class="math inline">\(a_n(f)\)</span>. Si <span class="math inline">\(f\)</span> és cuspidal, aleshores sabem que la sèrie convergeix a <span class="math inline">\(\Re(s)&gt;k/2+1\)</span>.</p>
 <section id="el-producte-deuler-i-lequació-funcional" class="level3" data-number="3.3.1">
 <h3 data-number="3.3.1" class="anchored" data-anchor-id="el-producte-deuler-i-lequació-funcional"><span class="header-section-number">3.3.1</span> El producte d’Euler i l’equació funcional</h3>
-<p><strong>Proposició:</strong> Si <span class="math inline">\(f\)</span> és una forma pròpia normalitzada, aleshores la funció <span class="math inline">\(L(f,s)\)</span> té un producte d’Euler: <span class="math display">\[
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposició 3.4</strong></span> Si <span class="math inline">\(f\)</span> és una forma pròpia normalitzada, aleshores la funció <span class="math inline">\(L(f,s)\)</span> té un producte d’Euler: <span class="math display">\[
 L(f,s) = \prod_{p\text{ primer}} \frac{1}{1-a_p(f)p^{-s} + p^{k-1-2s}}.
 \]</span></p>
-<p><em>Prova</em>: Els coeficients <span class="math inline">\(a_{n}(f)\)</span> formen una successió multiplicativa i, per tant, <span class="math display">\[
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Els coeficients <span class="math inline">\(a_{n}(f)\)</span> formen una successió multiplicativa i, per tant, <span class="math display">\[
 L(f,s) = \prod_p \sum_{r=0}^\infty a_{p^r}(f)p^{-rs}.
 \]</span> Per tant, si escrivim <span class="math inline">\(T=p^{-s}\)</span>, hem de demostrar <span class="math display">\[
 \sum_{r=0}^\infty a_{p^r}(f)T^r = \left(1-a_p(f)T + p^{k-1}T^2\right)^{-1}.
@@ -319,8 +353,11 @@ L(f,s) = \prod_p \sum_{r=0}^\infty a_{p^r}(f)p^{-rs}.
 \left(1-a_p(f)T + p^{k-1}T^2\right)\sum_{r=0}^\infty a_{p^r}(f)T^r = 1.
 \]</span> El coeficient de <span class="math inline">\(T\)</span> és <span class="math inline">\(a_p(f)-a_p(f)=0\)</span>. El de <span class="math inline">\(T^{r+1}\)</span> és, per a tot <span class="math inline">\(r\geq 1\)</span>, <span class="math display">\[
 a_{p^{r+1}} - a_pa_{p^{r}} + p^{k-1}a_{p^{r-1}},
-\]</span> que ja sabem que és <span class="math inline">\(0\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
-<p><strong>Remarca:</strong> El recíproc també és cert, i la demostració és essentialment el mateix argument fet a l’inrevés.</p>
+\]</span> que ja sabem que és <span class="math inline">\(0\)</span>.</p>
+</div>
+<div id="rem-" class="proof remark">
+<p><span class="proof-title"><em>Observació 3.5</em>. </span>El recíproc també és cert, i la demostració és essentialment el mateix argument fet a l’inrevés.</p>
+</div>
 <p>Per escriure l’equació funcional, escrivim <span class="math inline">\(\Lambda(f,s) = (2\pi)^{-s} \Gamma(s) L(f,s)\)</span>, on <span class="math display">\[
 \Gamma(s) = \int_0^{\infty} t^{s}e^{-t}\frac{dt}{t}.
 \]</span></p>
@@ -330,7 +367,9 @@ a_{p^{r+1}} - a_pa_{p^{r}} + p^{k-1}a_{p^{r-1}},
 \sum_{n=1}^\infty a_n\int_0^\infty t^s e^{-2\pi n t} \frac{dt}{t} = \int_0^\infty \left(\sum_{n=1}^\infty a_ne^{-2\pi nt}\right) t^s\frac{dt}{t}.
 \]</span></p>
 <p>Per tant, hem vist:</p>
-<p><strong>Proposició:</strong> <span class="math inline">\(\Lambda(f,s) = \int_0^\infty (f(it) - a_0)t^s\frac{dt}{t}\)</span>.</p>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposició 3.5</strong></span> <span class="math inline">\(\Lambda(f,s) = \int_0^\infty (f(it) - a_0)t^s\frac{dt}{t}\)</span>.</p>
+</div>
 <p>Volem extendre <span class="math inline">\(\Lambda(f,s)\)</span> a tot el pla complex, però la integral tal i com la tenim té problemes de convergència prop de <span class="math inline">\(t=0\)</span>. Suposem, per simplicar, que <span class="math inline">\(a_0=0\)</span>. Podem trencar la integral <span class="math display">\[
 \int_0^\infty f(it)t^{s}\frac{dt}{t} = \int_0^1(\cdots)+\int_1^\infty(\cdots)
 \]</span> i, fent servir que <span class="math inline">\(f(i/t) = i^kt^kf(it)\)</span> trobem, fent el canvi <span class="math inline">\(t\mapsto 1/t\)</span>, <span class="math display">\[
@@ -340,19 +379,27 @@ a_{p^{r+1}} - a_pa_{p^{r}} + p^{k-1}a_{p^{r-1}},
 \]</span> Aquesta expressió convergeix per tot <span class="math inline">\(s\in\mathbb{C}\)</span>. A més a més, obtenim l’equació funcional, que relaciona <span class="math inline">\(s\)</span> amb <span class="math inline">\(k-s\)</span>: <span class="math display">\[
 \Lambda(f,k-s) = (-1)^{k/2} \Lambda(f,s).
 \]</span></p>
-<p><strong>Remarca:</strong> Si <span class="math inline">\(f\in M_k\)</span> no és cuspidal, aleshores <span class="math inline">\(\Lambda(f,s)\)</span> no té una continuació holomorfa (només meromorfa), però l’equació funcional es segueix satisfent.</p>
+<div id="rem-" class="proof remark">
+<p><span class="proof-title"><em>Observació 3.5</em>. </span>Si <span class="math inline">\(f\in M_k\)</span> no és cuspidal, aleshores <span class="math inline">\(\Lambda(f,s)\)</span> no té una continuació holomorfa (només meromorfa), però l’equació funcional es segueix satisfent.</p>
+</div>
 <p>Hi ha un teorema recíproc, que no demostrarem.</p>
-<p><strong>Teorema (Weil):</strong> Sigui <span class="math inline">\(L(\{a_n\},s) = \sum_{n=1}^\infty a_n n^{-s}\)</span> una sèrie de Dirichlet associada a una successió <span class="math inline">\(\{a_n\}_{n\geq 1}\)</span> tal que <span class="math inline">\(|a_n|=O(n^K)\)</span> per <span class="math inline">\(K\)</span> suficientment gran. Suposem que la funció <span class="math inline">\(\Lambda(\{a_n\},s)\)</span> associada tingui continuació analítica a tot <span class="math inline">\(s\in\mathbb{C}\)</span>, fitada en conjunts <span class="math inline">\(\{\sigma_1\leq \Re(s)\leq \sigma_2\}\)</span> i que tingui una equació funcional com l’anterior. Aleshores la funció <span class="math inline">\(f(z)=\sum_{n=1}^\infty a_ne^{2\pi inz}\)</span> és una forma cuspidal de pes <span class="math inline">\(k\)</span>.</p>
+<div id="thm-Weil" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 3.3 (Weil)</strong></span> Sigui <span class="math inline">\(L(\{a_n\},s) = \sum_{n=1}^\infty a_n n^{-s}\)</span> una sèrie de Dirichlet associada a una successió <span class="math inline">\(\{a_n\}_{n\geq 1}\)</span> tal que <span class="math inline">\(|a_n|=O(n^K)\)</span> per <span class="math inline">\(K\)</span> suficientment gran. Suposem que la funció <span class="math inline">\(\Lambda(\{a_n\},s)\)</span> associada tingui continuació analítica a tot <span class="math inline">\(s\in\mathbb{C}\)</span>, fitada en conjunts <span class="math inline">\(\{\sigma_1\leq \Re(s)\leq \sigma_2\}\)</span> i que tingui una equació funcional com l’anterior. Aleshores la funció <span class="math inline">\(f(z)=\sum_{n=1}^\infty a_ne^{2\pi inz}\)</span> és una forma cuspidal de pes <span class="math inline">\(k\)</span>.</p>
+</div>
 </section>
 <section id="funció-l-de-les-sèries-deisenstein" class="level3" data-number="3.3.2">
 <h3 data-number="3.3.2" class="anchored" data-anchor-id="funció-l-de-les-sèries-deisenstein"><span class="header-section-number">3.3.2</span> Funció-L de les sèries d’Eisenstein</h3>
 <p>Sigui <span class="math inline">\(k\geq 4\)</span> un enter, i considerem la sèrie d’Eisenstein <span class="math inline">\(E_k = 1 - \frac{2k}{B_k}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n\)</span>.</p>
-<p><strong>Proposició:</strong> <span class="math inline">\(T_p(E_k) = (1+p^{k-1})E_k\)</span>.</p>
-<p><em>Prova:</em> Ho comprovem coeficient a coeficient. Si <span class="math inline">\(p\nmid n\)</span>, hem de comprovar que <span class="math display">\[
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposició 3.6</strong></span> <span class="math inline">\(T_p(E_k) = (1+p^{k-1})E_k\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Ho comprovem coeficient a coeficient. Si <span class="math inline">\(p\nmid n\)</span>, hem de comprovar que <span class="math display">\[
 \sigma_{k-1}(pn) = (1+p^{k-1})\sigma_{k-1}(n).
 \]</span> Per altra banda, si <span class="math inline">\(n = p^em\)</span> amb <span class="math inline">\(p\nmid m\)</span> i <span class="math inline">\(e\geq 1\)</span>, hem de veure que <span class="math display">\[
 \sigma_{k-1}(p^{e+1}m) + p^{k-1} \sigma_{k-1}(p^{e-1}m) = (1+p^{k-1})\sigma_{k-1}(p^em).
-\]</span> La primera equació es comprova fàcilment, i la segona es fa per inducció en <span class="math inline">\(e\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
+\]</span> La primera equació es comprova fàcilment, i la segona es fa per inducció en <span class="math inline">\(e\)</span>.</p>
+</div>
 <p>Podem ara calcular ara la seva sèrie de Dirichlet: <span class="math display">\[
 \sum_{n=1}^\infty \sigma_{k-1}(n)n^{-s} = \sum_{a,d\geq 1} \frac{a^{k-1}}{a^sd^s} = \left(\sum_{d\geq 1} d^{-s}\right)\left(\sum_{a\geq 1} a^{k-s-1}\right) = \zeta(s)\zeta(s-k+1).
 \]</span></p>
@@ -372,13 +419,12 @@ L(E_k,s) = \zeta(s)\zeta(s-k+1).
 <p>Si <span class="math inline">\(\gamma\in\operatorname{SL}_2(\mathbb{Z})\)</span>, podem veure fàcilment que <span class="math inline">\(\phi_{f,g}(\gamma z) = \phi_{f,g}(z)\)</span>. Per tant, és una funció ben definida a <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\backslash\mathbb{H}\)</span>. Podem doncs considerar la integral <span class="math display">\[
 \langle f,g\rangle = \frac{3}{\pi}\int_{\operatorname{SL}_2(\mathbb{Z})\backslash\mathbb{H}} f(z)\overline{g(z)} y^{k-2}dxdy,
 \]</span> ja que <span class="math inline">\(\frac{dxdy}{y^2}\)</span> és una mesura <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span>-invariant a <span class="math inline">\(\mathbb{H}\)</span>. Respecte aquesta mesura, el domini fonamental de <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span> té volum <span class="math inline">\(\frac{\pi}{3}\)</span>, i per això escollim la normalització anterior.</p>
-<p><strong>Proposició:</strong> El producte <span class="math inline">\(\langle\cdot,\cdot\rangle\)</span> és hermític i definit positiu. És a dir:</p>
-<ol type="1">
-<li><span class="math inline">\(\langle a_1f_1+a_2f_2,g\rangle = a_1\langle f_1,g\rangle + a_2\langle f_2,g\rangle\)</span>,</li>
-<li><span class="math inline">\(\langle g,f\rangle = \overline{\langle f,g\rangle}\)</span>, i</li>
-<li><span class="math inline">\(\langle f,f\rangle\geq 0\)</span>, amb igualtat només si <span class="math inline">\(f=0\)</span>.</li>
-</ol>
-<p><strong>Proposició:</strong> Per a tot <span class="math inline">\(n\geq 1\)</span>, tenim <span class="math inline">\(\langle T_n f, g\rangle=\langle f, T_ng\rangle\)</span>.</p>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposició 3.7</strong></span> El producte <span class="math inline">\(\langle\cdot,\cdot\rangle\)</span> és hermític i definit positiu. És a dir: 1. <span class="math inline">\(\langle a_1f_1+a_2f_2,g\rangle = a_1\langle f_1,g\rangle + a_2\langle f_2,g\rangle\)</span>, #. <span class="math inline">\(\langle g,f\rangle = \overline{\langle f,g\rangle}\)</span>, i #. <span class="math inline">\(\langle f,f\rangle\geq 0\)</span>, amb igualtat només si <span class="math inline">\(f=0\)</span>.</p>
+<p>A més, per a tot <span class="math inline">\(n\geq 1\)</span>, tenim <span class="math display">\[
+\langle T_n f, g\rangle=\langle f, T_ng\rangle.
+\]</span></p>
+</div>
 <p>Com a conclusió, els operadors de Hecke <span class="math inline">\(T_n\)</span> formen una família d’operadors normals respecte el producte de Petersson. Per tant, <span class="math inline">\(S_k\)</span> conté una base ortogonal de formes pròpies per <strong>tots</strong> els operadors de Hecke simultàniament. Es diu que <span class="math inline">\(S_k\)</span> satisfà “multiplicitat-1”: donat una col·lecció de valors propis <span class="math inline">\(\{\lambda_n\}_{n\geq 1}\)</span>, hi ha com a molt una forma cuspidal pròpia <span class="math inline">\(f\in S_k\)</span> tal que <span class="math inline">\(T_n(f)=\lambda_n f\)</span>. A més, pel teorema de Cayley-Hamilton tenim que els valors propis dels operadors de Hecke són nombres algebraics reals!</p>
 </section>
 <section id="formes-modulars-amb-nivell" class="level2" data-number="3.5">
@@ -393,12 +439,16 @@ L(E_k,s) = \zeta(s)\zeta(s-k+1).
 \Gamma_0(N) = \{\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) : \left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) \equiv \left(\begin{smallmatrix}*&amp;*\\0&amp;*\end{smallmatrix}\right) \pmod{N}\}.
 \]</span></p>
 <p>La definició de formes modulars de nivell <span class="math inline">\(\Gamma\)</span> (on <span class="math inline">\(\Gamma\)</span> és un d’aquests grups) és bastant natural:</p>
-<p><strong>Definició:</strong> Una funció holomorfa <span class="math inline">\(f\colon \mathbb{H}\longrightarrow\mathbb{C}\)</span> és una forma modular de pes <span class="math inline">\(k\)</span> i nivell <span class="math inline">\(\Gamma\)</span> si:</p>
+<div id="def-forma-modular" class="theorem definition">
+<p><span class="theorem-title"><strong>Definició 3.1</strong></span> Una funció holomorfa <span class="math inline">\(f\colon \mathbb{H}\longrightarrow\mathbb{C}\)</span> és una forma modular de pes <span class="math inline">\(k\)</span> i nivell <span class="math inline">\(\Gamma\)</span> si:</p>
 <ol type="1">
 <li><span class="math inline">\(f(\gamma z) = (cz+d)^k f(z), \text{per a tot }\gamma=\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) \in \Gamma\)</span>,</li>
 <li><span class="math inline">\((cz+d)^{-k}f(\gamma z)\)</span> és holomorfa a l’infinit, per a tot <span class="math inline">\(\gamma\in \operatorname{SL}_2(\mathbb{Z})\)</span>.</li>
 </ol>
-<p>Fixem-nos que la definició demana que <span class="math inline">\(f(\gamma z)\)</span> sigui holomorfa a l’infinit per a tota <span class="math inline">\(\gamma\)</span> de <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span>. Quan <span class="math inline">\(\Gamma=\operatorname{SL}_2(\mathbb{Z})\)</span> aquesta condició només l’hem de comprovar per <span class="math inline">\(f(z)\)</span>, però ara cal imposar més condicions.</p>
+</div>
+<div id="rem-" class="proof remark">
+<p><span class="proof-title"><em>Observació 3.5</em>. </span>Fixem-nos que la definició demana que <span class="math inline">\(f(\gamma z)\)</span> sigui holomorfa a l’infinit per a tota <span class="math inline">\(\gamma\)</span> de <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span>. Quan <span class="math inline">\(\Gamma=\operatorname{SL}_2(\mathbb{Z})\)</span> aquesta condició només l’hem de comprovar per <span class="math inline">\(f(z)\)</span>, però ara cal imposar més condicions.</p>
+</div>
 <p>Es té un anàleg per la fórmula de la valència, valid per tots aquests grups. Si escrivim <span class="math inline">\(M_k(\Gamma)\)</span> (resp. <span class="math inline">\(S_k(\Gamma)\)</span>) per les formes modulars (resp. cuspidals) de pes <span class="math inline">\(k\)</span> i nivell <span class="math inline">\(\Gamma\)</span>, es demostra de manera semblant que aquests espais són de dimensió finita. També es té una teoria d’operadors de Hecke i de producte de Petersson.</p>
 </section>
 <section id="corbes-ellíptiques-i-modularitat" class="level2" data-number="3.6">
@@ -419,14 +469,19 @@ L_p(E,s) = \begin{cases}
 \end{cases}
 \]</span> on <span class="math inline">\(a_p\)</span> es defineix com <span class="math inline">\(p+1-\#E(\mathbb{F}_p)\)</span>.</p>
 <p>Als anys 70 del segle passat, Eichler i Shimura van demostrar el següent resultat profund:</p>
-<p><strong>Teorema (Eichler-Shimura):</strong> Sigui <span class="math inline">\(f\in S_2(\Gamma_0(N))\)</span> una forma modular pròpia de pes <span class="math inline">\(2\)</span>,nivell <span class="math inline">\(N\)</span> i coeficients <span class="math inline">\(a_n\in\mathbb{Z}\)</span>. A més, suposem que <span class="math inline">\(f\)</span> és “nova”, és a dir que no “ve” de cap grup <span class="math inline">\(\Gamma_0(M)\)</span> amb <span class="math inline">\(M\mid N\)</span>. Aleshores existeix una corba el·líptica <span class="math inline">\(E_f\)</span> de conductor <span class="math inline">\(N\)</span> tal que <span class="math display">\[
+<div id="thm-eichler-shimura" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 3.4 (Eichler-Shimura)</strong></span> Sigui <span class="math inline">\(f\in S_2(\Gamma_0(N))\)</span> una forma modular pròpia de pes <span class="math inline">\(2\)</span>,nivell <span class="math inline">\(N\)</span> i coeficients <span class="math inline">\(a_n\in\mathbb{Z}\)</span>. A més, suposem que <span class="math inline">\(f\)</span> és “nova”, és a dir que no “ve” de cap grup <span class="math inline">\(\Gamma_0(M)\)</span> amb <span class="math inline">\(M\mid N\)</span>. Aleshores existeix una corba el·líptica <span class="math inline">\(E_f\)</span> de conductor <span class="math inline">\(N\)</span> tal que <span class="math display">\[
 L(E_f,s) = L(f,s).
 \]</span></p>
+</div>
 <p>El recíproc d’aquest teorema es coneixia com la conjectura de Shimura-Taniyama-Weil, i la seva demostració va dur Andrew Wiles a la portada del New York Times perquè als anys 90 del segle passat ja es sabia que un cas particular (quan el “conductor” d’<span class="math inline">\(E\)</span> és lliure de quadrats) implicava l’Últim Teorema de Fermat. El teorema complet va ser demostrat finalment el 2002.</p>
-<p><strong>Teorema (Wiles, Taylor-Wiles, Breuil-Conrad-Diamond-Taylor):</strong> Sigui <span class="math inline">\(E\)</span> una corba el·líptica definida sobre els racionals, i de conductor <span class="math inline">\(N\)</span>. Aleshores existeix una forma pròpia cuspidal <span class="math inline">\(f_E\in S_2(\Gamma_0(N))\)</span> tal que, per a tot <span class="math inline">\(p\nmid N\)</span>, <span class="math display">\[
+<div id="thm-wiles" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 3.5 (Wiles, Taylor-Wiles, Breuil-Conrad-Diamond-Taylor)</strong></span> Sigui <span class="math inline">\(E\)</span> una corba el·líptica definida sobre els racionals, i de conductor <span class="math inline">\(N\)</span>. Aleshores existeix una forma pròpia cuspidal <span class="math inline">\(f_E\in S_2(\Gamma_0(N))\)</span> tal que, per a tot <span class="math inline">\(p\nmid N\)</span>, <span class="math display">\[
 a_p(f) = p+1-\# E(\mathbb{F}_p).
 \]</span> De fet, es té que <span class="math inline">\(L(E,s) = L(f_E,s)\)</span>.</p>
-<p><strong>Exemple:</strong> Considerem la corba amb etiqueta LMFDB <span class="math inline">\(11.a3\)</span>, que té per equació <span class="math display">\[
+</div>
+<div id="exm-" class="theorem example">
+<p><span class="theorem-title"><strong>Exemple 3.1</strong></span> Considerem la corba amb etiqueta LMFDB <span class="math inline">\(11.a3\)</span>, que té per equació <span class="math display">\[
 E\colon\quad y^2 + y = x^3-x^2.
 \]</span> No és de la forma anterior, però s’hi pot posar amb un canvi de variables, que faria els coeficients més grans. Si comptem els punts de la corba per uns quants primers obtenim, si calculem per cada primer <span class="math inline">\(a_p=p+1-\#E(\mathbb{F}_p)\)</span>:</p>
 <table class="table">
@@ -483,30 +538,49 @@ f(z) &amp;= q {\color{red}-2 q^{2}} {\color{red}-  q^{3}} + 2 q^{4} + {\color{re
 &amp;{\color{red}-  q^{23}}- 4 q^{25} - 8 q^{26} + 5 q^{27} - 4 q^{28} + 2 q^{30} +{\color{red} 7 q^{31}} + O(q^{32})
 \end{align*}\]</span></p>
 <p>i podem veure que els coeficients coincideixen amb els obtinguts de la corba el·líptica.</p>
+</div>
 </section>
 <section id="la-funció-j-de-klein" class="level2" data-number="3.7">
 <h2 data-number="3.7" class="anchored" data-anchor-id="la-funció-j-de-klein"><span class="header-section-number">3.7</span> La funció j de Klein</h2>
 <p>Definim la següent funció modular de pes <span class="math inline">\(0\)</span>: <span class="math display">\[
 j = E_2^3 / \Delta.
 \]</span> Veiem que <span class="math inline">\(j\)</span> té un holomorfa a tot <span class="math inline">\(\mathbb{H}\)</span>, perquè <span class="math inline">\(\Delta\)</span> no s’anula. A més, té un pol simple a l’infinit, provinent del zero simple de <span class="math inline">\(\Delta\)</span>.</p>
-<p><strong>Proposició:</strong> L’aplicació <span class="math inline">\(z\mapsto j(z)\)</span> identifica <span class="math inline">\(\operatorname{PSL}_2(\mathbb{R})\backslash \mathbb{H}\)</span> amb <span class="math inline">\(\mathbb{C}\)</span>.</p>
-<p><em>Prova:</em> com que <span class="math inline">\(j\)</span> és invariant per <span class="math inline">\(G\)</span>, obtenim una funció ben definida <span class="math inline">\(G\backslash \mathbb{H}\longrightarrow\mathbb{C}\)</span>. Hem de veure que, per a tot <span class="math inline">\(\lambda\mathbb{C}\)</span>, existeix un únic <span class="math inline">\(z\in G\backslash\mathbb{H}\)</span> tal que <span class="math inline">\(j(z)=\lambda\)</span> o, el què és el mateix, que la funció <span class="math inline">\(f_\lambda(z)=E_2(z)^3 - \lambda\Delta(z)\)</span> té un únic zero mòdul <span class="math inline">\(G\)</span>. Aplicant la fórmula de la valència a <span class="math inline">\(f_\lambda\)</span> (que té pes <span class="math inline">\(12\)</span>) veiem que hem de descomposar <span class="math inline">\(1\)</span> de la forma <span class="math inline">\(a + b/2 + c/3\)</span> amb <span class="math inline">\(a,b,c\geq 0\)</span>. Les úniques possibilitats són <span class="math inline">\((1,0,0)\)</span>, <span class="math inline">\((0,2,0)\)</span>, <span class="math inline">\((0,0,3)\)</span>, i per tant hi ha un únic zero de <span class="math inline">\(f_\lambda\)</span> a <span class="math inline">\(G\backslash\mathbb{H}\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposició 3.8</strong></span> L’aplicació <span class="math inline">\(z\mapsto j(z)\)</span> identifica <span class="math inline">\(\operatorname{PSL}_2(\mathbb{R})\backslash \mathbb{H}\)</span> amb <span class="math inline">\(\mathbb{C}\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Com que <span class="math inline">\(j\)</span> és invariant per <span class="math inline">\(G\)</span>, obtenim una funció ben definida <span class="math inline">\(G\backslash \mathbb{H}\longrightarrow\mathbb{C}\)</span>. Hem de veure que, per a tot <span class="math inline">\(\lambda\mathbb{C}\)</span>, existeix un únic <span class="math inline">\(z\in G\backslash\mathbb{H}\)</span> tal que <span class="math inline">\(j(z)=\lambda\)</span> o, el què és el mateix, que la funció <span class="math inline">\(f_\lambda(z)=E_2(z)^3 - \lambda\Delta(z)\)</span> té un únic zero mòdul <span class="math inline">\(G\)</span>. Aplicant la fórmula de la valència a <span class="math inline">\(f_\lambda\)</span> (que té pes <span class="math inline">\(12\)</span>) veiem que hem de descomposar <span class="math inline">\(1\)</span> de la forma <span class="math inline">\(a + b/2 + c/3\)</span> amb <span class="math inline">\(a,b,c\geq 0\)</span>. Les úniques possibilitats són <span class="math inline">\((1,0,0)\)</span>, <span class="math inline">\((0,2,0)\)</span>, <span class="math inline">\((0,0,3)\)</span>, i per tant hi ha un únic zero de <span class="math inline">\(f_\lambda\)</span> a <span class="math inline">\(G\backslash\mathbb{H}\)</span>.</p>
+</div>
 <p>De fet, la funció <span class="math inline">\(j\)</span> dona lloc a totes les funcions modulars de pes zero:</p>
-<p><strong>Proposició:</strong> Tota funció modular de pes zero és una funció racional en <span class="math inline">\(j\)</span>.</p>
-<p><em>Prova:</em> Sigui <span class="math inline">\(f\)</span> una funció modular. Multiplicant-la per un polinomi en <span class="math inline">\(j\)</span>, posem suposar que és holomorfa a <span class="math inline">\(\mathbb{H}\)</span>. D’altra banda, com que <span class="math inline">\(\Delta\)</span> té un zero simple a l’infinit, podem multiplicar <span class="math inline">\(f\)</span> per <span class="math inline">\(\Delta^n\)</span> de manera que <span class="math inline">\(g=\Delta^nf\)</span> sigui holomorfa també a l’infinit. Aleshores <span class="math inline">\(g\)</span> és una forma modular de pes <span class="math inline">\(12n\)</span>, que podem escriure com un polinomi (4,6)-homogeni en <span class="math inline">\(E_4\)</span> i <span class="math inline">\(E_6\)</span>, de grau <span class="math inline">\(12n\)</span>. Per linealitat, n’hi ha prou amb veure que <span class="math inline">\(f=E_4^iE_6^j/\Delta^n\)</span> és una funció racional en <span class="math inline">\(j\)</span>. Observem però que, com que <span class="math inline">\(4i+6j=12n\)</span>, tant <span class="math inline">\(p=i/3\)</span> com <span class="math inline">\(q=j/2\)</span> són enters i, per tant, <span class="math inline">\(f=E_4^{3p}E_6^{2q}/\Delta^{p+q}=(\frac{E_4^3}{\Delta})^p(\frac{E_6^2}{\Delta})^q\)</span>. Però tant <span class="math inline">\(E_4^3/\Delta\)</span> com <span class="math inline">\(E_6^2/\Delta\)</span> són funcions racionals en <span class="math inline">\(j\)</span>, i ja estem. <span class="math inline">\(\blacksquare\)</span></p>
-<p><strong>Remarca:</strong> A partir de les <span class="math inline">\(q\)</span>-expansions de les sèries d’Eisenstein podem obtenir la de <span class="math inline">\(j\)</span>: <span class="math display">\[
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposició 3.9</strong></span> Tota funció modular de pes zero és una funció racional en <span class="math inline">\(j\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Sigui <span class="math inline">\(f\)</span> una funció modular. Multiplicant-la per un polinomi en <span class="math inline">\(j\)</span>, posem suposar que és holomorfa a <span class="math inline">\(\mathbb{H}\)</span>. D’altra banda, com que <span class="math inline">\(\Delta\)</span> té un zero simple a l’infinit, podem multiplicar <span class="math inline">\(f\)</span> per <span class="math inline">\(\Delta^n\)</span> de manera que <span class="math inline">\(g=\Delta^nf\)</span> sigui holomorfa també a l’infinit. Aleshores <span class="math inline">\(g\)</span> és una forma modular de pes <span class="math inline">\(12n\)</span>, que podem escriure com un polinomi (4,6)-homogeni en <span class="math inline">\(E_4\)</span> i <span class="math inline">\(E_6\)</span>, de grau <span class="math inline">\(12n\)</span>. Per linealitat, n’hi ha prou amb veure que <span class="math inline">\(f=E_4^iE_6^j/\Delta^n\)</span> és una funció racional en <span class="math inline">\(j\)</span>. Observem però que, com que <span class="math inline">\(4i+6j=12n\)</span>, tant <span class="math inline">\(p=i/3\)</span> com <span class="math inline">\(q=j/2\)</span> són enters i, per tant, <span class="math inline">\(f=E_4^{3p}E_6^{2q}/\Delta^{p+q}=(\frac{E_4^3}{\Delta})^p(\frac{E_6^2}{\Delta})^q\)</span>. Però tant <span class="math inline">\(E_4^3/\Delta\)</span> com <span class="math inline">\(E_6^2/\Delta\)</span> són funcions racionals en <span class="math inline">\(j\)</span>, i ja estem.</p>
+</div>
+<div id="rem-" class="proof remark">
+<p><span class="proof-title"><em>Observació 3.5</em>. </span>A partir de les <span class="math inline">\(q\)</span>-expansions de les sèries d’Eisenstein podem obtenir la de <span class="math inline">\(j\)</span>: <span class="math display">\[
 j(z)=\frac{1}{q} + 744 + 196884q + 21493760q^2+\cdots
 \]</span> Els coeficients són tots enters, que a més satisfan <span class="math inline">\(n\equiv 0\pmod{p^i}\implies c(n) \equiv 0 \pmod{p^i}\)</span> per <span class="math inline">\(p=2,3,5,7,11\)</span> (per <span class="math inline">\(p=2,3,5\)</span> la divisilitat de <span class="math inline">\(c(n)\)</span> és per <span class="math inline">\(2^{3i+8}\)</span>, <span class="math inline">\(3^{2i+3}\)</span> i <span class="math inline">\(5^{i+1}\)</span>, respectivament).</p>
+</div>
 <p>El següent teorema és sorprenent: ens diu que la funció transcendent <span class="math inline">\(j(z)\)</span> pren valors algebraics quan l’argument és quadràtic.</p>
-<p><strong>Teorema:</strong> Si <span class="math inline">\(\tau\in\mathbb{H}\)</span> genera un cos quadràtic, aleshores <span class="math inline">\(j(\tau)\)</span> és algebraic.</p>
-<p><em>Prova:</em> Suposem que <span class="math inline">\(A\tau^2+B\tau+C=0\)</span>, amb <span class="math inline">\(A\neq 0\)</span>. Aleshores la matriu <span class="math inline">\(M=\left(\begin{smallmatrix}B&amp;C\\-A&amp;0\end{smallmatrix}\right)\)</span> té determinant <span class="math inline">\(N = AC\)</span> i fixa <span class="math inline">\(\tau\)</span>. El grup <span class="math inline">\(\Gamma=\operatorname{SL}_2(\mathbb{Z})\cap M^{-1}\operatorname{SL}_2(\mathbb{Z})M\)</span> és d’índex finit a <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span>, i tant <span class="math inline">\(j(z)\)</span> com <span class="math inline">\(j(Nz)\)</span> són formes modulars meromorfes pel grup <span class="math inline">\(\Gamma\)</span>. Per tant, són algebraicament dependents: hi ha un polinomi <span class="math inline">\(P(X,Y)\in \mathbb{C}[X,Y]\)</span> tal que <span class="math inline">\(P(j(z), j(Nz))=0\)</span>. Mirant la <span class="math inline">\(q\)</span>-expansió de <span class="math inline">\(j(z)\)</span> i <span class="math inline">\(j(Nz)\)</span> es veu que <span class="math inline">\(\mathbb{Q}[X,Y]\)</span>. Resulta aleshores que <span class="math inline">\(j(\tau)\)</span> és arrel del polinomi <span class="math inline">\(P(X,X)\in\mathbb{Q}[X]\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 3.6</strong></span> Si <span class="math inline">\(\tau\in\mathbb{H}\)</span> genera un cos quadràtic, aleshores <span class="math inline">\(j(\tau)\)</span> és algebraic.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Suposem que <span class="math inline">\(A\tau^2+B\tau+C=0\)</span>, amb <span class="math inline">\(A\neq 0\)</span>. Aleshores la matriu <span class="math inline">\(M=\left(\begin{smallmatrix}B&amp;C\\-A&amp;0\end{smallmatrix}\right)\)</span> té determinant <span class="math inline">\(N = AC\)</span> i fixa <span class="math inline">\(\tau\)</span>. El grup <span class="math inline">\(\Gamma=\operatorname{SL}_2(\mathbb{Z})\cap M^{-1}\operatorname{SL}_2(\mathbb{Z})M\)</span> és d’índex finit a <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span>, i tant <span class="math inline">\(j(z)\)</span> com <span class="math inline">\(j(Nz)\)</span> són formes modulars meromorfes pel grup <span class="math inline">\(\Gamma\)</span>. Per tant, són algebraicament dependents: hi ha un polinomi <span class="math inline">\(P(X,Y)\in \mathbb{C}[X,Y]\)</span> tal que <span class="math inline">\(P(j(z), j(Nz))=0\)</span>. Mirant la <span class="math inline">\(q\)</span>-expansió de <span class="math inline">\(j(z)\)</span> i <span class="math inline">\(j(Nz)\)</span> es veu que <span class="math inline">\(\mathbb{Q}[X,Y]\)</span>. Resulta aleshores que <span class="math inline">\(j(\tau)\)</span> és arrel del polinomi <span class="math inline">\(P(X,X)\in\mathbb{Q}[X]\)</span>.</p>
+</div>
 <p>Per exemple, es pot demostrar que <span class="math inline">\(j(\frac{1+\sqrt{-163}}{2}) = (640320)^3\)</span>. D’aquí se’n dedueix la famosa “identitat” <span class="math display">\[
 e^{\pi\sqrt{163}} = 262537412640768743.999999999999250072597\ldots
 \]</span></p>
 <p>De fet, la funció <span class="math inline">\(j\)</span> ens permet apropar-nos al somni de joventut de Kronecker. Kronecker i Weber van demostrar el 1884 el següent teorema:</p>
-<p><strong>Teorema (Kronecker-Weber):</strong> Sigui <span class="math inline">\(H\)</span> una extensió abeliana de <span class="math inline">\(\mathbb{Q}\)</span>. Aleshores existeix <span class="math inline">\(n\geq 1\)</span> tal que <span class="math inline">\(H\subseteq \mathbb{Q}(e^{2\pi i/n})\)</span>.</p>
-<p>Es va preguntar si les extensions abelianes d’altres cossos diferents de <span class="math inline">\(\mathbb{Q}\)</span> també es poden obtenir adjuntant valors “especials” d’alguna funció anàloga a l’exponencial. Doncs bé, tenim:</p>
-<p><strong>Teorema (Kronecker, Weber, Takagi, Hasse):</strong> Sigui <span class="math inline">\(H\)</span> una extensió abeliana d’un cos quadràtic imaginari <span class="math inline">\(K\)</span>. Aleshores existeix un <span class="math inline">\(n\geq 1\)</span> i un <span class="math inline">\(\tau\)</span> quadràtic tal que <span class="math inline">\(H\subseteq K(e^{2\pi i/n}, j(\tau), j(n\tau))\)</span>.</p>
+<div id="thm-kronecker-weber" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 3.7 (Kronecker-Weber)</strong></span> Sigui <span class="math inline">\(H\)</span> una extensió abeliana de <span class="math inline">\(\mathbb{Q}\)</span>. Aleshores existeix <span class="math inline">\(n\geq 1\)</span> tal que <span class="math inline">\(H\subseteq \mathbb{Q}(e^{2\pi i/n})\)</span>.</p>
+</div>
+<p>Es van preguntar si les extensions abelianes d’altres cossos diferents de <span class="math inline">\(\mathbb{Q}\)</span> també es poden obtenir adjuntant valors “especials” d’alguna funció anàloga a l’exponencial. Doncs bé, tenim:</p>
+<div id="thm-kronecker-weber-takagi-hasse" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 3.8 (Kronecker, Weber, Takagi, Hasse)</strong></span> Sigui <span class="math inline">\(H\)</span> una extensió abeliana d’un cos quadràtic imaginari <span class="math inline">\(K\)</span>. Aleshores existeix un <span class="math inline">\(n\geq 1\)</span> i un <span class="math inline">\(\tau\)</span> quadràtic tal que <span class="math inline">\(H\subseteq K(e^{2\pi i/n}, j(\tau), j(n\tau))\)</span>.</p>
+</div>
 
 
 </section>

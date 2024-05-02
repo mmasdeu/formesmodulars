@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="ca" xml:lang="ca"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.554">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -216,13 +216,17 @@ window.Quarto = {
 </div>
 <p>Avui veurem les formes modulars <span class="math inline">\(p\)</span>-àdiques des del punt de vista de J.-P. Serre, i com ens permeten una construcció alternativa de la funció <span class="math inline">\(p\)</span>-àdica de Kubota–Leopoldt.</p>
 <p>Recordem les congruències de Clausen–von Staudt pels nombres de Bernoulli</p>
-<p><strong>Teorema (Clausen–von Staudt):</strong> Si <span class="math inline">\(k\geq 2\)</span> és parell, aleshores <span class="math display">\[
+<div id="thm-clausen-vonstaudt" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 4.1 (Clausen–von Staudt)</strong></span> Si <span class="math inline">\(k\geq 2\)</span> és parell, aleshores <span class="math display">\[
 B_k + \sum_{p-1\mid k} \frac{1}{p} \in \mathbb{Z}.
 \]</span></p>
+</div>
 <p>La demostració és relativament elemental, i no la farem en aquestes notes. Una conseqüència fàcil és que</p>
-<p><strong>Corol·lari:</strong> Per a tot primer <span class="math inline">\(p\)</span> es té <span class="math display">\[
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corol·lari 4.1</strong></span> Per a tot primer <span class="math inline">\(p\)</span> es té <span class="math display">\[
 k \equiv 0 \pmod{(p-1)p^\alpha} \implies \frac{k}{B_k}\equiv 0\pmod{p^{\alpha+1}}.
 \]</span></p>
+</div>
 <p>Recordem les sèries d’Eisenstein <span class="math inline">\(E_k\)</span>, <span class="math display">\[
 E_k(q) = 1 - \frac{2k}{Bk} \sum_{n=1}^\infty \sigma_{k-1}(n)q^n.
 \]</span> El corol·lari anterior ens diu que, per a tot <span class="math inline">\(r\in\mathbb{Z}\)</span> i <span class="math inline">\(\alpha\geq 0\)</span>, tenim <span class="math inline">\(E_{r(p-1)p^\alpha} \equiv 1 \pmod{p^{\alpha+1}}\)</span>. En particular, <span class="math inline">\(E_{p-1}\equiv 1\pmod p\)</span>. Aquí, les congruències són de <span class="math inline">\(q\)</span>-expansions, és a dir, estem dient que la sèrie <span class="math inline">\(E_{p-1}-1\)</span> té tots els coeficients divisibles per <span class="math inline">\(p\)</span>.</p>
@@ -235,53 +239,68 @@ M_k(\mathbb{F}_p)\subseteq M_{k+(p-1)}(\mathbb{F}_p)\subseteq\cdots\subseteq M_{
 \]</span> i per tant té sentit considerar la unió de tots aquests anells. Per cada <span class="math inline">\(i\in \mathbb{Z}/(p-1)\mathbb{Z}\)</span>, definim <span class="math display">\[
 M^i(\mathbb{F}_p) = \bigcup_{k\equiv i\pmod{p-1}} M_k(\mathbb{F}_p).
 \]</span> Finalment, també considerem <span class="math inline">\(M(\mathbb{F}_p)\subseteq \mathbb{F}_p[[q]]\)</span> com la suma de tots els <span class="math inline">\(M_k(\mathbb{F}_p)\)</span>, i de manera anàloga considerem també <span class="math inline">\(M(\mathbb{Z}_{(p)})\)</span>. El morfisme de reducció dona lloc a un morfisme d’anells <span class="math inline">\(M(\mathbb{Z}_{(p)})\longrightarrow M(\mathbb{F}_p)\)</span>. Fixem-nos que <span class="math inline">\(E_{p-1}-1\in M(\mathbb{Z}_{(p)})\)</span> és al nucli d’aquesta aplicació. Escrivim <span class="math inline">\(A=E_{p-1}\)</span>, i recordem que escrivim <span class="math inline">\(Q=E_4\)</span> i <span class="math inline">\(R=E_6\)</span>. Sabem que <span class="math inline">\(A\)</span> es pot escriure com un cert polinomi “homogeni” en <span class="math inline">\(Q,R\)</span>, que denotarem com <span class="math inline">\(A=A(Q,R)\)</span>.</p>
-<p><strong>Teorema (Swinnerton-Dyer):</strong></p>
+<div id="thm-swinnerton-dyer" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 4.2 (Swinnerton-Dyer)</strong></span> &nbsp;</p>
 <ol type="1">
 <li><p>Si <span class="math inline">\(p\geq 5\)</span>, aleshores <span class="math inline">\(\ker\operatorname{red} = A - 1\)</span>. Per tant, <span class="math inline">\(M(\mathbb{F}_p) \cong \mathbb{F}_p[X, Y]/(\bar A(X,Y) - 1)\)</span>. A més, <span class="math display">\[
 M(\mathbb{F}_p) = \bigoplus_{i\in\mathbb{Z}/(p-1)\mathbb{Z}} M^i(\mathbb{F}_p).
 \]</span></p></li>
 <li><p>Per <span class="math inline">\(p=2,3\)</span>, tenim <span class="math inline">\(M(\mathbb{F}_p) = M^0(\mathbb{F}_p)=\mathbb{F}_p(\bar\Delta)\)</span>.</p></li>
 </ol>
-<p><em>Prova:</em> TODO</p>
-<p><strong>Teorema:</strong> Sigui <span class="math inline">\(p\geq 3\)</span>, i siguin <span class="math inline">\(f\in M_k(\mathbb{Z}_{(p)})\)</span> i <span class="math inline">\(f'\in M_{k'}(\mathbb{Z}_{(p)})\)</span> dues formes modulars de pesos <span class="math inline">\(k\)</span> i <span class="math inline">\(k'\)</span> respectivament. Aleshores <span class="math display">\[
+</div>
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 4.3</strong></span> Sigui <span class="math inline">\(p\geq 3\)</span>, i siguin <span class="math inline">\(f\in M_k(\mathbb{Z}_{(p)})\)</span> i <span class="math inline">\(f'\in M_{k'}(\mathbb{Z}_{(p)})\)</span> dues formes modulars de pesos <span class="math inline">\(k\)</span> i <span class="math inline">\(k'\)</span> respectivament. Aleshores <span class="math display">\[
 f\equiv f'\pmod{p^m}\implies k\equiv k'\pmod{(p-1)p^{m-1}}.
 \]</span> Si <span class="math inline">\(p=2\)</span>, aleshores es té <span class="math display">\[
 f\equiv f'\pmod{2^m}\implies k\equiv k'\pmod{2^{m-2}}.
 \]</span></p>
-<p><em>Prova:</em> TODO</p>
+</div>
 <p>Més endavant veurem la demostració d’aquests resultats. Però fixem-nos que en podem treure alguna conseqüència fàcil:</p>
-<p><strong>Proposició (congruències de Kummer per a=1):</strong> Si <span class="math inline">\(k\equiv k'\not\equiv 0\pmod{p-1}\)</span> aleshores <span class="math inline">\(\frac{B_k}{k} \equiv \frac{B_{k'}}{k'}\pmod p\)</span>.</p>
-<p><em>Prova:</em> Sabem que <span class="math inline">\(\sigma_{k-1}(n)\equiv \sigma_{k'-1}(n)\pmod{p}\)</span> per a tot <span class="math inline">\(n\)</span>. Les congruències de Clausen–von Staudt ens diuen que <span class="math inline">\(G_k\)</span> i <span class="math inline">\(G_{k'}\)</span> viuen a <span class="math inline">\(M_k(\mathbb{Z}_{(p)})\)</span>. Per tant, la reducció <span class="math inline">\(\bar G_k - \bar G_{k'}\)</span> viu a <span class="math inline">\(M^k(\mathbb{F}_p)\)</span>. Però els termes no-constants de la <span class="math inline">\(q\)</span>-expansió s’anul·len tots, i per tant en deduim que <span class="math display">\[
+<div id="prp-kummer" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposició 4.1 (Congruències de Kummer per a=1)</strong></span> Si <span class="math inline">\(k\equiv k'\not\equiv 0\pmod{p-1}\)</span> aleshores <span class="math inline">\(\frac{B_k}{k} \equiv \frac{B_{k'}}{k'}\pmod p\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Sabem que <span class="math inline">\(\sigma_{k-1}(n)\equiv \sigma_{k'-1}(n)\pmod{p}\)</span> per a tot <span class="math inline">\(n\)</span>. Les congruències de Clausen–von Staudt ens diuen que <span class="math inline">\(G_k\)</span> i <span class="math inline">\(G_{k'}\)</span> viuen a <span class="math inline">\(M_k(\mathbb{Z}_{(p)})\)</span>. Per tant, la reducció <span class="math inline">\(\bar G_k - \bar G_{k'}\)</span> viu a <span class="math inline">\(M^k(\mathbb{F}_p)\)</span>. Però els termes no-constants de la <span class="math inline">\(q\)</span>-expansió s’anul·len tots, i per tant en deduim que <span class="math display">\[
 \frac{B_k}{k} - \frac{B_{k'}}{k'} \in M^{k}(\mathbb{F}_p).
-\]</span> Essent la diferència de dues constants, també viuen a <span class="math inline">\(M^0(\mathbb{F}_p)\)</span> i , per tant, com que <span class="math inline">\(p-1\nmid k\)</span>, el teorema de Swinnerton-Dyer ens diu que aquesta diferència és <span class="math inline">\(0\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
+\]</span> Essent la diferència de dues constants, també viuen a <span class="math inline">\(M^0(\mathbb{F}_p)\)</span> i , per tant, com que <span class="math inline">\(p-1\nmid k\)</span>, el teorema de Swinnerton-Dyer ens diu que aquesta diferència és <span class="math inline">\(0\)</span>.</p>
+</div>
 <section id="formes-modulars-p-àdiques" class="level2" data-number="4.1">
 <h2 data-number="4.1" class="anchored" data-anchor-id="formes-modulars-p-àdiques"><span class="header-section-number">4.1</span> Formes modulars p-àdiques</h2>
 <p>Considerem l’anell de les formes modulars amb coeficients racionals <span class="math inline">\(M(\mathbb{Q})\)</span>. Podem definir-hi una valoració <span class="math inline">\(p\)</span>-àdica (que indueix una norma) definint <span class="math display">\[
 v_p(f) = \inf_{n} v_p(a_n),\quad f(q) = \sum_{n\geq 0}a_nq^n.
 \]</span> Aquesta definició té sentit, perquè les formes modulars tenen denominadors fitats: són polinomis “homogenis” en <span class="math inline">\(Q\)</span> i <span class="math inline">\(R\)</span> a coeficients racionals, i <span class="math inline">\(Q\)</span> i <span class="math inline">\(R\)</span> tenen denominadors enters.</p>
-<p><strong>Definició:</strong> L’anell <span class="math inline">\(M(\mathbb{Q}_p)\subseteq \mathbb{Q}_p[[q]]\)</span> és la completació de <span class="math inline">\(M(\mathbb{Q})\)</span> respecte la norma induida per <span class="math inline">\(v_p\)</span>. Més concretament, una <span class="math inline">\(q\)</span>-expansió <span class="math inline">\(f\in \mathbb{Q}_p[[q]]\)</span> és de <span class="math inline">\(M(\mathbb{Q}_p)\)</span> si, i només si, existeix una successió de formes modulars <span class="math inline">\((f_m)_m\subseteq M(\mathbb{Q})\)</span> tals que <span class="math inline">\(\lim_m f_m= f\)</span> (convergència uniforme).</p>
+<div id="def-anell-formes-modulars" class="theorem definition">
+<p><span class="theorem-title"><strong>Definició 4.1</strong></span> L’anell <span class="math inline">\(M(\mathbb{Q}_p)\subseteq \mathbb{Q}_p[[q]]\)</span> és la completació de <span class="math inline">\(M(\mathbb{Q})\)</span> respecte la norma induida per <span class="math inline">\(v_p\)</span>. Més concretament, una <span class="math inline">\(q\)</span>-expansió <span class="math inline">\(f\in \mathbb{Q}_p[[q]]\)</span> és de <span class="math inline">\(M(\mathbb{Q}_p)\)</span> si, i només si, existeix una successió de formes modulars <span class="math inline">\((f_m)_m\subseteq M(\mathbb{Q})\)</span> tals que <span class="math inline">\(\lim_m f_m= f\)</span> (convergència uniforme).</p>
+</div>
 <p>Considerem ara <span class="math inline">\(f=\lim_m f_m\)</span> una forma modular <span class="math inline">\(p\)</span>-àdica, i suposem que <span class="math inline">\(f_m\)</span> té pes <span class="math inline">\(k_m\)</span>. Pel teorema de la secció anterior, la successió d’enters <span class="math inline">\(\{k_m\}_m\)</span> convergeix <span class="math inline">\(p\)</span>-àdicament a un element <span class="math inline">\(\kappa \in\mathfrak{X}\)</span>, on <span class="math display">\[
 \mathfrak{X}= \varprojlim_m\ \mathbb{Z}/(p-1)p^m\mathbb{Z}\cong \mathbb{Z}/(p-1)\mathbb{Z}\times \mathbb{Z}_p.
 \]</span> Direm que <span class="math inline">\(f\)</span> té pes <span class="math inline">\(\kappa\)</span>, i escriurem <span class="math inline">\(M_\kappa(\mathbb{Q}_p)\)</span> pel subespai de formes modulars <span class="math inline">\(p\)</span>-àdiques de pes <span class="math inline">\(\kappa\)</span>.</p>
-<p><strong>Remarca:</strong> El conjunt <span class="math inline">\(\mathfrak{X}\)</span>, que s’anomena “l’espai de pesos”, el podem pensar com un espai de caràcters. Fixem-nos que <span class="math inline">\(\mathbb{Z}_p^\times \cong \mu_{p-1} \times (1+p\mathbb{Z}_p)\)</span> (on <span class="math inline">\(\mu_{p-1}\)</span> és el grup cíclic format per les arrels <span class="math inline">\((p-1)\)</span>-èssimes de la unitat), via <span class="math inline">\(x\mapsto \omega(x)\langle x\rangle\)</span>. Els caràcters multiplicatius de <span class="math inline">\(1+p\mathbb{Z}_p\)</span> són tots de la forma <span class="math inline">\(\alpha\mapsto \alpha^{\kappa}\)</span>, per <span class="math inline">\(\kappa\in\mathbb{Z}_p\)</span>. Per tant, els caràcters de <span class="math inline">\(\mathbb{Z}_p^\times\)</span> són de la forma <span class="math inline">\((u,\alpha)\mapsto \chi_{(h,\kappa)}(u,\alpha)=(u^h, \alpha^\kappa)\)</span>. Així, <span class="math display">\[
+<div id="rem-" class="proof remark">
+<p><span class="proof-title"><em>Observació 4.1</em>. </span>El conjunt <span class="math inline">\(\mathfrak{X}\)</span>, que s’anomena “l’espai de pesos”, el podem pensar com un espai de caràcters. Fixem-nos que <span class="math inline">\(\mathbb{Z}_p^\times \cong \mu_{p-1} \times (1+p\mathbb{Z}_p)\)</span> (on <span class="math inline">\(\mu_{p-1}\)</span> és el grup cíclic format per les arrels <span class="math inline">\((p-1)\)</span>-èssimes de la unitat), via <span class="math inline">\(x\mapsto \omega(x)\langle x\rangle\)</span>. Els caràcters multiplicatius de <span class="math inline">\(1+p\mathbb{Z}_p\)</span> són tots de la forma <span class="math inline">\(\alpha\mapsto \alpha^{\kappa}\)</span>, per <span class="math inline">\(\kappa\in\mathbb{Z}_p\)</span>. Per tant, els caràcters de <span class="math inline">\(\mathbb{Z}_p^\times\)</span> són de la forma <span class="math inline">\((u,\alpha)\mapsto \chi_{(h,\kappa)}(u,\alpha)=(u^h, \alpha^\kappa)\)</span>. Així, <span class="math display">\[
 \mathfrak{X}= \operatorname{Hom}_{\text{cont}}(\mathbb{Z}_p^\times,\mathbb{Z}_p^\times), \quad (h,\kappa)\mapsto \chi_{(h,\kappa)}.
 \]</span></p>
+</div>
 <p>El teorema de la secció anterior es pot formular en termes de formes modulars <span class="math inline">\(p\)</span>-àdiques:</p>
-<p><strong>Teorema:</strong> Siguin <span class="math inline">\(f\)</span> i <span class="math inline">\(f'\)</span> formes modulars <span class="math inline">\(p\)</span>-àdiques de pesos <span class="math inline">\(\kappa\)</span> i <span class="math inline">\(\kappa'\)</span>, respectivament. Suposem que <span class="math inline">\(v_p(f-f')\geq v_p(f)+m\)</span> per algun <span class="math inline">\(m\geq 1\)</span>. Aleshores, si <span class="math inline">\(p\geq 3\)</span>, <span class="math display">\[
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 4.4</strong></span> Siguin <span class="math inline">\(f\)</span> i <span class="math inline">\(f'\)</span> formes modulars <span class="math inline">\(p\)</span>-àdiques de pesos <span class="math inline">\(\kappa\)</span> i <span class="math inline">\(\kappa'\)</span>, respectivament. Suposem que <span class="math inline">\(v_p(f-f')\geq v_p(f)+m\)</span> per algun <span class="math inline">\(m\geq 1\)</span>. Aleshores, si <span class="math inline">\(p\geq 3\)</span>, <span class="math display">\[
 \kappa\equiv \kappa' \pmod{(p-1)p^{m-1}}.
 \]</span> (Per <span class="math inline">\(p=2\)</span> cal canviar l’exponent <span class="math inline">\(m-1\)</span> per <span class="math inline">\(m-2\)</span>).</p>
+</div>
 </section>
 <section id="el-terme-constant-a-partir-dels-altres-termes" class="level2" data-number="4.2">
 <h2 data-number="4.2" class="anchored" data-anchor-id="el-terme-constant-a-partir-dels-altres-termes"><span class="header-section-number">4.2</span> El terme constant a partir dels altres termes</h2>
 <p>Per les sèries d’Eisenstein, l’únic terme “interessant” és el constant, ja que la resta de termes estan formats per funcions ben conegudes. El següent resultat ens permet deduir propietats del terme constant a partir de conèixer els termes d’ordre més alt.</p>
-<p><strong>Proposició:</strong></p>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposició 4.2</strong></span> &nbsp;</p>
 <ol type="1">
 <li>Sigui <span class="math inline">\(f=\sum_n a_n q^n\in M_{\kappa}(\mathbb{Q}_p)\)</span> una forma modular <span class="math inline">\(p\)</span>-àdica de pes <span class="math inline">\(\kappa\in\mathfrak{X}\)</span>. Si <span class="math inline">\(\kappa\not\equiv 0 \pmod{(p-1)p^m}\)</span> per algun <span class="math inline">\(m\geq 0\)</span>, aleshores <span class="math display">\[
 v_p(a_0)+m\geq \inf_{n\geq 1} v_p(a_n).
 \]</span></li>
 <li>Sigui <span class="math inline">\((f_m)_m\subseteq M(\mathbb{Q}_p)\)</span> una successió de formes modulars <span class="math inline">\(p\)</span>-adiques de pesos <span class="math inline">\(\{\kappa_m\}_m\)</span>. Escrivim <span class="math inline">\(f_m = \lim_n f_m^{(n)}\)</span>, on <span class="math inline">\(f_m^{(n)} = \sum_{n} a_n^{(m)} q^n\)</span>. Suposem que <span class="math inline">\(\lim_m a_n^{(m)} = a_n\)</span> uniformement en <span class="math inline">\(n\)</span> i que <span class="math inline">\(\lim\kappa_m=\kappa\neq 0\)</span>. Aleshores <span class="math inline">\(\lim_m a_0^{(m)}= a_0\)</span>, i <span class="math inline">\(f=\sum_{n}a_nq^n\)</span> és una forma modular <span class="math inline">\(p\)</span>-àdica de pes <span class="math inline">\(\kappa\)</span>.</li>
 </ol>
-<p><em>Prova:</em> Per demostrar (1), observem primer que si <span class="math inline">\(a_0=0\)</span> aleshores ja estem. Si no, <span class="math inline">\(a_0\in M_0(\mathbb{Q}_p)\)</span> i per tant tenim, per la proposició anterior, que <span class="math display">\[
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Per demostrar (1), observem primer que si <span class="math inline">\(a_0=0\)</span> aleshores ja estem. Si no, <span class="math inline">\(a_0\in M_0(\mathbb{Q}_p)\)</span> i per tant tenim, per la proposició anterior, que <span class="math display">\[
 v_p(f-a_0)&lt;v_p(f)+m+1.
 \]</span> Per tant, <span class="math display">\[
 v_p(a_0)+m\geq v_p(f)+m \geq \inf_{n\geq 1} v_p(a_n).
@@ -291,7 +310,8 @@ v_p(a_{n}^{(i)})\geq t,\quad \forall n\geq 1.
 \]</span></p>
 <p>L’apartat anterior ens dona doncs que <span class="math inline">\(v_p(a_{0}^{(i)})&gt;t-m\)</span> per a tot <span class="math inline">\(i\)</span> suficientment gran. Com que <span class="math inline">\(p^{t-m}\mathbb{Z}_{p}\)</span> és compacte, hi ha una subsuccessió de <span class="math inline">\((a_0^{(i)})_i\)</span> convergint a <span class="math inline">\(a_0\)</span>, i <span class="math inline">\(f=\sum_{n\geq 0} a_n q^{n}\in M_{\kappa}(\mathbb{Q}_p)\)</span>. Si <span class="math inline">\(a_0'\)</span> fos el límit d’una altra subsuccessió, aleshores obtindríem una altra <span class="math inline">\(f'\)</span>, i <span class="math display">\[
 f-f' = a_0-a_0'\in M_{\kappa}(\mathbb{Q}_p)\cap M_{0}(\mathbb{Q}_p)=0.
-\]</span> Per tant <span class="math inline">\((a_0^{(i)})_i\)</span> convergeix a <span class="math inline">\(a_0\)</span>. <span class="math inline">\(\blacksquare\)</span></p>
+\]</span> Per tant <span class="math inline">\((a_0^{(i)})_i\)</span> convergeix a <span class="math inline">\(a_0\)</span>.</p>
+</div>
 </section>
 <section id="la-funció-zeta-p-àdica" class="level2" data-number="4.3">
 <h2 data-number="4.3" class="anchored" data-anchor-id="la-funció-zeta-p-àdica"><span class="header-section-number">4.3</span> La funció zeta p-àdica</h2>
@@ -307,9 +327,11 @@ f-f' = a_0-a_0'\in M_{\kappa}(\mathbb{Q}_p)\cap M_{0}(\mathbb{Q}_p)=0.
 \zeta^*(1-\kappa) = \lim_{i\longrightarrow\infty} \zeta(1-k_i)=\lim_{i\longrightarrow\infty} \prod_\ell \frac{1}{1-\ell^{k_i-1}} = \prod_{\ell\neq p} \frac{1}{1-\ell^{k-1}} = (1-p^{k-1}) \zeta(1-k).
 \]</span></p>
 <p>Com que <span class="math inline">\(\zeta^*\)</span> és contínua i interpola en un conjunt dens, ha de ser la funció de Kubota–Leopoldt que ja hem vist. És a dir, que obtenim (assumim <span class="math inline">\(p\neq 2\)</span> per simplicitat):</p>
-<p><strong>Teorema:</strong> Si <span class="math inline">\(p\neq 2\)</span> i <span class="math inline">\((s,u)\in\mathbb{Z}_p\times \mathbb{Z}/(p-1)\mathbb{Z}\cong\mathfrak{X}\)</span>, tenim <span class="math display">\[
+<div id="thm-" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 4.5</strong></span> Si <span class="math inline">\(p\neq 2\)</span> i <span class="math inline">\((s,u)\in\mathbb{Z}_p\times \mathbb{Z}/(p-1)\mathbb{Z}\cong\mathfrak{X}\)</span>, tenim <span class="math display">\[
 \zeta^*(s,u)=L_p(s\omega^{1-u}).
 \]</span></p>
+</div>
 
 
 </section>
