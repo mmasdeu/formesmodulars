@@ -31,12 +31,13 @@ format:
     lang: ca
     language:
       title-block-author-single: "Autor"
-    theme: cosmo
+    theme: materia
   pdf:
     lang: ca
     documentclass: scrreprt
     colorlinks: true
     toc: true
+    toc-depth: 2
     number-sections: true
     cite-method: biblatex
     
