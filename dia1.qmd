@@ -23,12 +23,9 @@ $$
 ::: {#thm-fermat}
 ## Fermat
 El nombre de maneres d'escriure $n$ com a suma de $2$ quadrats és
-
 $$
-4\sum_{\substack{d\mid n\\d \equiv 1\mod 4}} d - 4\sum_{\substack{d\mid n\\d \equiv 3\mod 4}} d,
+4\sum_{\substack{0<d\mid n\\d \equiv 1\mod 4}} d - 4\sum_{\substack{0<d\mid n\\d \equiv 3\mod 4}} d.
 $$
-
-on les sumes recorren els divisors $d$ de $n$ positius.
 :::
 
 ::: {#thm-cubic}

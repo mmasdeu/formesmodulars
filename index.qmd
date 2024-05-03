@@ -1,4 +1,4 @@
-# Introducció {.unnumbered}
+# Prefaci {.unnumbered}
 
 La referència bàsica d'aquests apunts és el llibre @serre2012. Si voleu aprofundir més, podeu consultar @diamond-shurman2005.
 

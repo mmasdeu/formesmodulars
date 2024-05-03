@@ -21,6 +21,12 @@ $$
 k \equiv 0 \pmod{(p-1)p^\alpha} \implies \frac{k}{B_k}\equiv 0\pmod{p^{\alpha+1}}.
 $$
 :::
+::: {.proof}
+Com que $p-1$ divideix $k$, del teorema obtenim que $v_p(B_k)=-1$. Per tant,
+$$
+v_p(\frac{k}{B_k}) = v_p(k)-v_p(B_k)\geq \alpha - (-1)= \alpha + 1.
+$$
+:::
 
 Recordem les sèries d'Eisenstein $E_k$,
 $$

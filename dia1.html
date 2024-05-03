@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ca" xml:lang="ca"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.553">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Formes Modulars - 1&nbsp; Primer dia</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./dia2.html" rel="next">
+<link href="./index.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "language": {
+    "search-no-results-text": "Cap resultat",
+    "search-matching-documents-text": "documents que coincideixen",
+    "search-copy-link-title": "Copia l'enllaç a la cerca",
+    "search-hide-matches-text": "Amaga les coincidències addicionals",
+    "search-more-match-text": "altra coincidència en aquest document",
+    "search-more-matches-text": "altres coincidències en aquest document",
+    "search-clear-button-title": "Neteja",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel·la",
+    "search-submit-button-title": "Envia",
+    "search-label": "Cerca"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Commuta la navegació de la barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./dia1.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Primer dia</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Commuta la navegació de la barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Formes Modulars</a> 
+        <div class="sidebar-tools-main">
+    <a href="https://www.github.com/mmasdeu/formesmodulars" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
+    <a href="./Formes-Modulars.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Cerca"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Prefaci</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dia1.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Primer dia</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dia2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Segon dia</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dia3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Tercer dia</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./dia4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Quart dia</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./bibliografia.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Bibliografia</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Taula de continguts</h2>
+   
+  <ul>
+  <li><a href="#definicions-bàsiques" id="toc-definicions-bàsiques" class="nav-link active" data-scroll-target="#definicions-bàsiques"><span class="header-section-number">1.1</span> Definicions bàsiques</a></li>
+  <li><a href="#el-domini-fonamental" id="toc-el-domini-fonamental" class="nav-link" data-scroll-target="#el-domini-fonamental"><span class="header-section-number">1.2</span> El domini fonamental</a></li>
+  <li><a href="#formes-modulars" id="toc-formes-modulars" class="nav-link" data-scroll-target="#formes-modulars"><span class="header-section-number">1.3</span> Formes modulars</a>
+  <ul class="collapse">
+  <li><a href="#definicions" id="toc-definicions" class="nav-link" data-scroll-target="#definicions"><span class="header-section-number">1.3.1</span> Definicions</a></li>
+  <li><a href="#sèries-deisenstein" id="toc-sèries-deisenstein" class="nav-link" data-scroll-target="#sèries-deisenstein"><span class="header-section-number">1.3.2</span> Sèries d’Eisenstein</a></li>
+  </ul></li>
+  <li><a href="#lespai-de-les-formes-modulars" id="toc-lespai-de-les-formes-modulars" class="nav-link" data-scroll-target="#lespai-de-les-formes-modulars"><span class="header-section-number">1.4</span> L’espai de les formes modulars</a>
+  <ul class="collapse">
+  <li><a href="#zeros-i-pols-duna-funció-modular" id="toc-zeros-i-pols-duna-funció-modular" class="nav-link" data-scroll-target="#zeros-i-pols-duna-funció-modular"><span class="header-section-number">1.4.1</span> Zeros i pols d’una funció modular</a></li>
+  <li><a href="#làlgebra-de-formes-modulars" id="toc-làlgebra-de-formes-modulars" class="nav-link" data-scroll-target="#làlgebra-de-formes-modulars"><span class="header-section-number">1.4.2</span> L’àlgebra de formes modulars</a></li>
+  </ul></li>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://www.github.com/mmasdeu/formesmodulars/edit/main/dia1.qmd" class="toc-action"><i class="bi bi-github"></i>Edita aquesta pàgina</a></li><li><a href="https://www.github.com/mmasdeu/formesmodulars/issues" class="toc-action"><i class="bi empty"></i>Informa d'un problema</a></li><li><a href="https://www.github.com/mmasdeu/formesmodulars/blob/main/dia1.qmd" class="toc-action"><i class="bi empty"></i>Mostra la font</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Primer dia</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="hidden">
+
+</div>
+<p>Abans d’introduir els objects que estudiarem, és natural preguntar-nos per què els estudiem (a més del fet que són objectes matemàtics extremadament bonics).</p>
+<p>Resulta que molts problemes en la teoria de nombres (i en altres ciències) tracten de <em>comptar</em> certs objectes. Per exemple, podem comptar el nombre de particions d’un enter <span class="math inline">\(n\)</span> (maneres d’obtenir <span class="math inline">\(n\)</span> com a suma de naturals positius ordenats), o el nombre de solucions mòdul <span class="math inline">\(n\)</span> de l’equació <span class="math inline">\(y^2+y=x^3-x^2\)</span>, o bé el nombre de maneres d’escriure <span class="math inline">\(n\)</span> com a suma de <span class="math inline">\(2\)</span> quadrats,… Doncs resulta que per tots els problemes anteriors (i molts d’altres) aquests recomptes donen, un cop escrits en forma de sèrie de potències, una forma modular.</p>
+<p>El fet anterior ja seria de per si interessant, ja que estudiar formes modulars ens permetria estudiar tots aquests problemes a la vegada. El que és encara més sorprenent és que resulta que les formes modulars constitueixen espais vectorials de dimensió finita, i això fa que si podem construir suficients exemples, podem descobrir identitats sorprenents. Com a mostra, podem enunciar alguns teoremes que aprofiten aquest fet:</p>
+<div id="thm-1" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 1.1</strong></span> Per a tot primer <span class="math inline">\(p\)</span>, es té: <span class="math display">\[
+\#\{(x,y)\in\mathbb{Z}/p\times\mathbb{Z}/p : y^2+y=x^3-x^2\} = p - a_p,
+\]</span> on <span class="math inline">\(a_p\)</span> és el coeficient de <span class="math inline">\(q^p\)</span> de la sèrie formal <span class="math display">\[
+q\prod_{n=1}^\infty (1-q^n)^2(1-q^{11n})^2=q-2q^2-q^3+2q^4+q^5+2q^6-2q^7+\cdots.
+\]</span></p>
+</div>
+<div id="thm-fermat" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 1.2 (Fermat)</strong></span> El nombre de maneres d’escriure <span class="math inline">\(n\)</span> com a suma de <span class="math inline">\(2\)</span> quadrats és <span class="math display">\[
+4\sum_{\substack{0&lt;d\mid n\\d \equiv 1\mod 4}} d - 4\sum_{\substack{0&lt;d\mid n\\d \equiv 3\mod 4}} d.
+\]</span></p>
+</div>
+<div id="thm-cubic" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 1.3</strong></span> Sigui <span class="math inline">\(a_p\)</span> el nombre d’arrels del polinomi <span class="math inline">\(x^3-x-1\)</span> a <span class="math inline">\(\mathbb{Z}/p\mathbb{Z}\)</span>. Aleshores per tot primer <span class="math inline">\(p\neq 23\)</span>, <span class="math inline">\(a_p-1\)</span> és el coeficient de <span class="math inline">\(q^p\)</span> de la sèrie formal <span class="math display">\[
+q\prod_{n=1}^\infty (1-q^n)(1-q^{23n}).
+\]</span></p>
+</div>
+<div id="thm-ramanujan" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 1.4 (Ramanujan)</strong></span> Sigui <span class="math inline">\(\tau(n)\)</span> el coeficient de <span class="math inline">\(q^n\)</span> de la sèrie formal <span class="math inline">\(\Delta(q)=q\prod_{n\geq 1} (1-q^n)^{24}\)</span>. Aleshores per a tot <span class="math inline">\(n\geq 1\)</span>, <span class="math display">\[
+\tau(n) \equiv \sum_{d\mid n} d^{11} \pmod{691}.
+\]</span></p>
+</div>
+<section id="definicions-bàsiques" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="definicions-bàsiques"><span class="header-section-number">1.1</span> Definicions bàsiques</h2>
+<p>Considerem el semiplà superior de Poincaré, <span class="math display">\[
+\mathbb{H}= \{z\in \mathbb{C}: \Im(z) &gt;0\}
+\]</span> i el grup <span class="math inline">\(\operatorname{SL}_2(\mathbb{R})\)</span>, definit com <span class="math display">\[
+\operatorname{SL}_2(\mathbb{R}) = \left\{ \left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) \in M_2(\mathbb{R}) : ad-bc = 1\right\}.
+\]</span></p>
+<p>Aquest grup actua en els complexos (de fet, a <span class="math inline">\(\mathbb{C} \cup \{\infty\}\)</span>) mitjançant les anomenades <em>transformacions lineals fraccionàries</em>: <span class="math display">\[
+g\cdot z =\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right)\cdot z = \frac{az+b}{cz+d}.
+\]</span></p>
+<p>Es té una fórmula senzilla per la part imaginària d’aquesta quantitat: <span class="math display">\[
+\Im(gz) = \frac{\Im(z)}{ |cz+d|^2}.
+\]</span></p>
+<p>Per tant, veiem que <span class="math inline">\(\operatorname{SL}_2(\mathbb{R})\)</span> actua a <span class="math inline">\(\mathbb{H}\)</span>. Com que <span class="math inline">\(-1\)</span> actua trivialment, de fet tenim una acció del quocient <span class="math inline">\(\operatorname{PSL}_2(\mathbb{R}) = \operatorname{SL}_2(\mathbb{R})/\{\pm 1\}\)</span>, que de fet és <em>fidel</em>.</p>
+<div id="rem-" class="proof remark">
+<p><span class="proof-title"><em>Observació 1.6</em>. </span>De fet, el grup <span class="math inline">\(\operatorname{PSL}_2(\mathbb{R})\)</span> és el grup d’automorfismes analítics d’<span class="math inline">\(\mathbb{H}\)</span>.</p>
+</div>
+<div id="def-grup-modular" class="theorem definition">
+<p><span class="theorem-title"><strong>Definició 1.1</strong></span> El grup <span class="math inline">\(G = \operatorname{PSL}_2(\mathbb{R})\)</span> s’anomena el <em>grup modular</em>. Sovint confondrem una matriu <span class="math inline">\(g = \left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right)\)</span> amb la seva imatge a <span class="math inline">\(G\)</span>.</p>
+</div>
+</section>
+<section id="el-domini-fonamental" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="el-domini-fonamental"><span class="header-section-number">1.2</span> El domini fonamental</h2>
+<p>Considerem dos elements a <span class="math inline">\(G\)</span> que jugaran un paper important: <span class="math display">\[
+S = \left(\begin{smallmatrix}0&amp;-1\\1&amp;0\end{smallmatrix}\right),\quad T = \left(\begin{smallmatrix}1&amp;1\\0&amp;1\end{smallmatrix}\right).
+\]</span> Actuen enviant <span class="math inline">\(z\)</span> a <span class="math inline">\(S z=-1/z\)</span> i <span class="math inline">\(T z = z+1\)</span>. A més, satisfan les relacions (a <span class="math inline">\(G\)</span>) <span class="math display">\[
+S^2=1,\quad (ST)^3=1.
+\]</span> Considerem ara el conjunt <span class="math inline">\(D\subseteq \mathbb{H}\)</span> definit com <span class="math display">\[
+D = \{ z \in \mathbb{H}: |\Re(z)|\leq 1/2, |z| \geq 1 \}.
+\]</span> Es té el següent:</p>
+<div id="thm-fundom" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 1.5</strong></span> &nbsp;</p>
+<ol type="1">
+<li><p>Per cada <span class="math inline">\(z\in\mathbb{H}\)</span> hi ha algun <span class="math inline">\(g\in G\)</span> tal que <span class="math inline">\(gz\in D\)</span>.</p></li>
+<li><p>Siguin <span class="math inline">\(z, z'\in D\)</span> congruents mòdul <span class="math inline">\(G\)</span>. Aleshores o bé <span class="math inline">\(\Re(z)=\pm 1/2\)</span> i <span class="math inline">\(z=z'\pm 1\)</span>, o bé <span class="math inline">\(|z| = 1\)</span> i <span class="math inline">\(z'=-1/z\)</span>.</p></li>
+<li><p>Sigui <span class="math inline">\(z\in D\)</span>, i considerem <span class="math inline">\(G_z=\{g \in G: g z = z\}\)</span>. Aleshores <span class="math inline">\(G_z=1\)</span> excepte si:</p>
+<ol type="a">
+<li><span class="math inline">\(z=i\)</span>, i aleshores <span class="math inline">\(G_i = \{1, S\}\)</span>.</li>
+<li><span class="math inline">\(z = \rho=e^{2\pi i/3}\)</span>, i aleshores <span class="math inline">\(G_\rho=\{1, ST, (ST)^2\}\)</span>.</li>
+<li><span class="math inline">\(z = -\bar\rho=e^{\pi i /3}\)</span>, i aleshores <span class="math inline">\(G_{-\bar\rho}=\{1, (TS), (TS)^2\}\)</span>.</li>
+</ol></li>
+<li><p>El grup <span class="math inline">\(G\)</span> està generat per <span class="math inline">\(S\)</span> i <span class="math inline">\(T\)</span>. De fet, es té <span class="math inline">\(G=\langle S, T | S^2=(ST)^3=1 \rangle\)</span>.</p></li>
+</ol>
+</div>
+<div id="proof">
+<p>Considerem <span class="math inline">\(G'=\langle S, T\rangle\)</span>. Donat <span class="math inline">\(z\in\mathbb{H}\)</span>, trobarem <span class="math inline">\(g'\in G'\)</span> tal que <span class="math inline">\(g'z\in D\)</span>. Escrivim <span class="math inline">\(g=\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right)\)</span> un element de <span class="math inline">\(G'\)</span> arbitrari, i observem que hi ha un nombre finit de parelles <span class="math inline">\((c,d)\)</span> tals que <span class="math inline">\(|cz+d|&lt;M\)</span> (per qualsevol <span class="math inline">\(M\)</span> fixat): si escrivim <span class="math inline">\(z=x+iy\)</span>, aleshores <span class="math inline">\(|cz+d|&gt;|cx+d|\)</span> i <span class="math inline">\(|cz+d|&gt;|cy|\)</span> i, per tant, hi ha un nombre finit de <span class="math inline">\(c\)</span> i de <span class="math inline">\(d\)</span> que el fan més petit. Aleshores per la fórmula <span class="math display">\[
+\Im(gz)=\frac{\Im(z)}{|cz+d|^2}
+\]</span> veiem que hi ha algun <span class="math inline">\(g\in G'\)</span> que maximitza <span class="math inline">\(\Im(gz)\)</span>. Triem ara <span class="math inline">\(n\in\mathbb{Z}\)</span> tal que <span class="math inline">\(T^ngz\)</span> tingui part real entre <span class="math inline">\(-1/2\)</span> i <span class="math inline">\(1/2\)</span>. Aleshores és fàcil veure que <span class="math inline">\(z'=T^ngz\)</span> és a <span class="math inline">\(D\)</span> (si no ho fos, seria perquè <span class="math inline">\(|z'|&lt;1\)</span>, però aleshores <span class="math inline">\(-1/z'\)</span> tindria part imaginària més gran, contradicció).</p>
+<p>Per demostrar el segon punt, suposem que <span class="math inline">\(z\)</span> i <span class="math inline">\(gz\)</span> pertanyen a <span class="math inline">\(D\)</span>. Per simetria, podem assumir que <span class="math inline">\(\Im(gz)\geq \Im(z)\)</span>, és a dir, <span class="math display">\[
+|cz+d|^2=(cx+d)^2 + (cy)^2\leq 1, \quad z=x+iy.
+\]</span> Com que <span class="math inline">\(y^2 \geq 3/4\)</span>, això implica que <span class="math inline">\(|c|\leq 1\)</span>. Analitzant els diferents casos <span class="math inline">\(c=0\)</span>, <span class="math inline">\(c=1\)</span> i <span class="math inline">\(c=-1\)</span> obtenim el que quedava per demostrar, excepte el fet que <span class="math inline">\(G=G'\)</span>.</p>
+<p>Sigui ara <span class="math inline">\(g\in G\)</span> un element arbitrari, i prenem <span class="math inline">\(z_0\)</span> a l’interior de <span class="math inline">\(D\)</span>. Considerem <span class="math inline">\(z=gz_0\)</span>, i trobarem <span class="math inline">\(g'\in G'\)</span> tal que <span class="math inline">\(g'z\)</span> pertanyi a <span class="math inline">\(D\)</span>. Pel què hem vist <span class="math inline">\(g'z=z_0\)</span> i d’aquí obtenim <span class="math inline">\(g'g=1\)</span>, i per tant <span class="math inline">\(g\)</span> pertany a <span class="math inline">\(G'\)</span>.</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corol·lari 1.1</strong></span> L’aplicació de pas al quocient <span class="math inline">\(D \longrightarrow\mathbb{H}/G\)</span> és exhaustiva, i la seva restricció a l’interior de <span class="math inline">\(D\)</span> és injectiva.</p>
+</div>
+</section>
+<section id="formes-modulars" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="formes-modulars"><span class="header-section-number">1.3</span> Formes modulars</h2>
+<section id="definicions" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="definicions"><span class="header-section-number">1.3.1</span> Definicions</h3>
+<div id="def-debilment-modular" class="theorem definition">
+<p><span class="theorem-title"><strong>Definició 1.2</strong></span> Diem que una funció <span class="math inline">\(f\)</span> meromorfa a <span class="math inline">\(\mathbb{H}\)</span> és <em>dèbilment modular</em> de pes <span class="math inline">\(k\in\mathbb{Z}\)</span> si <span class="math display">\[
+f(g z) = (cz+d)^k f(z),\forall g=\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) \in\operatorname{SL}_2(\mathbb{Z}).
+\]</span></p>
+</div>
+<p>És convenient introduir aquí la notació “slash”: definim <span class="math inline">\(f |_{k} g\)</span> com la funció (que depèn de <span class="math inline">\(k\)</span>, encara que no ho posem a la notació) <span class="math display">\[
+(f |_{k} g)(z) = (cz+d)^{-k} f(z).
+\]</span> Aleshores veiem que <span class="math inline">\(f\)</span> és dèbilment modular si, i només si, <span class="math inline">\(f|_{k} g=f\)</span> per a tot <span class="math inline">\(g\in \operatorname{SL}_2(\mathbb{Z})\)</span>.</p>
+<p>Com que <span class="math inline">\(G\)</span> està generat pels elements <span class="math inline">\(S\)</span> i <span class="math inline">\(T\)</span>, aquesta condició és equivalent a demanar que, per a tot <span class="math inline">\(z\in \mathbb{H}\)</span>, <span class="math display">\[
+f(z+1)=f(z),\quad f(-1/z) = z^{k}f(z).
+\]</span></p>
+<div id="rem-" class="proof remark">
+<p><span class="proof-title"><em>Observació 1.6</em>. </span>Aplicant la definició a <span class="math inline">\(-1\in \operatorname{SL}_2(\mathbb{Z})\)</span> obtenim que <span class="math inline">\(f(z)=(-1)^k f(z)\)</span>. Per tant, si <span class="math inline">\(k\)</span> és senar només la funció <span class="math inline">\(0\)</span> és dèbilment modular. Demanarem doncs, d’aquí en endavant, que <span class="math inline">\(k\)</span> sigui parell.</p>
+</div>
+<p>Fixem-nos que, si <span class="math inline">\(f(z+1)=f(z)\)</span> per a tot <span class="math inline">\(z\in \mathbb{H}\)</span>, aleshores podem composar amb el canvi <span class="math inline">\(q=e^{2\pi i z}\)</span> i obtenir una funció <span class="math inline">\(\tilde f(q)\)</span> definida a</p>
+<p><span class="math display">\[
+\tilde{\mathbb{H}}=\{q\in \mathbb{C}: 0 &lt; |q| &lt; 1 \}.
+\]</span> Aleshores, <span class="math inline">\(\tilde f\)</span> tindrà una sèrie de Laurent al voltant de <span class="math inline">\(q=0\)</span>: <span class="math display">\[
+\tilde f(q) = \sum_{n=-\infty}^\infty a_nq^n.
+\]</span> Direm aleshores que <span class="math inline">\(f\)</span> és <em>meromorfa a l’infinit</em> si <span class="math inline">\(\tilde f\)</span> és meromorfa a <span class="math inline">\(q=0\)</span> (<span class="math inline">\(a_n=0\)</span> per <span class="math inline">\(n&lt;&lt;0\)</span>). També direm que <span class="math inline">\(f\)</span> és <em>holomorfa a l’infinit</em> si <span class="math inline">\(a_n=0\)</span> per <span class="math inline">\(n &lt; 0\)</span>, i <span class="math inline">\(f\)</span> s’anul·la a l’infinit si <span class="math inline">\(a_n=0\)</span> per <span class="math inline">\(n\leq 0\)</span>.</p>
+<div id="def-forma-modular" class="theorem definition">
+<p><span class="theorem-title"><strong>Definició 1.3</strong></span> Una <em>forma modular</em> de pes <span class="math inline">\(k\)</span> és una funció dèbilment modular que és holomorfa a tot arreu, incloent l’infinit. Si aquesta s’anula a l’infinit, l’anomenarem una <em>forma cuspidal</em>. Denotem per <span class="math inline">\(M_k\)</span> el <span class="math inline">\(\mathbb{C}\)</span>-espai vectorial de les formes modulars de pes <span class="math inline">\(k\)</span>, i per <span class="math inline">\(S_k\subseteq M_k\)</span> el subespai de les formes cuspidals.</p>
+</div>
+<p>Resumint, una forma modular de pes <span class="math inline">\(k\)</span> ve donada per una sèrie <span class="math display">\[
+f(z) = \sum_{n=0}^\infty a_n q^n = \sum_{n=0}^\infty a_ne^{2\pi i nz},
+\]</span> que convergeix per a tot <span class="math inline">\(z\in \mathbb{H}\)</span>, i que satisfà <span class="math inline">\(f(-1/z) = z^kf(z)\)</span>.</p>
+<div id="rem-" class="proof remark">
+<p><span class="proof-title"><em>Observació 1.6</em>. </span>Si multipliquem una forma modular <span class="math inline">\(f\)</span> de pes <span class="math inline">\(k\)</span> amb una <span class="math inline">\(f'\)</span> de pes <span class="math inline">\(k'\)</span> obtindrem una forma <span class="math inline">\(ff'\)</span> de pes <span class="math inline">\(k+k'\)</span>. Obtenim així un anell graduat <span class="math inline">\(M=\bigoplus_{k\in\mathbb{Z}} M_k\)</span>.</p>
+</div>
+</section>
+<section id="sèries-deisenstein" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="sèries-deisenstein"><span class="header-section-number">1.3.2</span> Sèries d’Eisenstein</h3>
+<p>Per ara els únics exemples que tenim de formes modulars són les constants, que són formes modulars de pes zero (de fet, són les úniques formes modulars de pes zero). Si considerem una funció holomorfa <span class="math inline">\(h\)</span> qualsevol, aleshores una manera de construir una funció modular és “simetritzar-la”, és a dir, considerar <span class="math inline">\(\sum_{g\in G} h|_{k} g\)</span>. El problema és que en general aquesta suma no té per què convergir. Una segona idea seria considerar una funció que ja sigui invariant per algun subgrup de <span class="math inline">\(H\leq G\)</span>, i aleshores només simetritzar per <span class="math inline">\(G/H\)</span>. La versió més senzilla d’aquest principi és considerar la funció constant <span class="math inline">\(1\)</span>. Si <span class="math inline">\(H=\{ \pm \left(\begin{smallmatrix}1&amp;t\\0&amp;1\end{smallmatrix}\right)\}\)</span>, veiem que <span class="math inline">\(1|_{k} h=1\)</span> per a tot <span class="math inline">\(h\in H\)</span>. Per tant, podem considerar <span class="math display">\[
+\tilde G_k(z) = \sum_{\gamma \in H\backslash \operatorname{SL}_2(\mathbb{Z})} 1|_{k} \gamma= \sum_{\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) \in H \backslash \operatorname{SL}_2(\mathbb{Z})} \frac{1}{(cz+d)^{k}}.
+\]</span> Fixem-nos que, donada una matriu <span class="math inline">\(\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right)\in \operatorname{SL}_2(\mathbb{Z})\)</span>, la classe lateral <span class="math inline">\(H\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right)\)</span> està formada per totes les matrius de la forma <span class="math inline">\(\left(\begin{smallmatrix}a'&amp;b'\\c&amp;d\end{smallmatrix}\right)\in\operatorname{SL}_2(\mathbb{Z})\)</span>. És a dir, les classes laterals venen indexades per parelles <span class="math inline">\((c,d)\in\mathbb{Z}^2\)</span> amb <span class="math inline">\(\gcd(c,d)=1\)</span>. És més comú considerar totes les parelles diferents de <span class="math inline">\((0,0)\)</span>, i definir <span class="math display">\[
+G_k(z) = \sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k}.
+\]</span> La relació entre <span class="math inline">\(G_k\)</span> i <span class="math inline">\(\tilde G_k\)</span> és un factor de <span class="math inline">\(\zeta(k)\)</span> (exercici).</p>
+<div id="prp-" class="theorem proposition">
+<p><span class="theorem-title"><strong>Proposició 1.1</strong></span> Si <span class="math inline">\(k&gt;2\)</span>, la funció <span class="math inline">\(G_k(z)\)</span> és una forma modular de pes <span class="math inline">\(k\)</span>. El seu valor a l’infinit és <span class="math inline">\(2\zeta(k)\)</span>, on <span class="math inline">\(\zeta\)</span> és la funció zeta de Riemann.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Ens cal primer veure la convergència de la sèrie per tot <span class="math inline">\(z\)</span>. Considerem primer <span class="math inline">\(z\in D\)</span> fixat, i podem veure fàcilment que <span class="math inline">\(|c z + d|^2 \geq c^2-cd+d^2= |c\rho + d|^2\)</span>. Com que <span class="math display">\[
+\#\{ (c,d)\neq (0,0) : N \leq |c\rho - d|&lt; N+1\} = O(N)
+\]</span> i <span class="math inline">\(\sum_{n\geq 1} 1/n^{k-1}\)</span> convergeix per <span class="math inline">\(k&gt;2\)</span>, ja estem. Com que <span class="math inline">\(D\)</span> és compacte, la sèrie <span class="math inline">\(G_k(z)\)</span> convergeix normalment a <span class="math inline">\(D\)</span> (vol dir que la sèrie de les sup-normes convergeix) i, com que podem traslladar <span class="math inline">\(D\)</span> per recobrir tot <span class="math inline">\(\mathbb{H}\)</span> amb elements de <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span>, en deduïm que <span class="math inline">\(G_k(z)\)</span> també convergeix a tot <span class="math inline">\(\mathbb{H}\)</span> a una funció holomorfa.</p>
+<p>Per calcular <span class="math inline">\(G_k(\infty)\)</span>, prenem el límit quan <span class="math inline">\(\Im(z)\longrightarrow\infty\)</span>, i això ho podem fer mantenint <span class="math inline">\(z\)</span> a <span class="math inline">\(D\)</span>. En aquest cas, gràcies a la convergència uniforme de la sèrie podem prendre el límit terme a terme. Els termes que tenen <span class="math inline">\(c\neq 0\)</span> tots van a <span class="math inline">\(0\)</span>, i només ens queda <span class="math display">\[
+\lim G_k(z) = \sum_{n\neq 0} n^{-k} = 2 \zeta(k).
+\]</span></p>
+</div>
+<p>Podem normalitzar <span class="math inline">\(G_k\)</span> per tal que prengui el valor <span class="math inline">\(1\)</span> a l’infinit, i obtenim <span class="math inline">\(E_k(z)=\frac{1}{2\zeta(k)} G_k(z)\)</span>. Aleshores podem fer combinacions de sèries d’Eisenstein per obtenir altres formes modulars. Per exemple, <span class="math display">\[
+\Delta(z) = \frac{E_4^3 - E_6^2}{1728}
+\]</span> és una forma cuspidal de pes <span class="math inline">\(12\)</span>, anomenada la funció discriminant (més endavant veurem per què hem dividit per <span class="math inline">\(1728\)</span>).</p>
+<div id="rem-" class="proof remark">
+<p><span class="proof-title"><em>Observació 1.6</em>. </span>Definim, per <span class="math inline">\(\tau\in\mathbb{H}\)</span> i <span class="math inline">\(w\in\mathbb{C}\)</span>, la funció <span class="math inline">\(\wp\)</span> de Weierstrass, com <span class="math display">\[
+\wp_\tau(w)=\frac{1}{w^2}+\sum_{(c,d)\neq (0,0)} \left(\frac{1}{(w-c\tau-d)^2}-\frac{1}{(c\tau+d)^2}\right).
+\]</span> Aleshores la sèrie de Laurent de <span class="math inline">\(\wp_\tau\)</span> és fàcil de calcular, i resulta que les sèries d’Eisenstein apareixen com a coeficients d’aquesta sèrie: <span class="math display">\[
+\wp_\tau(w) = \frac{1}{w^2} + \sum_{k=2}^\infty (2k-1)G_{2k}(\tau)w^{2k-2}.
+\]</span> De fet, si definim <span class="math inline">\(x=\wp_\tau(w)\)</span> i <span class="math inline">\(y=\wp_\tau'(w)\)</span> (la derivada respecte <span class="math inline">\(w\)</span>), tenim <span class="math display">\[
+y^2=4x^3-60G_4(\tau)x-140G_6(\tau),
+\]</span> que és una corba el·líptica amb discriminant justament <span class="math inline">\(16\Delta(\tau)\)</span>, que per tant és diferent de zero.</p>
+</div>
+</section>
+</section>
+<section id="lespai-de-les-formes-modulars" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="lespai-de-les-formes-modulars"><span class="header-section-number">1.4</span> L’espai de les formes modulars</h2>
+<section id="zeros-i-pols-duna-funció-modular" class="level3" data-number="1.4.1">
+<h3 data-number="1.4.1" class="anchored" data-anchor-id="zeros-i-pols-duna-funció-modular"><span class="header-section-number">1.4.1</span> Zeros i pols d’una funció modular</h3>
+<p>Sigui <span class="math inline">\(f\neq 0\)</span> una funció meromorfa a <span class="math inline">\(\mathbb{H}\)</span>, i sigui <span class="math inline">\(\tau\in\mathbb{H}\)</span>. Escrivim <span class="math inline">\(v_{\tau}(f)\)</span> com l’enter tal que <span class="math inline">\((z-\tau)^{- v_{\tau}(f)} f(z)\)</span> és holomorfa i diferent de zero a <span class="math inline">\(z=\tau\)</span> (l’ordre de <span class="math inline">\(f\)</span> a <span class="math inline">\(\tau\)</span>).</p>
+<p>Si <span class="math inline">\(f\)</span> és una funció modular de pes <span class="math inline">\(k\)</span>, aleshores <span class="math inline">\(v_\tau(f)=v_{g\tau}(f)\)</span>, perquè <span class="math inline">\(cz+d\)</span> és holomorfa i diferent de zero a tot <span class="math inline">\(\mathbb{H}\)</span>. També podem definir <span class="math inline">\(v_\infty(f)=n_0\)</span> si <span class="math inline">\(\tilde f(q)=\sum_{n\geq n_0} a_nq^n\)</span> amb <span class="math inline">\(a_{n_0}\neq 0\)</span>.</p>
+<div id="thm-valencia" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 1.6 (fórmula de la valència)</strong></span> Si <span class="math inline">\(f\neq 0\)</span> és una funció dèbilment modular de pes <span class="math inline">\(k\)</span>, es té <span class="math display">\[v_{\infty}(f) + \frac{1}{2} v_{i}(f) +\frac{1}{3}v_{\rho}(f) +\sum_{\tau\in G\backslash \mathbb{H}} v_{\tau}(f) = \frac{k}{12},
+\]</span> on la suma recorre les òrbites de punts de <span class="math inline">\(\mathbb{H}\)</span> diferents de <span class="math inline">\(i\)</span>, <span class="math inline">\(\rho\)</span> i <span class="math inline">\(-\bar\rho\)</span>.</p>
+</div>
+<div id="rem-" class="proof remark">
+<p><span class="proof-title"><em>Observació 1.6</em>. </span>La suma només conté un nombre finit de termes no nuls. En efecte, com que <span class="math inline">\(f\)</span> és meromorfa tenim que <span class="math inline">\(\tilde f\)</span> no té cap zero ni pol al disc <span class="math inline">\(0&lt;|q|&lt;r\)</span> per algun <span class="math inline">\(r &gt;0\)</span>. Per tant, <span class="math inline">\(f\)</span> no té zeros ni pols a la regió <span class="math inline">\(\Im(z)&gt;\frac{\log(1/r)}{2\pi}\)</span> i, llavors <span class="math inline">\(f\)</span> té tots els zeros i pols de <span class="math inline">\(D\)</span> a la regió compacta <span class="math inline">\(D\cap \Im(z)&lt; \frac{\log(1/r)}{2\pi}\)</span>, on només n’hi pot haver un nombre finit.</p>
+</div>
+<p>El teorema es demostra aplicant el teorema del residu a un contorn adequat, i no el farem en aquestes notes.</p>
+</section>
+<section id="làlgebra-de-formes-modulars" class="level3" data-number="1.4.2">
+<h3 data-number="1.4.2" class="anchored" data-anchor-id="làlgebra-de-formes-modulars"><span class="header-section-number">1.4.2</span> L’àlgebra de formes modulars</h3>
+<p>Escrivim <span class="math inline">\(M_k\)</span> com el <span class="math inline">\(\mathbb{C}\)</span>-espai vectorial format per les formes modulars de pes <span class="math inline">\(k\)</span>, i <span class="math inline">\(S_k\)</span> com el subespai format per les formes cuspidals. Com que <span class="math inline">\(S_k=\ker( f\mapsto f(\infty))\)</span>, tenim <span class="math inline">\(\dim M_k/S_k\leq 1\)</span>. A més, quan <span class="math inline">\(k\geq 4\)</span> les sèries d’Eisenstein són de <span class="math inline">\(M_k\smallsetminus S_k\)</span> i, per tant <span class="math inline">\(M_k = \mathbb{C}G_k \oplus S_k\)</span>.</p>
+<p>Aplicarem la fórmula de la valència a alguns casos senzills. Per exemple, si <span class="math inline">\(f\)</span> és una funció holomorfa, aleshores tots els termes que apareixen a l’esquerra són positius o zero, i per tant <span class="math inline">\(M_k=0\)</span> per <span class="math inline">\(k&lt;0\)</span>. Per <span class="math inline">\(k=2\)</span>, veiem que no hi ha manera d’obtenir <span class="math inline">\(1/6\)</span> sumant múltiples de <span class="math inline">\(1\)</span>, <span class="math inline">\(1/2\)</span> i <span class="math inline">\(1/3\)</span>, i per tant <span class="math inline">\(M_2=0\)</span>.</p>
+<p>Ara, apliquem la fórmula a <span class="math inline">\(G_4\)</span>. Podem escriure <span class="math inline">\(1/3 = 0 + 1/2\cdot 0 + 1/3\cdot 1+0\)</span> (i només d’aquesta manera), i per tant <span class="math inline">\(G_4(\rho)=0\)</span> (amb ordre <span class="math inline">\(1\)</span>), i no s’anul·la enlloc més. De forma semblant, <span class="math inline">\(v_{i}(G_6) = 1\)</span> i aquest és l’únic punt on s’anul·la <span class="math inline">\(G_6\)</span>. Observem llavors que <span class="math inline">\(\Delta(i)\neq 0\)</span> i que, per tant <span class="math inline">\(\Delta\neq 0\)</span>. A més, per construcció <span class="math inline">\(v_{\infty}(\Delta)\geq 1\)</span>. Per tant, la fórmula de la valència ens diu que <span class="math inline">\(\Delta\)</span> no s’anul·la a <span class="math inline">\(\mathbb{H}\)</span>, i té un zero simple a l’infinit.</p>
+<p>Finalment, sigui <span class="math inline">\(f\)</span> un element de <span class="math inline">\(S_k\)</span>, i definim <span class="math inline">\(g=f/\Delta\)</span>. Aleshores <span class="math inline">\(g\)</span> té pes <span class="math inline">\(k-12\)</span>, i <span class="math inline">\(v_{\tau}(g)\geq 0\)</span> per a tot <span class="math inline">\(\tau\)</span>. Per tant <span class="math inline">\(g\in M_{k-12}\)</span>.</p>
+<p>Podem acabar calculant per <span class="math inline">\(k\leq 10\)</span> els espais <span class="math inline">\(M_k\)</span>. En aquest cas, <span class="math inline">\(k-12 &lt; 0\)</span> i <span class="math inline">\(S_k=0\)</span>. Per tant, <span class="math inline">\(\dim M_k\leq 1\)</span>. Com que <span class="math inline">\(1, G_4, G_6, G_8, G_{10}\)</span> són elements de <span class="math inline">\(M_k\)</span> per <span class="math inline">\(k=0, 4,6,8,10\)</span>, formen una base de l’espai corresponent.</p>
+<p>Resumim el què hem demostrat:</p>
+<div id="thm-Mk" class="theorem">
+<p><span class="theorem-title"><strong>Teorema 1.7</strong></span> &nbsp;</p>
+<ol type="1">
+<li><span class="math inline">\(M_k=0\)</span> per <span class="math inline">\(k&lt;0\)</span> i <span class="math inline">\(k=2\)</span>.</li>
+<li><span class="math inline">\(M_0=\mathbb{C}\cdot 1\)</span>, <span class="math inline">\(M_4=\mathbb{C}\cdot G_4\)</span>, <span class="math inline">\(M_6=\mathbb{C}\cdot G_6\)</span>, <span class="math inline">\(M_8=\mathbb{C}\cdot G_8\)</span> i <span class="math inline">\(M_{10} = \mathbb{C}\cdot G_{10}\)</span>. En aquests casos, <span class="math inline">\(S_k=0\)</span>.</li>
+<li>La multiplicació per <span class="math inline">\(\Delta\)</span> indueix un isomorfisme <span class="math inline">\(M_{k-12}\cong S_k\)</span>.</li>
+</ol>
+<p>En particular, <span class="math inline">\(\dim M_k=\lfloor k/12\rfloor\)</span> si <span class="math inline">\(k\equiv 2 \pmod{12}\)</span>, i <span class="math inline">\(\dim M_k=\lfloor k/12\rfloor +1\)</span> si <span class="math inline">\(k\neq 2\pmod{12}\)</span>.</p>
+</div>
+<div id="cor-" class="theorem corollary">
+<p><span class="theorem-title"><strong>Corol·lari 1.2</strong></span> L’espai <span class="math inline">\(M_k\)</span> té com a base el conjunt de monomis <span class="math inline">\(G_4^iG_6^j\)</span>, on <span class="math inline">\(i,j\geq 0\)</span> són enters amb <span class="math inline">\(4i+6j=k\)</span>.</p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Veiem primer que generen, cosa que és clara per <span class="math inline">\(k\leq 6\)</span>. Per <span class="math inline">\(k\geq 8\)</span>, fem inducció en <span class="math inline">\(k\)</span>. Triem enters positius <span class="math inline">\(i,j\)</span> tals que <span class="math inline">\(4i+6j=k\)</span>, i considerem <span class="math inline">\(g =G_4^iG_6^j\)</span>, que no s’anula a l’infinit. Si <span class="math inline">\(f\in M_k\)</span>, aleshores <span class="math inline">\(f-\lambda g\in S_k\)</span> per algun <span class="math inline">\(\lambda\in\mathbb{C}\)</span>. Per aquest <span class="math inline">\(\lambda\)</span>, tenim <span class="math inline">\(f-\lambda g = \Delta h\)</span> amb <span class="math inline">\(h\in M_{k-12}\)</span>. Apliquem ara la hipòtesi d’inducció a <span class="math inline">\(h\)</span>, i ja estem.</p>
+<p>Si aquests monomis no fossin linealment independents, la funció <span class="math inline">\(G_4^3/G_6^2\)</span> satisfaria un polinomi amb coeficients a <span class="math inline">\(\mathbb{C}\)</span> i, per tant, seria constant. Però això no pot ser, perquè <span class="math inline">\(G_4\)</span> s’anula a <span class="math inline">\(\rho\)</span> i <span class="math inline">\(G_6\)</span> no, per exemple.</p>
+</div>
+<div id="rem-" class="proof remark">
+<p><span class="proof-title"><em>Observació 1.6</em>. </span>Es pot resumir l’anterior dient que <span class="math inline">\(M=\bigoplus_{k\in\mathbb{Z}} M_k \cong \mathbb{C}[G_4,G_6]\)</span>.</p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiat!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiat!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./index.html" class="pagination-link" aria-label="Prefaci">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Prefaci</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./dia2.html" class="pagination-link" aria-label="Segon dia">
+        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Segon dia</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://www.github.com/mmasdeu/formesmodulars/edit/main/dia1.qmd" class="toc-action"><i class="bi bi-github"></i>Edita aquesta pàgina</a></li><li><a href="https://www.github.com/mmasdeu/formesmodulars/issues" class="toc-action"><i class="bi empty"></i>Informa d'un problema</a></li><li><a href="https://www.github.com/mmasdeu/formesmodulars/blob/main/dia1.qmd" class="toc-action"><i class="bi empty"></i>Mostra la font</a></li></ul></div></div></div></footer></body></html>

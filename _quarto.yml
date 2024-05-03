@@ -19,6 +19,8 @@ book:
   sidebar:
     pinned: true
   repo-url: https://www.github.com/mmasdeu/formesmodulars   
+  issue-url: https://www.github.com/mmasdeu/formesmodulars/issues
+  repo-actions: [edit, issue, source]
   search: 
     location: sidebar
     type: textbox
@@ -32,6 +34,7 @@ format:
     language:
       title-block-author-single: "Autor"
     theme: materia
+
   pdf:
     lang: ca
     documentclass: scrreprt
