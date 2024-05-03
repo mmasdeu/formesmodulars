@@ -140,7 +140,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introducció</span></a>
+ <span class="menu-text">Prefaci</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -187,7 +187,7 @@ window.Quarto = {
   <li><a href="#el-terme-constant-a-partir-dels-altres-termes" id="toc-el-terme-constant-a-partir-dels-altres-termes" class="nav-link" data-scroll-target="#el-terme-constant-a-partir-dels-altres-termes"><span class="header-section-number">4.2</span> El terme constant a partir dels altres termes</a></li>
   <li><a href="#la-funció-zeta-p-àdica" id="toc-la-funció-zeta-p-àdica" class="nav-link" data-scroll-target="#la-funció-zeta-p-àdica"><span class="header-section-number">4.3</span> La funció zeta p-àdica</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://www.github.com/mmasdeu/formesmodulars/edit/main/dia4.qmd" class="toc-action"><i class="bi bi-github"></i>Edita aquesta pàgina</a></li><li><a href="https://www.github.com/mmasdeu/formesmodulars/issues" class="toc-action"><i class="bi empty"></i>Informa d'un problema</a></li><li><a href="https://www.github.com/mmasdeu/formesmodulars/blob/main/dia4.qmd" class="toc-action"><i class="bi empty"></i>Mostra la font</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -225,6 +225,11 @@ B_k + \sum_{p-1\mid k} \frac{1}{p} \in \mathbb{Z}.
 <div id="cor-" class="theorem corollary">
 <p><span class="theorem-title"><strong>Corol·lari 4.1</strong></span> Per a tot primer <span class="math inline">\(p\)</span> es té <span class="math display">\[
 k \equiv 0 \pmod{(p-1)p^\alpha} \implies \frac{k}{B_k}\equiv 0\pmod{p^{\alpha+1}}.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Com que <span class="math inline">\(p-1\)</span> divideix <span class="math inline">\(k\)</span>, del teorema obtenim que <span class="math inline">\(v_p(B_k)=-1\)</span>. Per tant, <span class="math display">\[
+v_p(\frac{k}{B_k}) = v_p(k)-v_p(B_k)\geq \alpha - (-1)= \alpha + 1.
 \]</span></p>
 </div>
 <p>Recordem les sèries d’Eisenstein <span class="math inline">\(E_k\)</span>, <span class="math display">\[
@@ -763,4 +768,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://www.github.com/mmasdeu/formesmodulars/edit/main/dia4.qmd" class="toc-action"><i class="bi bi-github"></i>Edita aquesta pàgina</a></li><li><a href="https://www.github.com/mmasdeu/formesmodulars/issues" class="toc-action"><i class="bi empty"></i>Informa d'un problema</a></li><li><a href="https://www.github.com/mmasdeu/formesmodulars/blob/main/dia4.qmd" class="toc-action"><i class="bi empty"></i>Mostra la font</a></li></ul></div></div></div></footer></body></html>

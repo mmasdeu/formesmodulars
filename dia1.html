@@ -140,7 +140,7 @@ window.Quarto = {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introducció</span></a>
+ <span class="menu-text">Prefaci</span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -196,7 +196,7 @@ window.Quarto = {
   <li><a href="#làlgebra-de-formes-modulars" id="toc-làlgebra-de-formes-modulars" class="nav-link" data-scroll-target="#làlgebra-de-formes-modulars"><span class="header-section-number">1.4.2</span> L’àlgebra de formes modulars</a></li>
   </ul></li>
   </ul>
-</nav>
+<div class="toc-actions"><ul><li><a href="https://www.github.com/mmasdeu/formesmodulars/edit/main/dia1.qmd" class="toc-action"><i class="bi bi-github"></i>Edita aquesta pàgina</a></li><li><a href="https://www.github.com/mmasdeu/formesmodulars/issues" class="toc-action"><i class="bi empty"></i>Informa d'un problema</a></li><li><a href="https://www.github.com/mmasdeu/formesmodulars/blob/main/dia1.qmd" class="toc-action"><i class="bi empty"></i>Mostra la font</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -234,11 +234,9 @@ q\prod_{n=1}^\infty (1-q^n)^2(1-q^{11n})^2=q-2q^2-q^3+2q^4+q^5+2q^6-2q^7+\cdots.
 \]</span></p>
 </div>
 <div id="thm-fermat" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 1.2 (Fermat)</strong></span> El nombre de maneres d’escriure <span class="math inline">\(n\)</span> com a suma de <span class="math inline">\(2\)</span> quadrats és</p>
-<p><span class="math display">\[
-4\sum_{\substack{d\mid n\\d \equiv 1\mod 4}} d - 4\sum_{\substack{d\mid n\\d \equiv 3\mod 4}} d,
+<p><span class="theorem-title"><strong>Teorema 1.2 (Fermat)</strong></span> El nombre de maneres d’escriure <span class="math inline">\(n\)</span> com a suma de <span class="math inline">\(2\)</span> quadrats és <span class="math display">\[
+4\sum_{\substack{0&lt;d\mid n\\d \equiv 1\mod 4}} d - 4\sum_{\substack{0&lt;d\mid n\\d \equiv 3\mod 4}} d.
 \]</span></p>
-<p>on les sumes recorren els divisors <span class="math inline">\(d\)</span> de <span class="math inline">\(n\)</span> positius.</p>
 </div>
 <div id="thm-cubic" class="theorem">
 <p><span class="theorem-title"><strong>Teorema 1.3</strong></span> Sigui <span class="math inline">\(a_p\)</span> el nombre d’arrels del polinomi <span class="math inline">\(x^3-x-1\)</span> a <span class="math inline">\(\mathbb{Z}/p\mathbb{Z}\)</span>. Aleshores per tot primer <span class="math inline">\(p\neq 23\)</span>, <span class="math inline">\(a_p-1\)</span> és el coeficient de <span class="math inline">\(q^p\)</span> de la sèrie formal <span class="math display">\[
@@ -832,8 +830,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./index.html" class="pagination-link" aria-label="Introducció">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introducció</span>
+      <a href="./index.html" class="pagination-link" aria-label="Prefaci">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Prefaci</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -847,4 +845,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://www.github.com/mmasdeu/formesmodulars/edit/main/dia1.qmd" class="toc-action"><i class="bi bi-github"></i>Edita aquesta pàgina</a></li><li><a href="https://www.github.com/mmasdeu/formesmodulars/issues" class="toc-action"><i class="bi empty"></i>Informa d'un problema</a></li><li><a href="https://www.github.com/mmasdeu/formesmodulars/blob/main/dia1.qmd" class="toc-action"><i class="bi empty"></i>Mostra la font</a></li></ul></div></div></div></footer></body></html>
