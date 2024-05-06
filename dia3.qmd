@@ -432,7 +432,7 @@ Definim la següent funció modular de pes $0$:
 $$
 j = E_2^3 / \Delta.
 $$
-Veiem que $j$ té un holomorfa a tot $\HH$, perquè $\Delta$ no s'anula. A més, té un pol simple a l'infinit, provinent del zero simple de $\Delta$.
+Veiem que $j$ té un holomorfa a tot $\HH$, perquè $\Delta$ no s'anul·la. A més, té un pol simple a l'infinit, provinent del zero simple de $\Delta$.
 
 ::: {#prp-}
 L'aplicació $z\mapsto j(z)$ identifica $\PSL_2(\RR)\backslash \HH$ amb $\CC$.

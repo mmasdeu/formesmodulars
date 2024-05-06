@@ -37,7 +37,11 @@ $$
 
 ::: {#thm-ramanujan}
 ## Ramanujan
-Sigui $\tau(n)$ el coeficient de $q^n$ de la sèrie formal $\Delta(q)=q\prod_{n\geq 1} (1-q^n)^{24}$. Aleshores per a tot $n\geq 1$,
+Sigui $\tau(n)$ el coeficient de $q^n$ de la sèrie formal
+$$
+\Delta(q)=q\prod_{n\geq 1} (1-q^n)^{24}.
+$$
+Aleshores per a tot $n\geq 1$,
 $$
 \tau(n) \equiv \sum_{d\mid n} d^{11} \pmod{691}.
 $$
@@ -166,7 +170,7 @@ $$
 Direm aleshores que $f$ és *meromorfa a l'infinit* si $\tilde f$ és meromorfa a $q=0$ ($a_n=0$ per $n<<0$). També direm que $f$ és *holomorfa a l'infinit* si $a_n=0$ per $n < 0$, i $f$ s'anul·la a l'infinit si $a_n=0$ per $n\leq 0$.
 
 ::: {#def-forma-modular}
-Una *forma modular* de pes $k$ és una funció dèbilment modular que és holomorfa a tot arreu, incloent l'infinit. Si aquesta s'anula a l'infinit, l'anomenarem una *forma cuspidal*. Denotem per $M_k$ el $\CC$-espai vectorial de les formes modulars de pes $k$, i per $S_k\subseteq M_k$ el subespai de les formes cuspidals.
+Una *forma modular* de pes $k$ és una funció dèbilment modular que és holomorfa a tot arreu, incloent l'infinit. Si aquesta s'anul·la a l'infinit, l'anomenarem una *forma cuspidal*. Denotem per $M_k$ el $\CC$-espai vectorial de les formes modulars de pes $k$, i per $S_k\subseteq M_k$ el subespai de les formes cuspidals.
 
 :::
 Resumint, una forma modular de pes $k$ ve donada per una sèrie
@@ -282,9 +286,9 @@ L'espai $M_k$ té com a base el conjunt de monomis $G_4^iG_6^j$, on $i,j\geq 0$ 
 :::
 
 ::: {.proof}
-Veiem primer que generen, cosa que és clara per $k\leq 6$. Per $k\geq 8$, fem inducció en $k$. Triem enters positius $i,j$ tals que $4i+6j=k$, i considerem $g =G_4^iG_6^j$, que no s'anula a l'infinit. Si $f\in M_k$, aleshores $f-\lambda g\in S_k$ per algun $\lambda\in\CC$. Per aquest $\lambda$, tenim $f-\lambda g = \Delta h$ amb $h\in M_{k-12}$. Apliquem ara la hipòtesi d'inducció a $h$, i ja estem.
+Veiem primer que generen, cosa que és clara per $k\leq 6$. Per $k\geq 8$, fem inducció en $k$. Triem enters positius $i,j$ tals que $4i+6j=k$, i considerem $g =G_4^iG_6^j$, que no s'anul·la a l'infinit. Si $f\in M_k$, aleshores $f-\lambda g\in S_k$ per algun $\lambda\in\CC$. Per aquest $\lambda$, tenim $f-\lambda g = \Delta h$ amb $h\in M_{k-12}$. Apliquem ara la hipòtesi d'inducció a $h$, i ja estem.
 
-Si aquests monomis no fossin linealment independents, la funció $G_4^3/G_6^2$ satisfaria un polinomi amb coeficients a $\CC$ i, per tant, seria constant. Però això no pot ser, perquè $G_4$ s'anula a $\rho$ i $G_6$ no, per exemple.
+Si aquests monomis no fossin linealment independents, la funció $G_4^3/G_6^2$ satisfaria un polinomi amb coeficients a $\CC$ i, per tant, seria constant. Però això no pot ser, perquè $G_4$ s'anul·la a $\rho$ i $G_6$ no, per exemple.
 :::
 
 ::: {#rem-} 
