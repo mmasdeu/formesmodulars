@@ -343,18 +343,48 @@ f(z) = \sum_{n=0}^\infty a_n q^n = \sum_{n=0}^\infty a_ne^{2\pi i nz},
 </section>
 <section id="sèries-deisenstein" class="level3" data-number="1.3.2">
 <h3 data-number="1.3.2" class="anchored" data-anchor-id="sèries-deisenstein"><span class="header-section-number">1.3.2</span> Sèries d’Eisenstein</h3>
-<p>Per ara els únics exemples que tenim de formes modulars són les constants, que són formes modulars de pes zero (de fet, són les úniques formes modulars de pes zero). Si considerem una funció holomorfa <span class="math inline">\(h\)</span> qualsevol, aleshores una manera de construir una funció modular és “simetritzar-la”, és a dir, considerar <span class="math inline">\(\sum_{g\in G} h|_{k} g\)</span>. El problema és que en general aquesta suma no té per què convergir. Una segona idea seria considerar una funció que ja sigui invariant per algun subgrup de <span class="math inline">\(H\leq G\)</span>, i aleshores només simetritzar per <span class="math inline">\(G/H\)</span>. La versió més senzilla d’aquest principi és considerar la funció constant <span class="math inline">\(1\)</span>. Si <span class="math inline">\(H=\{ \pm \left(\begin{smallmatrix}1&amp;t\\0&amp;1\end{smallmatrix}\right)\}\)</span>, veiem que <span class="math inline">\(1|_{k} h=1\)</span> per a tot <span class="math inline">\(h\in H\)</span>. Per tant, podem considerar <span class="math display">\[
+<p>Per ara els únics exemples que tenim de formes modulars són les constants, que són formes modulars de pes zero (de fet, són les úniques formes modulars de pes zero). Si considerem una funció holomorfa <span class="math inline">\(h\)</span> qualsevol, aleshores una manera de construir una funció modular és “simetritzar-la”, és a dir, considerar <span class="math inline">\(\sum_{g\in G} h|_{k} g\)</span>. El problema és que en general aquesta suma no té per què convergir. Una segona idea seria considerar una funció que ja sigui invariant per algun subgrup de <span class="math inline">\(H\leq G\)</span>, i aleshores només simetritzar per <span class="math inline">\(G/H\)</span>. La versió més senzilla d’aquest principi és considerar la funció constant <span class="math inline">\(1\)</span>. Si <span class="math inline">\(H=\{\left(\begin{smallmatrix}1&amp;t\\0&amp;1\end{smallmatrix}\right)\}\)</span>, veiem que <span class="math inline">\(1|_{k} h=1\)</span> per a tot <span class="math inline">\(h\in H\)</span>. Per tant, podem considerar <span class="math display">\[
 \tilde G_k(z) = \sum_{\gamma \in H\backslash \operatorname{SL}_2(\mathbb{Z})} 1|_{k} \gamma= \sum_{\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) \in H \backslash \operatorname{SL}_2(\mathbb{Z})} \frac{1}{(cz+d)^{k}}.
-\]</span> Fixem-nos que, donada una matriu <span class="math inline">\(\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right)\in \operatorname{SL}_2(\mathbb{Z})\)</span>, la classe lateral <span class="math inline">\(H\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right)\)</span> està formada per totes les matrius de la forma <span class="math inline">\(\left(\begin{smallmatrix}a'&amp;b'\\c&amp;d\end{smallmatrix}\right)\in\operatorname{SL}_2(\mathbb{Z})\)</span>. És a dir, les classes laterals venen indexades per parelles <span class="math inline">\((c,d)\in\mathbb{Z}^2\)</span> amb <span class="math inline">\(\gcd(c,d)=1\)</span>. És més comú considerar totes les parelles diferents de <span class="math inline">\((0,0)\)</span>, i definir <span class="math display">\[
+\]</span> Fixem-nos que, donada una matriu <span class="math inline">\(\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right)\in \operatorname{SL}_2(\mathbb{Z})\)</span>, la classe lateral <span class="math inline">\(H\left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right)\)</span> està formada per totes les matrius de la forma <span class="math inline">\(\left(\begin{smallmatrix}a'&amp;b'\\c&amp;d\end{smallmatrix}\right)\in\operatorname{SL}_2(\mathbb{Z})\)</span>. És a dir, les classes laterals venen indexades per parelles <span class="math inline">\((c,d)\in\mathbb{Z}^2\)</span> amb <span class="math inline">\(\gcd(c,d)=1\)</span>. És més comú considerar <em>totes</em> les parelles diferents de <span class="math inline">\((0,0)\)</span>, i definir <span class="math display">\[
 G_k(z) = \sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k}.
 \]</span> La relació entre <span class="math inline">\(G_k\)</span> i <span class="math inline">\(\tilde G_k\)</span> és un factor de <span class="math inline">\(\zeta(k)\)</span> (exercici).</p>
 <div id="prp-" class="theorem proposition">
 <p><span class="theorem-title"><strong>Proposició 1.1</strong></span> Si <span class="math inline">\(k&gt;2\)</span>, la funció <span class="math inline">\(G_k(z)\)</span> és una forma modular de pes <span class="math inline">\(k\)</span>. El seu valor a l’infinit és <span class="math inline">\(2\zeta(k)\)</span>, on <span class="math inline">\(\zeta\)</span> és la funció zeta de Riemann.</p>
 </div>
+<p>Per demostrar la proposició anterior ens calen dos lemes auxiliars.</p>
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 1.1</strong></span> Si <span class="math inline">\(k&gt;2\)</span>, la sèrie <span class="math display">\[
+\sum_{(c,d)\neq (0,0)} \max(c,d)^{-k}
+\]</span> convergeix absolutament.</p>
+</div>
 <div class="proof">
-<p><span class="proof-title"><em>Demostració</em>. </span>Ens cal primer veure la convergència de la sèrie per tot <span class="math inline">\(z\)</span>. Considerem primer <span class="math inline">\(z\in D\)</span> fixat, i podem veure fàcilment que <span class="math inline">\(|c z + d|^2 \geq c^2-cd+d^2= |c\rho + d|^2\)</span>. Com que <span class="math display">\[
-\#\{ (c,d)\neq (0,0) : N \leq |c\rho - d|&lt; N+1\} = O(N)
-\]</span> i <span class="math inline">\(\sum_{n\geq 1} 1/n^{k-1}\)</span> convergeix per <span class="math inline">\(k&gt;2\)</span>, ja estem. Com que <span class="math inline">\(D\)</span> és compacte, la sèrie <span class="math inline">\(G_k(z)\)</span> convergeix normalment a <span class="math inline">\(D\)</span> (vol dir que la sèrie de les sup-normes convergeix) i, com que podem traslladar <span class="math inline">\(D\)</span> per recobrir tot <span class="math inline">\(\mathbb{H}\)</span> amb elements de <span class="math inline">\(\operatorname{SL}_2(\mathbb{Z})\)</span>, en deduïm que <span class="math inline">\(G_k(z)\)</span> també convergeix a tot <span class="math inline">\(\mathbb{H}\)</span> a una funció holomorfa.</p>
+<p><span class="proof-title"><em>Demostració</em>. </span>Considerem la suma parcial de la sèrie en la caixa <span class="math inline">\(\{ |c| \leq N, |d| \leq N\}\)</span>. Podem calcular explícitament que aquesta val <span class="math display">\[
+\sum_{n=1}^N (2n+1) n^{-k}.
+\]</span> Aquesta suma convergeix, de fet al valor <span class="math inline">\(\zeta(k)+2\zeta(k-1)\)</span>.</p>
+</div>
+<div class="lem-">
+<p>Donats <span class="math inline">\(A&gt;0\)</span> i <span class="math inline">\(B&gt;0\)</span> reals positius, considerem el compacte <span class="math display">\[
+\Omega = \{z\in \mathbb{H}~|~ |\Re(z)|\leq A, \Im(z) \geq B\}.
+\]</span> Aleshores existeix una constant <span class="math inline">\(C=C_{A,B}\)</span> tal que <span class="math display">\[
+|z + \delta| &gt; L \max(1,|\delta|), \quad \forall \delta\in \mathbb{R}.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em>. </span>Si <span class="math inline">\(|\delta|&lt;1\)</span>, aleshores <span class="math inline">\(|z+\delta|\geq B=B\max(1,|\delta|)\)</span>. Si <span class="math inline">\(1\leq |\delta| \leq 10A\)</span>, aleshores si <span class="math inline">\(\Im(z) &gt; A\)</span> tenim <span class="math display">\[
+|z+\delta| &gt;A \geq \frac{|\delta|}{10},
+\]</span> i si <span class="math inline">\(B\leq \Im z \leq A\)</span> aleshores la funció <span class="math display">\[
+\left|\frac{z+\delta}{\delta}\right|
+\]</span> té un mínim absolut <span class="math inline">\(m\)</span> en el compacte <span class="math inline">\(1\leq |\delta|\leq 10A\)</span> i <span class="math inline">\(B\leq \Im z \leq A\)</span>.</p>
+<p>Finalment, si <span class="math inline">\(|\delta|&gt; 10A\)</span>, aleshores <span class="math display">\[
+|z+\delta|\geq |\delta|-|z| &gt; |\delta| - A &gt; \frac{9}{10}|\delta|.
+\]</span></p>
+</div>
+<div class="proof">
+<p><span class="proof-title"><em>Demostració</em> (de la proposició). </span>Ens cal primer veure la convergència de la sèrie per tot <span class="math inline">\(z\)</span>. Per simplificar la notació, ens restringim a les parelles en el primer quadrant. Si restringim suma doble a parelles a la caixa <span class="math inline">\(\{ 0 \leq c,d \leq N\}\)</span>, per una banda tenim <span class="math display">\[
+\sum_{d=1}^N d^{-k} + \sum_{c=1}^N\sum_{d=1}^N (cz+d)^{-k}.
+\]</span> El primer summand està fitat per <span class="math inline">\(\zeta(k)\)</span> i el podem obviar. Si restringim <span class="math inline">\(z\)</span> al compacte <span class="math inline">\(\Omega_{A,B}\)</span>, el segon summand el podem reescriure com <span class="math display">\[
+\sum_{c=1}^N\sum_{d=1}^N c^{-k}|z+d/c|^{-k} \leq \sum_{c=1}^N\sum_{d=1}^N c^{-k} L^k \max(1,d^{-k}/c^{-k}) = L^k \sum_{c=1}^N\sum_{d=1}^N max(c,d)^{-k}.
+\]</span> Pel primer lema, aquesta sèrie convergeix absolutament. Hem vist que la sèrie convergeix absolutament en compactes que recobreixen tot <span class="math inline">\(\mathbb{H}\)</span>, i per tant en deduïm la convergència a una funció holomorfa.</p>
 <p>Per calcular <span class="math inline">\(G_k(\infty)\)</span>, prenem el límit quan <span class="math inline">\(\Im(z)\longrightarrow\infty\)</span>, i això ho podem fer mantenint <span class="math inline">\(z\)</span> a <span class="math inline">\(D\)</span>. En aquest cas, gràcies a la convergència uniforme de la sèrie podem prendre el límit terme a terme. Els termes que tenen <span class="math inline">\(c\neq 0\)</span> tots van a <span class="math inline">\(0\)</span>, i només ens queda <span class="math display">\[
 \lim G_k(z) = \sum_{n\neq 0} n^{-k} = 2 \zeta(k).
 \]</span></p>

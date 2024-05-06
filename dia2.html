@@ -315,7 +315,9 @@ G_2(z) = \sum_{m=-\infty}^\infty \sum_{n=-\infty}^\infty \frac{1}{(mz+n)^2},
 \]</span> on si <span class="math inline">\(m=0\)</span> hem d’ometre el terme <span class="math inline">\(n=0\)</span> (a partir d’ara això no ho direm). Podem separar el terme <span class="math inline">\(m=0\)</span> i obtenir: <span class="math display">\[
 G_2(z) = 2\zeta(2) + 2\sum_{m\neq 0}\sum_{n\in\mathbb{Z}} \frac{1}{(mz+n)^2}.
 \]</span> Igual que hem fet amb les series d’Eisenstein de pes <span class="math inline">\(k\geq 4\)</span>, podem calcular els coeficients de Fourier de <span class="math inline">\(G_2\)</span>, i obtenim <span class="math display">\[
-G_2(z)= 2\zeta(2)  - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n=\frac{\pi^2}{3} E_2(z),\quad E_2(z)=1-24\sum_{n=1}^\infty \sigma_1(n)q^n.
+G_2(z)= 2\zeta(2)  - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n=\frac{\pi^2}{3} E_2(z), amb
+\]</span> <span class="math display">\[
+E_2(z)=1-24\sum_{n=1}^\infty \sigma_1(n)q^n.
 \]</span> És clar, doncs, que <span class="math inline">\(G_2(z+1)=G_2(z)\)</span>. Ara bé, si intentem calcular <span class="math inline">\(G_2(-1/z)\)</span> trobarem un comportament curiós: <span class="math display">\[
 G_2(-1/z) = \sum_{m=-\infty}^\infty\sum_{n=-\infty}^\infty \frac{z^2}{(nz+m)^2} = z^2\sum_{n=-\infty}^\infty\sum_{m=-\infty}^\infty \frac{1}{(mz+n)^2}.
 \]</span></p>
@@ -327,9 +329,10 @@ G_2(z) = 2\zeta(2) + \sum_{m\neq 0,n\in\mathbb{Z}}\frac{1}{(mz+n)^2(mz+n+1)},
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Demostració</em>. </span>Només cal calcular</p>
-<p><span class="math display">\[
-\sum_{m\neq 0}\sum_{n\in\mathbb{Z}} \frac{1}{(mz+n)(mz+n+1)} = \sum_{m\neq 0}\sum_{n\in\mathbb{Z}} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right) = \sum_{m\neq 0} 0 = 0.
-\]</span></p>
+<p><span class="math display">\[\begin{align*}
+\sum_{m\neq 0}\sum_{n\in\mathbb{Z}} \frac{1}{(mz+n)(mz+n+1)} &amp;= \sum_{m\neq 0}\sum_{n\in\mathbb{Z}} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right) \\
+&amp;= \sum_{m\neq 0} 0 = 0.
+\end{align*}\]</span></p>
 <p>Per tant, podem restar el terme general de la sèrie que defineix <span class="math inline">\(G_2(z)\)</span>, per obtenir <span class="math display">\[\begin{align*}
 G_2(z) &amp;= 2\zeta(2) + \sum_{m\neq 0}\sum_{n\in\mathbb{Z}} \left(\frac{1}{(mz+n)^2}-\frac{1}{(mz+n)(mz+n+1)}\right)\\
 &amp;=2\zeta(2)+\sum_{m\neq 0
@@ -356,7 +359,9 @@ G_2(z+1) = G_2(z),\quad G_2(-1/z) = z^2G_2(z) -2\pi i z.
 G_2(\gamma z) = (cz+d)^2G_2(z) - 2\pi i c(cz+d).
 \]</span></p>
 <p>En termes de la funció normalitzada <span class="math inline">\(E_2(z)\)</span>, tenim <span class="math display">\[
-E_2(-1/z) = z^2E_2(z) +\frac{12 z}{2\pi i},\quad E_2(\gamma z) = (cz+d)^2E_2(z)+\frac{12}{2\pi i}c(cz+d).
+E_2(-1/z) = z^2E_2(z) +\frac{12 z}{2\pi i},
+\]</span> i per <span class="math inline">\(\gamma\)</span> qualsevol: <span class="math display">\[
+E_2(\gamma z) = (cz+d)^2E_2(z)+\frac{12}{2\pi i}c(cz+d).
 \]</span></p>
 </div>
 </section>
@@ -374,7 +379,8 @@ E_2(-1/z) = z^2E_2(z) +\frac{12 z}{2\pi i},\quad E_2(\gamma z) = (cz+d)^2E_2(z)+
 <section id="la-funció-tau-de-ramanujan" class="level3" data-number="2.2.3">
 <h3 data-number="2.2.3" class="anchored" data-anchor-id="la-funció-tau-de-ramanujan"><span class="header-section-number">2.2.3</span> La funció tau de Ramanujan</h3>
 <p>Calculant els primers termes del producte <span class="math inline">\(\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}\)</span>, de seguida veiem que <span class="math display">\[\begin{align*}
-\tilde\Delta = \sum_{n\geq 1} \tau(n)q^n &amp;= q - 24 q^{2} + 252 q^{3} - 1472 q^{4} + 4830 q^{5}
+\tilde\Delta &amp;= \sum_{n\geq 1} \tau(n)q^n\\
+&amp;= q - 24 q^{2} + 252 q^{3} - 1472 q^{4} + 4830 q^{5}\\
 &amp;- 6048 q^{6} - 16744 q^{7} + O(q^{8}).
 \end{align*}\]</span></p>
 <p>Ramanujan va ser el primer a estudiar la funció <span class="math inline">\(\tau(n)\)</span> el 1916, i va conjecturar que:</p>
@@ -466,7 +472,7 @@ D^2(Q^2) = \frac{1}{2}P^2Q^2 +\frac{5}{18}Q^3 -PQR +\frac{2}{9}R^2.
 \]</span> obtenim <span class="math display">\[
 D^2(Q^2) = 480\Delta +\frac{1}{2} P^2Q^2 - PQR+\frac{1}{2}R^2.
 \]</span> Fent servir que <span class="math inline">\(PQ=3DQ+R\)</span>, obtenim <span class="math display">\[\begin{align*}
-(PQ)^2 +R^2-2PQR &amp;= (3DQ+R)^2+R^2-2R(3DQ+R)
+(PQ)^2 +R^2-2PQR &amp;= (3DQ+R)^2+R^2-2R(3DQ+R)\\
 &amp;= 9(DQ)^2,
 \end{align*}\]</span> i per tant <span class="math display">\[
 D^2(Q^2)=480\Delta + \frac{9}{2} (DQ)^2.
