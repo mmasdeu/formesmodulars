@@ -137,7 +137,10 @@ G_2(z) = 2\zeta(2) + 2\sum_{m\neq 0}\sum_{n\in\ZZ} \frac{1}{(mz+n)^2}.
 $$
 Igual que hem fet amb les series d'Eisenstein de pes $k\geq 4$, podem calcular els coeficients de Fourier de $G_2$, i obtenim
 $$
-G_2(z)= 2\zeta(2)  - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n=\frac{\pi^2}{3} E_2(z),\quad E_2(z)=1-24\sum_{n=1}^\infty \sigma_1(n)q^n.
+G_2(z)= 2\zeta(2)  - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n=\frac{\pi^2}{3} E_2(z), amb
+$$
+$$
+E_2(z)=1-24\sum_{n=1}^\infty \sigma_1(n)q^n.
 $$
 És clar, doncs, que $G_2(z+1)=G_2(z)$. Ara bé, si intentem calcular $G_2(-1/z)$ trobarem un comportament curiós:
 $$
@@ -157,9 +160,10 @@ on la sèrie és absolutament convergent.
 ::: {.proof}
 Només cal calcular
 
-$$
-\sum_{m\neq 0}\sum_{n\in\ZZ} \frac{1}{(mz+n)(mz+n+1)} = \sum_{m\neq 0}\sum_{n\in\ZZ} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right) = \sum_{m\neq 0} 0 = 0.
-$$
+\begin{align*}
+\sum_{m\neq 0}\sum_{n\in\ZZ} \frac{1}{(mz+n)(mz+n+1)} &= \sum_{m\neq 0}\sum_{n\in\ZZ} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right) \\
+&= \sum_{m\neq 0} 0 = 0.
+\end{align*}
 
 Per tant, podem restar el terme general de la sèrie que defineix $G_2(z)$, per obtenir
 \begin{align*}
@@ -201,7 +205,11 @@ $$
 
 En termes de la funció normalitzada $E_2(z)$, tenim
 $$
-E_2(-1/z) = z^2E_2(z) +\frac{12 z}{2\pi i},\quad E_2(\gamma z) = (cz+d)^2E_2(z)+\frac{12}{2\pi i}c(cz+d).
+E_2(-1/z) = z^2E_2(z) +\frac{12 z}{2\pi i},
+$$
+i per $\gamma$ qualsevol:
+$$
+E_2(\gamma z) = (cz+d)^2E_2(z)+\frac{12}{2\pi i}c(cz+d).
 $$
 :::
 
@@ -224,7 +232,8 @@ Per tant, $z^{-12}\tilde\Delta(-1/z) = C \tilde\Delta(z)$, per certa constant $C
 
 Calculant els primers termes del producte $\tilde\Delta=q\prod_{n=1}^\infty(1-q^n)^{24}$, de seguida veiem que
 \begin{align*}
-\tilde\Delta = \sum_{n\geq 1} \tau(n)q^n &= q - 24 q^{2} + 252 q^{3} - 1472 q^{4} + 4830 q^{5}
+\tilde\Delta &= \sum_{n\geq 1} \tau(n)q^n\\
+&= q - 24 q^{2} + 252 q^{3} - 1472 q^{4} + 4830 q^{5}\\
 &- 6048 q^{6} - 16744 q^{7} + O(q^{8}).
 \end{align*}
 
@@ -357,7 +366,7 @@ D^2(Q^2) = 480\Delta +\frac{1}{2} P^2Q^2 - PQR+\frac{1}{2}R^2.
 $$
 Fent servir que $PQ=3DQ+R$, obtenim
 \begin{align*}
-(PQ)^2 +R^2-2PQR &= (3DQ+R)^2+R^2-2R(3DQ+R)
+(PQ)^2 +R^2-2PQR &= (3DQ+R)^2+R^2-2R(3DQ+R)\\
 &= 9(DQ)^2,
 \end{align*}
 i per tant

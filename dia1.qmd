@@ -186,11 +186,11 @@ Si multipliquem una forma modular $f$ de pes $k$ amb una $f'$ de pes $k'$ obtind
 
 ### Sèries d'Eisenstein
 
-Per ara els únics exemples que tenim de formes modulars són les constants, que són formes modulars de pes zero (de fet, són les úniques formes modulars de pes zero). Si considerem una funció holomorfa $h$ qualsevol, aleshores una manera de construir una funció modular és "simetritzar-la", és a dir, considerar $\sum_{g\in G} h\slsh{k} g$. El problema és que en general aquesta suma no té per què convergir. Una segona idea seria considerar una funció que ja sigui invariant per algun subgrup de $H\leq G$, i aleshores només simetritzar per $G/H$. La versió més senzilla d'aquest principi és considerar la funció constant $1$. Si $H=\{ \pm \smtx{1}{t}{0}{1}\}$, veiem que $1\slsh{k} h=1$ per a tot $h\in H$. Per tant, podem considerar
+Per ara els únics exemples que tenim de formes modulars són les constants, que són formes modulars de pes zero (de fet, són les úniques formes modulars de pes zero). Si considerem una funció holomorfa $h$ qualsevol, aleshores una manera de construir una funció modular és "simetritzar-la", és a dir, considerar $\sum_{g\in G} h\slsh{k} g$. El problema és que en general aquesta suma no té per què convergir. Una segona idea seria considerar una funció que ja sigui invariant per algun subgrup de $H\leq G$, i aleshores només simetritzar per $G/H$. La versió més senzilla d'aquest principi és considerar la funció constant $1$. Si $H=\{\smtx{1}{t}{0}{1}\}$, veiem que $1\slsh{k} h=1$ per a tot $h\in H$. Per tant, podem considerar
 $$
 \tilde G_k(z) = \sum_{\gamma \in H\backslash \SL_2(\ZZ)} 1\slsh{k} \gamma= \sum_{\smtx abcd \in H \backslash \SL_2(\ZZ)} \frac{1}{(cz+d)^{k}}.
 $$
-Fixem-nos que, donada una matriu $\smtx abcd\in \SL_2(\ZZ)$, la classe lateral $H\smtx abcd$ està formada per totes les matrius de la forma $\smtx{a'}{b'}{c}{d}\in\SL_2(\ZZ)$. És a dir, les classes laterals venen indexades per parelles $(c,d)\in\ZZ^2$ amb $\gcd(c,d)=1$. És més comú considerar totes les parelles diferents de $(0,0)$, i definir
+Fixem-nos que, donada una matriu $\smtx abcd\in \SL_2(\ZZ)$, la classe lateral $H\smtx abcd$ està formada per totes les matrius de la forma $\smtx{a'}{b'}{c}{d}\in\SL_2(\ZZ)$. És a dir, les classes laterals venen indexades per parelles $(c,d)\in\ZZ^2$ amb $\gcd(c,d)=1$. És més comú considerar *totes* les parelles diferents de $(0,0)$, i definir
 $$
 G_k(z) = \sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k}.
 $$
@@ -200,12 +200,64 @@ La relació entre $G_k$ i $\tilde G_k$ és un factor de $\zeta(k)$ (exercici).
 Si $k>2$, la funció $G_k(z)$ és una forma modular de pes $k$. El seu valor a l'infinit és $2\zeta(k)$, on $\zeta$ és la funció zeta de Riemann.
 :::
 
+Per demostrar la proposició anterior ens calen dos lemes auxiliars.
+
+::: {#lem-}
+Si $k>2$, la sèrie
+$$
+\sum_{(c,d)\neq (0,0)} \max(c,d)^{-k}
+$$
+convergeix absolutament.
+:::
+
 ::: {.proof}
-Ens cal primer veure la convergència de la sèrie per tot $z$. Considerem primer $z\in D$ fixat, i podem veure fàcilment que $|c z + d|^2 \geq c^2-cd+d^2= |c\rho + d|^2$. Com que
+Considerem la suma parcial de la sèrie en la caixa $\{ |c| \leq N, |d| \leq N\}$. Podem calcular explícitament que aquesta val
 $$
-\#\{ (c,d)\neq (0,0) : N \leq |c\rho - d|< N+1\} = O(N)
+\sum_{n=1}^N (2n+1) n^{-k}.
 $$
-i $\sum_{n\geq 1} 1/n^{k-1}$ convergeix per $k>2$, ja estem. Com que $D$ és compacte, la sèrie $G_k(z)$ convergeix normalment a $D$ (vol dir que la sèrie de les sup-normes convergeix) i, com que podem traslladar $D$ per recobrir tot $\HH$ amb elements de $\SL_2(\ZZ)$, en deduïm que $G_k(z)$ també convergeix a tot $\HH$ a una funció holomorfa.
+Aquesta suma convergeix, de fet al valor $\zeta(k)+2\zeta(k-1)$.
+:::
+
+::: {.lem-}
+Donats $A>0$ i $B>0$ reals positius, considerem el compacte
+$$
+\Omega = \{z\in \HH ~|~ |\Re(z)|\leq A, \Im(z) \geq B\}.
+$$
+Aleshores existeix una constant $C=C_{A,B}$ tal que
+$$
+|z + \delta| > L \max(1,|\delta|), \quad \forall \delta\in \RR.
+$$
+:::
+
+::: {.proof}
+Si $|\delta|<1$, aleshores $|z+\delta|\geq B=B\max(1,|\delta|)$. Si $1\leq |\delta| \leq 10A$, aleshores si $\Im(z) > A$ tenim
+$$
+|z+\delta| >A \geq \frac{|\delta|}{10},
+$$
+i si $B\leq \Im z \leq A$ aleshores la funció
+$$
+\left|\frac{z+\delta}{\delta}\right|
+$$
+té un mínim absolut $m$ en el compacte $1\leq |\delta|\leq 10A$ i $B\leq \Im z \leq A$.
+
+Finalment, si $|\delta|> 10A$, aleshores
+$$
+|z+\delta|\geq |\delta|-|z| > |\delta| - A > \frac{9}{10}|\delta|. 
+$$
+:::
+
+::: {.proof}
+# de la proposició
+Ens cal primer veure la convergència de la sèrie per tot $z$. Per simplificar la notació, ens restringim a les parelles en el primer quadrant. Si restringim suma doble a parelles a la caixa $\{ 0 \leq c,d \leq N\}$, per una banda tenim
+$$
+\sum_{d=1}^N d^{-k} + \sum_{c=1}^N\sum_{d=1}^N (cz+d)^{-k}.
+$$
+El primer summand està fitat per $\zeta(k)$ i el podem obviar. Si restringim $z$ al compacte $\Omega_{A,B}$, el segon summand el podem reescriure com
+$$
+\sum_{c=1}^N\sum_{d=1}^N c^{-k}|z+d/c|^{-k} \leq \sum_{c=1}^N\sum_{d=1}^N c^{-k} L^k \max(1,d^{-k}/c^{-k}) = L^k \sum_{c=1}^N\sum_{d=1}^N max(c,d)^{-k}.
+$$
+Pel primer lema, aquesta sèrie convergeix absolutament. Hem vist que la sèrie convergeix absolutament en compactes que recobreixen tot $\HH$, i per tant en
+deduïm la convergència a una funció holomorfa. 
 
 Per calcular $G_k(\infty)$, prenem el límit quan $\Im(z)\to\infty$, i això ho podem fer mantenint $z$ a $D$. En aquest cas, gràcies a la convergència uniforme de la sèrie podem prendre el límit terme a terme. Els termes que tenen $c\neq 0$ tots van a $0$, i només ens queda
 $$
