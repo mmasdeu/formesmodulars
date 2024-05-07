@@ -362,9 +362,9 @@ G_k(z) = \sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k}.
 \sum_{n=1}^N (2n+1) n^{-k}.
 \]</span> Aquesta suma convergeix, de fet al valor <span class="math inline">\(\zeta(k)+2\zeta(k-1)\)</span>.</p>
 </div>
-<div class="lem-">
-<p>Donats <span class="math inline">\(A&gt;0\)</span> i <span class="math inline">\(B&gt;0\)</span> reals positius, considerem el compacte <span class="math display">\[
-\Omega = \{z\in \mathbb{H}~|~ |\Re(z)|\leq A, \Im(z) \geq B\}.
+<div id="lem-" class="theorem lemma">
+<p><span class="theorem-title"><strong>Lema 1.2</strong></span> Donats <span class="math inline">\(A&gt;0\)</span> i <span class="math inline">\(B&gt;0\)</span> reals positius, considerem el compacte <span class="math display">\[
+\Omega = \{z\in \mathbb{H}: |\Re(z)|\leq A, \Im(z) \geq B\}.
 \]</span> Aleshores existeix una constant <span class="math inline">\(C=C_{A,B}\)</span> tal que <span class="math display">\[
 |z + \delta| &gt; L \max(1,|\delta|), \quad \forall \delta\in \mathbb{R}.
 \]</span></p>
@@ -382,9 +382,10 @@ G_k(z) = \sum_{(c,d)\neq (0,0)} \frac{1}{(cz+d)^k}.
 <div class="proof">
 <p><span class="proof-title"><em>Demostració</em> (de la proposició). </span>Ens cal primer veure la convergència de la sèrie per tot <span class="math inline">\(z\)</span>. Per simplificar la notació, ens restringim a les parelles en el primer quadrant. Si restringim suma doble a parelles a la caixa <span class="math inline">\(\{ 0 \leq c,d \leq N\}\)</span>, per una banda tenim <span class="math display">\[
 \sum_{d=1}^N d^{-k} + \sum_{c=1}^N\sum_{d=1}^N (cz+d)^{-k}.
-\]</span> El primer summand està fitat per <span class="math inline">\(\zeta(k)\)</span> i el podem obviar. Si restringim <span class="math inline">\(z\)</span> al compacte <span class="math inline">\(\Omega_{A,B}\)</span>, el segon summand el podem reescriure com <span class="math display">\[
-\sum_{c=1}^N\sum_{d=1}^N c^{-k}|z+d/c|^{-k} \leq \sum_{c=1}^N\sum_{d=1}^N c^{-k} L^k \max(1,d^{-k}/c^{-k}) = L^k \sum_{c=1}^N\sum_{d=1}^N max(c,d)^{-k}.
-\]</span> Pel primer lema, aquesta sèrie convergeix absolutament. Hem vist que la sèrie convergeix absolutament en compactes que recobreixen tot <span class="math inline">\(\mathbb{H}\)</span>, i per tant en deduïm la convergència a una funció holomorfa.</p>
+\]</span> El primer summand està fitat per <span class="math inline">\(\zeta(k)\)</span> i el podem obviar. Si restringim <span class="math inline">\(z\)</span> al compacte <span class="math inline">\(\Omega_{A,B}\)</span>, el segon summand el podem reescriure com <span class="math display">\[\begin{align*}
+\sum_{c=1}^N\sum_{d=1}^N c^{-k}|z+d/c|^{-k} &amp;\leq \sum_{c=1}^N\sum_{d=1}^N c^{-k} L^k \max(1,d^{-k}/c^{-k}) \\
+&amp;= L^k \sum_{c=1}^N\sum_{d=1}^N \max(c,d)^{-k}.
+\end{align*}\]</span> Pel primer lema, aquesta sèrie convergeix absolutament. Hem vist que la sèrie convergeix absolutament en compactes que recobreixen tot <span class="math inline">\(\mathbb{H}\)</span>, i per tant en deduïm la convergència a una funció holomorfa.</p>
 <p>Per calcular <span class="math inline">\(G_k(\infty)\)</span>, prenem el límit quan <span class="math inline">\(\Im(z)\longrightarrow\infty\)</span>, i això ho podem fer mantenint <span class="math inline">\(z\)</span> a <span class="math inline">\(D\)</span>. En aquest cas, gràcies a la convergència uniforme de la sèrie podem prendre el límit terme a terme. Els termes que tenen <span class="math inline">\(c\neq 0\)</span> tots van a <span class="math inline">\(0\)</span>, i només ens queda <span class="math display">\[
 \lim G_k(z) = \sum_{n\neq 0} n^{-k} = 2 \zeta(k).
 \]</span></p>
