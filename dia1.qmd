@@ -218,10 +218,10 @@ $$
 Aquesta suma convergeix, de fet al valor $\zeta(k)+2\zeta(k-1)$.
 :::
 
-::: {.lem-}
+::: {#lem-}
 Donats $A>0$ i $B>0$ reals positius, considerem el compacte
 $$
-\Omega = \{z\in \HH ~|~ |\Re(z)|\leq A, \Im(z) \geq B\}.
+\Omega = \{z\in \HH : |\Re(z)|\leq A, \Im(z) \geq B\}.
 $$
 Aleshores existeix una constant $C=C_{A,B}$ tal que
 $$
@@ -253,9 +253,10 @@ $$
 \sum_{d=1}^N d^{-k} + \sum_{c=1}^N\sum_{d=1}^N (cz+d)^{-k}.
 $$
 El primer summand està fitat per $\zeta(k)$ i el podem obviar. Si restringim $z$ al compacte $\Omega_{A,B}$, el segon summand el podem reescriure com
-$$
-\sum_{c=1}^N\sum_{d=1}^N c^{-k}|z+d/c|^{-k} \leq \sum_{c=1}^N\sum_{d=1}^N c^{-k} L^k \max(1,d^{-k}/c^{-k}) = L^k \sum_{c=1}^N\sum_{d=1}^N max(c,d)^{-k}.
-$$
+\begin{align*}
+\sum_{c=1}^N\sum_{d=1}^N c^{-k}|z+d/c|^{-k} &\leq \sum_{c=1}^N\sum_{d=1}^N c^{-k} L^k \max(1,d^{-k}/c^{-k}) \\
+&= L^k \sum_{c=1}^N\sum_{d=1}^N \max(c,d)^{-k}.
+\end{align*}
 Pel primer lema, aquesta sèrie convergeix absolutament. Hem vist que la sèrie convergeix absolutament en compactes que recobreixen tot $\HH$, i per tant en
 deduïm la convergència a una funció holomorfa. 
 
