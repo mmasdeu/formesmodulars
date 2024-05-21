@@ -7,7 +7,8 @@
 ### Definició
 
 
-Sigui $f$ una forma dèbilment modular de pes $k$ (és a dir, meromorfa i satisfent la simetria corresponent per $\SL_2(\ZZ)$). Per cada $n\geq 1$, definim
+Sigui $f$ una forma dèbilment modular de pes $k$ (és a dir, meromorfa i satisfent
+la simetria corresponent per $\SL_2(\ZZ)$). Per cada $n\geq 1$, definim
 $$
 (T_nf)(z) = n^{k-1} \sum_{e\geq 1, ed=n}\sum_{0\leq b < d} d^{-k} f\left(\frac{ez+b}{d}\right).
 $$
@@ -28,13 +29,15 @@ La funció $T_nf$ és dèbilment modular de pes $k$. Si $f$ és holomorfa, tamb�
 Podem calcular l'efecte d'aquests operadors en les $q$-expansions, obtenint:
 
 ::: {#prp-}
-Si $f(z)=\sum_{m\in \ZZ} a_m(f)q^m$ és meromorfa l'infinit, aleshores $T_nf(z)=\sum_{m\in\ZZ} a_m(T_nf)q^m$ també ho és, i
+Si $f(z)=\sum_{m\in \ZZ} a_m(f)q^m$ és meromorfa l'infinit,
+aleshores $T_nf(z)=\sum_{m\in\ZZ} a_m(T_nf)q^m$ també ho és, i
 
 $$
 a_m(T_nf) = \sum_{d \mid (m,n)} d^{k-1} a_{mn/d^2}(f).
 $$
 
-En particular, $a_0(T_nf) = \sigma_{k-1}(n) a_0(f)$, $a_1(T_nf) = a_n(f)$ i, si $n=p$ és un primer,
+En particular, $a_0(T_nf) = \sigma_{k-1}(n) a_0(f)$, $a_1(T_nf) = a_n(f)$ i,
+si $n=p$ és un primer,
 $$
 a_m(T_pf) = a_{pm}(f) + p^{k-1} a_{m/p}(f),
 $$
@@ -48,19 +51,26 @@ Els operadors $T_n$ actuen a $M_k$ i $S_k$, i commuten entre si.
 ### Formes pròpies
 
 
-Suposem ara que $f=\sum_{n\geq 0} a_n(f)q^n$ és una forma modular de pes $k>0$, que és pròpia per tots els $T_n$. És a dir, per cada $n\geq 1$ tenim $T_nf=\lambda_nf$, per algun $\lambda_n\in\CC$.
+Suposem ara que $f=\sum_{n\geq 0} a_n(f)q^n$ és una forma modular de pes $k>0$,
+que és pròpia per tots els $T_n$. És a dir, per cada $n\geq 1$ tenim $T_nf=\lambda_nf$,
+per algun $\lambda_n\in\CC$.
 
 
 ::: {#thm-}
-Si $f$ és pròpia, $a_1(f)\neq 0$. Si $f$ està normalitzada de manera que $a_1(f)=1$, aleshores $a_n(f) = \lambda_n$.
+Si $f$ és pròpia, $a_1(f)\neq 0$. Si $f$ està normalitzada de manera que $a_1(f)=1$,
+aleshores $a_n(f) = \lambda_n$.
 :::
 
 ::: {.proof}
-Hem vist que $a_1(T_nf) = a_n(f)$. Com que $f$ és pròpia, $a_1(T_nf) = \lambda_n a_1(f)$. Per tant, $a_n(f) = \lambda_n a_1(f)$. Si suposem que $a_1(f)=0$, aleshores tindríem $a_n(f)=0$ per a tot $n\geq 1$, i per tant $f$ seria una constant. Però $k>0$, i per tant arribem a contradicció.
+Hem vist que $a_1(T_nf) = a_n(f)$. Com que $f$ és pròpia, $a_1(T_nf) = \lambda_n a_1(f)$.
+Per tant, $a_n(f) = \lambda_n a_1(f)$. Si suposem que $a_1(f)=0$,
+aleshores tindríem $a_n(f)=0$ per a tot $n\geq 1$, i per tant $f$ seria una constant.
+Però $k>0$, i per tant arribem a contradicció.
 :::
 
 ::: {#cor-}
-Si $f$ i $g$ són formes pròpies per tot $T_n$ amb els mateixos valors propis, aleshores són proporcionals.
+Si $f$ i $g$ són formes pròpies per tot $T_n$ amb els mateixos valors propis,
+aleshores són proporcionals.
 :::
 
 ::: {#cor-}
@@ -76,7 +86,9 @@ $$
 ### Aplicació a la tau de Ramanujan
 
 
-Recordem $\Delta(q)=q\prod_{n\geq 1} (1-q^n)^{24}$. Com ja hem vist, $S_{12}=\CC\Delta$ i per tant $\Delta$ és trivialment una forma pròpia per tots els operadors de Hecke, que a més ja està normalitzada. Per tant:
+Recordem $\Delta(q)=q\prod_{n\geq 1} (1-q^n)^{24}$.
+Com ja hem vist, $S_{12}=\CC\Delta$ i per tant $\Delta$ és trivialment una forma pròpia
+per tots els operadors de Hecke, que a més ja està normalitzada. Per tant:
 
 ::: {#cor-}
 Tenim:
@@ -89,7 +101,8 @@ $$
 $$
 :::
 
-Es tenen resultats anàlegs per tots els espais $S_k$ de dimensió $1$, que són exactament $k=12,16,18,20,22,26$. El generador és, en cada cas, $\Delta E_{k-12}$.
+Es tenen resultats anàlegs per tots els espais $S_k$ de dimensió $1$,
+que són exactament $k=12,16,18,20,22,26$. El generador és, en cada cas, $\Delta E_{k-12}$.
 
 ## Creixement dels coeficients
 
@@ -107,7 +120,8 @@ $$
 ::: {.proof}
 Tenim $|a_n| = A \sigma_{k-1}(n)\geq An^{k-1}$. D'altra banda,
 $$
-\frac{|a_n|}{n^{k-1}} = A \sum_{d\mid n} \frac{1}{d^{k-1}} \leq A\sum_{d=1}^\infty \frac{1}{d^{k-1}} = A\zeta(k-1) < \infty.
+\frac{|a_n|}{n^{k-1}} = A \sum_{d\mid n} \frac{1}{d^{k-1}}
+\leq A\sum_{d=1}^\infty \frac{1}{d^{k-1}} = A\zeta(k-1) < \infty.
 $$
 :::
 
@@ -124,7 +138,10 @@ $$
 |f(z)| = O(q)=O(e^{-2\pi \Im(z)}),\quad q\to 0.
 $$
 
-Escrivim $z=x+iy$, i definim $\phi(z)=|f(z)|y^{k/2}$. La modularitat de $f$ fa que la funció $C^\infty$ (no-holomorfa) $\phi$ sigui invariant per $\SL_2(\ZZ)$, i $\phi(z)\to 0$ quan $\Im(z)\to\infty$. Per tant, $\phi$ és fitada: hi ha alguna constant $M$ tal que
+Escrivim $z=x+iy$, i definim $\phi(z)=|f(z)|y^{k/2}$. La modularitat de $f$
+fa que la funció $C^\infty$ (no-holomorfa) $\phi$ sigui invariant per $\SL_2(\ZZ)$,
+i $\phi(z)\to 0$ quan $\Im(z)\to\infty$.
+Per tant, $\phi$ és fitada: hi ha alguna constant $M$ tal que
 $$
 |f(z)|\leq My^{-k/2},\quad z\in \HH.
 $$
@@ -147,23 +164,29 @@ Si $f$ no és cuspidal, aleshores $a_n\approx n^{k-1}$.
 :::
 
 ::: {.proof}
-Escrivim $f=\lambda E_k + h$ amb $\lambda\neq 0$ i $h$ cuspidal, i apliquem els resultats anteriors. Com que els coeficients de $E_k$ creixen
+Escrivim $f=\lambda E_k + h$ amb $\lambda\neq 0$ i $h$ cuspidal,
+i apliquem els resultats anteriors. Com que els coeficients de $E_k$ creixen
 molt més ràpid que els de $h$, el creixement de $f$ és igual que el de $E_k$.
 :::
 
 ::: {#rem-} 
-Un teorema molt profund de Deligne (1973) demostra, de fet, que $a_n = O(n^{(k-1)/2}\sigma_0(n))=O(n^{(k-1)/2-\epsilon})$ per a tot $\epsilon>0$. Abans del resultat de Deligne, aquest fet es coneixia com la conjectura de Petersson, que generalitzava una conjectura famosa de Ramanujan sobre la funció $\tau(n)$.
+Un teorema molt profund de Deligne (1973) demostra, de fet,
+que $a_n = O(n^{(k-1)/2}\sigma_0(n))=O(n^{(k-1)/2-\epsilon})$ per a tot $\epsilon>0$.
+Abans del resultat de Deligne, aquest fet es coneixia com la conjectura de Petersson,
+que generalitzava una conjectura famosa de Ramanujan sobre la funció $\tau(n)$.
 :::
 
 
 ## La funció-L associada a una forma modular
 
 
-Podem empaquetar tota la informació que hem trobat de manera analítica, mitjançant la funció-L. Sigui
+Podem empaquetar tota la informació que hem trobat de manera analítica,
+mitjançant la funció-L. Sigui
 $$
 L(f,s) = \sum_{n=1}^\infty a_n(f)n^{-s}.
 $$
-Observem que convergeix per a tot $\Re(s)>k$ gràcies a que controlem el creixement dels $a_n(f)$. Si $f$ és cuspidal,
+Observem que convergeix per a tot $\Re(s)>k$ gràcies a que controlem el creixement
+dels $a_n(f)$. Si $f$ és cuspidal,
 aleshores sabem que la sèrie convergeix a $\Re(s)>k/2+1$.
 
 ### El producte d'Euler i l'equació funcional
@@ -197,7 +220,8 @@ que ja sabem que és $0$.
 :::
 
 ::: {#rem-} 
-El recíproc també és cert, i la demostració és essentialment el mateix argument fet a l'inrevés.
+El recíproc també és cert, i la demostració és essentialment
+el mateix argument fet a l'inrevés.
 :::
 
 Per escriure l'equació funcional, escrivim $\Lambda(f,s) = (2\pi)^{-s} \Gamma(s) L(f,s)$, on
@@ -206,9 +230,11 @@ $$
 $$
 
 Podem trobar una formula integral per $\Lambda(f,s)$:
-$$
-\Lambda(f,s) = (2\pi)^{-s} \int_0^\infty t^s e^{-t}\frac{dt}{t} \sum_{n=1}^\infty a_nn^{-s} = \sum_{n=1}^\infty a_n \int_0^\infty \left(\frac{t}{2\pi n}\right)^s e^{-t}\frac{dt}{t}.
-$$
+\begin{align*}
+\Lambda(f,s) &= (2\pi)^{-s} \int_0^\infty t^s e^{-t}\frac{dt}{t} \sum_{n=1}^\infty a_nn^{-s}\\
+&= \sum_{n=1}^\infty a_n \int_0^\infty \left(\frac{t}{2\pi n}\right)^s e^{-t}\frac{dt}{t}.
+\end{align*}
+
 Si fem el canvi de variables $t\mapsto t/(2\pi n)$ al terme $n$-èssim, obtenim
 $$
 \sum_{n=1}^\infty a_n\int_0^\infty t^s e^{-2\pi n t} \frac{dt}{t} = \int_0^\infty \left(\sum_{n=1}^\infty a_ne^{-2\pi nt}\right) t^s\frac{dt}{t}.
@@ -256,7 +282,10 @@ Sigui $L(\{a_n\},s) = \sum_{n=1}^\infty a_n n^{-s}$ una sèrie de Dirichlet asso
 Sigui $k\geq 4$ un enter, i considerem la sèrie d'Eisenstein $E_k = 1 - \frac{2k}{B_k}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n$.
 
 ::: {#prp-}
-$T_p(E_k) = (1+p^{k-1})E_k$.
+Per a tot $p$ primer i tot $k\geq 4$ es té
+$$
+T_p(E_k) = (1+p^{k-1})E_k.
+$$
 :::
 
 ::: {.proof}
@@ -272,14 +301,18 @@ La primera equació es comprova fàcilment, i la segona es fa per inducció en $
 :::
 
 Podem ara calcular ara la seva sèrie de Dirichlet:
-$$
-\sum_{n=1}^\infty \sigma_{k-1}(n)n^{-s} = \sum_{a,d\geq 1} \frac{a^{k-1}}{a^sd^s} = \left(\sum_{d\geq 1} d^{-s}\right)\left(\sum_{a\geq 1} a^{k-s-1}\right) = \zeta(s)\zeta(s-k+1).
-$$
+\begin{align*}
+\sum_{n=1}^\infty \sigma_{k-1}(n)n^{-s} &= \sum_{a,d\geq 1} \frac{a^{k-1}}{a^sd^s}\\
+&= \left(\sum_{d\geq 1} d^{-s}\right)\left(\sum_{a\geq 1} a^{k-s-1}\right)\\
+&= \zeta(s)\zeta(s-k+1).
+\end{align*}
+
 
 De manera alternativa, podem veure que l'invers del terme $p$-èssim del producte d'Euler és
-$$
-1-\sigma_{k-1}(p)p^{-s} + p^{k-1-2s} = 1- p^{-s} - p^{k-1-s} + p^{k-1-2s} = (1-p^{-s})(1-p^{k-1-s}),
-$$
+\begin{align*}
+1-\sigma_{k-1}(p)p^{-s} + p^{k-1-2s} &= 1- p^{-s} - p^{k-1-s} + p^{k-1-2s}\\
+&= (1-p^{-s})(1-p^{k-1-s}),
+\end{align*}
 que coincideix amb el producte dels inversos dels factors d'Euler de $\zeta(s)\zeta(s-k+1)$. Resumint, obtenim la factorització
 
 $$
@@ -291,16 +324,21 @@ $$
 ## El producte de Petersson
 
 
-Per estudiar més a fons els espais $S_k$, els hem de dotar de més estructura que la d'espai vectorial complex. Podem definir un producte escalar hermític, de la següent manera: donades $f,g\in S_k$, considerem
+Per estudiar més a fons els espais $S_k$,
+els hem de dotar de més estructura que la d'espai vectorial complex.
+Podem definir un producte escalar hermític, de la següent manera: donades $f,g\in S_k$, considerem
 $$
 \phi_{f,g} = f(z)\overline{g(z)} y^{k}.
 $$
 
-Si $\gamma\in\SL_2(\ZZ)$, podem veure fàcilment que $\phi_{f,g}(\gamma z) = \phi_{f,g}(z)$. Per tant, és una funció ben definida a $\SL_2(\ZZ)\backslash\HH$. Podem doncs considerar la integral
+Si $\gamma\in\SL_2(\ZZ)$, podem veure fàcilment que $\phi_{f,g}(\gamma z) = \phi_{f,g}(z)$.
+Per tant, és una funció ben definida a $\SL_2(\ZZ)\backslash\HH$. Podem doncs considerar la integral
 $$
 \langle f,g\rangle = \frac{3}{\pi}\int_{\SL_2(\ZZ)\backslash\HH} f(z)\overline{g(z)} y^{k-2}dxdy,
 $$
-ja que $\frac{dxdy}{y^2}$ és una mesura $\SL_2(\ZZ)$-invariant a $\HH$. Respecte aquesta mesura, el domini fonamental de $\SL_2(\ZZ)$ té volum $\frac{\pi}{3}$, i per això escollim la normalització anterior.
+ja que $\frac{dxdy}{y^2}$ és una mesura $\SL_2(\ZZ)$-invariant a $\HH$.
+Respecte aquesta mesura, el domini fonamental de $\SL_2(\ZZ)$ té volum $\frac{\pi}{3}$,
+i per això escollim la normalització anterior.
 
 ::: {#prp-}
 El producte $\langle\cdot,\cdot\rangle$ és hermític i definit positiu. És a dir:
@@ -314,13 +352,22 @@ $$
 $$
 :::
 
-Com a conclusió, els operadors de Hecke $T_n$ formen una família d'operadors normals respecte el producte de Petersson. Per tant, $S_k$ conté una base ortogonal de formes pròpies per **tots** els operadors de Hecke simultàniament. Es diu que $S_k$ satisfà "multiplicitat-1": donat una col·lecció de valors propis $\{\lambda_n\}_{n\geq 1}$, hi ha com a molt una forma cuspidal pròpia $f\in S_k$ tal que $T_n(f)=\lambda_n f$. A més, pel teorema de Cayley-Hamilton tenim que els valors propis dels operadors de Hecke són nombres algebraics reals!
+Com a conclusió, els operadors de Hecke $T_n$ formen una família d'operadors normals
+respecte el producte de Petersson. Per tant, $S_k$ conté una base ortogonal de formes
+pròpies per **tots** els operadors de Hecke simultàniament.
+Es diu que $S_k$ satisfà "multiplicitat-1": donat una col·lecció de valors propis $\{\lambda_n\}_{n\geq 1}$,
+hi ha com a molt una forma cuspidal pròpia $f\in S_k$ tal que $T_n(f)=\lambda_n f$.
+A més, pel teorema de Cayley-Hamilton tenim que els valors propis
+dels operadors de Hecke són nombres algebraics reals!
 
 
 ## Formes modulars amb nivell
 
 
-Fins ara hem considerat formes modulars que es transformen bé pel grup modular $\PSL_2(\ZZ)$. És natural generalitzar la definició a altres subgrups de $\PSL_2(\RR)$ que actuin bé (de manera discreta) a $\HH$. Una família important la formen els coneguts com a *grups de Hecke*, indexada per enters $N\geq 1$:
+Fins ara hem considerat formes modulars que es transformen bé pel grup modular $\PSL_2(\ZZ)$.
+És natural generalitzar la definició a altres subgrups de $\PSL_2(\RR)$
+que actuin bé (de manera discreta) a $\HH$
+ Una família important la formen els coneguts com a *grups de Hecke*, indexada per enters $N\geq 1$:
 $$
 \Gamma(N)\subseteq \Gamma_1(N)\subseteq \Gamma_0(N)\subseteq \SL_2(\ZZ),
 $$
@@ -345,24 +392,32 @@ Una funció holomorfa $f\colon \HH\to\CC$ és una forma modular de pes $k$ i niv
 :::
 
 ::: {#rem-}
-Fixem-nos que la definició demana que $f(\gamma z)$ sigui holomorfa a l'infinit per a tota $\gamma$ de $\SL_2(\ZZ)$. Quan $\Gamma=\SL_2(\ZZ)$ aquesta condició només l'hem de comprovar per $f(z)$, però ara cal imposar més condicions.
+Fixem-nos que la definició demana que $f(\gamma z)$ sigui holomorfa a l'infinit
+per a tota $\gamma$ de $\SL_2(\ZZ)$. Quan $\Gamma=\SL_2(\ZZ)$ aquesta condició només
+l'hem de comprovar per $f(z)$, però ara cal imposar més condicions.
 :::
 
-Es té un anàleg per la fórmula de la valència, valid per tots aquests grups. Si escrivim $M_k(\Gamma)$ (resp. $S_k(\Gamma)$) per les formes modulars (resp. cuspidals) de pes $k$ i nivell $\Gamma$, es demostra de manera semblant que aquests espais són de dimensió finita. També es té una teoria d'operadors de Hecke i de producte de Petersson.
+Es té un anàleg per la fórmula de la valència, valid per tots aquests grups.
+Si escrivim $M_k(\Gamma)$ (resp. $S_k(\Gamma)$) per les formes modulars (resp. cuspidals) de pes $k$
+i nivell $\Gamma$, es demostra de manera semblant que aquests espais són de dimensió finita.
+També es té una teoria d'operadors de Hecke i de producte de Petersson.
 
 
 ## Corbes el·líptiques i modularitat
 
 
-En aquesta secció enunciarem una versió del famós teorema de modularitat, que va jugar un paper central a la demostració de l'Últim teorema de Fermat.
+En aquesta secció enunciarem una versió del famós teorema de modularitat,
+que va jugar un paper central a la demostració de l'Últim teorema de Fermat.
 
 Una corba el·líptica es pot pensar com una equació del tipus
 $$
 E\colon\quad y^2=x^3+ax+b,\quad a,b\in\ZZ, \Delta=-16(4a^3-27b^2)\neq 0.
 $$
-Hem d'entendre aquesta equació com la part afí d'una corba dins el pla projectiu, així que hi ha un punt de més, $\mathcal{O}=(0:1:0)$, amb les coordenades $x=X/Z$, $y=Y/Z$.
+Hem d'entendre aquesta equació com la part afí d'una corba dins el pla projectiu,
+així que hi ha un punt de més, $\mathcal{O}=(0:1:0)$, amb les coordenades $x=X/Z$, $y=Y/Z$.
 
-Quan reduïm els coeficients mòdul $p$, obtenim una corba definida sobre $\mathbb{F}_p$. A les corbes sobre cossos finits se'ls pot associar una funció "zeta":
+Quan reduïm els coeficients mòdul $p$, obtenim una corba definida sobre $\mathbb{F}_p$.
+A les corbes sobre cossos finits se'ls pot associar una funció "zeta":
 $$
 Z_p(E,T) = \exp\left(\sum_{m=1}^\infty \frac{\#E(\mathbb{F}_{p^{m}})}{m}T^m\right).
 $$
@@ -384,17 +439,23 @@ Als anys 70 del segle passat, Eichler i Shimura van demostrar el següent result
 
 ::: {#thm-eichler-shimura}
 ## Eichler-Shimura
-Sigui $f\in S_2(\Gamma_0(N))$ una forma modular pròpia de pes $2$,nivell $N$ i coeficients $a_n\in\ZZ$. A més, suposem que $f$ és "nova", és a dir que no "ve" de cap grup $\Gamma_0(M)$ amb $M\mid N$. Aleshores existeix una corba el·líptica $E_f$ de conductor $N$ tal que
+Sigui $f\in S_2(\Gamma_0(N))$ una forma modular pròpia de pes $2$,nivell $N$ i coeficients $a_n\in\ZZ$.
+A més, suposem que $f$ és "nova", és a dir que no "ve" de cap grup $\Gamma_0(M)$ amb $M\mid N$.
+Aleshores existeix una corba el·líptica $E_f$ de conductor $N$ tal que
 $$
 L(E_f,s) = L(f,s).
 $$
 :::
 
-El recíproc d'aquest teorema es coneixia com la conjectura de Shimura-Taniyama-Weil, i la seva demostració va dur Andrew Wiles a la portada del New York Times perquè als anys 90 del segle passat ja es sabia que un cas particular (quan el "conductor" d'$E$ és lliure de quadrats) implicava l'Últim Teorema de Fermat. El teorema complet va ser demostrat finalment el 2002.
+El recíproc d'aquest teorema es coneixia com la conjectura de Shimura-Taniyama-Weil,
+i la seva demostració va dur Andrew Wiles a la portada del New York Times perquè als anys 90
+del segle passat ja es sabia que un cas particular (quan el "conductor" d'$E$ és lliure de quadrats)
+implicava l'Últim Teorema de Fermat. El teorema complet va ser demostrat finalment el 2002.
 
 ::: {#thm-wiles}
 ## Wiles, Taylor-Wiles, Breuil-Conrad-Diamond-Taylor
-Sigui $E$ una corba el·líptica definida sobre els racionals, i de conductor $N$. Aleshores existeix una forma pròpia cuspidal $f_E\in S_2(\Gamma_0(N))$ tal que, per a tot $p\nmid N$,
+Sigui $E$ una corba el·líptica definida sobre els racionals, i de conductor $N$.
+Aleshores existeix una forma pròpia cuspidal $f_E\in S_2(\Gamma_0(N))$ tal que, per a tot $p\nmid N$,
 $$
 a_p(f) = p+1-\# E(\mathbb{F}_p).
 $$
@@ -406,7 +467,9 @@ Considerem la corba amb etiqueta LMFDB $11.a3$, que té per equació
 $$
 E\colon\quad y^2 + y = x^3-x^2.
 $$
-No és de la forma anterior, però s'hi pot posar amb un canvi de variables, que faria els coeficients més grans. Si comptem els punts de la corba per uns quants primers obtenim, si calculem per cada primer $a_p=p+1-\#E(\mathbb{F}_p)$:
+No és de la forma anterior, però s'hi pot posar amb un canvi de variables,
+que faria els coeficients més grans. Si comptem els punts de la corba per uns quants primers obtenim,
+si calculem per cada primer $a_p=p+1-\#E(\mathbb{F}_p)$:
 
 
 
@@ -418,7 +481,8 @@ $a_p$| $-2$|  $-1$ | $1$ |$-2$ | $1$ | $4$|  $-2$ | $0$| $-1$|  $0$| $7$
 
 Per altra banda, tenim la forma modular $f(z) = q\prod_{n=1}^\infty (1-q^n)^{2}(1-q^{11n})^2$, que té una expansió
 \begin{align*}
-f(z) &= q {\color{red}-2 q^{2}} {\color{red}-  q^{3}} + 2 q^{4} + {\color{red} q^{5}} + 2 q^{6} {\color{red}- 2 q^{7}} - 2 q^{9} - 2 q^{10} {\color{red}+  q^{11}} - 2 q^{12}\\
+f(z) &= q {\color{red}-2 q^{2}} {\color{red}-  q^{3}} + 2 q^{4} +
+{\color{red} q^{5}} + 2 q^{6} {\color{red}- 2 q^{7}} - 2 q^{9} - 2 q^{10} {\color{red}+  q^{11}} - 2 q^{12}\\
 &+ {\color{red}4 q^{13}} + 4 q^{14} -  q^{15} - 4 q^{16} {\color{red}- 2 q^{17}} + 4 q^{18} + 2 q^{20} + 2 q^{21} - 2 q^{22}\\
 &{\color{red}-  q^{23}}- 4 q^{25} - 8 q^{26} + 5 q^{27} - 4 q^{28} + 2 q^{30} +{\color{red} 7 q^{31}} + O(q^{32})
 \end{align*}
@@ -432,14 +496,21 @@ Definim la següent funció modular de pes $0$:
 $$
 j = E_2^3 / \Delta.
 $$
-Veiem que $j$ té un holomorfa a tot $\HH$, perquè $\Delta$ no s'anul·la. A més, té un pol simple a l'infinit, provinent del zero simple de $\Delta$.
+Veiem que $j$ té un holomorfa a tot $\HH$, perquè $\Delta$ no s'anul·la.
+A més, té un pol simple a l'infinit, provinent del zero simple de $\Delta$.
 
 ::: {#prp-}
 L'aplicació $z\mapsto j(z)$ identifica $\PSL_2(\RR)\backslash \HH$ amb $\CC$.
 :::
 
 ::: {.proof}
-Com que $j$ és invariant per $G$, obtenim una funció ben definida $G\backslash \HH\to \CC$. Hem de veure que, per a tot $\lambda\CC$, existeix un únic $z\in G\backslash\HH$ tal que $j(z)=\lambda$ o, el què és el mateix, que la funció $f_\lambda(z)=E_2(z)^3 - \lambda\Delta(z)$ té un únic zero mòdul $G$. Aplicant la fórmula de la valència a $f_\lambda$ (que té pes $12$) veiem que hem de descomposar $1$ de la forma $a + b/2 + c/3$ amb $a,b,c\geq 0$. Les úniques possibilitats són $(1,0,0)$, $(0,2,0)$, $(0,0,3)$, i per tant hi ha un únic zero de $f_\lambda$ a $G\backslash\HH$.
+Com que $j$ és invariant per $G$, obtenim una funció ben definida $G\backslash \HH\to \CC$.
+Hem de veure que, per a tot $\lambda\CC$, existeix un únic $z\in G\backslash\HH$ tal que
+$j(z)=\lambda$ o, el què és el mateix, que la funció $f_\lambda(z)=E_2(z)^3 - \lambda\Delta(z)$
+té un únic zero mòdul $G$. Aplicant la fórmula de la valència a $f_\lambda$ (que té pes $12$)
+veiem que hem de descomposar $1$ de la forma $a + b/2 + c/3$ amb $a,b,c\geq 0$.
+Les úniques possibilitats són $(1,0,0)$, $(0,2,0)$, $(0,0,3)$,
+i per tant hi ha un únic zero de $f_\lambda$ a $G\backslash\HH$.
 :::
 
 De fet, la funció $j$ dona lloc a totes les funcions modulars de pes zero:
@@ -449,7 +520,17 @@ Tota funció modular de pes zero és una funció racional en $j$.
 :::
 
 ::: {.proof}
-Sigui $f$ una funció modular. Multiplicant-la per un polinomi en $j$, posem suposar que és holomorfa a $\HH$. D'altra banda, com que $\Delta$ té un zero simple a l'infinit, podem multiplicar $f$ per $\Delta^n$ de manera que $g=\Delta^nf$ sigui holomorfa també a l'infinit. Aleshores $g$ és una forma modular de pes $12n$, que podem escriure com un polinomi (4,6)-homogeni en $E_4$ i $E_6$, de grau $12n$. Per linealitat, n'hi ha prou amb veure que $f=E_4^iE_6^j/\Delta^n$ és una funció racional en $j$. Observem però que, com que $4i+6j=12n$, tant $p=i/3$ com $q=j/2$ són enters i, per tant, $f=E_4^{3p}E_6^{2q}/\Delta^{p+q}=(\frac{E_4^3}{\Delta})^p(\frac{E_6^2}{\Delta})^q$. Però tant $E_4^3/\Delta$ com $E_6^2/\Delta$ són funcions racionals en $j$, i ja estem.
+Sigui $f$ una funció modular. Multiplicant-la per un polinomi en $j$,
+posem suposar que és holomorfa a $\HH$. D'altra banda, com que $\Delta$ té un zero simple a l'infinit,
+podem multiplicar $f$ per $\Delta^n$ de manera que $g=\Delta^nf$ sigui holomorfa també a l'infinit.
+Aleshores $g$ és una forma modular de pes $12n$, que podem escriure com un
+polinomi (4,6)-homogeni en $E_4$ i $E_6$, de grau $12n$. Per linealitat, n'hi ha prou amb veure que
+$f=E_4^iE_6^j/\Delta^n$ és una funció racional en $j$. Observem però que, com que $4i+6j=12n$,
+tant $p=i/3$ com $q=j/2$ són enters i, per tant,
+$$
+f=E_4^{3p}E_6^{2q}/\Delta^{p+q}=(\frac{E_4^3}{\Delta})^p(\frac{E_6^2}{\Delta})^q.
+$$
+Però tant $E_4^3/\Delta$ com $E_6^2/\Delta$ són funcions racionals en $j$, i ja estem.
 :::
 
 ::: {#rem-}
@@ -457,35 +538,52 @@ A partir de les  $q$-expansions de les sèries d'Eisenstein podem obtenir la de 
 $$
 j(z)=\frac{1}{q} + 744 + 196884q + 21493760q^2+\cdots
 $$
-Els coeficients són tots enters, que a més satisfan $n\equiv 0\pmod{p^i}\implies c(n) \equiv 0 \pmod{p^i}$ per $p=2,3,5,7,11$ (per $p=2,3,5$ la divisilitat de $c(n)$ és per $2^{3i+8}$, $3^{2i+3}$ i $5^{i+1}$, respectivament).
+Els coeficients són tots enters, que a més satisfan
+$n\equiv 0\pmod{p^i}\implies c(n) \equiv 0 \pmod{p^i}$ per $p=2,3,5,7,11$
+(per $p=2,3,5$ la divisilitat de $c(n)$ és per $2^{3i+8}$, $3^{2i+3}$ i $5^{i+1}$,
+respectivament).
 :::
 
-El següent teorema és sorprenent: ens diu que la funció transcendent $j(z)$ pren valors algebraics quan l'argument és quadràtic.
+El següent teorema és sorprenent: ens diu que la funció transcendent $j(z)$
+pren valors algebraics quan l'argument és quadràtic.
 
 ::: {#thm-}
 Si $\tau\in\HH$ genera un cos quadràtic, aleshores $j(\tau)$ és algebraic.
 :::
 
 ::: {.proof}
-Suposem que $A\tau^2+B\tau+C=0$, amb $A\neq 0$. Aleshores la matriu $M=\smtx B C {-A} 0$ té determinant $N = AC$ i fixa $\tau$. El grup $\Gamma=\SL_2(\ZZ)\cap M^{-1}\SL_2(\ZZ)M$ és d'índex finit a $\SL_2(\ZZ)$, i tant $j(z)$ com $j(Nz)$ són formes modulars meromorfes pel grup $\Gamma$. Per tant, són algebraicament dependents: hi ha un polinomi $P(X,Y)\in \CC[X,Y]$ tal que $P(j(z), j(Nz))=0$. Mirant la $q$-expansió de $j(z)$ i $j(Nz)$ es veu que $\QQ[X,Y]$. Resulta aleshores que $j(\tau)$ és arrel del polinomi $P(X,X)\in\QQ[X]$.
+Suposem que $A\tau^2+B\tau+C=0$, amb $A\neq 0$.
+Aleshores la matriu $M=\smtx B C {-A} 0$ té determinant $N = AC$ i fixa $\tau$.
+El grup $\Gamma=\SL_2(\ZZ)\cap M^{-1}\SL_2(\ZZ)M$ és d'índex finit a $\SL_2(\ZZ)$,
+i tant $j(z)$ com $j(Nz)$ són formes modulars meromorfes pel grup $\Gamma$.
+Per tant, són algebraicament dependents: hi ha un polinomi $P(X,Y)\in \CC[X,Y]$
+tal que $P(j(z), j(Nz))=0$. Mirant la $q$-expansió de $j(z)$ i $j(Nz)$ es veu que $\QQ[X,Y]$.
+Resulta aleshores que $j(\tau)$ és arrel del polinomi $P(X,X)\in\QQ[X]$.
 :::
 
 
-Per exemple, es pot demostrar que $j(\frac{1+\sqrt{-163}}{2}) = (640320)^3$. D'aquí se'n dedueix la famosa "identitat"
+Per exemple, es pot demostrar que $j(\frac{1+\sqrt{-163}}{2}) = (640320)^3$.
+D'aquí se'n dedueix la famosa "identitat"
 $$
 e^{\pi\sqrt{163}} = 262537412640768743.999999999999250072597\ldots
 $$
 
-De fet, la funció $j$ ens permet apropar-nos al somni de joventut de Kronecker. Kronecker i Weber van demostrar el 1884 el següent teorema:
+De fet, la funció $j$ ens permet apropar-nos al somni de joventut de Kronecker.
+Kronecker i Weber van demostrar el 1884 el següent teorema:
 
 ::: {#thm-kronecker-weber}
 ## Kronecker-Weber
 Sigui $H$ una extensió abeliana de $\QQ$. Aleshores existeix $n\geq 1$ tal que $H\subseteq \QQ(e^{2\pi i/n})$.
 :::
 
-Es van preguntar si les extensions abelianes d'altres cossos diferents de $\QQ$ també es poden obtenir adjuntant valors "especials" d'alguna funció anàloga a l'exponencial. Doncs bé, tenim:
+Es van preguntar si les extensions abelianes d'altres cossos diferents de $\QQ$
+també es poden obtenir adjuntant valors "especials" d'alguna funció anàloga a l'exponencial. Doncs bé, tenim:
 
 ::: {#thm-kronecker-weber-takagi-hasse}
 ## Kronecker, Weber, Takagi, Hasse
-Sigui $H$ una extensió abeliana d'un cos quadràtic imaginari $K$. Aleshores existeix un $n\geq 1$ i un $\tau$ quadràtic tal que $H\subseteq K(e^{2\pi i/n}, j(\tau), j(n\tau))$.
+Sigui $H$ una extensió abeliana d'un cos quadràtic imaginari $K$.
+Aleshores existeix un $n\geq 1$ i un $\tau$ quadràtic tal que
+$$
+H\subseteq K(e^{2\pi i/n}, j(\tau), j(n\tau)).
+$$
 :::

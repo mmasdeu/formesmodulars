@@ -58,7 +58,7 @@ $$
 $$
 Comparant les dues expressions, obtenim la igualtat bàsica
 $$
-\frac{1}{z} + \sum_{m=1}^\infty \left(\frac{1}{z+m}-\frac{1}{z-m}\right) =  i\pi -2\pi i \sum_{n=0}^\infty q^n.
+\frac{1}{z} + \sum_{m=1}^\infty \left(\frac{1}{z+m}+\frac{1}{z-m}\right) =  i\pi -2\pi i \sum_{n=0}^\infty q^n.
 $$
 Derivant-la successivament, obtenim el que es coneix com la **fórmula de Lipschitz**:
 $$
@@ -133,12 +133,13 @@ G_2(z) = \sum_{m=-\infty}^\infty \sum_{n=-\infty}^\infty \frac{1}{(mz+n)^2},
 $$
 on si $m=0$ hem d'ometre el terme $n=0$ (a partir d'ara això no ho direm). Podem separar el terme $m=0$ i obtenir:
 $$
-G_2(z) = 2\zeta(2) + 2\sum_{m\neq 0}\sum_{n\in\ZZ} \frac{1}{(mz+n)^2}.
+G_2(z) = 2\zeta(2) + \sum_{m\neq 0}\sum_{n\in\ZZ} \frac{1}{(mz+n)^2}.
 $$
 Igual que hem fet amb les series d'Eisenstein de pes $k\geq 4$, podem calcular els coeficients de Fourier de $G_2$, i obtenim
 $$
-G_2(z)= 2\zeta(2)  - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n=\frac{\pi^2}{3} E_2(z), amb
+G_2(z)= 2\zeta(2)  - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n=\frac{\pi^2}{3} E_2(z),
 $$
+amb
 $$
 E_2(z)=1-24\sum_{n=1}^\infty \sigma_1(n)q^n.
 $$
