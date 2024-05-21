@@ -184,7 +184,7 @@ Aquesta última suma la podem calcular explícitament:
 \begin{align*}
 \sum_{n=-N}^{N-1}\sum_{m\neq 0} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right) &=  \sum_{m\neq 0}\sum_{n=-N}^{N-1} \left(\frac{1}{mz+n}-\frac{1}{mz+n+1}\right)\\
 &= \sum_{m\neq 0} \left(\frac{1}{mz-N}-\frac{1}{mz+N}\right) \\
-&= \frac{-2\pi}{z}\cot(\pi N/z).
+&= \frac{2}{N} + \frac{-2\pi}{z}\cot(\pi N/z).
 \end{align*}
 
 Per poder calcular el límit, observem que
