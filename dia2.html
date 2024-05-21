@@ -259,7 +259,7 @@ z\cot z = 1+2\sum_{n=1}^\infty \frac{z^2}{z^2-n^2\pi^2}
 \]</span> D’altra banda, <span class="math display">\[
 \pi\cot(\pi z) = \pi \frac{\cos(\pi z)}{\sin(\pi z)} = i\pi\frac{q+1}{q-1} = i\pi - \frac{2i\pi}{1-q} = i\pi -2\pi i \sum_{n=0}^\infty q^n.
 \]</span> Comparant les dues expressions, obtenim la igualtat bàsica <span class="math display">\[
-\frac{1}{z} + \sum_{m=1}^\infty \left(\frac{1}{z+m}-\frac{1}{z-m}\right) =  i\pi -2\pi i \sum_{n=0}^\infty q^n.
+\frac{1}{z} + \sum_{m=1}^\infty \left(\frac{1}{z+m}+\frac{1}{z-m}\right) =  i\pi -2\pi i \sum_{n=0}^\infty q^n.
 \]</span> Derivant-la successivament, obtenim el que es coneix com la <strong>fórmula de Lipschitz</strong>: <span class="math display">\[
 \sum_{m\in\mathbb{Z}} \frac{1}{(z+m)^k} = \frac{(-1)^k (2\pi i)^k}{(k-1)!}\sum_{n=1}^\infty n^{k-1}q^n, \quad k\geq 2.
 \]</span></p>
@@ -313,10 +313,10 @@ E_{14} &amp;= 1-24\sum_{n\geq 1} \sigma_{13}(n)q^n.
 <p>Considerem la funció <span class="math display">\[
 G_2(z) = \sum_{m=-\infty}^\infty \sum_{n=-\infty}^\infty \frac{1}{(mz+n)^2},
 \]</span> on si <span class="math inline">\(m=0\)</span> hem d’ometre el terme <span class="math inline">\(n=0\)</span> (a partir d’ara això no ho direm). Podem separar el terme <span class="math inline">\(m=0\)</span> i obtenir: <span class="math display">\[
-G_2(z) = 2\zeta(2) + 2\sum_{m\neq 0}\sum_{n\in\mathbb{Z}} \frac{1}{(mz+n)^2}.
+G_2(z) = 2\zeta(2) + \sum_{m\neq 0}\sum_{n\in\mathbb{Z}} \frac{1}{(mz+n)^2}.
 \]</span> Igual que hem fet amb les series d’Eisenstein de pes <span class="math inline">\(k\geq 4\)</span>, podem calcular els coeficients de Fourier de <span class="math inline">\(G_2\)</span>, i obtenim <span class="math display">\[
-G_2(z)= 2\zeta(2)  - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n=\frac{\pi^2}{3} E_2(z), amb
-\]</span> <span class="math display">\[
+G_2(z)= 2\zeta(2)  - 8\pi^2\sum_{n=1}^\infty \sigma_1(n)q^n=\frac{\pi^2}{3} E_2(z),
+\]</span> amb <span class="math display">\[
 E_2(z)=1-24\sum_{n=1}^\infty \sigma_1(n)q^n.
 \]</span> És clar, doncs, que <span class="math inline">\(G_2(z+1)=G_2(z)\)</span>. Ara bé, si intentem calcular <span class="math inline">\(G_2(-1/z)\)</span> trobarem un comportament curiós: <span class="math display">\[
 G_2(-1/z) = \sum_{m=-\infty}^\infty\sum_{n=-\infty}^\infty \frac{z^2}{(nz+m)^2} = z^2\sum_{n=-\infty}^\infty\sum_{m=-\infty}^\infty \frac{1}{(mz+n)^2}.

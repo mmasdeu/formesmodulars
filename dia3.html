@@ -301,7 +301,8 @@ An^{k-1}\leq |a_n|\leq Bn^{k-1}.
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Demostració</em>. </span>Tenim <span class="math inline">\(|a_n| = A \sigma_{k-1}(n)\geq An^{k-1}\)</span>. D’altra banda, <span class="math display">\[
-\frac{|a_n|}{n^{k-1}} = A \sum_{d\mid n} \frac{1}{d^{k-1}} \leq A\sum_{d=1}^\infty \frac{1}{d^{k-1}} = A\zeta(k-1) &lt; \infty.
+\frac{|a_n|}{n^{k-1}} = A \sum_{d\mid n} \frac{1}{d^{k-1}}
+\leq A\sum_{d=1}^\infty \frac{1}{d^{k-1}} = A\zeta(k-1) &lt; \infty.
 \]</span></p>
 </div>
 <p>El creixement de les formes cuspidals és més lent:</p>
@@ -361,9 +362,11 @@ a_{p^{r+1}} - a_pa_{p^{r}} + p^{k-1}a_{p^{r-1}},
 <p>Per escriure l’equació funcional, escrivim <span class="math inline">\(\Lambda(f,s) = (2\pi)^{-s} \Gamma(s) L(f,s)\)</span>, on <span class="math display">\[
 \Gamma(s) = \int_0^{\infty} t^{s}e^{-t}\frac{dt}{t}.
 \]</span></p>
-<p>Podem trobar una formula integral per <span class="math inline">\(\Lambda(f,s)\)</span>: <span class="math display">\[
-\Lambda(f,s) = (2\pi)^{-s} \int_0^\infty t^s e^{-t}\frac{dt}{t} \sum_{n=1}^\infty a_nn^{-s} = \sum_{n=1}^\infty a_n \int_0^\infty \left(\frac{t}{2\pi n}\right)^s e^{-t}\frac{dt}{t}.
-\]</span> Si fem el canvi de variables <span class="math inline">\(t\mapsto t/(2\pi n)\)</span> al terme <span class="math inline">\(n\)</span>-èssim, obtenim <span class="math display">\[
+<p>Podem trobar una formula integral per <span class="math inline">\(\Lambda(f,s)\)</span>: <span class="math display">\[\begin{align*}
+\Lambda(f,s) &amp;= (2\pi)^{-s} \int_0^\infty t^s e^{-t}\frac{dt}{t} \sum_{n=1}^\infty a_nn^{-s}\\
+&amp;= \sum_{n=1}^\infty a_n \int_0^\infty \left(\frac{t}{2\pi n}\right)^s e^{-t}\frac{dt}{t}.
+\end{align*}\]</span></p>
+<p>Si fem el canvi de variables <span class="math inline">\(t\mapsto t/(2\pi n)\)</span> al terme <span class="math inline">\(n\)</span>-èssim, obtenim <span class="math display">\[
 \sum_{n=1}^\infty a_n\int_0^\infty t^s e^{-2\pi n t} \frac{dt}{t} = \int_0^\infty \left(\sum_{n=1}^\infty a_ne^{-2\pi nt}\right) t^s\frac{dt}{t}.
 \]</span></p>
 <p>Per tant, hem vist:</p>
@@ -391,7 +394,9 @@ a_{p^{r+1}} - a_pa_{p^{r}} + p^{k-1}a_{p^{r-1}},
 <h3 data-number="3.3.2" class="anchored" data-anchor-id="funció-l-de-les-sèries-deisenstein"><span class="header-section-number">3.3.2</span> Funció-L de les sèries d’Eisenstein</h3>
 <p>Sigui <span class="math inline">\(k\geq 4\)</span> un enter, i considerem la sèrie d’Eisenstein <span class="math inline">\(E_k = 1 - \frac{2k}{B_k}\sum_{n=1}^\infty \sigma_{k-1}(n)q^n\)</span>.</p>
 <div id="prp-" class="theorem proposition">
-<p><span class="theorem-title"><strong>Proposició 3.6</strong></span> <span class="math inline">\(T_p(E_k) = (1+p^{k-1})E_k\)</span>.</p>
+<p><span class="theorem-title"><strong>Proposició 3.6</strong></span> Per a tot <span class="math inline">\(p\)</span> primer i tot <span class="math inline">\(k\geq 4\)</span> es té <span class="math display">\[
+T_p(E_k) = (1+p^{k-1})E_k.
+\]</span></p>
 </div>
 <div class="proof">
 <p><span class="proof-title"><em>Demostració</em>. </span>Ho comprovem coeficient a coeficient. Si <span class="math inline">\(p\nmid n\)</span>, hem de comprovar que <span class="math display">\[
@@ -400,12 +405,15 @@ a_{p^{r+1}} - a_pa_{p^{r}} + p^{k-1}a_{p^{r-1}},
 \sigma_{k-1}(p^{e+1}m) + p^{k-1} \sigma_{k-1}(p^{e-1}m) = (1+p^{k-1})\sigma_{k-1}(p^em).
 \]</span> La primera equació es comprova fàcilment, i la segona es fa per inducció en <span class="math inline">\(e\)</span>.</p>
 </div>
-<p>Podem ara calcular ara la seva sèrie de Dirichlet: <span class="math display">\[
-\sum_{n=1}^\infty \sigma_{k-1}(n)n^{-s} = \sum_{a,d\geq 1} \frac{a^{k-1}}{a^sd^s} = \left(\sum_{d\geq 1} d^{-s}\right)\left(\sum_{a\geq 1} a^{k-s-1}\right) = \zeta(s)\zeta(s-k+1).
-\]</span></p>
-<p>De manera alternativa, podem veure que l’invers del terme <span class="math inline">\(p\)</span>-èssim del producte d’Euler és <span class="math display">\[
-1-\sigma_{k-1}(p)p^{-s} + p^{k-1-2s} = 1- p^{-s} - p^{k-1-s} + p^{k-1-2s} = (1-p^{-s})(1-p^{k-1-s}),
-\]</span> que coincideix amb el producte dels inversos dels factors d’Euler de <span class="math inline">\(\zeta(s)\zeta(s-k+1)\)</span>. Resumint, obtenim la factorització</p>
+<p>Podem ara calcular ara la seva sèrie de Dirichlet: <span class="math display">\[\begin{align*}
+\sum_{n=1}^\infty \sigma_{k-1}(n)n^{-s} &amp;= \sum_{a,d\geq 1} \frac{a^{k-1}}{a^sd^s}\\
+&amp;= \left(\sum_{d\geq 1} d^{-s}\right)\left(\sum_{a\geq 1} a^{k-s-1}\right)\\
+&amp;= \zeta(s)\zeta(s-k+1).
+\end{align*}\]</span></p>
+<p>De manera alternativa, podem veure que l’invers del terme <span class="math inline">\(p\)</span>-èssim del producte d’Euler és <span class="math display">\[\begin{align*}
+1-\sigma_{k-1}(p)p^{-s} + p^{k-1-2s} &amp;= 1- p^{-s} - p^{k-1-s} + p^{k-1-2s}\\
+&amp;= (1-p^{-s})(1-p^{k-1-s}),
+\end{align*}\]</span> que coincideix amb el producte dels inversos dels factors d’Euler de <span class="math inline">\(\zeta(s)\zeta(s-k+1)\)</span>. Resumint, obtenim la factorització</p>
 <p><span class="math display">\[
 L(E_k,s) = \zeta(s)\zeta(s-k+1).
 \]</span></p>
@@ -429,7 +437,7 @@ L(E_k,s) = \zeta(s)\zeta(s-k+1).
 </section>
 <section id="formes-modulars-amb-nivell" class="level2" data-number="3.5">
 <h2 data-number="3.5" class="anchored" data-anchor-id="formes-modulars-amb-nivell"><span class="header-section-number">3.5</span> Formes modulars amb nivell</h2>
-<p>Fins ara hem considerat formes modulars que es transformen bé pel grup modular <span class="math inline">\(\operatorname{PSL}_2(\mathbb{Z})\)</span>. És natural generalitzar la definició a altres subgrups de <span class="math inline">\(\operatorname{PSL}_2(\mathbb{R})\)</span> que actuin bé (de manera discreta) a <span class="math inline">\(\mathbb{H}\)</span>. Una família important la formen els coneguts com a <em>grups de Hecke</em>, indexada per enters <span class="math inline">\(N\geq 1\)</span>: <span class="math display">\[
+<p>Fins ara hem considerat formes modulars que es transformen bé pel grup modular <span class="math inline">\(\operatorname{PSL}_2(\mathbb{Z})\)</span>. És natural generalitzar la definició a altres subgrups de <span class="math inline">\(\operatorname{PSL}_2(\mathbb{R})\)</span> que actuin bé (de manera discreta) a <span class="math inline">\(\mathbb{H}\)</span> Una família important la formen els coneguts com a <em>grups de Hecke</em>, indexada per enters <span class="math inline">\(N\geq 1\)</span>: <span class="math display">\[
 \Gamma(N)\subseteq \Gamma_1(N)\subseteq \Gamma_0(N)\subseteq \operatorname{SL}_2(\mathbb{Z}),
 \]</span> definits com <span class="math display">\[
 \Gamma(N) = \{ \left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) : \left(\begin{smallmatrix}a&amp;b\\c&amp;d\end{smallmatrix}\right) \equiv \left(\begin{smallmatrix}1&amp;0\\0&amp;1\end{smallmatrix}\right) \pmod{N}\},
@@ -533,7 +541,8 @@ E\colon\quad y^2 + y = x^3-x^2.
 </tbody>
 </table>
 <p>Per altra banda, tenim la forma modular <span class="math inline">\(f(z) = q\prod_{n=1}^\infty (1-q^n)^{2}(1-q^{11n})^2\)</span>, que té una expansió <span class="math display">\[\begin{align*}
-f(z) &amp;= q {\color{red}-2 q^{2}} {\color{red}-  q^{3}} + 2 q^{4} + {\color{red} q^{5}} + 2 q^{6} {\color{red}- 2 q^{7}} - 2 q^{9} - 2 q^{10} {\color{red}+  q^{11}} - 2 q^{12}\\
+f(z) &amp;= q {\color{red}-2 q^{2}} {\color{red}-  q^{3}} + 2 q^{4} +
+{\color{red} q^{5}} + 2 q^{6} {\color{red}- 2 q^{7}} - 2 q^{9} - 2 q^{10} {\color{red}+  q^{11}} - 2 q^{12}\\
 &amp;+ {\color{red}4 q^{13}} + 4 q^{14} -  q^{15} - 4 q^{16} {\color{red}- 2 q^{17}} + 4 q^{18} + 2 q^{20} + 2 q^{21} - 2 q^{22}\\
 &amp;{\color{red}-  q^{23}}- 4 q^{25} - 8 q^{26} + 5 q^{27} - 4 q^{28} + 2 q^{30} +{\color{red} 7 q^{31}} + O(q^{32})
 \end{align*}\]</span></p>
@@ -556,7 +565,9 @@ j = E_2^3 / \Delta.
 <p><span class="theorem-title"><strong>Proposició 3.9</strong></span> Tota funció modular de pes zero és una funció racional en <span class="math inline">\(j\)</span>.</p>
 </div>
 <div class="proof">
-<p><span class="proof-title"><em>Demostració</em>. </span>Sigui <span class="math inline">\(f\)</span> una funció modular. Multiplicant-la per un polinomi en <span class="math inline">\(j\)</span>, posem suposar que és holomorfa a <span class="math inline">\(\mathbb{H}\)</span>. D’altra banda, com que <span class="math inline">\(\Delta\)</span> té un zero simple a l’infinit, podem multiplicar <span class="math inline">\(f\)</span> per <span class="math inline">\(\Delta^n\)</span> de manera que <span class="math inline">\(g=\Delta^nf\)</span> sigui holomorfa també a l’infinit. Aleshores <span class="math inline">\(g\)</span> és una forma modular de pes <span class="math inline">\(12n\)</span>, que podem escriure com un polinomi (4,6)-homogeni en <span class="math inline">\(E_4\)</span> i <span class="math inline">\(E_6\)</span>, de grau <span class="math inline">\(12n\)</span>. Per linealitat, n’hi ha prou amb veure que <span class="math inline">\(f=E_4^iE_6^j/\Delta^n\)</span> és una funció racional en <span class="math inline">\(j\)</span>. Observem però que, com que <span class="math inline">\(4i+6j=12n\)</span>, tant <span class="math inline">\(p=i/3\)</span> com <span class="math inline">\(q=j/2\)</span> són enters i, per tant, <span class="math inline">\(f=E_4^{3p}E_6^{2q}/\Delta^{p+q}=(\frac{E_4^3}{\Delta})^p(\frac{E_6^2}{\Delta})^q\)</span>. Però tant <span class="math inline">\(E_4^3/\Delta\)</span> com <span class="math inline">\(E_6^2/\Delta\)</span> són funcions racionals en <span class="math inline">\(j\)</span>, i ja estem.</p>
+<p><span class="proof-title"><em>Demostració</em>. </span>Sigui <span class="math inline">\(f\)</span> una funció modular. Multiplicant-la per un polinomi en <span class="math inline">\(j\)</span>, posem suposar que és holomorfa a <span class="math inline">\(\mathbb{H}\)</span>. D’altra banda, com que <span class="math inline">\(\Delta\)</span> té un zero simple a l’infinit, podem multiplicar <span class="math inline">\(f\)</span> per <span class="math inline">\(\Delta^n\)</span> de manera que <span class="math inline">\(g=\Delta^nf\)</span> sigui holomorfa també a l’infinit. Aleshores <span class="math inline">\(g\)</span> és una forma modular de pes <span class="math inline">\(12n\)</span>, que podem escriure com un polinomi (4,6)-homogeni en <span class="math inline">\(E_4\)</span> i <span class="math inline">\(E_6\)</span>, de grau <span class="math inline">\(12n\)</span>. Per linealitat, n’hi ha prou amb veure que <span class="math inline">\(f=E_4^iE_6^j/\Delta^n\)</span> és una funció racional en <span class="math inline">\(j\)</span>. Observem però que, com que <span class="math inline">\(4i+6j=12n\)</span>, tant <span class="math inline">\(p=i/3\)</span> com <span class="math inline">\(q=j/2\)</span> són enters i, per tant, <span class="math display">\[
+f=E_4^{3p}E_6^{2q}/\Delta^{p+q}=(\frac{E_4^3}{\Delta})^p(\frac{E_6^2}{\Delta})^q.
+\]</span> Però tant <span class="math inline">\(E_4^3/\Delta\)</span> com <span class="math inline">\(E_6^2/\Delta\)</span> són funcions racionals en <span class="math inline">\(j\)</span>, i ja estem.</p>
 </div>
 <div id="rem-" class="proof remark">
 <p><span class="proof-title"><em>Observació 3.5</em>. </span>A partir de les <span class="math inline">\(q\)</span>-expansions de les sèries d’Eisenstein podem obtenir la de <span class="math inline">\(j\)</span>: <span class="math display">\[
@@ -579,7 +590,9 @@ e^{\pi\sqrt{163}} = 262537412640768743.999999999999250072597\ldots
 </div>
 <p>Es van preguntar si les extensions abelianes d’altres cossos diferents de <span class="math inline">\(\mathbb{Q}\)</span> també es poden obtenir adjuntant valors “especials” d’alguna funció anàloga a l’exponencial. Doncs bé, tenim:</p>
 <div id="thm-kronecker-weber-takagi-hasse" class="theorem">
-<p><span class="theorem-title"><strong>Teorema 3.8 (Kronecker, Weber, Takagi, Hasse)</strong></span> Sigui <span class="math inline">\(H\)</span> una extensió abeliana d’un cos quadràtic imaginari <span class="math inline">\(K\)</span>. Aleshores existeix un <span class="math inline">\(n\geq 1\)</span> i un <span class="math inline">\(\tau\)</span> quadràtic tal que <span class="math inline">\(H\subseteq K(e^{2\pi i/n}, j(\tau), j(n\tau))\)</span>.</p>
+<p><span class="theorem-title"><strong>Teorema 3.8 (Kronecker, Weber, Takagi, Hasse)</strong></span> Sigui <span class="math inline">\(H\)</span> una extensió abeliana d’un cos quadràtic imaginari <span class="math inline">\(K\)</span>. Aleshores existeix un <span class="math inline">\(n\geq 1\)</span> i un <span class="math inline">\(\tau\)</span> quadràtic tal que <span class="math display">\[
+H\subseteq K(e^{2\pi i/n}, j(\tau), j(n\tau)).
+\]</span></p>
 </div>
 
 
