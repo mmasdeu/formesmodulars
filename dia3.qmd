@@ -557,7 +557,8 @@ Aleshores la matriu $M=\smtx B C {-A} 0$ té determinant $N = AC$ i fixa $\tau$.
 El grup $\Gamma=\SL_2(\ZZ)\cap M^{-1}\SL_2(\ZZ)M$ és d'índex finit a $\SL_2(\ZZ)$,
 i tant $j(z)$ com $j(Nz)$ són formes modulars meromorfes pel grup $\Gamma$.
 Per tant, són algebraicament dependents: hi ha un polinomi $P(X,Y)\in \CC[X,Y]$
-tal que $P(j(z), j(Nz))=0$. Mirant la $q$-expansió de $j(z)$ i $j(Nz)$ es veu que $\QQ[X,Y]$.
+tal que $P(j(z), j(Nz))=0$. Mirant la $q$-expansió de $j(z)$ i $j(Nz)$ es veu que
+$P(X,Y)$ té de fet coeficients a $\QQ$.
 Resulta aleshores que $j(\tau)$ és arrel del polinomi $P(X,X)\in\QQ[X]$.
 :::
 
